@@ -622,3 +622,14 @@ trim()
 }
 
 
+
+
+
+####EXPORTS######
+#find /usr/lib/jvm/java-1.x.x-openjdk
+#vim /etc/profile 
+#export JAVA_HOME="path that you found"
+#export PATH=$JAVA_HOME/bin:$PATH
+export JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk-amd64"
+export PATH=$JAVA_HOME/bin:$PATH
+
