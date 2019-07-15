@@ -154,6 +154,7 @@ alias hlp='less ~/.bashrc_help'
 alias da='date "+%Y-%m-%d %A %T %Z"'
 
 # Alias's to modified commands
+alias mount="mount -w"
 alias distupgrade='sudo apt update && sudo apt dist-upgrade'
 alias update='sudo apt install update && sudo apt upgrade'
 alias cp='cp -i'
@@ -620,6 +621,9 @@ trim()
 	var="${var%"${var##*[![:space:]]}"}"  # remove trailing whitespace characters
 	echo -n "$var"
 }
+pendrive(){
+	cd /media/joel/ && ls
+}
 
 
 
@@ -632,4 +636,6 @@ trim()
 #export PATH=$JAVA_HOME/bin:$PATH
 export JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk-amd64"
 export PATH=$JAVA_HOME/bin:$PATH
+export flutter="/home/joel/flutter"
+export PATH=$flutter/bin:$PATH
 
