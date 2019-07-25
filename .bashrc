@@ -154,12 +154,20 @@ alias hlp='less ~/.bashrc_help'
 alias da='date "+%Y-%m-%d %A %T %Z"'
 
 # Alias's to modified commands
+alias gateway='ip r'
+alias code='code & exit'
+alias evince='evince & exit'
+alias text=/opt/sublime_text/sublime_text
+alias dict=sdcv
+alias free='free --mega'
+alias terminal='xfce4-terminal'
+alias nmap='nmap -sP'
 alias mount="mount -w"
 alias distupgrade='sudo apt update && sudo apt dist-upgrade'
-alias update='sudo apt install update && sudo apt upgrade'
-alias cp='cp -i'
+alias update='sudo apt  update && sudo apt upgrade'
+alias cp='cp -irv'
 alias mv='mv -i'
-alias rm='rm -iv'
+alias rm='rm -ivrf'
 alias mkdir='mkdir -p'
 alias ps='ps auxf'
 alias ping='ping -c 10'
@@ -209,7 +217,7 @@ alias 644='chmod -R 644'
 alias 666='chmod -R 666'
 alias 755='chmod -R 755'
 alias 777='chmod -R 777'
-
+alias chmods="cat /home/joel/chmods"
 # Search command line history
 alias h="history | grep "
 
@@ -327,26 +335,7 @@ ftext ()
 	grep -iIHrn --color=always "$1" . | less -r
 }
 
-# Copy file with a progress bar
-cpp()
-{
-	set -e
-	strace -q -ewrite cp -- "${1}" "${2}" 2>&1 \
-	| awk '{
-	count += $NF
-	if (count % 10 == 0) {
-		percent = count / total_size * 100
-		printf "%3d%% [", percent
-		for (i=0;i<=percent;i++)
-			printf "="
-			printf ">"
-			for (i=percent;i<100;i++)
-				printf " "
-				printf "]\r"
-			}
-		}
-	END { print "" }' total_size=$(stat -c '%s' "${1}") count=0
-}
+
 
 # Copy and go to the directory
 cpg ()
@@ -621,9 +610,18 @@ trim()
 	var="${var%"${var##*[![:space:]]}"}"  # remove trailing whitespace characters
 	echo -n "$var"
 }
-pendrive(){
-	cd /media/joel/ && ls
+mountpendrive(){
+
+	sudo mount /dev/sdb1 /media/joel/pendrive && pendrive
 }
+unmountpendrive(){
+	home && sudo umount /dev/sdb1  
+}
+pendrive(){
+	cd /media/joel/pendrive && la
+}
+
+ 
 
 
 
