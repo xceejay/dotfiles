@@ -1,11 +1,14 @@
+
+
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
 # If not running interactively, don't do anything
 case $- in
-    *i*) ;;
-      *) return;;
+	*i*) ;;
+*) return;;
 esac
 
 # don't put duplicate lines or lines starting with space in the history.
@@ -32,12 +35,12 @@ shopt -s checkwinsize
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
+	debian_chroot=$(cat /etc/debian_chroot)
 fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
+	xterm-color|*-256color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -46,36 +49,36 @@ esac
 #force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
-    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+	if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
 	# We have color support; assume it's compliant with Ecma-48
 	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
 	# a case would tend to support setf rather than setaf.)
 	color_prompt=yes
-    else
+else
 	color_prompt=
-    fi
+fi
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+	PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+	PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
+	xterm*|rxvt*)
+PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+;;
 *)
-    ;;
+;;
 esac
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
+	test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+	alias ls='ls --color=auto'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
@@ -98,18 +101,18 @@ fi
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+	. ~/.bash_aliases
 fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
+	if [ -f /usr/share/bash-completion/bash_completion ]; then
+		. /usr/share/bash-completion/bash_completion
+	elif [ -f /etc/bash_completion ]; then
+		. /etc/bash_completion
+	fi
 fi
 
 
@@ -154,9 +157,29 @@ alias hlp='less ~/.bashrc_help'
 alias da='date "+%Y-%m-%d %A %T %Z"'
 
 # Alias's to modified commands
+alias regex='sed "s/-/    /" ~/regex|egrep --color ^[^Aa-Zz].?[^Aa-Zz0-9]'
+alias cwlc='/home/joel/Desktop/.programming/java/CWLC/./CWLC'
+alias ipa=' ip add|egrep global|egrep --color "(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)"'
+alias androidstudio='studio.sh & exit'
+alias ig='ig & exit'
+alias surfg='surf google.com & exit'
+alias kdec=kdeconnect-cli
+alias anboxrun=' anbox launch --package=org.anbox.appmgr & exit'
+alias avwifi='nmcli dev wifi'
+alias kdeconnect=kdeconnectd
+alias logout='loginctl terminate-user joel'
 alias gateway='ip r'
+alias music='rhythmbox& exit'
+alias nautilus='nautilus& exit'
+alias inkscape='inkscape & exit'
+alias gimp='gimp & exit'
+alias thunar='thunar & exit'
+alias firefox='firefox-esr   & exit'
+alias tgcli='~/tg/bin/./telegram-cli'
+alias telegram='Telegram/Telegram & exit' 
+alias eclipse='eclipse & exit'
 alias code='code & exit'
-alias evince='evince & exit'
+alias evincee='evince & exit'
 alias text=/opt/sublime_text/sublime_text
 alias dict=sdcv
 alias free='free --mega'
@@ -173,14 +196,14 @@ alias ps='ps auxf'
 alias ping='ping -c 10'
 alias less='less -R'
 alias cls='clear'
-alias apt='sudo apt-get'
+alias apt='sudo apt'
 alias multitail='multitail --no-repeat -c'
-alias freshclam='sudo freshclam'
-alias vi='vim'
-alias svi='sudo vi'
-alias vis='vim "+set si"'
 
 # Change directory aliases
+alias cs='cd "/home/joel/Desktop/.lectures/Computer Science/";ls'
+alias jprog='cd ~/Desktop/.programming/java;ls'
+alias prog='cd ~/Desktop/.programming;ls'
+alias desktop='cd ~/Desktop/'
 alias home='cd ~'
 alias cd..='cd ..'
 alias ..='cd ..'
@@ -219,7 +242,7 @@ alias 755='chmod -R 755'
 alias 777='chmod -R 777'
 alias chmods="cat /home/joel/chmods"
 # Search command line history
-alias h="history | grep "
+alias h="history | tail -n 20"
 
 # Search running processes
 alias p="ps aux | grep "
@@ -259,6 +282,7 @@ alias mkgz='tar -cvzf'
 alias untar='tar -xvf'
 alias unbz2='tar -xvjf'
 alias ungz='tar -xvzf'
+alias mkzip='zip -rv'
 
 # Show all logs in /var/log
 alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f &"
@@ -271,32 +295,6 @@ alias sha1='openssl sha1'
 #######################################################
 
 # Use the best version of pico installed
-edit ()
-{
-	if [ "$(type -t jpico)" = "file" ]; then
-		# Use JOE text editor http://joe-editor.sourceforge.net/
-		jpico -nonotice -linums -nobackups "$@"
-	elif [ "$(type -t nano)" = "file" ]; then
-		nano -c "$@"
-	elif [ "$(type -t pico)" = "file" ]; then
-		pico "$@"
-	else
-		vim "$@"
-	fi
-}
-sedit ()
-{
-	if [ "$(type -t jpico)" = "file" ]; then
-		# Use JOE text editor http://joe-editor.sourceforge.net/
-		sudo jpico -nonotice -linums -nobackups "$@"
-	elif [ "$(type -t nano)" = "file" ]; then
-		sudo nano -c "$@"
-	elif [ "$(type -t pico)" = "file" ]; then
-		sudo pico "$@"
-	else
-		sudo vim "$@"
-	fi
-}
 
 # Extracts any archive(s) (if unp isn't installed)
 extract () {
@@ -304,22 +302,22 @@ extract () {
 		if [ -f $archive ] ; then
 			case $archive in
 				*.tar.bz2)   tar xvjf $archive    ;;
-				*.tar.gz)    tar xvzf $archive    ;;
-				*.bz2)       bunzip2 $archive     ;;
-				*.rar)       rar x $archive       ;;
-				*.gz)        gunzip $archive      ;;
-				*.tar)       tar xvf $archive     ;;
-				*.tbz2)      tar xvjf $archive    ;;
-				*.tgz)       tar xvzf $archive    ;;
-				*.zip)       unzip $archive       ;;
-				*.Z)         uncompress $archive  ;;
-				*.7z)        7z x $archive        ;;
-				*)           echo "don't know how to extract '$archive'..." ;;
-			esac
-		else
-			echo "'$archive' is not a valid file!"
-		fi
-	done
+*.tar.gz)    tar xvzf $archive    ;;
+*.bz2)       bunzip2 $archive     ;;
+*.rar)       rar x $archive       ;;
+*.gz)        gunzip $archive      ;;
+*.tar)       tar xvf $archive     ;;
+*.tbz2)      tar xvjf $archive    ;;
+*.tgz)       tar xvzf $archive    ;;
+*.zip)       unzip $archive       ;;
+*.Z)         uncompress $archive  ;;
+*.7z)        7z x $archive        ;;
+*)           echo "don't know how to extract '$archive'..." ;;
+esac
+else
+	echo "'$archive' is not a valid file!"
+fi
+done
 }
 
 # Searches for text in all files in the current folder
@@ -333,18 +331,6 @@ ftext ()
 	# optional: -F treat search term as a literal, not a regular expression
 	# optional: -l only print filenames and not the matching lines ex. grep -irl "$1" *
 	grep -iIHrn --color=always "$1" . | less -r
-}
-
-
-
-# Copy and go to the directory
-cpg ()
-{
-	if [ -d "$2" ];then
-		cp $1 $2 && cd $2
-	else
-		cp $1 $2
-	fi
 }
 
 # Move and go to the directory
@@ -370,9 +356,9 @@ up ()
 	local d=""
 	limit=$1
 	for ((i=1 ; i <= limit ; i++))
-		do
-			d=$d/..
-		done
+	do
+		d=$d/..
+	done
 	d=$(echo $d | sed 's/^\///')
 	if [ -z "$d" ]; then
 		d=..
@@ -396,108 +382,7 @@ pwdtail ()
 	pwd|awk -F/ '{nlast = NF -1;print $nlast"/"$NF}'
 }
 
-# Show the current distribution
-distribution ()
-{
-	local dtype
-	# Assume unknown
-	dtype="unknown"
-	
-	# First test against Fedora / RHEL / CentOS / generic Redhat derivative
-	if [ -r /etc/rc.d/init.d/functions ]; then
-		source /etc/rc.d/init.d/functions
-		[ zz`type -t passed 2>/dev/null` == "zzfunction" ] && dtype="redhat"
-	
-	# Then test against SUSE (must be after Redhat,
-	# I've seen rc.status on Ubuntu I think? TODO: Recheck that)
-	elif [ -r /etc/rc.status ]; then
-		source /etc/rc.status
-		[ zz`type -t rc_reset 2>/dev/null` == "zzfunction" ] && dtype="suse"
-	
-	# Then test against Debian, Ubuntu and friends
-	elif [ -r /lib/lsb/init-functions ]; then
-		source /lib/lsb/init-functions
-		[ zz`type -t log_begin_msg 2>/dev/null` == "zzfunction" ] && dtype="debian"
-	
-	# Then test against Gentoo
-	elif [ -r /etc/init.d/functions.sh ]; then
-		source /etc/init.d/functions.sh
-		[ zz`type -t ebegin 2>/dev/null` == "zzfunction" ] && dtype="gentoo"
-	
-	# For Mandriva we currently just test if /etc/mandriva-release exists
-	# and isn't empty (TODO: Find a better way :)
-	elif [ -s /etc/mandriva-release ]; then
-		dtype="mandriva"
 
-	# For Slackware we currently just test if /etc/slackware-version exists
-	elif [ -s /etc/slackware-version ]; then
-		dtype="slackware"
-
-	fi
-	echo $dtype
-}
-
-# Show the current version of the operating system
-ver ()
-{
-	local dtype
-	dtype=$(distribution)
-
-	if [ $dtype == "redhat" ]; then
-		if [ -s /etc/redhat-release ]; then
-			cat /etc/redhat-release && uname -a
-		else
-			cat /etc/issue && uname -a
-		fi
-	elif [ $dtype == "suse" ]; then
-		cat /etc/SuSE-release
-	elif [ $dtype == "debian" ]; then
-		lsb_release -a
-		# sudo cat /etc/issue && sudo cat /etc/issue.net && sudo cat /etc/lsb_release && sudo cat /etc/os-release # Linux Mint option 2
-	elif [ $dtype == "gentoo" ]; then
-		cat /etc/gentoo-release
-	elif [ $dtype == "mandriva" ]; then
-		cat /etc/mandriva-release
-	elif [ $dtype == "slackware" ]; then
-		cat /etc/slackware-version
-	else
-		if [ -s /etc/issue ]; then
-			cat /etc/issue
-		else
-			echo "Error: Unknown distribution"
-			exit 1
-		fi
-	fi
-}
-
-# Automatically install the needed support files for this .bashrc file
-install_bashrc_support ()
-{
-	local dtype
-	dtype=$(distribution)
-
-	if [ $dtype == "redhat" ]; then
-		sudo yum install multitail tree joe
-	elif [ $dtype == "suse" ]; then
-		sudo zypper install multitail
-		sudo zypper install tree
-		sudo zypper install joe
-	elif [ $dtype == "debian" ]; then
-		sudo apt-get install multitail tree joe
-	elif [ $dtype == "gentoo" ]; then
-		sudo emerge multitail
-		sudo emerge tree
-		sudo emerge joe
-	elif [ $dtype == "mandriva" ]; then
-		sudo urpmi multitail
-		sudo urpmi tree
-		sudo urpmi joe
-	elif [ $dtype == "slackware" ]; then
-		echo "No install support for Slackware"
-	else
-		echo "Unknown distribution"
-	fi
-}
 
 # Show current network information
 netinfo ()
@@ -620,8 +505,27 @@ unmountpendrive(){
 pendrive(){
 	cd /media/joel/pendrive && la
 }
+tgceejay(){
+	cd /home/joel/Downloads/Programs/telegram &&	./Telegram -many -workdir /home/joel/ceejay/ & exit
+}
 
- 
+dirsize(){ #Recursively  Calculate Total Size of specified Directory
+if [ $# -eq 0 ]		
+then
+	lr |grep ^total|sed s/total//g> ~/dirsize;cd ~/ && java dirsize;printf "  " ;echo $OLDPWD|sed s/\\/home\\/joel\\//~\\//g;bd;
+else
+	olddir=$PWD;cd "$*";lr |grep ^total|sed s/total//g> ~/dirsize;cd ~/ && java dirsize;printf "  " ;echo $OLDPWD|sed s/\\/home\\/joel\\//~\\//g;bd;cd $olddir;
+fi
+}
+filesize(){ #Recursively  Calculate Total Size of FILES within specified Directory
+if [ $# -eq 0 ]	
+then
+	lf |grep ^total|sed s/total//g> ~/dirsize;cd ~/ && java dirsize;printf "   " ;echo $OLDPWD|sed s/\\/home\\/joel\\//~\\//g;bd;
+else
+	olddir=$PWD;cd "$*";lf |grep ^total|sed s/total//g> ~/dirsize;cd ~/ && java dirsize;printf "  " ;echo $OLDPWD|sed s/\\/home\\/joel\\//~\\//g;bd;cd $olddir;
+fi
+}
+
 
 
 
@@ -636,4 +540,15 @@ export JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk-amd64"
 export PATH=$JAVA_HOME/bin:$PATH
 export flutter="/home/joel/flutter"
 export PATH=$flutter/bin:$PATH
+#no need since i apt installed it
+#export M2_HOME="/opt/apache-maven-3.6.1"
+#export PATH=$M2_HOME/bin:$PATH
+export STARDICT_DATA_DIR="/usr/share/stardict"
+export PATH=$STARDICT_DATA_DIR/dic:$PATH
+export eclipse="/home/joel/eclipse/"
+export PATH=$eclipse:$PATH
+export androidstudio='/home/joel/android-studio/bin'
+export PATH=$androidstudio:$PATH
 
+export ig="/home/joel/"
+export PATH=$ig:$PATH
