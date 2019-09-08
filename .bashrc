@@ -157,29 +157,24 @@ alias hlp='less ~/.bashrc_help'
 alias da='date "+%Y-%m-%d %A %T %Z"'
 
 # Alias's to modified commands
+alias tee='tee -a'
+alias t='tldr $*'
 alias regex='sed "s/-/    /" ~/regex|egrep --color ^[^Aa-Zz].?[^Aa-Zz0-9]'
-alias cwlc='/home/joel/Desktop/.programming/java/CWLC/./CWLC'
-alias ipa=' ip add|egrep global|egrep --color "(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)"'
-alias androidstudio='studio.sh & exit'
-alias ig='ig & exit'
-alias surfg='surf google.com & exit'
+alias cwlc='/home/joel/Desktop/programming/java/CWLC/./CWLC'
+alias ipa=' ip add|egrep global|egrep   --color "(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)"'
+alias androidstudio='studio.sh $* >/dev/null 2>&1 &'
+alias ig='ig $* >/dev/null 2>&1 &'
 alias kdec=kdeconnect-cli
-alias anboxrun=' anbox launch --package=org.anbox.appmgr & exit'
+alias anboxrun=' anbox launch --package=org.anbox.appmgr $* >/dev/null 2>&1 &'
 alias avwifi='nmcli dev wifi'
 alias kdeconnect=kdeconnectd
 alias logout='loginctl terminate-user joel'
 alias gateway='ip r'
-alias music='rhythmbox& exit'
-alias nautilus='nautilus& exit'
-alias inkscape='inkscape & exit'
-alias gimp='gimp & exit'
-alias thunar='thunar & exit'
-alias firefox='firefox-esr   & exit'
+alias nautilus='nautilus$* >/dev/null 2>&1 &'
+alias inkscape='inkscape $* >/dev/null 2>&1 &'
+alias thunar='thunar $* >/dev/null 2>&1 &'
 alias tgcli='~/tg/bin/./telegram-cli'
-alias telegram='Telegram/Telegram & exit' 
-alias eclipse='eclipse & exit'
-alias code='code & exit'
-alias evincee='evince & exit'
+alias telegram='Telegram/Telegram $* >/dev/null 2>&1 &' 
 alias text=/opt/sublime_text/sublime_text
 alias dict=sdcv
 alias free='free --mega'
@@ -190,7 +185,7 @@ alias distupgrade='sudo apt update && sudo apt dist-upgrade'
 alias update='sudo apt  update && sudo apt upgrade'
 alias cp='cp -irv'
 alias mv='mv -i'
-alias rm='rm -ivrf'
+alias rm='rm -Ivr'
 alias mkdir='mkdir -p'
 alias ps='ps auxf'
 alias ping='ping -c 10'
@@ -200,10 +195,10 @@ alias apt='sudo apt'
 alias multitail='multitail --no-repeat -c'
 
 # Change directory aliases
-alias cs='cd "/home/joel/Desktop/.lectures/Computer Science/";ls'
-alias jprog='cd ~/Desktop/.programming/java;ls'
-alias prog='cd ~/Desktop/.programming;ls'
-alias desktop='cd ~/Desktop/'
+alias cs='cd "/home/joel/Desktop/lectures/Computer Science/";ls'
+alias jpg='cd ~/Desktop/programming/java;ls'
+alias pg='cd ~/Desktop/programming;ls'
+alias dp='cd ~/Desktop/'
 alias home='cd ~'
 alias cd..='cd ..'
 alias ..='cd ..'
@@ -367,14 +362,14 @@ up ()
 }
 
 #Automatically do an ls after each cd
-# cd ()
-# {
-# 	if [ -n "$1" ]; then
-# 		builtin cd "$@" && ls
-# 	else
-# 		builtin cd ~ && ls
-# 	fi
-# }
+ #cd ()
+ #{
+	#if [ -n "$1" ]; then
+ 	#	builtin cd "$@" && ls
+ 	#else
+ 	#	builtin cd ~ && ls
+ #	fi
+ #}
 
 # Returns the last 2 fields of the working directory
 pwdtail ()
@@ -426,9 +421,9 @@ apachelog ()
 apacheconfig ()
 {
 	if [ -f /etc/httpd/conf/httpd.conf ]; then
-		sedit /etc/httpd/conf/httpd.conf
+		nano /etc/httpd/conf/httpd.conf
 	elif [ -f /etc/apache2/apache2.conf ]; then
-		sedit /etc/apache2/apache2.conf
+		nano /etc/apache2/apache2.conf
 	else
 		echo "Error: Apache config file could not be found."
 		echo "Searching for possible locations:"
@@ -440,15 +435,15 @@ apacheconfig ()
 phpconfig ()
 {
 	if [ -f /etc/php.ini ]; then
-		sedit /etc/php.ini
+		nano /etc/php.ini
 	elif [ -f /etc/php/php.ini ]; then
-		sedit /etc/php/php.ini
+		nano /etc/php/php.ini
 	elif [ -f /etc/php5/php.ini ]; then
-		sedit /etc/php5/php.ini
+		nano /etc/php5/php.ini
 	elif [ -f /usr/bin/php5/bin/php.ini ]; then
-		sedit /usr/bin/php5/bin/php.ini
+		nano /usr/bin/php5/bin/php.ini
 	elif [ -f /etc/php5/apache2/php.ini ]; then
-		sedit /etc/php5/apache2/php.ini
+		nano /etc/php5/apache2/php.ini
 	else
 		echo "Error: php.ini file could not be found."
 		echo "Searching for possible locations:"
@@ -460,17 +455,17 @@ phpconfig ()
 mysqlconfig ()
 {
 	if [ -f /etc/my.cnf ]; then
-		sedit /etc/my.cnf
+		nano /etc/my.cnf
 	elif [ -f /etc/mysql/my.cnf ]; then
-		sedit /etc/mysql/my.cnf
+		nano /etc/mysql/my.cnf
 	elif [ -f /usr/local/etc/my.cnf ]; then
-		sedit /usr/local/etc/my.cnf
+		nano /usr/local/etc/my.cnf
 	elif [ -f /usr/bin/mysql/my.cnf ]; then
-		sedit /usr/bin/mysql/my.cnf
+		nano /usr/bin/mysql/my.cnf
 	elif [ -f ~/my.cnf ]; then
-		sedit ~/my.cnf
+		nano ~/my.cnf
 	elif [ -f ~/.my.cnf ]; then
-		sedit ~/.my.cnf
+		nano ~/.my.cnf
 	else
 		echo "Error: my.cnf file could not be found."
 		echo "Searching for possible locations:"
@@ -506,7 +501,7 @@ pendrive(){
 	cd /media/joel/pendrive && la
 }
 tgceejay(){
-	cd /home/joel/Downloads/Programs/telegram &&	./Telegram -many -workdir /home/joel/ceejay/ & exit
+	 ~/Downloads/Programs/telegram/./Telegram -many -workdir ~/ceejay $* >/dev/null 2>&1 &
 }
 
 dirsize(){ #Recursively  Calculate Total Size of specified Directory
@@ -527,8 +522,23 @@ fi
 }
 
 
+#Lauch Gui application and redirect sdtout and stderr to /dev/null to prevent terminal logging
 
-
+mpv() { command mpv "$@" > /dev/null 2>&1 & }
+chrome() { command chromium "$@" > /dev/null 2>&1 & }
+evince() { command evince  "$@" > /dev/null 2>&1 & }
+surf() { command surf "$@" > /dev/null 2>&1 & }
+music() { command rhythmbox "$@" > /dev/null 2>&1 & }
+gimp() { command  gimp "$@" > /dev/null 2>&1 & }
+firefox() { command  firefox-esr "$@" > /dev/null 2>&1 & }
+eclipse () { command eclipse "$@" > /dev/null 2>&1 & }
+code() { command  code "$@" > /dev/null 2>&1 & }
+#() { command  "$@" > /dev/null 2>&1 & }
+#() { command  "$@" > /dev/null 2>&1 & }
+#() { command  "$@" > /dev/null 2>&1 & }
+#() { command  "$@" > /dev/null 2>&1 & }
+#() { command  "$@" > /dev/null 2>&1 & }
+#() { command  "$@" > /dev/null 2>&1 & }
 
 
 ####EXPORTS######
