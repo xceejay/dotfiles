@@ -195,6 +195,7 @@ alias apt='sudo apt'
 alias multitail='multitail --no-repeat -c'
 
 # Change directory aliases
+alias sshs='cd ~/sshserver'
 alias cs='cd "/home/joel/Desktop/lectures/Computer Science/";ls'
 alias jpg='cd ~/Desktop/programming/java;ls'
 alias pg='cd ~/Desktop/programming;ls'
@@ -524,21 +525,20 @@ fi
 
 #Lauch Gui application and redirect sdtout and stderr to /dev/null to prevent terminal logging
 
-mpv() { command mpv "$@" > /dev/null 2>&1 & }
-chrome() { command chromium "$@" > /dev/null 2>&1 & }
-evince() { command evince  "$@" > /dev/null 2>&1 & }
-surf() { command surf "$@" > /dev/null 2>&1 & }
-music() { command rhythmbox "$@" > /dev/null 2>&1 & }
-gimp() { command  gimp "$@" > /dev/null 2>&1 & }
-firefox() { command  firefox-esr "$@" > /dev/null 2>&1 & }
-eclipse () { command eclipse "$@" > /dev/null 2>&1 & }
-code() { command  code "$@" > /dev/null 2>&1 & }
-#() { command  "$@" > /dev/null 2>&1 & }
-#() { command  "$@" > /dev/null 2>&1 & }
-#() { command  "$@" > /dev/null 2>&1 & }
-#() { command  "$@" > /dev/null 2>&1 & }
-#() { command  "$@" > /dev/null 2>&1 & }
-#() { command  "$@" > /dev/null 2>&1 & }
+mpv() { command mpv "$@" > /dev/null 2>&1 & disown ;}
+chrome() { command chromium "$@" > /dev/null 2>&1 & disown ;}
+evince() { command evince  "$@" > /dev/null 2>&1 & disown ;}
+surf() { command surf "$@" > /dev/null 2>&1 & disown ;}
+music() { command rhythmbox "$@" > /dev/null 2>&1 & disown ;}
+gimp() { command gimp "$@" > /dev/null 2>&1 & disown ;}
+firefox() { command  firefox-esr "$@" > /dev/null 2>&1 & disown ;}
+eclipse () { command eclipse "$@" > /dev/null 2>&1 & disown ;}
+code() { command  code "$@" > /dev/null 2>&1 & disown ;}
+#() { command  "$@" > /dev/null 2>&1 & disown ;}
+#() { command  "$@" > /dev/null 2>&1 & disown ;}
+#() { command  "$@" > /dev/null 2>&1 & disown ;}
+#() { command  "$@" > /dev/null 2>&1 & disown ;}
+#() { command  "$@" > /dev/null 2>&1 & disown ;}
 
 
 ####EXPORTS######
