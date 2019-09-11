@@ -195,8 +195,13 @@ alias apt='sudo apt'
 alias multitail='multitail --no-repeat -c'
 
 # Change directory aliases
+alias doc='cd ~/Documents'
+alias vid='cd ~/Downloads/Video'
+alias cmpr='cd ~/Downloads/Compressed'
+alias dwn='cd ~/Downloads'
+alias mvs='cd  ~/Desktop/movies'
 alias sshs='cd ~/sshserver'
-alias cs='cd "/home/joel/Desktop/lectures/Computer Science/";ls'
+alias cs='cd ~/Desktop/lectures/Computer\ Science/;ls'
 alias jpg='cd ~/Desktop/programming/java;ls'
 alias pg='cd ~/Desktop/programming;ls'
 alias dp='cd ~/Desktop/'
@@ -206,6 +211,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
+alias diraliases='sed '197,213!d' .bashrc|egrep  --color '^alias' '
 
 # cd into the old directory
 alias bd='cd "$OLDPWD"'
