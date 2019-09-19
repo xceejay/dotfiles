@@ -150,13 +150,22 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # Edit this .bashrc file
 alias ebrc='edit ~/.bashrc'
 
-# Show help for this .bashrc file
-alias hlp='less ~/.bashrc_help'
+# Show help for this .bashrc file2alias hlp='less ~/.bashrc_hel2'
 
 # alias to show the date
 alias da='date "+%Y-%m-%d %A %T %Z"'
 
 # Alias's to modified commands
+alias usdb1='sudo umount /dev/sdb1'
+alias usdb2='sudo umount /dev/sdb2'
+alias usdc1='sudo umount /dev/sdc1'
+alias usdc2='sudo umount /dev/sdc2'
+alias msdb1='sudo mount -w /dev/sdb1 /media/joel/disk'
+alias msdb2='sudo mount -w /dev/sdb2 /media/joel/disk'
+alias msdc1='sudo mount -w /dev/sdc1 /media/joel/disk'
+alias msdc2='sudo mount -w /dev/sdc2 /media/joel/disk'
+alias timetable="cgrep  '(^([a-zA-Z]+)|[0-9]+-[0-9]+am||[0-9]+-[0-9]+pm|[0-9][0-9][a-z][a-z]+|am+|pm+)' ~/timetable" 
+alias upvote='sudo systemctl restart upvotebot.service'
 alias tee='tee -a'
 alias t='tldr $*'
 alias regex='sed "s/-/    /" ~/regex|egrep --color ^[^Aa-Zz].?[^Aa-Zz0-9]'
@@ -181,6 +190,7 @@ alias free='free --mega'
 alias terminal='xfce4-terminal'
 alias nmap='nmap -sP'
 alias mount="mount -w"
+alias cgrep='egrep --color=always'
 alias distupgrade='sudo apt update && sudo apt dist-upgrade'
 alias update='sudo apt  update && sudo apt upgrade'
 alias cp='cp -irv'
@@ -195,13 +205,16 @@ alias apt='sudo apt'
 alias multitail='multitail --no-repeat -c'
 
 # Change directory aliases
-alias doc='cd ~/Documents'
-alias vid='cd ~/Downloads/Video'
-alias cmpr='cd ~/Downloads/Compressed'
-alias dwn='cd ~/Downloads'
-alias mvs='cd  ~/Desktop/movies'
-alias sshs='cd ~/sshserver'
-alias cs='cd ~/Desktop/lectures/Computer\ Science/;ls'
+alias disk='cd /media/joel/disk;la'
+alias lec21='cd ~/Desktop/lectures/level2001;la'
+alias lec='cd ~/Desktop/lectures;la'
+alias doc='cd ~/Documents;ls'
+alias vid='cd ~/Downloads/Video;lt'
+alias cmpr='cd ~/Downloads/Compressed;lt'
+alias dwn='cd ~/Downloads;lt'
+alias mvs='cd  ~/Desktop/movies;ls'
+alias sshs='cd ~/sshserver;la'
+alias cs='cd ~/Desktop/lectures/computer\ science/;ls'
 alias jpg='cd ~/Desktop/programming/java;ls'
 alias pg='cd ~/Desktop/programming;ls'
 alias dp='cd ~/Desktop/'
@@ -211,7 +224,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
-alias diraliases='sed '197,213!d' .bashrc|egrep  --color '^alias' '
+alias diraliases='sed '208,226!d' .bashrc|egrep  --color '^alias' '
 
 # cd into the old directory
 alias bd='cd "$OLDPWD"'
@@ -497,19 +510,7 @@ trim()
 	var="${var%"${var##*[![:space:]]}"}"  # remove trailing whitespace characters
 	echo -n "$var"
 }
-mountpendrive(){
 
-	sudo mount /dev/sdb1 /media/joel/pendrive && pendrive
-}
-unmountpendrive(){
-	home && sudo umount /dev/sdb1  
-}
-pendrive(){
-	cd /media/joel/pendrive && la
-}
-tgceejay(){
-	 ~/Downloads/Programs/telegram/./Telegram -many -workdir ~/ceejay $* >/dev/null 2>&1 &
-}
 
 dirsize(){ #Recursively  Calculate Total Size of specified Directory
 if [ $# -eq 0 ]		
@@ -527,6 +528,9 @@ else
 	olddir=$PWD;cd "$*";lf |grep ^total|sed s/total//g> ~/dirsize;cd ~/ && java dirsize;printf "  " ;echo $OLDPWD|sed s/\\/home\\/joel\\//~\\//g;bd;cd $olddir;
 fi
 }
+vidtomp3(){
+	 ffmpeg -i "$1" -vn "$2".mp3
+}
 
 
 #Lauch Gui application and redirect sdtout and stderr to /dev/null to prevent terminal logging
@@ -540,12 +544,13 @@ gimp() { command gimp "$@" > /dev/null 2>&1 & disown ;}
 firefox() { command  firefox-esr "$@" > /dev/null 2>&1 & disown ;}
 eclipse () { command eclipse "$@" > /dev/null 2>&1 & disown ;}
 code() { command  code "$@" > /dev/null 2>&1 & disown ;}
+transmission() { command  transmission-gtks "$@" > /dev/null 2>&1 & disown ;}
+torbrowser() { command  torbrowser-launcher  "$@" > /dev/null 2>&1 & disown ;}
+idea() { command  idea.sh  "$@" > /dev/null 2>&1 & disown ;}
+tgceejay() { command  ~/Downloads/Programs/telegram/./Telegram -many -workdir ~/ceejay "$@" > /dev/null 2>&1 & disown ;}
+qtcreator() { command  qtcreator  "$@" > /dev/null 2>&1 & disown ;}
+lowriter() { command  lowriter  "$@" > /dev/null 2>&1 & disown ;}
 #() { command  "$@" > /dev/null 2>&1 & disown ;}
-#() { command  "$@" > /dev/null 2>&1 & disown ;}
-#() { command  "$@" > /dev/null 2>&1 & disown ;}
-#() { command  "$@" > /dev/null 2>&1 & disown ;}
-#() { command  "$@" > /dev/null 2>&1 & disown ;}
-
 
 ####EXPORTS######
 #find /usr/lib/jvm/java-1.x.x-openjdk
@@ -565,6 +570,8 @@ export eclipse="/home/joel/eclipse/"
 export PATH=$eclipse:$PATH
 export androidstudio='/home/joel/android-studio/bin'
 export PATH=$androidstudio:$PATH
-
 export ig="/home/joel/"
 export PATH=$ig:$PATH
+export idea="~/idea/bin"
+export PATH=$idea:$PATH
+
