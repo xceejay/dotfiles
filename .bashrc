@@ -156,12 +156,18 @@ alias ebrc='edit ~/.bashrc'
 alias da='date "+%Y-%m-%d %A %T %Z"'
 
 # Alias's to modified commands
+alias hist='$(tac  .bash_history|dmenu -l 35)'
+alias vvu='~/./captiveportal'
 alias usdb1='sudo umount /dev/sdb1'
 alias usdb2='sudo umount /dev/sdb2'
+alias usdb3='sudo umount /dev/sdb3'
+alias usdb4='sudo umount /dev/sdb4'
 alias usdc1='sudo umount /dev/sdc1'
 alias usdc2='sudo umount /dev/sdc2'
 alias msdb1='sudo mount -w /dev/sdb1 /media/joel/disk'
 alias msdb2='sudo mount -w /dev/sdb2 /media/joel/disk'
+alias msdb3='sudo mount -w /dev/sdb3 /media/joel/disk'
+alias msdb4='sudo mount -w /dev/sdb4 /media/joel/disk'
 alias msdc1='sudo mount -w /dev/sdc1 /media/joel/disk'
 alias msdc2='sudo mount -w /dev/sdc2 /media/joel/disk'
 alias timetable="cgrep  '(^([a-zA-Z]+)|[0-9]+-[0-9]+am||[0-9]+-[0-9]+pm|[0-9][0-9][a-z][a-z]+|am+|pm+)' ~/timetable" 
@@ -179,9 +185,8 @@ alias avwifi='nmcli dev wifi'
 alias kdeconnect=kdeconnectd
 alias logout='loginctl terminate-user joel'
 alias gateway='ip r'
-alias nautilus='nautilus$* >/dev/null 2>&1 &'
 alias inkscape='inkscape $* >/dev/null 2>&1 &'
-alias thunar='thunar $* >/dev/null 2>&1 &'
+alias thunar='thunar &'
 alias tgcli='~/tg/bin/./telegram-cli'
 alias telegram='Telegram/Telegram $* >/dev/null 2>&1 &' 
 alias text=/opt/sublime_text/sublime_text
@@ -532,6 +537,8 @@ vidtomp3(){
 	 ffmpeg -i "$1" -vn "$2".mp3
 }
 
+###SYNTAX FOR DMENU
+#$(grep  "surf [0-1]"* .bash_history|dmenu -l 30)
 
 #Lauch Gui application and redirect sdtout and stderr to /dev/null to prevent terminal logging
 
@@ -550,6 +557,7 @@ idea() { command  idea.sh  "$@" > /dev/null 2>&1 & disown ;}
 tgceejay() { command  ~/Downloads/Programs/telegram/./Telegram -many -workdir ~/ceejay "$@" > /dev/null 2>&1 & disown ;}
 qtcreator() { command  qtcreator  "$@" > /dev/null 2>&1 & disown ;}
 lowriter() { command  lowriter  "$@" > /dev/null 2>&1 & disown ;}
+nautilus() { command  nautilus "$PWD" > /dev/null 2>&1 & disown ;}
 #() { command  "$@" > /dev/null 2>&1 & disown ;}
 
 ####EXPORTS######
@@ -574,4 +582,8 @@ export ig="/home/joel/"
 export PATH=$ig:$PATH
 export idea="~/idea/bin"
 export PATH=$idea:$PATH
-
+export GOBIN=/home/joel/bin
+export PATH=$GOBIN:$PATH
+export RHN_HS_IP="192.168.0.254:8090"
+export RHN_HS_USERNAME="219IT01090003"
+export RHN_HS_PASSWORD="neymar1234"
