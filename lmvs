@@ -1,0 +1,3 @@
+#!/bin/bash
+shopt -s expand_aliases
+	mpv $(lf *.[mw][eokp][bv4]*|cut -c 13-|sed s/matches//g|dmenu )  &

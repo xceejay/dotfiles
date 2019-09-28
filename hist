@@ -1,0 +1,5 @@
+#!/bin/bash
+alias dmenu='dmenu -l 30 -nb black'
+shopt -s expand_aliases
+yes=$(tac  ~/.bash_history|dmenu)
+$yes &

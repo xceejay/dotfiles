@@ -1,6 +1,4 @@
 
-
-
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -20,7 +18,7 @@ shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
-HISTFILESIZE=2000
+HISTFILESIZE= #infinite history
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -74,6 +72,9 @@ PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
 *)
 ;;
 esac
+stty -ixon #disable terminal pausing
+
+shopt -s autocd #allows autocd into directory by just typing dir name
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -125,7 +126,7 @@ fi
 #######################################################
 # MACHINE SPECIFIC ALIAS'S
 #######################################################			
-
+shopt -s expand_aliases
 # Alias's for SSH
 alias SERVERNAME='sudo ssh google.com -l joel -p 22'
 
@@ -156,8 +157,8 @@ alias ebrc='edit ~/.bashrc'
 alias da='date "+%Y-%m-%d %A %T %Z"'
 
 # Alias's to modified commands
-alias hist='$(tac  .bash_history|dmenu -l 35)'
-alias vvu='~/./captiveportal'
+alias dmenu='dmenu -l 30 -nb black'
+alias vvu='surf 192.168.0.254:8090'
 alias usdb1='sudo umount /dev/sdb1'
 alias usdb2='sudo umount /dev/sdb2'
 alias usdb3='sudo umount /dev/sdb3'
@@ -186,7 +187,6 @@ alias kdeconnect=kdeconnectd
 alias logout='loginctl terminate-user joel'
 alias gateway='ip r'
 alias inkscape='inkscape $* >/dev/null 2>&1 &'
-alias thunar='thunar &'
 alias tgcli='~/tg/bin/./telegram-cli'
 alias telegram='Telegram/Telegram $* >/dev/null 2>&1 &' 
 alias text=/opt/sublime_text/sublime_text
@@ -208,15 +208,15 @@ alias less='less -R'
 alias cls='clear'
 alias apt='sudo apt'
 alias multitail='multitail --no-repeat -c'
-
+alias yt='youtube-dl --add-metadata -ic'
 # Change directory aliases
 alias disk='cd /media/joel/disk;la'
-alias lec21='cd ~/Desktop/lectures/level2001;la'
-alias lec='cd ~/Desktop/lectures;la'
+alias lec21='cd ~/Desktop/lectures/level2001;ls'
+alias lec='cd ~/Desktop/lectures;ls'
 alias doc='cd ~/Documents;ls'
 alias vid='cd ~/Downloads/Video;lt'
 alias cmpr='cd ~/Downloads/Compressed;lt'
-alias dwn='cd ~/Downloads;lt'
+alias dwn='cd ~/Downloads;ls'
 alias mvs='cd  ~/Desktop/movies;ls'
 alias sshs='cd ~/sshserver;la'
 alias cs='cd ~/Desktop/lectures/computer\ science/;ls'
@@ -515,7 +515,7 @@ trim()
 	var="${var%"${var##*[![:space:]]}"}"  # remove trailing whitespace characters
 	echo -n "$var"
 }
-
+disk=/media/joel/disk
 
 dirsize(){ #Recursively  Calculate Total Size of specified Directory
 if [ $# -eq 0 ]		
@@ -537,12 +537,16 @@ vidtomp3(){
 	 ffmpeg -i "$1" -vn "$2".mp3
 }
 
+
+
+
 ###SYNTAX FOR DMENU
 #$(grep  "surf [0-1]"* .bash_history|dmenu -l 30)
 
 #Lauch Gui application and redirect sdtout and stderr to /dev/null to prevent terminal logging
 
 mpv() { command mpv "$@" > /dev/null 2>&1 & disown ;}
+vlc() { command vlc "$@" > /dev/null 2>&1 & disown ;}
 chrome() { command chromium "$@" > /dev/null 2>&1 & disown ;}
 evince() { command evince  "$@" > /dev/null 2>&1 & disown ;}
 surf() { command surf "$@" > /dev/null 2>&1 & disown ;}
@@ -557,7 +561,8 @@ idea() { command  idea.sh  "$@" > /dev/null 2>&1 & disown ;}
 tgceejay() { command  ~/Downloads/Programs/telegram/./Telegram -many -workdir ~/ceejay "$@" > /dev/null 2>&1 & disown ;}
 qtcreator() { command  qtcreator  "$@" > /dev/null 2>&1 & disown ;}
 lowriter() { command  lowriter  "$@" > /dev/null 2>&1 & disown ;}
-nautilus() { command  nautilus "$PWD" > /dev/null 2>&1 & disown ;}
+nautilus() { command  nautilus "$1" > /dev/null 2>&1 & disown ;}
+images(){ command sxiv -t *>/dev/null 2>&1 & disown;}
 #() { command  "$@" > /dev/null 2>&1 & disown ;}
 
 ####EXPORTS######
@@ -583,7 +588,9 @@ export PATH=$ig:$PATH
 export idea="~/idea/bin"
 export PATH=$idea:$PATH
 export GOBIN=/home/joel/bin
-export PATH=$GOBIN:$PATH
-export RHN_HS_IP="192.168.0.254:8090"
-export RHN_HS_USERNAME="219IT01090003"
-export RHN_HS_PASSWORD="neymar1234"
+export PATH=$GOBIN:$PATH#test comment
+export scripts=/home/joel/scripts
+export PATH=$scripts:$PATH
+#test comment
+#test comment
+#test comment

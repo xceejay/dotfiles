@@ -1,0 +1,3 @@
+#!/bin/bash
+shopt -s expand_aliases
+vlc $(lf *.m[okp][v4]|cut -c 13-|sed s/matches//g|dmenu) &
