@@ -1,0 +1,2 @@
+#!/bin/bash
+echo /home/joel/.bashrc|entr -p notify-send 'Bashrc updated' 

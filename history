@@ -1,0 +1,1137 @@
+     pandoc ass2.md -o assignment2.pdf
+     evince assignment2.pdf 
+     vim ass2.md
+     pandoc ass2.md -o assignment2.pdf
+     evince assignment2.pdf , mj;n-pp;o0juh6yh6yhj8i9op;[']
+     pandoc ass2.md -o assignment2.pdf//hist
+     hsit
+     hist
+     lowriter ass1.md
+    lowriter ass2.md
+    lowriter assignment2.pdf 
+    history > "/home/joel/scripts/history";sed  -i s/"[0-9]\+ "//g "/home/joel/scripts/history" 
+     $(tac  /home/joel/scripts/history|dmenu -l -nb black)
+    ls
+    lec21
+    history > "/home/joel/scripts/history";sed  -i s/"[0-9]\+ "//g "/home/joel/scripts/history" 
+     $(tac  /home/joel/scripts/history|dmenu -l -nb black)
+    sudo bash
+    firefox
+    dir
+    clear
+    tgceejay 
+    lec21
+    cd music/
+    ls
+    cd ass/
+    ls
+    pdftotext assignment2.pdf 
+    clear
+    ls
+    lowriter assignment2.txt 
+    tgceejay 
+    man screen
+    t screen
+    ebrc
+    echo "#js" >> .bashrc
+    text
+    hist
+    nmcli networking on
+    killall xfce4-terminal
+    history > "$scripts/history";sed  -i s/"[0-9]\+ "//g "$scripts/history" 
+     $(tac  /home/joel/scripts/history|dmenu -l -nb black)
+    enu -l -nb black)
+    history > "/home/joel/scripts/history";sed  -i s/"[0-9]\+ "//g "/home/joel/scripts/history" 
+     $(tac  /home/joel/scripts/history|dmenu -l -nb black)
+    ls
+    clear
+    lt
+    sudo bash
+    ls
+    sudo bash
+    ls
+    clear
+    sudo bash
+    sudo bash
+    systemctl suspend
+    lec21
+    sudo bash
+    ls
+    clear
+    lt
+    text
+    cd scripts/
+    lec21
+    mkdir  networking
+    cd networking/
+    wget https://elearning.vvu.edu.gh/course/view.php?id=192
+    clear
+    ls
+    firefox 'view.php?id=192'
+    apt search table
+    apt search ^table
+    apt search ^table$
+    music
+    sudo apt install bat
+    lsblk
+    clear
+    lt
+    clear
+    do
+    if [ls = ls]; echo "yep"; else
+    if [ls = ls]; echo "yep"; else echo "nope"
+    ckear
+    clear
+    if
+    clear
+    grep if .bashrc
+    clear
+    if [ls=ls]; then echo "yep"; else echo "nope"; fi
+    if [$ls=$ls]; then echo "yep"; else echo "nope"; fi
+    clear
+    if [ssh = ls]; then echo "yep"; else echo "nope"; fi
+    if [$scripts=/home/joel/scripts]; then echo "yep"; else echo "nope"; fi
+    if [$scripts = /home/joel/scripts]; then echo "yep"; else echo "nope"; fi
+    if [ $scripts = /home/joel/scripts]; then echo "yep"; else echo "nope"; fi
+    if ["$scripts" = /home/joel/scripts]; then echo "yep"; else echo "nope"; fi
+    if [$scripts= =e/joel/scripts]; then echo "yep"; else echo "nope"; fi
+    clear
+    cd Desktop/
+   lec21
+   hist
+   if ["$scripts" -eq /home/joel/scripts]; then echo "yep"; else echo "nope"; fi
+   ls
+   clear
+   lt
+   htop
+   clear
+   lt
+   clear
+   sudo bash
+   text
+   mvs
+   lmvs
+   sudo apt install foreui
+   dwn
+   extract ForeUI.tar.gz 
+   clear
+   ls
+   cd fore
+   cd ForeUI/
+   ls
+   mx ForeUI.exe 
+   ls
+   cat ForeUI.exe 
+   clear
+   ls
+   mx launch.sh 
+   ./launch.sh 
+   firefox google.com
+   clear
+   ls
+   lt
+   lcear
+   clear
+   acpi 
+   ls
+   clear
+   evince
+   mvs
+   cd Tv\ Shows/
+   cd THE\ BOYS/
+   ls
+   clear
+   lmvs
+   text
+   cd $scripts
+   ls
+   text lmvs
+   pdf
+   man pdftotext
+   ls
+   clear
+   lt
+   ls
+   lt
+   lw
+   ld
+   ldir
+   clear
+   dir
+   clear
+   mvs
+   cd The\ Wolf\ of\ Wall\ Street\ \(2013\)/
+   ks
+   clear
+   ..
+   cd Tv\ Shows/
+   cd THE\ BOYS/
+   ls
+   cear
+   clear
+   lmvs
+   ..
+   ls
+   ..
+   ls
+   lmvs
+   ls
+   Tv\ Shows/
+   ls
+   cd THE\ BOYS/
+   ;s
+   ls
+   lmvs
+   mvs
+   Tv\ Shows/
+   clear
+   ls
+   cd Teen\ Titans\ Go/
+   ls
+   cd Teen\ Titans\ Go\ Season\ 1\ 720p\ loadstone2k12/
+   clear;ls
+   lmvs
+   clear:lmvs
+   clear;lmvs
+   clear:lmvs
+   clear;lmvs
+   ls
+   clear
+   lt
+   clear
+   sudo bash
+   clear
+   ls
+   clear
+   firefox
+   wifi on
+   nmcli dev wifi
+   clear
+   nmcli networking connectivity 
+   nmcli status
+   nmcli connection 
+   clear
+   hist
+   surf https://192.168.0.254:8090/httpclient.html
+   surf http://192.168.0.254:8090/
+   hist
+   tgceejay 
+   firefox
+   history
+   clear
+   lt
+   text
+   text .bashrc
+   vvu 
+   hist
+   ls|dmenu 
+   t dmeny
+   t dmenu
+   t ls
+   t man
+   clear
+   t "ls"
+   clear
+   t "dmenu"
+   man dmenu
+   ls|dmenu -f
+   ls|dmenu 
+   man dmenu
+   dwm
+   apt search dwm
+   man dmenu
+   ls|dmenu -b
+   man dmenu
+   ls|dmenu -p yes
+   ls|dmenu -p Do you want to open this?
+   ls|dmenu -p "Do you want to open this?"
+   ls|dmenu -p "Do you want to open this?" -p yes -p no
+   clear
+   man dmenu
+   ls|dmenu -fn "Source Code Pro Bold"
+   ls|dmenu -fn "Source Code Pro bold"
+   ls|dmenu -fn "Source Code Pro"
+   ls|dmenu -fn "manrope"
+   clear
+   man dmenu
+   firefox
+   ls
+   clear
+   lt
+   cat typescript 
+   rm typescript 
+   man script
+   tgceejay 
+   htop
+   htop|dmenu
+   top|dmenu
+   ps|dmenu
+   lec21
+   cd database/
+   ls
+   cat notes.md 
+   cd assignments/
+   ls
+   vim assignment2.md
+   c;ear
+   clear
+   ls
+   lowriter assignment2.odt
+   man lowrite
+   man lowriter
+   lowriter 
+   lsblk
+   msdb1
+   clear
+   ls
+   clear
+   lt
+   clear
+   disk
+   lec21;database
+   ls
+   cd assignments/
+   ls
+   cp assignment2.pdf $disk
+   sudo cp assignment2.pdf $disk
+   clear
+   usdb1
+   vvu
+   lec21
+   cd database/
+   cd assignments/
+   evince assignment2.pdf 
+   nmcli dev
+   w
+   clear
+   lt
+   mvs
+   cd Tv\ Shows/
+   wifi off
+   ls
+   cd THE\ BOYS/
+   ls
+   lmvs
+   wifi on
+   nmcli dev wifi
+   wifi off
+   lmvs
+   ls
+   lec21;database;assignments
+   lowriter assignment2.odt 
+   lodraw 
+   lowriter assignment2.odt 
+   evince assignment2.pdf 
+   lsblk
+   msdb1
+   cp assignment2.pdf $disk
+   sudo cp assignment2.pdf $disk
+   clear
+   disk
+   ls assignment2.pdf 
+   evince assignment2.pdf 
+   usdb1
+   wifi off
+   cd Pictures/
+   ls
+   cd random/
+   ls calibre
+   ..
+   f calibre
+   his
+   hist
+   wifi on
+   nmcli dev wifi
+   nmcli devi wifi connect VVUITS 
+   clear
+   firefox
+   clear
+   ps java
+   p java
+   clear
+   lec21;database
+   clear
+   ls
+   calibre
+   nmcli connection 
+   xfce4-panel -r
+   loginctl terminate-user joel
+   rebootsafe
+   sudo reboot
+   ldir|dmenu
+   ldir|cut -c 15-|dmenu
+   ldir|cut -c 25-|dmenu
+   ldir|cut -c 35-|dmenu
+   ldir|cut -c 45-|dmenu
+   ldir|cut -c 50-|dmenu
+   ldir|cut -c 55-|dmenu
+   ldir|cut -c 54-|dmenu
+   cls
+   htop
+   lec21
+   cd database/
+   sl
+   ls
+   vim notes.md 
+   cls
+   man clear
+   clear -x
+   clear -x;clear -x
+   text
+   ufw
+   sudo bash
+   clear
+   man screenfetch 
+   screenfetch -D "MACOS X"
+   screenfetch -D "ARCH"
+   screenfetch -D "KALI"
+   clear
+   usdb1
+   lsblk
+   msdb1
+   mvs
+   cd Tv\ Shows/
+   ls
+   sudo cp -r THE\ BOYS/ $disk
+   lsblk
+   msdb
+   sudo mount -w /dev/sdb $disk
+   disk
+   bd
+   sudo cp -r THE\ BOYS/ $disk
+   usdb1
+   usdb
+   sudo umount /dev/sdb 
+   acpi
+   man sxic
+   man sxiv
+   wifi on
+   nmcli dev wifi
+   wifi off
+   clear
+   loginctl terminate-user joel
+   mvs
+   cd Tv\ Shows/
+   ls
+   cd THE\ BOYS/
+   ls
+   lmvs
+   disk
+   clear
+   bd
+   lmvs
+   cd project
+   ..
+   pg
+   clear
+   ls
+   cd c\&c++/
+   ls
+   cd c++/
+   ls
+   cd learnc++/
+   ls
+   clear
+   cd learnEc/
+   ls
+   clear
+   ls
+   cd project
+   ls
+   clear
+   ls
+   ./a.out 
+   clear
+   ./a.out 
+   clear
+   ls
+   clear
+   terminal
+   ls
+   clear
+   cat bin.txt 
+   clear
+   evince
+   lsblk
+   clear
+   vvu
+   firefox
+   vid 
+   yt https://www.youtube.com/watch?v=Ag0AQDa3PmU;mv Ag0AQDa3PmU
+   yt https://www.youtube.com/watch?v=Ag0AQDa3PmU;mv Ag0AQDa3PmU kodak
+   clear
+   yt https://www.youtube.com/watch?v=Ag0AQDa3PmU;mv Ag0AQDa3PmU kodak.mkv
+   clear
+   lec21
+   cd database/
+   ls
+   evince notes.pdf 
+   ..
+   ls
+   cd Computer\ Organization/
+   ls
+   evince notes1.pdf 
+   cat assignments 
+   evince organization.pdf 
+   wifi on
+   nmcli dev wifi 
+   evince
+   tgceejay 
+   vid
+   youtube-dl https://www.youtube.com/watch?v=FNZqj16XYrs&t=11s
+   firefox
+   clear
+   lt
+   firefox
+   clear
+   lt
+   clear
+   firefox
+   mvs
+   cd Tv\ Shows/
+   ls
+   cd THE\ BOYS/
+   ls
+   lmvs
+   hist
+   history > "/home/joel/scripts/history";sed  -i s/"[0-9]\+ "//g "/home/joel/scripts/history" 
+    $(tac  /home/joel/scripts/history|dmenu -l -nb black)
+   history > "/home/joel/scripts/history";sed  -i s/"[0-9]\+ "//g "/home/joel/scripts/history" 
+    $(tac  /home/joel/scripts/history|dmenu -l -nb black)
+   nmcli dev wifi
+   wifi of
+   wifi off
+   wifi on
+   awwifi
+   avwifi
+   clear
+   vvu
+   vvu
+   firefox
+   clear
+   lt
+   lec12
+   lec21
+   cd Computer\ Organization/
+   ls
+   cat assignments 
+   dwn
+   cd minimal/
+   git clone https://github.com/MinhasKamal/CuteVirusCollection
+   evince
+   tgceejay 
+   ls
+   clear
+   lt
+   vvu
+   firefox
+   neofetch 
+   clear
+   sudo apt update
+   vvu
+   wifi off
+   wifi on
+   vvu
+   firefox
+   logout
+   man chmod
+   firefox
+   lec21
+   database/
+   ls
+   evince notes.pdf 
+   vvu
+   nmcli devi wifi
+   tgceejay
+   man ufw
+   telegram
+   lec21
+   cat *
+   neofetch 
+   clear
+   screenfetch -D "Rice"
+   clear
+   screenfetch -D "Android"
+   screenfetch -D "ANDROID"
+   CLEAR
+   clear
+   wifi off
+   wifi on
+   lec21
+   cd Computer\ Organization/
+   ls
+   mupdf organization.pdf 
+   man mupdf
+   mupdf -r organization.pdf 
+   mupdf -r  organization.pdf 
+   mupdf -r organization.pdf 
+   mupdf -r organization.pdf &
+   man mupdf
+   notify-send Good Morning
+   notify-send Good
+   man notify-send 
+   n
+   notify-send -i Pictures/random/adele 
+   notify-send -i Pictures/random/adele hi
+   clear
+   notify-send -I Pictures/random/adele hi
+   notify-send -i Pictures/random/adele hi
+   cd Pictures/random/
+   sxiv adele 
+   notify-send -i Pictures/random/adele hi
+   mupdf ls
+   lec21
+   mupdf mycourses 
+   cd Computer\ Organization/
+   ls
+   mupdf notes.pdf 
+   lec21
+   cd Computer\ Organization/
+   s
+   ls
+   mupdf notes.pdf 
+   clear
+   aasasasa
+   clear
+   lt
+   lec21
+   cd database/
+   ls
+   ..
+   ls
+   cd computer\ science/
+   ls
+   cd crash\ course/
+   ls
+   lmvs
+   rename s/"\-Youtube"//g *
+   clear
+   ls
+   rename s/"-Youtube"//g *
+   ls
+   rename s/\-Youtube//g *
+   ls
+   rename s/\\-Youtube//g *
+   ls
+   clear
+   rename s/'-Youtube'//g *
+   ls
+   rename s/"\-Youtube"//g *
+   ls
+   rename 's/\-Youtube//g' *
+   ls
+   rename 's/\-Youtube//' *
+   ls
+   clear
+   rename s/"\-Youtube"// *
+   ls
+   rename s/\-// *
+   ls
+   rename s/Youtube// *
+   clear
+   ls
+   rename s/YouTube// *
+   ls
+   clear
+   ..
+   ls
+   ..
+   la
+   clear
+   acpi
+   w
+   htopp
+   htop
+   clear
+   text
+   apt install suckless
+   clear
+   apt search suckless
+   clear
+   googler how to automount android device in cli 
+   vvu
+   wifi off
+   wifi on
+   nmcli dev wifi
+   nmcli dev wifi connect VVUITS 
+   chrome
+   my pc
+   ls
+   dir
+   document
+   Downloads
+   ls
+   ..
+   ls
+   pwd
+   opera mini
+   opera
+   my downloads
+   Downloads
+   wifi of
+   wifi off
+   wifi on
+   nmcli dev wifi
+   nmcli devi wifi connect  VVUITS 
+   nmcli dev wifi
+   systemctl status
+   systemctl list-unit-files 
+   systemctl list-unit-files | grep degraded
+   systemctl status 
+   systemctl restart  NetworkManager
+   nmcli dev wifi 
+   avwifi connect VVUITS
+   vvu
+   pg
+   cd java/
+   ls
+   cd books\ \&\ tutorials/
+   ls
+   cd Videos/
+   ls
+   rename s/" "/_/g *
+   clear
+   ls
+   lmvs
+   ly
+   lt
+   lmvs
+   vid
+   bd
+   lt
+   wifi off
+   code
+   clear
+   thunar
+   evince
+   vvu
+   acpi
+   kill -9
+   clear
+   javac Triangle2test.java 
+   java Triangle2test
+   javac Triangle2test.java 
+   java Triangle
+   java Triangle2test 
+   javac Triangle2test.java 
+   java Triangle2test 
+   javac Triangle2test.java 
+   java Triangle2test 
+   clear
+   java Triangle2test 
+   clear
+   java Triangle2test 
+   clear
+   java Triangle2test clear
+   clear
+   java Triangle2test 
+   clear
+   java Triangle2test clear
+   lcear
+   ceacals;d
+   cal
+   clear
+   cal
+   clear
+   javac Triangle2
+   javac Triangle2test.java 
+   java Triangle2test 
+   clear
+   javac Triangle2test.java 
+   clear
+   java Triangle2test 
+   evince
+   killall xfce4-terminal 
+   firefox
+   wifi on
+   nmcli dev wifi
+   firefox
+   vvu
+   firefox
+   wifi off
+   wifi on
+   firefox
+   sudo apt install compton
+   avwifi
+   vvu
+   firefox
+   apt search packet tracer
+   traceroute
+   clear
+   dwn
+   lt
+   extract 'Packet Tracer 7.2.for Linux bit.tar.gz' 
+   extract "Packet Tracer 7.2.for Linux bit.tar.gz"
+   clear
+   mv "Packet Tracer 7.2.for Linux bit.tar.gz"  packettracer.tar.gz
+   extract packettracer.tar.gz 
+   ls
+   clear
+   ls
+   lt
+   mv packettracer.tar.gz ~/
+   clear
+   home
+   ls
+   mkdir pt
+   mv packettracer.tar.gz pt
+   cd pt
+   ls
+   extract packettracer.tar.gz 
+   ls
+   clear
+   ls
+   mx install 
+   sudo bash
+   rebootsafe
+   traceroute google.com
+   apt search wireshark
+   sudo apt install wireshark
+   wireshark 
+   sudo apt install wireshark-gtk 
+   wireshark-gtk 
+   vvu
+   sudo packettracer 
+   cd pt/
+   ls
+   packettracer 
+   sudo pack
+   sudo packettracer 
+   packettracer 
+   vvu
+   hjtop
+   htop
+   ls
+   clear
+   sudo packettracer 
+   clear
+   packettracer 
+   pt
+   ls
+   cat install 
+   traceroute
+   traceroute google.com
+   clear
+   text
+   echo $SHELL
+   firefox
+   vvu
+   clear
+   lt
+   clear
+   ls
+   clear
+   lc
+   la
+   lw
+   lr
+   dirsize
+   vvu
+   apt search stow
+   sudo apt install xstow
+   xstow
+   man xstow
+   nnn
+   sudo apt install nn
+   clear
+   sudo apt install nnn
+   nnn
+   sudo apt remove --purge ranger 
+   nnn
+   xdg-open 
+   man xdg-open 
+   man xdg-settings 
+   xdg-settings 
+   xdg-settings  --list
+   xdg-settings default-web-browser
+   xdg-settings manual
+   xdg-settings --manual 
+   xdg-settings set default-web-browser firefox
+   xdg-settings set default-web-browser firefox-esr
+   xdg-settings set default-web-browser firefox-esr.desktop
+   nnn
+   apt search mtfg
+   apt search mtfs
+   apt search mtpfs
+   sudo apt install go mtpfs
+   sudo apt install go-mtpfs
+   go-mtpfs 
+   man go-mtpfs 
+   t  go-mtpfs 
+   go-mtpfs --help
+   sudo apt remove --purge go-mptfs
+   sudo apt remove --purge go-mtpfs
+   apt search simple-mtpfs
+   mtp-detect 
+   mtp-connect 
+   mtp-folders 
+   man fusermount 
+   dwn
+   min12xxw 
+   minimal/
+   git clone https://github.com/phatina/simple-mtpfs
+   cd simple-mtpfs/
+   ls
+   cat INSTALL 
+   clear
+   ls
+   cat README.md 
+   mkdir build
+   cd build/
+   ../configure
+   clear
+   ...
+   cd simple-mtpfs/
+   ls
+   mx configure.ac 
+   ls
+   cat configure.ac 
+   clear
+   ls
+   make
+   cd debian/
+   ls
+   cd source/
+   ls
+   ..
+   ls
+   cat rules 
+   ..
+   ls
+   cd src/
+   sl
+   ls
+   ..
+   ls
+   clear
+   ls
+   cd build/
+   ls
+   ../configure.ac 
+   ../configure
+   ../configure.ac 
+   clear
+   ..
+   cd build/
+   ../configure
+   make
+   m..
+   ..
+   ls
+   ./autogen.sh 
+   make
+   ./configure
+   ls
+   make
+   clear
+   cd build/
+   ../config
+   ../configure
+   clear
+   ls
+   ../configure
+   make distclean
+   ..
+   make distclean
+   clear
+   cd build/
+   ../configure
+   make
+   make install
+   sudo make install
+   ..
+   ./autogen.sh 
+   simple-mtpfs 
+   clear
+   simple-mtpfs -l
+   man simple-mtpfs 
+   c;ear
+   clear
+   simple-mtpfs -device ~/phone
+   clear
+   home 
+   cd p
+   cd phone/
+   ls
+   ..
+   simple-mtpfs -device ~/phone
+   simple-mtpfs -l
+   simple-mtpfs -device ~/phone
+   simple-mtpfs --device ~/phone
+   cd phone/
+   ls
+   clear
+   ls
+   nnn
+   clear
+   man simple-mtpfs 
+   fusermount -u phone
+   nnn
+   charmap 
+   mphone
+   cut
+   $(cat ~/anddev|dmenu -i -p "Which android device do you want to mount?"|cut -c 1)
+   simple-mtpfs -l
+   simple-mtpfs -l|cut -c 2
+   simple-mtpfs -l|cut -c 1
+   clear
+   mphone
+   clear
+   mphone
+   mphone 
+   cd phone/
+   ls
+   ..
+   clear
+   text
+   simple-mtpfs -l
+   hehe=simple-mtpfs -l 
+   hehe='simple-mtpfs -l '
+   hehe
+   echo $hehe
+   simple-mtpfs -l >hehe
+   $echo hehe
+   echo $hehe
+   clear
+   cat hehe
+   clear
+   rm hehe 
+   touch anddev
+  $(cat ~/anddev|dmenu -i -p "Which android device do you want to mount?"|cut -c 1)
+  opt=$(cat ~/anddev|dmenu -i -p "Which android device do you want to mount?"|cut -c 1)
+  cat $opt
+  echo $opt
+  mpone
+  mphone
+  cd phone/
+  ;s
+  ls
+  clear
+  mphont
+  mphone
+  text
+  cd phone/
+  ls
+  ..
+  uphone
+  cd scripts/
+  ls
+  mx uphone 
+  ..
+  ls
+  uphone
+  ls
+  ls phone/
+  mphone 
+  uphone
+  dmenu -i
+  dmenu -i -p hello
+  dmenu -i -p "hello"
+  "man"|dmenu -i -p "whats this"
+  "masdasdasn"|dmenu -i -p "whats this"
+  clear
+  "$PWD"|dmenu -i -p "whats this"
+  echo "$PWD"|dmenu -i -p "whats this"
+  clear
+  man dmenu
+  mphone 
+  mphone 
+  uphone 
+  man notify-send 
+  text
+  mphone
+  uphone
+  mkdir phone
+  clear
+  ls
+  xdg-mime 
+  cd scripts/
+  ls
+  touch mphone
+  text mphone 
+  mx mphone 
+  text mphone 
+  text
+  ranger
+  apt list --upgradeable
+  mphone
+  clear
+  vvu
+  evince
+  ls phone
+  dwn
+  minimal
+  ls
+  cd room\ decor/
+  images
+  dwn
+  cd ForeUI/
+  ls
+  ..
+  rm ForeUI.tar.gz ForeUI extensions/ set_ptenv.sh set_qtenv.sh tpl.packettracer tpl.linguist 
+  y
+  clear
+  ls
+  lt
+  rm cisco_packet_tracer_faqs.pdf 
+  clear
+  lt
+  rm install languages/ backgrounds/ art/
+  clear
+  ls
+  rm eula721.txt 
+  ls
+  clear
+  ls
+  cd bin/
+  ls
+  ..
+  rm bin
+  ls
+  rm extensions/ help/
+  rm -rf extensions/ help/
+  ls
+  rm -rf Sounds/ saves/ templates/
+  clear
+  ls
+  rm -rf Sounds/ saves/ templates/
+  sudo rm saves/
+  sudo rm -rf saves/
+  clear
+  ls
+  lf
+  text
+ 1104* 
+  clear
+  lf | cut -c -4
+  lf | cut -c 4-
+  lf | cut -c 8
+  clear
+  ls
+  lf | cut -c 8-
+  lf | cut -c 15-
+  lf | cut -c 25-
+  lf | cut -c 35-
+  lf | cut -c 40-
+  lf | cut -c 45-
+  lf | cut -c 42-
+  lf | cut -c 43-
+  lf | cut -c 43-|
+  lf | cut -c 43-
+  clear
+  mv "lf | cut -c 43-" Documents/
+  mv "$(lf | cut -c 43-)" Documents/
+  mv "(lf | cut -c 43-)" Documents/
+  mv "lf | cut -c 43-" Documents/
+  clear
+  ls
+  lf | cut -c 43-
+  lf | cut -c 43-|mv Documents/
+  clear
+  mv $(lf | cut -c 43-|dmenu) Documents/
+  rename 
+  rename s/" "/_/g *
+  clear
+  ls
+  clear
+  hist
