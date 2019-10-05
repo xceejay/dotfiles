@@ -215,7 +215,9 @@ alias cls='clear'
 alias apt='sudo apt'
 alias multitail='multitail --no-repeat -c'
 alias yt='youtube-dl --add-metadata -ic'
+
 # Change directory aliases
+alias pics='cd ~/Pictures'
 alias disk='cd /media/joel/disk;la'
 alias lec21='cd ~/Desktop/lectures/level2001;ls'
 alias lec='cd ~/Desktop/lectures;ls'
@@ -548,6 +550,9 @@ vidtomp3(){
 
 ###SYNTAX FOR DMENU
 #$(grep  "surf [0-1]"* .bash_history|dmenu -l 30)
+
+# save stderr and stdout to us var
+# us=$(pwd 2>&1)
 
 #Lauch Gui application and redirect sdtout and stderr to /dev/null to prevent terminal logging
 mupdf() { command mupdf -I -r 100 "$@" > /dev/null 2>&1 & disown ;}
