@@ -1,0 +1,6 @@
+#!/bin/bash
+alias dmenu='dmenu -l 30 -nb black'
+HISTFILE=~/.bash_history
+set -o history
+history > "/home/joel/scripts/history";sed  -i s/"[0-9]\+ "//g "/home/joel/scripts/history" 
+ $(tac  /home/joel/scripts/history|dmenu -l 30 -nb black)
