@@ -17,7 +17,7 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
+HISTSIZE=100000
 HISTFILESIZE= #infinite history
 
 # check the window size after each command and, if necessary,
@@ -58,7 +58,10 @@ fi
 fi
 
 if [ "$color_prompt" = yes ]; then
-	PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+	#PS1='${debian_chroot:+($debian_chroot)}\[\033[01;35m\]\u@\[\033[00;93m\]void\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+	#PS1="┌─[\`if [ \$? = 0 ]; then echo \[\e[32m\]✔\[\e[0m\]; else echo \[\e[31m\]✘\[\e[0m\]; fi\`]───[\[\e[01;49;39m\]\u\[\e[00m\]\[\e[01;49;39m\]@\H\[\e[00m\]]───[\[\e[1;49;34m\]\W\[\e[0m\]]───[\[\e[1;49;39m\]\$(ls | wc -l) files, \$(ls -lah | grep -m 1 total | sed 's/total //')\[\e[0m\]]\n└───▶ "
+
+PS1='\[\033[0;31m\]┌─\[\033[0;31m\][\[\033[01;35m\]📂 \[\033[01;34m\]\w\[\033[0;32m\] ]\n\[\033[0;93m\]└───▶ \033[0;00m\]'
 else
 	PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -157,6 +160,9 @@ alias ebrc='edit ~/.bashrc'
 alias da='date "+%Y-%m-%d %A %T %Z"'
 
 # Alias's to modified commands
+alias clear='clear -x'
+alias hist='history > $scripts/history;sed  -i s/"[0-9]\+ "//g $scripts/history && $(tac  $scripts/history|dmenu)'
+alias sxiv='sxiv -b'
 alias dmenu='dmenu -l 30 -nb black'
 alias vvu='surf 192.168.0.254:8090'
 alias usdb1='sudo umount /dev/sdb1'
@@ -174,7 +180,7 @@ alias msdc2='sudo mount -w /dev/sdc2 /media/joel/disk'
 alias timetable="cgrep  '(^([a-zA-Z]+)|[0-9]+-[0-9]+am||[0-9]+-[0-9]+pm|[0-9][0-9][a-z][a-z]+|am+|pm+)' ~/timetable" 
 alias upvote='sudo systemctl restart upvotebot.service'
 alias tee='tee -a'
-alias t='tldr $*'
+alias t="tldr $1"
 alias regex='sed "s/-/    /" ~/regex|egrep --color ^[^Aa-Zz].?[^Aa-Zz0-9]'
 alias cwlc='/home/joel/Desktop/programming/java/CWLC/./CWLC'
 alias ipa=' ip add|egrep global|egrep   --color "(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)"'
@@ -544,7 +550,7 @@ vidtomp3(){
 #$(grep  "surf [0-1]"* .bash_history|dmenu -l 30)
 
 #Lauch Gui application and redirect sdtout and stderr to /dev/null to prevent terminal logging
-
+mupdf() { command mupdf -I -r 100 "$@" > /dev/null 2>&1 & disown ;}
 mpv() { command mpv "$@" > /dev/null 2>&1 & disown ;}
 vlc() { command vlc "$@" > /dev/null 2>&1 & disown ;}
 chrome() { command chromium "$@" > /dev/null 2>&1 & disown ;}
@@ -553,7 +559,7 @@ surf() { command surf "$@" > /dev/null 2>&1 & disown ;}
 music() { command rhythmbox "$@" > /dev/null 2>&1 & disown ;}
 gimp() { command gimp "$@" > /dev/null 2>&1 & disown ;}
 firefox() { command  firefox-esr "$@" > /dev/null 2>&1 & disown ;}
-eclipse () { command eclipse "$@" > /dev/null 2>&1 & disown ;}
+eclipse() { command eclipse "$@" > /dev/null 2>&1 & disown ;}
 code() { command  code "$@" > /dev/null 2>&1 & disown ;}
 transmission() { command  transmission-gtks "$@" > /dev/null 2>&1 & disown ;}
 torbrowser() { command  torbrowser-launcher  "$@" > /dev/null 2>&1 & disown ;}
@@ -563,6 +569,7 @@ qtcreator() { command  qtcreator  "$@" > /dev/null 2>&1 & disown ;}
 lowriter() { command  lowriter  "$@" > /dev/null 2>&1 & disown ;}
 nautilus() { command  nautilus "$1" > /dev/null 2>&1 & disown ;}
 images(){ command sxiv -t *>/dev/null 2>&1 & disown;}
+krita(){ command krita "$@">/dev/null 2>&1 & disown;}
 #() { command  "$@" > /dev/null 2>&1 & disown ;}
 
 ####EXPORTS######
@@ -591,6 +598,4 @@ export GOBIN=/home/joel/bin
 export PATH=$GOBIN:$PATH#test comment
 export scripts=/home/joel/scripts
 export PATH=$scripts:$PATH
-#test comment
-#test comment
-#test comment
+#js
