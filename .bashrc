@@ -61,7 +61,7 @@ if [ "$color_prompt" = yes ]; then
 	#PS1='${debian_chroot:+($debian_chroot)}\[\033[01;35m\]\u@\[\033[00;93m\]void\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 	#PS1="┌─[\`if [ \$? = 0 ]; then echo \[\e[32m\]✔\[\e[0m\]; else echo \[\e[31m\]✘\[\e[0m\]; fi\`]───[\[\e[01;49;39m\]\u\[\e[00m\]\[\e[01;49;39m\]@\H\[\e[00m\]]───[\[\e[1;49;34m\]\W\[\e[0m\]]───[\[\e[1;49;39m\]\$(ls | wc -l) files, \$(ls -lah | grep -m 1 total | sed 's/total //')\[\e[0m\]]\n└───▶ "
 
-PS1='\[\033[0;31m\]┌─\[\033[0;31m\][\[\033[01;35m\]📂 \[\033[01;34m\]\w\[\033[0;32m\] ]\n\[\033[0;93m\]└───▶ \033[0;00m\]'
+PS1='\[\033[0;31m\]┌─\[\033[0;31m\][\[\033[01;35m\]📂 \[\033[01;34m\]\w\[\033[0;32m\] ]\n\[\033[0;93m\]└───▶\[\033[0;00m\] '
 else
 	PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -553,9 +553,10 @@ vidtomp3(){
 
 # save stderr and stdout to us var
 # us=$(pwd 2>&1)
+ # add quotes to beginning and end of line 
+ #ls *.pdf|awk '{ print "\""$0"\""}'|dmenu
 
 #Lauch Gui application and redirect sdtout and stderr to /dev/null to prevent terminal logging
-mupdf() { command mupdf -I -r 100 "$@" > /dev/null 2>&1 & disown ;}
 mpv() { command mpv "$@" > /dev/null 2>&1 & disown ;}
 vlc() { command vlc "$@" > /dev/null 2>&1 & disown ;}
 chrome() { command chromium "$@" > /dev/null 2>&1 & disown ;}
