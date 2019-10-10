@@ -160,27 +160,17 @@ alias ebrc='edit ~/.bashrc'
 alias da='date "+%Y-%m-%d %A %T %Z"'
 
 # Alias's to modified commands
+
+#alias a fuzzy finder alias
 alias clear='clear -x'
 alias hist='history > $scripts/history;sed  -i s/"[0-9]\+ "//g $scripts/history && $(tac  $scripts/history|dmenu)'
 alias sxiv='sxiv -b'
-alias dmenu='dmenu -l 30 -nb black'
+alias dmenu='dmenu -nb black -sb "#260A35"'
 alias vvu='surf 192.168.0.254:8090'
-alias usdb1='sudo umount /dev/sdb1'
-alias usdb2='sudo umount /dev/sdb2'
-alias usdb3='sudo umount /dev/sdb3'
-alias usdb4='sudo umount /dev/sdb4'
-alias usdc1='sudo umount /dev/sdc1'
-alias usdc2='sudo umount /dev/sdc2'
-alias msdb1='sudo mount -w /dev/sdb1 /media/joel/disk'
-alias msdb2='sudo mount -w /dev/sdb2 /media/joel/disk'
-alias msdb3='sudo mount -w /dev/sdb3 /media/joel/disk'
-alias msdb4='sudo mount -w /dev/sdb4 /media/joel/disk'
-alias msdc1='sudo mount -w /dev/sdc1 /media/joel/disk'
-alias msdc2='sudo mount -w /dev/sdc2 /media/joel/disk'
 alias timetable="cgrep  '(^([a-zA-Z]+)|[0-9]+-[0-9]+am||[0-9]+-[0-9]+pm|[0-9][0-9][a-z][a-z]+|am+|pm+)' ~/timetable" 
 alias upvote='sudo systemctl restart upvotebot.service'
-alias tee='tee -a'
-alias t="tldr $1"
+alias tee='tee -a '  
+alias t="tldr $1 "
 alias regex='sed "s/-/    /" ~/regex|egrep --color ^[^Aa-Zz].?[^Aa-Zz0-9]'
 alias cwlc='/home/joel/Desktop/programming/java/CWLC/./CWLC'
 alias ipa=' ip add|egrep global|egrep   --color "(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)"'
@@ -194,7 +184,6 @@ alias logout='loginctl terminate-user joel'
 alias gateway='ip r'
 alias inkscape='inkscape $* >/dev/null 2>&1 &'
 alias tgcli='~/tg/bin/./telegram-cli'
-alias telegram='Telegram/Telegram $* >/dev/null 2>&1 &' 
 alias text=/opt/sublime_text/sublime_text
 alias dict=sdcv
 alias free='free --mega'
@@ -301,7 +290,7 @@ alias folders='du -h --max-depth=1'
 alias folderssort='find . -maxdepth 1 -type d -print0 | xargs -0 du -sk | sort -rn'
 alias tree='tree -CAhF --dirsfirst'
 alias treed='tree -CAFd'
-alias mountedinfo='df -hT'
+
 
 # Alias's for archives
 alias mktar='tar -cvf'
@@ -570,12 +559,13 @@ code() { command  code "$@" > /dev/null 2>&1 & disown ;}
 transmission() { command  transmission-gtks "$@" > /dev/null 2>&1 & disown ;}
 torbrowser() { command  torbrowser-launcher  "$@" > /dev/null 2>&1 & disown ;}
 idea() { command  idea.sh  "$@" > /dev/null 2>&1 & disown ;}
-tgceejay() { command  ~/Downloads/Programs/telegram/./Telegram -many -workdir ~/ceejay "$@" > /dev/null 2>&1 & disown ;}
 qtcreator() { command  qtcreator  "$@" > /dev/null 2>&1 & disown ;}
 lowriter() { command  lowriter  "$@" > /dev/null 2>&1 & disown ;}
 nautilus() { command  nautilus "$1" > /dev/null 2>&1 & disown ;}
 images(){ command sxiv -t *>/dev/null 2>&1 & disown;}
 krita(){ command krita "$@">/dev/null 2>&1 & disown;}
+telegram(){ command Telegram/Telegram >/dev/null 2>&1 & disown;} 
+tgceejay(){ command ~/Downloads/Programs/telegram/./Telegram -many -workdir ~/ceejay >/dev/null 2>&1 & disown;}
 #() { command  "$@" > /dev/null 2>&1 & disown ;}
 
 ####EXPORTS######
