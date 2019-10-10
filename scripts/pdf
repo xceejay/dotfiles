@@ -1,8 +1,8 @@
 #!/bin/bash
 shopt -s expand_aliases
-alias dmenu='dmenu -l 30 -nb black'
-mupdf() { command mupdf -I -r 100 "$@" > /dev/null 2>&1 & disown ;}
+alias dmenu='dmenu -l 30 -nb black -sb "#260A35"'
 
+# mupdf() { command mupdf -I -r 100 "$@" > /dev/null 2>&1 & disown ;}
 CACHE="$HOME/.cache/pdfcache"
 [ ! -f "$CACHE" ] && touch "$CACHE"
 
@@ -15,7 +15,7 @@ if [ -f "$1" ]; then
     else 
 	page=1
     fi
-    mupdf "$1" $page &
+    mupdf -I -r 100 "$1" $page &
     wait
     input=$(echo "$page"|dmenu -l 0 -p "$(basename -s .pdf "$1")" 2>/dev/null)
     
@@ -27,3 +27,9 @@ if [ -f "$1" ]; then
 else
     exit 1
 fi
+
+
+epubs(){
+pdf $(ls *.epub|dmenu -nb black -l 30)
+}
+

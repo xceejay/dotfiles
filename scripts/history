@@ -1101,7 +1101,6 @@
   ls
   lf
   text
- 1104* 
   clear
   lf | cut -c -4
   lf | cut -c 4-
@@ -1134,4 +1133,2754 @@
   clear
   ls
   clear
+  hist
+  mv $(lf | cut -c 43-|dmenu) Documents/
+  clear
+  lf
+  lt
+  cd Documents/
+  ls
+  clear
+  ..
+  mv Telegram_Desktop/ "Telegram Desktop/"
+  ls
+  pics
+  imgs
+  img
+  text
+  sudo apt update
+  pics
+  cd scripts/
+  touch pdf
+  pdf
+  rm pdf
+  pdf
+  ..
+  pd
+  pdf
+  cd scripts/
+  pdf
+  #
+  # MUPDF Automation Script
+  # Make MUPDF remember current page when you quit
+  #
+  # Requires: xdotool, zenity
+  #
+  # Copyright © 2014, Mark Karpov
+  #
+  # MUPDF Automation Script is free software: you can redistribute it and/or
+  # modify it under the terms of the GNU General Public License as published
+  # by the Free Software Foundation, either version of the License, or (at
+  # your option) any later version.
+  #
+  # MUPDF Automation Script is distributed in the hope that it will be useful,
+  # but WITHOUT ANY WARRANTY; without even the implied warranty of
+  # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+  # Public License for more details.
+  #
+  # You should have received a copy of the GNU General Public License along
+  # with this program. If not, see <http://www.gnu.org/licenses/>.
+  ### constants
+  CACHE_DIR="$HOME/.cache/mupdf/"
+  DEFAULT_PAGE=1
+  PAGE_FILE="$CACHE_DIR/$(basename "$1").page"
+  ### functions
+  bad_exit() # prints error message and exits the program
+  { echo "$(basename $0): ${1:-"Unknown Error"}" 1>&2; exit 1; }
+  ### main
+  # It's not recommended to use this automation script as root, because it
+  # would create files with page indexes in /root directory. That's not what
+  # you want. So we check if current user is root.
+  if test $(id -u) -eq 0; then bad_exit "Please run this program as ordinary user, not as root."; fi
+  # Now we need to create a directory where we will store our page indexes for
+  # various PDF files. This command will create such directory only if doesn't
+  # exist yet.
+  mkdir -p "$CACHE_DIR"
+  # OK, here we check if our script has been invoked with at least one command
+  # line argument.
+  if test $# -gt 0
+  then
+  if test -f "$PAGE_FILE"; then page=$(cat "$PAGE_FILE"); else page=$DEFAULT_PAGE; fi
+  mupdf "$1" $page &
+  xdotool search --sync --onlyvisible --class "mupdf"
+  xdotool key f
+  xdotool key W
+  wait
+  input=$(zenity --entry --title="page number" --text="page number:")
+  if test "$input" != ""; then page=$input; fi
+  echo $page > "$PAGE_FILE"; else CACHE_DIR="$HOME/.cache/mupdf/"; DEFAULT_PAGE=1; PAGE_FILE="$CACHE_DIR/$(basename "$1").page" bad_exit() # prints error message and exits the program
+  { echo "$(basename $0): ${1:-"Unknown Error"}" 1>&2; exit 1; } if test $(id -u) -eq 0; then bad_exit "Please run this program as ordinary user, not as root."; fi mkdir -p "$CACHE_DIR" if test $# -gt 0
+  then
+  cd scripts/
+  touch pdf
+  mx pdf
+  nano pdf
+  pdf
+  cd scripts/
+  text pdf
+  nano pdf
+  pdf
+  apt search ed
+  apt search ^ed$
+  ping google.com
+  avwifi
+  vvu
+  doc
+  cd optics/
+  thunar
+  $scripts
+  touch spdf;mx spdf
+  nano spdf 
+  ed
+  man ed
+  spdf
+  cd .cache/
+  cat pdfcache 
+  realpath 
+  man realpath 
+  realpath pwd
+  pdf
+  dwn
+  cd Documents/
+  ls
+  pdf net-intro.pdf 
+  clear
+  scripts
+  $scripts
+  ls
+  text pdf
+  bd
+  pdf Semiconductor\ Physics.pdf 
+  sudo apt install ed
+  pdf Semiconductor\ Physics.pdf 
+  clear
+  ls
+  pdf 0135404673.pdf 
+  pdf SMB_University_120307_Networking_Fundamentals.pdf 
+  clear
+  pdf 0135404673.pdf 
+  clear
+  spdf
+  type spdf
+  file spdf
+  $scripts
+  ls
+  text
+  $scripts/
+  ..
+  lec21
+  Computer\ Organization/
+  ls
+  pdf organization.pdf 
+  pdf 
+  clear
+  spdf
+  clear
+  doc
+  cd books/
+  ls
+  pdf 'The Art of Persuasion.epub' 
+  clear
+  ..
+  cd books/
+  ls
+  pdf Kiyosaki\,\ Robert\ -\ Rich\ Dad\,\ Poor\ Dad\ \(2010\).epub 
+  clear
+  pdf Kiyosaki\,\ Robert\ -\ Rich\ Dad\,\ Poor\ Dad\ \(2010\).epub 
+  spdf
+  $scripts/
+  ls
+  text spdf 
+  cd .cache/
+  ls
+  cd mupdf/
+  ls
+  ..
+  cat pdfcache 
+  nano pdfcache 
+  clear
+  cat pdfcache 
+  systemctl disable modbrc.service 
+  spdf
+  clear
+  text
+  pdfs
+  doc
+  cd books/
+  s;
+  ls
+  pdf
+  ls *.pdf
+  ls *.pdf|dmenu
+  text
+  $scripts
+  text pdfs
+  mx pdfs
+  bd
+  pdfs
+  clear
+  pdfs
+  sudo apt update ; sudo apt upgrade -y
+  dwn
+  cd Documents/
+  ls *.ebub
+  ls *.ebup
+  ls *.ebpub
+  ls *.epub
+  clear
+  ls
+  doc
+  ls
+  cd books/
+  ls
+  mupdf 'Zak George, Dina Roth Port - Dog Training Revolution_ The Complete Guide to Raising the Perfect Pet with Love-Ten Speed Press (2016).epub' 
+  man mupdf
+  mutool
+  echo $PWD
+  us=$(PWD 2>&1)
+  echo $us
+  us=$(pwd 2>&1)
+  echo $us
+  text
+  touch ~/.mupdf.history
+  pdfs
+  $scripts
+  ls
+  nano pdf
+  text pdf
+  bd
+  ls
+  pdfs
+  doc
+  cd books/
+  pdfs
+  text
+  $scripts
+  ls
+  text pdf
+  bd
+  pdfs
+  pdf 'ACV.pdf' 
+  doc
+  bootctl 
+  books
+  pdfs
+  ls *.pdf
+  ls *.pdf|dmenu
+  ls *.pdf|awk '{ print "\""$0"\""}'|dmenu
+  text
+  pdfs
+  doc
+  cd books/
+  ls
+  pdfs
+  doc
+  cd books/
+  pdfs
+  clear
+  ;s
+  ...
+  l
+  ls
+  clear
+  ls
+  cd .cache/
+  ls
+  cat mupdf/
+  cat pdfcache 
+  echo > pdfcache 
+  cat pdfcache 
+  sed -i s/" "//g pdfcache 
+  cat pdfcache 
+  text pdfcache 
+  clear
+  doc
+  bootctl 
+  books
+  pdfs
+  spdf
+  clear
+  spdf
+  clear
+  text
+  doc
+  books/
+  epubs
+  text
+  epubs
+  pdfs
+  doc
+  bootctl 
+  books
+  epubs
+  pdfs
+  spdf
+  clear
+  mphone
+  clear
+  mphone 
+  text
+  text $scripts 
+  text $scripts/mphone
+  javac Triangle2test.java 
+  java Triangle
+  java Triangle2test 
+  clear
+  java Triangle2test 
+  java Triangle2test |grep pink
+  java Triangle2test |cgrep pink
+  clear
+  java Triangle2test |cgrep pink
+  clear
+  alias cgrep
+  javac intArrayListavg.java 
+  clear
+  javac intArrayListavg.java 
+  clear
+  java intArrayListavg 
+  javac intArrayListavg.java 
+  clear
+  java intArrayListavg 
+  c;ear
+  clear
+  javac intArrayListavg.java 
+  java intArrayListavg 
+  clear
+  java intArrayListavg 
+  clear
+  javac Triangle2test.java 
+  java Triangle2test 
+  javac Triangle2test.java 
+  java Triangle2test 
+  javac Triangle2test.java 
+  java Triangle2test 
+  javac Triangle2test.java 
+  java Triangle2test 
+  javac Triangle2test.java 
+  java Triangle2test 
+  javac Triangle2test.java 
+  java Triangle2test 
+  code
+  sudo apt-get install libfftw3-dev libncursesw5-dev cmake
+  cd ~/.config/vis/colors/
+  ls
+  cat basic_colors 
+  cat basic_colors rainbow 
+  touch bnw
+  nano bnw
+  dwn
+  cd minimal/
+  git clone https://github.com/dpayne/cli-visualizer#ubuntu
+  git clone https://github.com/dpayne/cli-visualizer
+  cd cli-visualizer/
+  ls
+  cat ./install.sh 
+  vis
+  clear
+  vis
+  ~/.config/vis/colors/
+  ls
+  ..
+  ls
+  cd colors/
+  ls
+  text
+  ~/.config/vis/colors/
+  ls
+  ..
+  ls
+  text
+  ls
+  clear
+  ls
+  cd colors/
+  touch new
+  nano new
+  cat new
+  nano new
+  ;s
+  ls
+  cat .new.swp 
+  cat newy 
+  rm new
+  rm .new.swp 
+  ls
+  clear
+  ..
+  ls
+  vis
+  cd ~/.config/vis/colors/
+  ls
+  cat basic_colors 
+  ..
+  ls
+  cd colors/
+  ..
+  cat config 
+  text config 
+  text
+  man vis
+  mphone
+  cd phone/
+  ls
+  cat sdcard 
+  rm sdcard 
+  ..
+  uphone
+  firefox
+  ~/.config/vis/colors/
+  ls
+  text cyberpunk 
+  /nano cyberpunk 
+  nano cyberpunk 
+  vis
+  ~/.config/vis/colors/
+  ls
+  rm new.save 
+  nano cyberpunk
+  ..
+  ls
+  text
+  sudo apt upgrade
+  ls
+  cd colors/
+  text neon
+  text
+  ls
+  rm newy 
+  rm bnw 
+  ..
+  text
+  ls
+  lt
+  ls
+  sudo bash
+  clear
+  ls
+  clear
+  ls
+  clear
+  ls
+  clear
+  lt
+  clear
+  ls
+  clear
+  kazam
+  kaza,
+  kazam
+  text
+  cd vid
+  cd Videos/
+  ls
+  sxiv 'Screencast 2019-10-12:27:56.mp4' 
+  mpv 'Screencast 2019-10-12:27:56.mp4' 
+  vlc 'Screencast 2019-10-12:27:56.mp4' 
+  ffmpeg 
+  clear
+  t ffmpeg
+  ffmpeg -i 'Screencast 2019-10-12:27:56.mp4' hm.gf
+  ffmpeg -i 'Screencast 2019-10-12:27:56.mp4' hm.gif
+  sxiv hm.gif 
+  mpv hm.gif 
+  tgceejay 
+  music
+  firefox
+  pics
+  cd wallpapers/
+  ls
+  gthumb  dark-night-mountains-minimalist-4k-o4.jpg 
+  ls
+  clear
+  lt
+  neofetch 
+  ls|wc -l
+  doc
+  cd books/
+  pdfs
+  ls
+  clear
+  doc
+  cd books/
+  $(ls *.pdf|dmenu -nb black -l 30
+  $(ls *.pdf|dmenu -nb black -l 30)
+  $(ls *.pdf|sed s/" "/"\ "/g|dmenu -nb black -l 30)
+  $(ls *.pdf|sed s/" "/"\ "/g
+  $(ls *.pdf|sed s/" "/"\ "/g)
+  ls *.pdf|sed s/" "/"\ "/g)
+  ls *.pdf|sed s/" "/"\ "/g
+  clear
+  ls *.pdf|sed s/" "/"\\ "/g
+  ls *.pdf|sed s/" "/"\\\ "/g
+  $scripts/
+  ls
+  cat pdfs
+  rm pdfs
+  pdfs
+  clear
+  ls
+  touch pdfs;mx pdfs
+  text
+  text pdfs
+  pdfs
+  text
+  $(ls *.pdf|dmenu -nb black -l 30
+  $(ls *.pdf|dmenu -nb black -l 30)
+  doc
+  bootctl 
+  books
+  pfs
+  pdfs
+  pds
+  pdfs
+  clear
+  ..
+  dwn
+  cd Documents/
+  ls
+  pdfs
+  ls *.pdf|sed s/" "/"\\\ "/g
+  pdf $(ls *.pdf|sed s/" "/"\\\ "/g|dmenu -nb black -l 30)
+  pdf (ls *.pdf|sed s/" "/"\\\ "/g|dmenu -nb black -l 30)
+  pdf '(ls *.pdf|sed s/" "/"\\\ "/g|dmenu -nb black -l 30)'
+  pdf $(ls *.pdf|sed s/" "/"\\\ "/g|dmenu -nb black -l 30)
+  clear
+  ls Statistics
+  ls Statistics*
+  ls *Statistics*
+  mv *Statistics* ~/Desktop/lectures/level2001/statistics/
+  cd ~/Desktop/lectures/level2001/statistics/
+  ls
+  pdfs
+  spdf
+  cd ~/.cache/
+  text pdfcache 
+  spdf
+  text pdfcache 
+  bd
+  pdf Neil_A._Weiss_-_Introductory_Statistics\,_9th_Edition____-Addison_Wesley__Pearson_Learning_\(2011\).pdf 
+  spdf
+  pdf Neil_A._Weiss_-_Introductory_Statistics\,_9th_Edition____-Addison_Wesley__Pearson_Learning_\(2011\).pdf 
+  lec21
+  cd Computer\ Organization/
+  ls
+  pdf organization.pdf 
+  lsblk
+  msdb1
+  disk
+  sudo cp -r 'Fresh off the boat'/ ~/Desktop/movies/
+  ..
+  usdb1
+  mvs
+  cp 'Fresh off the boat'/ Tv\ Shows/
+  clear
+  ls
+  clear
+  ls
+  cd Fresh\ off\ the\ boat/
+  ls
+  ..
+  ls
+  cd Tv\ Shows/
+  ls
+  Fresh\ off\ the\ boat/
+  ls
+  ..
+  ls
+  rm 'Fresh off the boat'/
+  rm -rf 'Fresh off the boat'/
+  sudo rm -rf 'Fresh off the boat'/
+  clera
+  ls
+  cd Tv\ Shows/
+  ls
+  cd Fresh\ off\ the\ boat/
+  ls
+  season\ 
+  season\ 1/
+  ls
+  lmvs
+  text
+  lmvs
+  ls
+  lmvs
+  clear
+  neofetch 
+  wc
+  man wc
+  ls| wc
+  ls| wc -l
+  clear
+  ls
+  man wc
+  home
+  ls|wc
+  clear
+  lsblk
+  cd /media/root/B
+  cd /media/root/
+  sudo bash
+  ls
+  clear
+  vvu
+  nmcli dev wifi
+  nmcli dev wifi connect VVUITS 
+  vvu
+  firefox
+  ls
+  clear
+  vis
+  music
+  clear
+  vis
+  ls
+  clear
+  vis
+  vos
+  vis
+  spdf
+  mvs
+  cd Tv\ Shows/
+  rm -rf bleach/
+  ls
+  rm -rf Gumball/
+  ls
+  rm -rf Teen\ Titans\ Go/
+  ls
+  clear
+  ls
+  rm -rf Da.Vinci\'s.Demons/ family\ guy\ 16/ season\ 4/ 
+  rm -rf Da.Vinci\'s.Demons/ family\ guy\ 16/ season\ 4/ THE\ BOYS/
+  clear
+  ls
+  ..
+  ls
+  la
+  mvs
+  rm The\ Wolf\ of\ Wall\ Street\ \(2013\)/
+  clear
+  ls
+  sudo bash
+  doc
+  l
+  bd
+  sudo bash
+  ls
+  sudo bash
+  text
+  clear
+  sudo bash
+  ls
+  sudo bash
+  thunar
+  sudo thunar
+  vvu
+  nmcli dev wifi 
+  nmcli dev wifi connect VVUITS 
+  nmcli dev 
+  nmcli connection 
+  nmcli connection show
+  vvu
+  text
+  cd /opt/sublime_text/
+  ls
+  cd Packages/
+  ls
+  cd hytrast/
+  ls
+  ..
+  ls
+  sudo bash
+  ls
+  ..
+  ls
+  cd Downloads/
+  ls
+  cd minimal/
+  ls
+  ..
+  sudo cp -r minimal/ /media/root/Backups
+  cd .config/calibre/
+  ls
+  touch stylesheetcalibre
+  nano stylesheetcalibre 
+  sudo cp -r stylesheetcalibre /media/root/Backups
+  clear
+  cd .config/
+  ..
+  cd .config/
+  ..
+  cd .gimp-2.8/
+  ls
+  ..
+  sudo cp -r .gimp-2.8/ /media/root/Backups
+  cd .config/
+  cd calibre/
+  ls
+  cd caches/
+  ls
+  calibre
+  nmcli dev wifi
+  nmcli dev wifi connect VVUITS 
+  vvu
+  clear
+  ls
+  clear
+  vvu
+  sudo bash
+  dwn
+  clear
+  ls
+  clear
+  blueman-manager 
+  vvu
+  surf google.com
+  firefox
+  vvu
+  firefox
+  dwn
+  lt
+  aqemu 
+  clear
+  aqemu 
+  clear
+  firefox
+  killall mb_warband.exe
+  mb_warband.exe
+  logout
+  vvu
+  firefox
+  blender
+  sudo dmesg
+  clear
+  vis
+  javac intArrayListavg.java 
+  java intArrayListavg 
+  clear
+  cat /proc/sys/vm/drop_caches 
+  cd /proc/sys/vm/ 
+  ls
+  cat dirty_bytes 
+  clear
+  cat laptop_mode 
+  clear
+  ls
+  blender
+  pg
+  cd general/
+  ls
+  ..
+  cd Ideas\,Algorithms\ etc/
+  ls
+  ..
+  ls
+  sxiv  Screenshot_2019-06-22_17-49-55.png 
+  lt
+  cd java/
+  ls
+  cd books\ \&\ tutorials/
+  ls
+  cd Videos/
+  ls
+  ..
+  ls
+  ..
+  ls
+  cd general/
+  ls
+  cd Algorithms\ \&\ Data\ Structures/
+  ls
+  cd  Videos/
+  ls
+  ..
+  ls
+  ..
+  ls
+  ..
+  ls
+  ..
+  ls
+  cd lectures/
+  ls
+  cd level2001/
+  sl
+  ls
+  ..
+  ls
+  ..
+  cd Desktop/
+  f blender
+  cs
+  cd Videos/
+  ls
+  lmvs
+  ..
+  ls
+  f blender
+  cd Others/
+  cd Videos/
+  ls
+  lmvs
+  blender
+  pg
+  cd java/
+  ls
+  cd books\ \&\ tutorials/
+  ls
+  cd Books/
+  ls
+  pdfs
+  pdf 'Introduction to Java Programming, Brief Version, 11th Global Edition.
+  pdf 'Introduction to Java Programming, Brief Version, 11th Global Edition.pdf' 
+  spdf
+  code
+  clear
+  ls
+  clear
+  ls
+  mvs
+  cd Tv\ Shows/
+  ls
+  clear
+  ls
+  cd Fresh\ off\ the\ boat/
+  ls
+  cd season\ 
+  cd season\ 2/
+  ls
+  lmvs
+  mv Fresh.Off.the.Boat.S02E12.480p\ \(1\).mkv Fresh.Off.the.Boat.S02E12.480p.mkv
+  clear
+  ls
+  lmvs
+  clear
+  ls
+  ..
+  ls
+  ..
+  ls
+  ..
+  ls
+  lmvs
+  firefox
+  cd /usr/share/
+  cd themes/
+  ls
+  ..
+  ls
+  mkdir .themes
+  sudo mkdir .themes
+  clear
+  ..
+  cd /share
+  cd share/
+  sl
+  ls
+  cd themes/
+  ls
+  cp -r Flat-Remix-GTK-Blue-Darkest-Solid/ ../.themes/
+  sudo cp -r Flat-Remix-GTK-Blue-Darkest-Solid/ ../.themes/
+  ../.themes/
+  ls
+  ..
+  mv .themes/ themes/
+  sudo mv .themes/ themes/
+  clear
+  cd themes/
+  ls
+  sudo cp -r Flat-Remix-GTK-Blue-Darkest-Solid/ ../.themes/
+  clear
+  ls
+  ...
+  cd share/
+  cd .themes/
+  ls
+  ..
+  ls
+  cd themes/
+  ls
+  cp -r Flat-Remix-GTK-Blue-Darkest-Solid ../.themes/
+  sudo cp  Flat-Remix-GTK-Blue-Darkest-Solid ../.themes/
+  sudo cp -r Flat-Remix-GTK-Blue-Darkest-Solid ../.themes/
+  clear
+  ..
+  cd .themes/
+  ls
+  rm cinnamon/ gtk-2.0/ gtk-3.0/ index.theme metacity-1/ xfwm4/
+  rm -rf cinnamon/ gtk-2.0/ gtk-3.0/ index.theme metacity-1/ xfwm4/
+  clear
+  sudo rm -rf cinnamon/ gtk-2.0/ gtk-3.0/ index.theme metacity-1/ xfwm4/
+  clear
+  ls
+  ..
+  rm themes/
+  rm -rf  themes/
+  clear
+  sudo rm -rf  themes/
+  mv .themes/ themes
+  sudo mv .themes/ themes
+  cd themes/
+  ls
+  cd Flat-Remix-GTK-Blue-Darkest-Solid/
+  ls
+  ..
+  cd icons/
+  ls
+  ls
+  neofetch 
+  dpkg -l
+  clear
+  ls
+  clear
+  ls
+  man rm
+  t r
+  t rm
+  t 'rm'
+  cd .themes/
+  ls
+  rm "Dots Black"/
+  cd assets/
+  ls
+  ..
+  ls
+  rm assets/
+  ls
+  rm Dots\ White/ Flat-Remix-GTK/ Flat-Remix-GTK-Blue Flat-Remix-GTK-Blue-Darkest/ Flat-Remix-GTK-Dark
+  clear
+  ls
+  rm Flat-Remix-GTK-Yellow Flat-Remix-GTK-Yellow-Dark Flat-Remix-GTK-Yellow-Darker Flat-Remix-GTK-Yellow-Darkest
+  clear
+  ls
+  rm Flat-Remix-GTK-Darker/                   Flat-Remix-GTK-Yellow-Solid/
+  clear
+  ls
+  lt
+  la
+  ls
+  lc
+  lw
+  rm Flat-Remix-GTK-Blue-Darkest-Solid/      Flat-Remix-GTK-Darker/
+  rm Flat-Remix-GTK-Darker-Solid/
+  clear
+  ls
+  rm Flat-Remix-GTK-Darker
+  clear
+  ls
+  ..
+  ls
+  clear
+  ls
+  cd .themes/
+  ls
+  ..
+  mkdir
+  mkdir themes
+  bd
+  ls
+  cp -r Flat-Remix-GTK-Blue-Darkest-Solid/ ~/themes/
+  clear
+  ls
+  rm *
+  clear
+  ..
+  mv themes/ .themes/
+  cd .themes/
+  ls
+  cd themes/
+  ls
+  cp Flat-Remix-GTK-Blue-Darkest-Solid/ .
+  cp Flat-Remix-GTK-Blue-Darkest-Solid/ ../../
+  clear
+  ls
+  ..
+  ls
+  cd themes/
+  cd theme
+  cd themes
+  ls
+  clear
+  ls
+  cp Flat-Remix-GTK-Blue-Darkest-Solid/ ~/.themes/
+  clear
+  ls
+  rm Flat-Remix-GTK-Blue-Darkest-Solid/
+  clear
+  ..
+  ls
+  rm themes/
+  clear
+  ls
+  ..
+  ls
+  lt
+  rm Flat-Remix-GTK-Blue-Darkest-Solid/
+  clear
+  ls
+  cd .themes/
+  ls
+  cat .gitignore 
+  rm .gitignore 
+  clear
+  ls
+  rm .gitmodules 
+  clear
+  ls
+  ..
+  ls
+  lt
+  rm untitled.blend1
+  clear
+  ls
+  thunar
+  conky-manager2
+  vis
+  telegram 
+  firefox
+  vis
+  ls
+  clear
+  ls
+  clear
+  dwn
+  cd minimal/
+  ..
+  images
+  mv *dark* ~/Pictures/wallpapers/
+  clear
+  ls
+  clear
+  xfwm--version
+  text
+  firefox
+  dwn 
+  minimal/
+  git clone https://github.com/wsdfhjxc/xfwm-rounded-corners-patch
+  cd xfwm-rounded-corners-patch/
+  git checkout xfwm4-4.12.5
+  git checkout xfwm-4.12.5-rounded-corners.patch
+  clear
+  ls
+  git apply xfwm-4.12.5-rounded-corners.patch
+  ./autogen.sh --prefix=/usr
+  ..
+  git clone https://github.com/xfce-mirror/xfwm4.git
+  cd xfwm4/
+  ls
+  git checkout xfwm4-4.12.5
+  ./autogen.sh --prefix=/usr
+  sudo apt install xfce4-dev-tools 
+  clear
+  ./autogen.sh --prefix=/usr
+  make
+  clear
+  make
+  ls
+  Make
+  sudo make
+  clear
+  ./autogen.sh --prefix=/usr
+  sudo apt install libxfce4util-common 
+  sudo apt install libxfce4util-dev
+  ./autogen.sh --prefix=/usr
+  sudo apt install libxfce4ui-1-0
+  sudo apt install libxfce4ui-1-dev 
+  ./autogen.sh --prefix=/usr
+  sudo apt install libwnck-dev
+  ./autogen.sh --prefix=/usr
+  make
+  ..
+  cd xfwm-rounded-corners-patch/
+  ls
+  git apply xfwm-4.12.5-rounded-corners.patch
+  cp xfwm-4.12.5-rounded-corners.patch ../xfwm4/
+  clear
+  ..
+  cd xfwm4/
+  ls
+  git apply xfwm-4.12.5-rounded-corners.patch
+  make
+  ./src/xfwm--replace & disown
+  logout
+  vis
+  tee ~/.config/autostart/xfwm-rounded-corners.desktop <<EOF
+  [Desktop Entry]
+  Type=Application
+  Name=xfwm-rounded-corners
+  Exec=$(pwd)/src/xfwm--replace
+  OnlyShowIn=XFCE;
+  EOF
+  clear
+  ls
+  logout
+  cd /usr/share/
+  ls
+  firefox
+  cd xgreeters/
+  ls
+  cat lightdm-g
+  cat lightdm-gtk-greeter.desktop 
+  ..
+  cd xgreeters/
+  cat lightdm-greeter.desktop 
+  clear
+  ls
+  ..
+  ls
+  f lightdm
+  cd xsessions/
+  ls
+  cat lightdm-xsession.desktop 
+  ..
+  ls
+  cd xgreeters/
+  ls
+  cat lightdm-greeter.desktop 
+  ..
+  cd lightdm/
+  ls
+  cd lightdm-gtk-greeter.conf.d/
+  ls
+  cat 01_debian.conf 
+  text 01_debian.conf 
+  ..
+  ls
+  cd lightdm.conf.d/
+  ls
+  text 01_debian.conf 
+  lightdm
+  sudo dpkg-reconfigure lightdm
+  logout
+  vvu
+  cd /etc/X11/
+  ls
+  cat Xsession
+  clear
+  cd Xsession.d/
+  ls
+  cd /usr/
+  ls
+  cd share/
+  ls
+  cd lightdm/
+  ls
+  cd lightdm
+  cd lightdm.conf.d/
+  ls
+  cat 01_debian.conf 
+  ls
+  clear
+  ..
+  ls
+  cd lightdm-gtk-greeter.conf.d/
+  ls
+  cat 01_debian.conf 
+  ..
+  ls
+  ..
+  ls
+  cd themes/
+  ls
+  cd Flat-Remix-GTK-Blue-Darkest-Solid/
+  ls
+  cd gtk-
+  cd gtk-2.0/
+  ls
+  ..
+  nmcli dev wifi connect VVUITS 
+  clear
+  ls
+  ..
+  ls
+  cd gdm
+  ls
+  cd autostart/u
+  cd autostart/
+  ls
+  ..
+  ls
+  cd gtk-3.0/
+  ls
+  cd /etc/lightdm/
+  ls
+  cat lightdm.conf 
+  cat lightdm.conf |grep theme
+  cat lightdm.conf |grep themes
+  cat lightdm.conf |grep theme*
+  cat lightdm.conf |grep *theme*
+  c;ear
+  ..
+  cd light
+  cd lightdm/
+  ls
+  cat lightdm-gtk-greeter.conf
+  text lightdm-gtk-greeter.conf
+  sudo bash
+  firefox
+  cd /usr/share/images/desktop-base/
+  ls
+  images
+  sxiv login-background.svg 
+  gimp login-background.svg 
+  logout
+  acpi
+  ls
+  clear
+  ls
+  clear
+  vis
+  cd Downloads/
+  ls
+  acpi
+  clear
+  l
+  ls
+  cear
+  cd Pictures/
+  ..
+  lcear
+  cd Downloads/
+  ls
+  mv 936378.jpg 77408.jpg 55471.jpg  334554.jpg ~/Pictures/wallpapers/
+  clear
+  ls
+  ls
+  clear
+  ls
+  clear
+  ls
+  clear
+  firefox
+  vvu
+  ls
+  clear
+  ls
+  clear
+  lt
+  clear
+  ls
+  clear
+  ls
+  claer
+  clear
+  ls
+  clear
+  cd Downloads/
+  ls
+  ls
+  clear
+  ls
+  lt
+  clear
+  cd /usr/
+  //
+  ls
+  cd etc/
+  ls
+  clear
+  ls
+  cd..
+  ..
+  pics
+  cd wallpapers/
+  dwn
+  bd
+  cp Gnu_wallpaper.png /usr/share/images/desktop-base/desktop-grub.png
+  cp Gnu_wallpaper.png /usr/share/images/desktop-base/
+  sudo cp Gnu_wallpaper.png /usr/share/images/desktop-base/
+  clear
+  dwn
+  clear
+  rm 'chainimage-space-sci-fi-wallpaper-hd-wallpapers(1).jpg' 
+  clear
+  ls
+  sxiv 121806.jpg
+  rm 121806.jpg 121806.jpg.part 
+  clear
+  ls
+  rm 521477\(1\).jpg 
+  C;EAR
+  CLEAR
+  mv *.jpg ~/Pictures/wallpapers/
+  clear
+  pics
+  cd wallpapers/
+  sl
+  images
+  cd /usr/
+  share
+  ls
+  cd grub/
+  ls
+  cd default/
+  ls
+  ..
+  cd xgreeters/
+  ls
+  ..
+  ls
+  f desktop-base
+  cd desktop-base/
+  ls
+  ..
+  ls
+  cd backgrounds/
+  ls
+  ,,
+  ..
+  sl
+  celar
+  ls
+  sudo update-grub
+  file /usr/share/images/desktop-base/desktop-grub.png
+  cd images/
+  cd desktop-base/
+  sxiv desktop-grub.png
+  sxiv Gnu_wallpaper.png 
+  clear
+  ls
+  sudo bash
+  ls
+  clear
+  vis
+  clear
+  ls
+  clear
+  lt
+  clear
+  sudo bash
+  pics
+  cd wallpapers/
+  images
+  rm 334554.jpg 
+  rebootsafe 
+  ls
+  clear
+  ks
+  clear
+  text
+  text .bashrc
+  sudo bas
+  ls
+  clear
+  dwn
+  text
+  cd $mvs
+  text
+  cd $mvs
+  text
+  cd mvs
+  cd ~/Desktop/movies/
+  cd $mvs
+  cd $cs
+  cd $pics
+  cd $mvs
+  text
+  clear
+  htop
+  cd /usr/
+  cd share/
+  cd xscreensaver/
+  ls
+  cd config/
+  ls
+  ..
+  ls
+  cat xscreensaver-
+  cat xscreensaver-wrapper.sh 
+  clear
+  killall firefox-esr
+  clear
+  apt search music
+  apt search music player
+  sudo apt install drai
+  sudo apt install draii
+  sudo apt install driaa
+  sudo apt install draai
+  clear
+  ls
+  xclipboard 
+  manxclipboard 
+  man xclipboard 
+  text
+  sls
+  sl
+  clip
+  clear
+  sudo bash
+  ls
+  clear
+  asd
+  ls
+  clear
+  ls
+  clear
+  ls
+  clear
+  lt
+  clear
+  l
+  ks
+  sudo /media/root/Backups
+  sudo cd  /media/root/Backups
+  sudo cd /media/root/Backups
+  cd /media/root/Backups
+  sudo bash
+  ls
+  clear
+  lt
+  ls
+  ls
+  clear
+  sudo bash
+  text
+  sudo bash
+  skajdlajsldjalsjdkalsjdlkjaslkdjajsdlasjdkajsdlkjdlajfkljadslkfjaksjfdlajdfljasldjfaslkdjflasjfdlsakdjfls
+  ls
+  clear
+  ls
+  htop
+  cat fonty 
+  rm fonty 
+  clear
+  ls
+  sudo bash
+  clear
+  ls
+  jaskdjkasjdkajskdllkjlajdflajsldjfladsjflkajldkjfadsklfjlasdjflkasjdlfjlsdjfksdalfjsldjfklsdjflasjdlfjslakdjfsjdlfasd
+  clear
+  jaskdjkasjdkajskdllkjlajdflajsldjfladsjflkajldkjfadsklfjlasdjflkasjdlfjlsdjfksdalfjsldjfklsdjflasjdlfjslakdjfsjdlfasd
+  xfce4-panel -r
+  sudo xfce4-panel -r
+  acpi
+  sudo bash
+  clear
+  indicator-cpufreq
+  cpufreq-info 
+  clear
+  cpufreq-info 
+  man cpufreq-info 
+  cpufreq-info -v
+  cpufreq-info -c
+  cpufreq-info -f
+  cpufreq-info -w
+  cpufreq-info -s
+  cpufreq-info -m
+  cpufreq-info -h
+  cpufreq-info -o
+  cclear
+  clear
+  cpufreq-info -o
+  ]]
+  cpufreq-info -o
+  powertop
+  tgceejay 
+  xfce4-panelpanel
+  xfce4-panel -r
+  tgceejay 
+  tgceejay 
+  rebootsafe
+  tgceejay 
+  firefox
+  logout
+  ls
+  clear
+  htop
+  man firefox-esr 
+  firefox
+  alias firefox=firefox duckduckgo.com/
+  alias firefox='firefox duckduckgo.com/'
+  firefox hi
+  telegram
+  killall Telegram 
+  tgceejay 
+  text
+  tgceejay 
+  clear
+  text
+  tgceejay 
+  tgceejay 
+  text
+  telegram 
+  tgceejay 
+  telegram
+  tgceejay 
+  killall Telegram 
+  clear
+  killall Telegram 
+  telegram
+  kill Telegram
+  killall Telegram
+  tgceejay 
+  text
+  tgceejay 
+  killall Telegram
+  tgceejay 
+  htop
+  dwn
+  mkdir natron
+  mv Natron-2.3.14-Linux-x86_64bit.tgz natron/
+  clear
+  cd natron/
+  ls
+  extract Natron-2.3.14-Linux-x86_64bit.tgz 
+  clear
+  ls
+  ./Natron-2.3.14-Linux-x86_64bit 
+  ls
+  natron
+  mpd
+  sudo apt install mpd
+  sudo apt install natron
+  apt search natron
+  ..
+  home
+  cd Natron2/
+  ls
+  ./Natron
+  sudo ./Natron
+  --help
+  cd lib/
+  ls
+  ..
+  cp lib/* /lib/
+  sudo cp lib/* /lib/
+  sudo -r cp lib/* /lib/
+  sudo cp  -r lib/* /lib/
+  clear
+  ./Natronc
+  sudo apt install libcairo2
+  sudo apt install libcairo2-dev 
+  clear
+  ls
+  ./Natron
+  ls
+  ./Natron --help
+  claer
+  clear
+  ./Natron --help
+  ./Natron
+  cd Natron2/
+  ls
+  cd Natron2/lib/
+  cat lib
+  cd libs
+  cd libss
+  cat libss
+  cd Natron2/
+  ls
+  cd lib/
+  ls
+  sudo ls
+  sudo ls 
+  clear
+  sudo ls 
+  sudo ls > libss
+  cd Natron2/
+  ls
+  cd lib/
+  ls
+  cd /lib
+  ls
+  bd
+  ls
+  ls *lib
+  ls *lib*
+  ls *lib*|wc
+  cd /lib
+  ls *lib*|wc
+  ls
+  vvu
+  ls
+  bd
+  ls
+  ls *lib* > libss
+  cat libss
+  clear
+  cd /lib
+  rm $(cat ~/Natron/libss|dmenu)
+  rm $(cat ~/Natron2/libss|dmenu)
+  rm $(cat ~/Natron2/lib/libss|dmenu)
+  rm $(cat ~/Natron2/lib/libss|cut -c 4-|dmenu)
+  rm $(cat ~/Natron2/lib/libss||dmenu)
+  rm $(cat ~/Natron2/lib/libss|dmenu)
+  sudo rm $(cat ~/Natron2/lib/libss|dmenu)
+  claer
+  clear
+  sudo rm $(cat ~/Natron2/lib/libss|dmenu)
+  clear
+  sudo rm $(cat ~/Natron2/lib/libss|dmenu)
+  clear
+  sudo rm $(cat ~/Natron2/lib/libss|dmenu)
+  rm $(cat ~/Natron2/lib/libss)
+  sudo rm $(cat ~/Natron2/lib/libss)
+  clear
+  ls
+  cd Natron2/
+  ls
+  ..
+  rm Natron2/
+  clear
+  ls
+  dwn
+  sxiv  121806.jpg 
+  mv 121806.jpg ~/Pictures/wallpapers/
+  claer
+  pics
+  wall 
+  wallpapers/
+  images
+  sxiv *
+  vvu
+  /usr/bin/ls
+  /usr/sbin/ls
+  type ls
+  clear
+  /bin/ls
+  clear
+  /bin/ls
+  clear
+  vvu
+  wifi off
+  wifi on
+  nmcli dev wifi connect VVUITS 
+  vvu
+  clear
+  vvu
+  dwn
+  dwm
+  dwn
+  extract ButtleOFX_Alpha_Linux64_v2.0.tar.bz
+  cd ButtleOFX_Alpha_Linux64_v2.0/
+  ls
+  ./run_buttleofx.sh 
+  clear
+  cat README.md 
+  ./run_buttleofx.sh 
+  clear
+  ls
+  cd ButtleOFX/
+  ls
+  ..
+  ls
+  car README.md 
+  dwn
+  sudo dpkg -i natron_2.3.14-dmo3_amd64.deb 
+  sudo apt install --fix-broken 
+  sudo dpkg-reconfigure 
+  sudo dpkg-reconfigure -a
+  sudo dpkg-reconfigure --a
+  sudo dpkg --configure -a
+  apt search libc6
+  apt search libc6-dev
+  sudo apt install libboost-serialization1.67
+  sudo apt install libc6
+  sudo apt install libfontconfig1
+  sudo apt install libexpat1
+  sudo apt install libqt4-network 
+  dwn
+  sudo dpkg -i natron_2.3.14-dmo3_amd64.deb 
+  sudo apt install python-pyside2.qtcore 
+  apt --fix-broken installl
+  apt --fix-broken install
+  sudo apt install libgflags2.2
+  apt --fix-broken install
+  sudo apt-get install deb-multimedia-keyring
+  sudo nano /etc/apt/sources.list
+  sudo apt update
+  deb http://www.deb-multimedia.org sid main
+  sudo apt-get install deb-multimedia-keyring
+  sudo nano /etc/apt/sources.list
+  sudo apt update
+  sudo nano /etc/apt/sources.list
+  clear
+  ls
+  cd ButtleOFX_Alpha_Linux64_v2.0/
+  ls
+  ./run_buttleofx.sh 
+  sudo apt-get install libegl1-mesa
+  ..
+  ls
+  cd natron/
+  ls
+  sudo ./Natron-2.3.14-Linux-x86_64bit 
+  cd /opt/Natron2/
+  ls
+  cd bin/
+  ls
+  ./Natron
+  ..
+  ls
+  cd lib/
+  ls
+  ls *cairo*
+  ..
+  ./Natron
+  sudo apt install libcairo2-dev
+  sudo apt install libcairo2
+  cd /opt/Natron2/
+  ls
+  ./NatronSetup 
+  ./Natron
+  cat Natron
+  cat Natron|grep cairo
+  cat Natron|grep cairo*
+  cat Natron|grep *cairo*
+  cd /usr/lib/x86_64-linux-gnu/
+  ls
+  clear
+  cat libcairo.so.2
+  cd /opt/Natron2/
+  ./NatronSetup 
+  dwn
+  sudo apt install nuke
+  sudo apt install snowmix
+  sudo apt install synfig
+  synfig 
+  mansynfig
+  man synfig
+  sudo apt install synfigstudio 
+  synfigstudio 
+  killall mpv
+  timetable 
+  xdman
+  lec21
+  mkdir fof
+  cd fof/
+  touch assignment1
+  nano assignment
+  clear
+  cat assignment
+  mv assignmentassignment1.md
+  type ebrc
+  edit assignment1.md 
+  pandoc assignment1.md assignment1.pdf
+  pandoc -o assignment1.md assignment1.pdf
+  pandoc  assignment1.md -o assignment1.pdf
+  pdf assignment1.
+  pdf assignment1.pdf 
+  cs
+  cd Others/
+  ls
+  cd VI
+  cd Videos/
+  ls
+  youtube-dl https://www.youtube.com/watch?v=KNU5Yiqh73U
+  mv _-KNU5Yiqh73U.webm synfig1
+  mv synfigsynfig1.webm
+  youtube-dl https://www.youtube.com/watch?v=zVFbYm4EnlA&list=PLbvQ5v0SyZnu1GGauoXBJtcRvxr22gbha&index=2
+  t youtube-dl
+  youtube-dl https://www.youtube.com/watch?v=KNU5Yiqh73U&list=PLbvQ5v0SyZnu1GGauoXBJtcRvxr22gbha&index=1
+  youtube-dl https://www.youtube.com/playlist?list=PLbvQ5v0SyZnu1GGauoXBJtcRvxr22gbha
+  ckear
+  clear
+  ls
+  youtube-dl https://www.youtube.com/playlist?list=PLbvQ5v0SyZnu1GGauoXBJtcRvxr22gbha
+  mpv  _-KNU5Yiqh73U.f2
+  mpv  _-KNU5Yiqh73U.f251.webm 
+  rm _-KNU5Yiqh73U.f247.webm 
+  rm _-KNU5Yiqh73U.f247.webm _
+  clear
+  rm _-KNU5Yiqh73U.f251.webm 
+  ls
+  clear
+  ls
+  rm _-U2n5aGqou9E.f248.webm.part 
+  clea
+  clear
+  l
+  sls
+  ls
+  youtube-dl https://www.youtube.com/watch?v=zVFbYm4EnlA
+  cs
+  cd Others/
+  ls
+  cd Videos/
+  vid
+  mv *Synfig* ~/Desktop/lectures/computer science/Others/Videos 
+  clear
+  mv *Synfig* ~/Desktop/lectures/computer science/Others/Videos 
+  mv *Synfig* '~/Desktop/lectures/computer science/Others/Videos '
+  ckear
+  mv *Synfig* '~/Desktop/lectures/computer science/Others/Videos'
+  clear
+  mv *Synfig* '~/Desktop/lectures/computer science/Others/Videos'
+  mv *Synfig* "~/Desktop/lectures/computer science/Others/Videos"
+  clear
+  mv *Synfig* ~/Desktop/lectures/computer\ science/Others/Videos/
+  clear
+  ls
+  lt
+  clear
+  lec21
+  fofo
+  fof
+  evince assignment1.pdf 
+  ls
+  clear
+  sudo bash
+  clear
+  vvu
+  type edit
+  what is edit
+  whatis edit
+  man edit
+  lec21;database
+  clear
+  ls
+  cd assignments/
+  ls
+  sxiv readingreport.pdf 
+  clear
+  pdf readingreport.pdf 
+  spdf
+  acpi
+  spdf
+  type sxiv 
+  text 
+  man sxiv
+  text
+  lowriter readingreport.
+  lec21;database
+  cd assignments/
+  lowriter readingreport.odt 
+  lsblk
+  msdb1
+  lec21;database
+  cd assignments/
+  ls
+  cp readingreport.pdf $disk
+  sudo cp readingreport.pdf $disk
+  usdb1
+  clear
+  home
+  vvu
+  spdf
+  evince
+  lec21;database
+  ls
+  mupdf  fundamentals\ of\ database\ systems.epub 
+  clear
+  lec21
+  cd database/
+  ls
+  pdf intro\ to\ database\ systems.djvu 
+  clear
+  ls
+  pdf fundamentals\ of\ database\ systems.epub 
+  vvu
+  clear
+  sudo bash
+  clear
+  sudo bash
+  home
+  vvu
+  avwifi
+  nmcli dev wifi connect VVUITS 
+  clear
+  vvu
+  killall surf
+  lowriter
+  clear
+  vis
+  sudo apt install mysql-common 
+  clear
+  lec21
+  cd database/
+  youtube-dl https://www.youtube.com/watch?v=4Z9KEBexzcM
+  mv _-4Z9KEBexzcM.mkv 1.mkv
+  youtube-dl https://www.youtube.com/watch?v=kyGVhx5LwXw
+  mv _-kyGVhx5LwXw.webm 2.webm
+  clear
+  ls
+  lmvs
+  youtube-dl https://www.youtube.com/watch?v=kqUIoOM3WEs
+  vvu
+  nmcli dev wifi connect VVUITS 
+  avwifi
+  nmcli dev wifi connect VVUITS 
+  avwifi
+  vvu
+  nmcli dev wifi connect VVUITS  
+  vvu
+  text
+  avwifi
+  vvu
+  avwifi
+  vvu
+  timetable 
+  text
+  da
+  cal
+  date
+  date| cut -c 8
+  date| cut -c 8-
+  clear
+  date| cut -c 15-
+  date| cut -c 12
+  date| cut -c 17-
+  clear
+  date| cut -c 17-
+  date| cut -c 17- -23
+  date| cut -c 17- -c -23
+  date| cut -c 17- -23
+  date| cut -c 17- -d -23
+  date| cut -c 17-|cut -c -23
+  date| cut -c 17-|cut -c -2
+  date| cut -c 17-|cut -c -4
+  date| cut -c 17-|cut -c -7
+  date| cut -c 17-|cut -c -10
+  date| cut -c 17-|cut -c -9
+  clear
+  date| cut -c 17-|cut -c -9
+  date| cut -c 17-|cut -c -12
+  lec21;database
+  clear
+  nano qns
+  mv qns qns.md
+  pandoc qns.md -o qns.pdf
+  mupdf qns.pdf 
+  nano qns.md 
+  mupdf qns.pdf 
+  nano qns.md 
+  pandoc qns.md -o qns.pdf
+  mupdf qns.pdf 
+  evince qns.pdf 
+  mupdf qns.pdf 
+  nano answers.md
+  clear
+  home
+  clear
+  neofetch 
+  tgceejay 
+  xdman
+  tgceejay 
+  lec21;database
+  youtube-dl https://www.youtube.com/watch?v=dMkwFzRgxZY https://www.youtube.com/watch?v=Xk3cgUdoieU https://www.youtube.com/watch?v=4WX2MZvmzho
+  clear
+  ls
+  lt
+  clear
+  ls
+  mv _-dMkwFzRgxZY.mkv 3.mkv
+  mv _-Xk3cgUdoieU.webm 4.webm
+  mv _-4WX2MZvmzho.webm 5.webm
+  clear
+  ls
+  mpv _-B_QU9OGwtbI.webm 
+  mv _-B_QU9OGwtbI.webm 5.webm
+  mv 5.webm  6.webm
+  mv _-4WX2MZvmzho.webm 5.webm
+  mv _-B_QU9OGwtbI.webm 5.webm
+  clear
+  ls
+  mpv 6.webm 
+  mv 6.webm 8.webm
+  clear
+  mpv 5.webm 
+  mpv 4.webm 
+  mv 4.webm 7.webm
+  claer
+  ls
+  mpv 3.mkv 
+  mv 3.mkv 6.mkv
+  clear
+  ls
+  mpv _-kqUIoOM3WEs.webm 
+  mv _-kqUIoOM3WEs.webm 3.webm
+  clear
+  ls
+  mpv 1.mkv 
+  mpv 5.webm 
+  nmcli networking off
+  nmcli networking on
+  nmcli dev wifi connect VVUITS 
+  lodraw 
+  vvu
+  lec21
+  cd database/
+  ls
+  youtube-dl https://www.youtube.com/watch?v=kqUIoOM3WEs
+  tgceejay 
+  vvu
+  vvu
+  nmcli dev wifi connect VVUITS  
+  vvu
+  clear
+  ls
+  lec21
+  ls
+  clear
+  ls
+  cd database/
+  ls
+  lmvsmv _-IfaqkiHpIjo.webm 4.webm
+  mv _-IfaqkiHpIjo.webm 4.webm
+  lmvs
+  lec21
+  cd database/
+  ls
+  youtube-dl https://www.youtube.com/watch?v=B_QU9OGwtbI
+  youtube-dl https://www.youtube.com/watch?v=IfaqkiHpIjo&t=52s
+  vvu
+  cs
+  cd Videos/
+  ls
+  ls|grep *organization*
+  ls|grep *architecture*
+  ..
+  ls
+  cd Books/
+  ls
+  ..
+  ls
+  cd Others/
+  ls
+  cd Videos/
+  ls
+  pg
+  cd general/
+  ls
+  cd Algorithms\ \&\ Data\ Structures/
+  lmvs
+  cd Videos/
+  lmvs
+  cs
+  edit
+  edit ls
+  edit welp
+  alias edit
+  alias ebrc
+  tgceejay & exit
+  text /etc/hosts
+  cat /etc/hosts.deny 
+  nano /etc/hosts
+  sudo nano /etc/hosts
+  dwn
+  extract OffTheBalls.zip 
+  clear
+  ls
+  rm OffTheBalls_Data/
+  clear
+  ls
+  rm OffTheBalls.x86
+  clear
+  rm OffTheBalls.x86_
+  clear
+  ls
+  mk off
+  mkdir off
+  mv OffTheBalls.zip off/
+  clear
+  cd off/
+  extract OffTheBalls.zip OffTheBalls.zip 
+  clear
+  rm *
+  extract OffTheBalls.zip OffTheBalls.zip 
+  ..
+  clear
+  ls
+  cd off/
+  ls
+  ..
+  mv OffTheBalls.zip off/
+  cd off/
+  extract OffTheBalls.zip OffTheBalls.zip 
+  clear
+  ls
+  rm OffTheBalls_Data/
+  rm OffTheBalls.x86
+  rm OffTheBalls.x86_
+  extract OffTheBalls.zip 
+  clear
+  ls
+  clear
+  ls
+  mx OffTheBalls.x86_
+  ./OffTheBalls.x86_
+  lec21
+  cd Computer\ Organization/
+  ls
+  youtube-dl https://www.youtube.com/watch?v=CDO28Esqmcg
+  mv _-CDO28Esqmcg.mplec1.mp4
+  youtube-dl https://www.youtube.com/watch?v=q6oiRtKTpX4
+  ls
+  mv _-q6oiRtKTpX4.mkv intro.mkv
+  youtube-dl https://www.youtube.com/watch?v=Xl2nWDcy0To
+  mpv _-Xl2nWDcy0To.mp
+  mv _-Xl2nWDcy0To.mpmicroprocessors.mp4
+  clear
+  ls
+  sudo apt install deadbeef
+  apt search deadbeef
+  apt search dead beef
+  dwn
+  cd off/
+  ls
+  ./OffTheBalls.x86_
+  vvu
+  dwn
+  ls
+  clear
+  cp ME_SW_1909.12.0.1236.zip $disk
+  sudo cp ME_SW_1909.12.0.1236.zip $disk
+  lsblk
+  usdb1
+  lec21
+  cd Computer\ Organization/
+  ls
+  youtube-dl https://www.youtube.com/watch?v=WsYrUytuG5Y&t=27s
+  vis
+  localc 
+  lsblk
+  msdb1
+  apt search gtypist
+  apt-cache search gtypist
+  vvu
+  sudo su
+  su
+  clear
+  man su
+  man sudo
+  edit todo
+  ebrc
+  man vim
+  cat vim 
+  cd .vim_runtime/
+  ls
+  cd vimrcs/
+  ls
+  cat basic.vim 
+  ckear
+  claer
+  clear
+  ls
+  cat plugins_config.vim 
+  clear
+  ls
+  less extended.vim 
+  ..
+  ls
+  f
+  mx install_awesome_vimrc.sh 
+  ./install_awesome_vimrc.sh 
+  vim
+  mx install_basic_vimrc.sh 
+  ./install_basic_vimrc.sh 
+  clear
+  ls
+  vim
+  clear
+  ls
+  vim
+  vim README.md 
+  ./install_awesome_vimrc.sh 
+  clear
+  vim
+  vim README.md 
+  clear
+  ls
+  cat install_awesome_vimrc.sh 
+  ./install_awesome_parameterized.sh 
+  clear
+  ls
+  cat install_awesome_parameterized.sh 
+  cd vimrcs/
+  ls
+  cat basic.vim 
+  ..
+  ls
+  cd autoload/
+  ;s
+  ls
+  celar
+  clear
+  ..
+  ls
+  cd my_plugins/
+  ls
+  ..
+  cd sources_non_forked/
+  ls
+  cat install_basic_vimrc.sh 
+  cd vimrcs/
+  cat basic.vim 
+  more basic.vim 
+  less basic.vim 
+  sudo asjdkj
+  sdjkfskdjf
+  sdjfkjsdkfjskdjl
+  askdajsd
+  sudo bash
+  clear
+  lec21
+  cd Computer\ Organization/
+  ls
+  cat notes1.md 
+  clear
+  nano lnotes1.md
+  youtube-dl https://www.youtube.com/watch?v=fS7FFOaC_iQ
+  sudo nano /etc/hosts
+  clear
+  ls
+  dwn
+  cd off/
+  ..
+  rm *ButtleOFX*
+  rm -rf *ButtleOFX*
+  clear
+  ls
+  rm -rf *natron*
+  clear
+  ls
+  cd off/
+  ls
+  ./OffTheBalls.x86_
+  tgceejay 
+  bd
+  man bd
+  t bd
+  type bd
+  bc
+  apt search calculator
+  apt search calculator|less
+  localc 
+  libreoffice
+  localc 
+  vvu
+  bc
+  man b
+  man bc
+  bc -i
+  man bc
+  bc -q
+  man
+  nc
+  man nc
+  man bc
+  clear
+  bc
+  quodlibet 
+  qtcreator 
+  vvu
+  ls
+  clear
+  ping google.com
+  ed
+  man ed
+  ed todo 
+  ed todo
+  lsblk
+  thunar
+  cs
+  cd crash\ course/
+  ls
+  lmvs
+  thunar
+  lmvs
+  systemctl suspend
+  as
+  man as
+  vvu
+  tgceejay 
+  clear
+  ls
+  tgceejay 
+  text
+  lsblk
+  msdb1
+  usdb1
+  msdb1
+  usdb1
+  text
+  tgceejay 
+  lsblk
+  text
+  text $scripts/mdisk
+  mdisk
+  mx mdisk
+  mx $scripts/mdisk
+  mdisk
+  apt search emoji picker
+  apt search emoji
+  lsblk|grep "part $"
+  lsblk|grep "part $"|dmenu -p "Which device do you want to mount?"
+  lsblk|grep "part $"|dmenu -p "Which ext device do you want to mount?"
+  lsblk|grep "part $"|dmenu -p "Which ext dev do u want to mount?"
+  lsblk|grep "part $"|dmenu -p "which ext dev do u want to mount?"
+  $(lsblk|grep "part $"|dmenu -p "which ext dev do u want to mount?"|cut -c 3-)
+  lsblk
+  man lsblk 
+  lsblk -l
+  lsblk -fs
+  man lsblk
+  lsblk -a
+  man lsblk 
+  lsblk -O
+  clear
+  man lsblk 
+  lsblk -s
+  man lsblk
+  lsblk -J
+  clear
+  $(lsblk|sed /^/\/dev/|grep "part $"|dmenu -p "which ext dev do u want to mount?"|)
+  $(lsblk|sed s/^/\/dev/g|grep "part $"|dmenu -p "which ext dev do u want to mount?"|)
+  $(lsblk|sed 's/^/\/dev/g'|grep "part $"|dmenu -p "which ext dev do u want to mount?"|)
+  $(lsblk|sed 's/^/\/dev/g'|grep "part $"|dmenu -p "which ext dev do u want to mount?")
+  $(lsblk|sed 's/^└─/\/dev/g'|grep "part $"|dmenu -p "which ext dev do u want to mount?")
+  $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|dmenu -p "which ext dev do u want to mount?")
+  $(lsblk|sed 's/^└─/\/dev\//g'|cut -c 5-|grep "part $"|dmenu -p "which ext dev do u want to mount?")
+  $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c 5-|dmenu -p "choose disk u want mounted"
+  $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c 5-|dmenu -p "choose disk u want mounted")
+  $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c 1-|dmenu -p "choose disk u want mounted")
+  $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -3|dmenu -p "choose disk u want mounted")
+  $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -6|dmenu -p "choose disk u want mounted")
+  $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -10|dmenu -p "choose disk u want mounted")
+  clear
+  $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -10|dmenu -p "choose disk u want mounted")
+  sudo mount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -10|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
+  clear
+  lsblk
+  sudo mount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -10|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
+  clear
+  sudo mount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -10|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
+  sudo mount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -10|sed s/" "//g|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
+  clear
+  sudo mount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -10|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
+  sudo mount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
+  sudo mount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -8|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
+  sudo mount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
+  cat /etc/fstab
+  sudo mount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
+  clear
+  lsblk
+  sudo mount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
+  sudo mount -w (lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
+  sudo mount -w lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted" && notify-send "MOUNTED SUCCESSFULLY 💻"
+  sudo mount -w '(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted")' && notify-send "MOUNTED SUCCESSFULLY 💻"
+  sudo mount -w (lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
+  clear
+  sudo mount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
+  mount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
+  sudo mount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
+  mount -w /dev/sdb
+  sudo mount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted") $disk  && notify-send "MOUNTED SUCCESSFULLY 💻
+  sudo mount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted") "$disk"  && notify-send "MOUNTED SUCCESSFULLY 💻
+  sudo mount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
+  sudo mount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted") "$disk" && notify-send "MOUNTED SUCCESSFULLY 💻"
+  clear
+  usdb1
+  sudo mount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted") "$disk" && notify-send "MOUNTED SUCCESSFULLY 💻"
+  clear
+  sudo mount -w (lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
+  text
+  lsblk
+  sudo mount -w (lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
+  sudo umount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
+  sudo umount $disk
+  lsblk
+  mdisk
+  cd $disk
+  clear
+  ls
+  ..
+  echo "mount pendrive?"|dmenu
+  echo "yes?"|dmenu -i -p
+  echo "yes"|dmenu -i -p "mount pendrive"
+  echo "yes" "no"|dmenu -i -p "mount pendrive"
+  echo "yes"|echo "no"|dmenu -i -p "mount pendrive"
+  type mphone
+  text $mphone
+  text \$scripts/mphone
+  text $scripts/mphone
+  echo "yes\n no"|echo "no"|dmenu -i -p "mount pendrive"
+  echo "yes\n |dmenu -i -p "mount pendrive"
+  echo "yes\nno" |dmenu -i -p "mount pendrive"
+  echo "yes\n no" |dmenu -i -p "mount pendrive"
+  echo "yes \n no" |dmenu -i -p "mount pendrive"
+  echo "yes /n no" |dmenu -i -p "mount pendrive"
+  print "yes" |dmenu -i -p "mount pendrive"
+  printf "yes\no" |dmenu -i -p "mount pendrive"
+  printf "yes\n no" |dmenu -i -p "mount pendrive"
+  printf "yes\nno" |dmenu -i -p "mount pendrive"
+  printf "yes\nno" |dmenu -i -p "mount pendrive?"
+  printf "yes\nno\nmaybeso" |dmenu -i -p "mount pendrive?"
+  printf "yes\nno\nmaybe so" |dmenu -i -p "mount pendrive?"
+  man dmenu
+  ls|dmenu -i
+  ls|dmenu 
+  printf "yes\nno\nmaybe so" |dmenu -p "mount pendrive?"
+  printf "yes\nno\nmaybe so" |dmenu -i -p "mount pendrive?"
+  printf "yes\nno\nmaybe so" |dmenu -p "mount pendrive?"
+  lsblk
+  lsblk|grep part
+  clear
+  lsblk|grep part $
+  lsblk|grep "part $"
+  lsblk|cgrep "part $"
+  lsblk|grep part $
+  lsblk|cgrep "part $"
+  lsblk|grep part
+  lsblk|grep part$
+  clear
+  lsblk|grep "part$"
+  lsblk|grep "part $"
+  clear
+  lsblk|cgrep "part$"
+  lsblk|cgrep "part $"
+  lear
+  clear
+  lsblk|cgrep "part $"
+  cd $scripts
+  nano mdisk
+  text
+  mdisk
+  lsblk
+  udisk
+  mdisk
+  man dmenu
+  mdisk
+  mdisk
+  mdisk
+  mdisk
+  man dmenu
+  mdisk
+  mdisk
+  sudo umount $disk
+  lsblk
+  mdisk
+  udisk
+  cd scripts/
+  mx udisk 
+  udisk
+  text
+  udisk
+  clear
+  lsblk
+  text
+  mdisk
+  mdisk
+  text
+  man dmenu
+  mdisk
+  text
+  cat ~/andev
+  cat ~/anddev
+  text
+  mdisk
+  gpick
+  mdisk
+  udsk
+  udisk
+  disk
+  clear
+  mdisk
+  ls
+  udisk
+  ls|dmenu
+  ls|dmenu 
+  lsblk|dmenu 
+  lsblk|dmenu -i 30
+  ls}dmenu
+  lsdmenu
+  ls\dmenu
+  ls|dmenu
+  text
+  text .bashrcc
+  text .bashrc
+  dmenu
+  ls|dmenu
+  dmenu
+  ls|dmenu
+  ls|dmenu
+  text
+  cd scripts/
+  text *
+  text
+  ls
+  usdb1
+  msdb1
+  usdb1
+  mphone
+  clear
+  msdb1
+  usdb1
+  lsblk
+  clear
+  msdb1
+  usdb1
+  notify-send 
+  man notify-send 
+  notify-send --urgency=high hi
+  notify-send --urgency=critical "hi"
+  notify-send --urgency=critical "What's up"
+  notify-send --urgency=low "What's up"
+  notify-send --urgency=normal "What's up"
+  man notify-send 
+  notifier
+  man notifier
+  sudo bash
+  clear
+  mdisk
+  udisk
+  clear
+  mdisk
+  hist
+  text
+  text scripts/hist
+  hist
+  text scripts/hist
+  ls
+  lsblk
+  lsblk|grep Backups
+  lsblk|grep "Backups $"
+  clear
+  lsblk|grep "Backups$"
+  lsblk|cgrep "Backups$"
+  lsblk|cgrep "Backups"
+  lsblk|cgrep "Backup"
+  lsblk|cgrep "up $"
+  lsblk|cgrep "pat $"
+  lsblk|cgrep "part $"
+  lsblk|cgrep "part$"
+  clear
+  ls
+  cat .emulator_console_auth_token 
+  ufw
+  regex
+  clear
+  vvu
+  t for
+  cd testdir/
+  ls
+  cat a 
+  compare
+  man compare
+  dmenu
+  man ls|dmenu
+  pop
+  ls
+  cat essay 
+  rm essay 
+  clear
+  ls
+  cat .qpsrc 
+  ls
+  cat .selected_editor 
+  ls
+  rm .selected_editor 
+  mkdir testdir
+  cd testdir/
+  touch swe
+  touch a
+  touch s
+  touch textfile
+  echo words>> textfile 
+  ls
+  clear
+  if {cat $@"}
+  if {cat "$@" -e ""}; echo "its empty" >> "$@"; fi
+  text
+  text .bashrc
+  text ~/.bashrc
+  if {cat "$@" -e ""}; then echo "its empty" >> "$@"; fi
+  if [cat "$@" -e ""] then; ehco "empty">> "$@"; fi
+  if [cat "$@" -e ""] then; echo "empty">> "$@"; fi
+  if [cat "$@" -e ""] then; echo "empty">> "$@" else; echo "not empty"; fi
+  man if
+  t if
+  vvu
+  if [cat "*$" = ""];then echo "empty";else echo "nope";fi
+  if {cat "*$" = ""};then echo "empty";else echo "nope";fi
+  c;ear
+  if '{cat "*$" = ""}';then echo "empty";else echo "nope";fi
+  if '{ cat "*$" = "" }';then echo "empty";else echo "nope";fi
+  if  cat "*$" = "" ;then echo "empty";else echo "nope";fi
+  if  'cat "*$" = ""' ;then echo "empty";else echo "nope";fi
+  clear
+  if  'cat "*$"  ;then echo "empty";else echo "nope";fi
+  if  cat "*$"  ;then echo "empty";else echo "nope";fi
+  if  cat * =  ;then echo "empty";else echo "nope";fi
+  if  cat *   ;then echo "empty";else echo "nope";fi
+  if  cat * = o  ;then echo "empty";else echo "nope";fi
+  if  cat * == ""  ;then echo "empty";else echo "nope";fi
+  t if
+  if  ! cat *  ;then echo "empty";else echo "nope";fi
+  if  ! cat a  ;then echo "empty";else echo "nope";fi
+  if  ! cat a;then echo "empty";else echo "nope";fi
+  if  cat .selected_editor  a;then echo "empty";else echo "nope";fi
+  if  ! cat a;then echo "empty";else echo "nope";fi
+  clear
+  if  ! cat -e "";then echo "empty";else echo "nope";fi
+  alet
+  alert
+  has
+  help has
+  is
+  help is
+  help =
+  help
+  equal
+  man equal
+  t equal
+  clear
+  ls
+  cat sf
+  rm sf
+  cd testdir/
+  ..
+  rm testdir/
+  clear
+  ls
+  cd recover/
+  ls
+  cat New\ Empty\ File 
+  clear
+  ..
+  ls
+  mdisk
+  udisk
+  mdisk
+  sleep 30;alert
+  ls;alert
+  welp;alert
+  ls;alert
+  cat;alert
+  cat *;alert
+  gparted
+  sudo gparted
+  rebootsafe
+  gnome-disks 
+  evince
+  spdf
+  lec21
+  Computer\ Organization/
+  ls
+  evince organization.pdf 
+  acpi
+  text
+  vvu
+  nnn
+  cd .vim_runtime/
+  ./install_basic_vimrc.sh 
+  vim
+  ls|dmeny
+  ls|dmenu
+  dmenu
+  se
+  sudo apt install fzf
+  fzf
+  ls|fzf
+  fzf
+  cs
+  fzf
+  mpv $(fzf)
+  alias dmenu
+  sudo update-grub
+  sudo update-grub2
+  sudo bash
+  /bin/ls
+  clear
+  /bin/ls -r
+  /bin/ls --re
+  /bin/ls --r
+  /bin/ls --recursive
+  clear
+  /bin/ls --recursive|fzf
+  mpv $(/bin/ls --recursive|fzf)
+  fzf
+  man fzf
+  fzf --color=light,fg:232,bg:255,bg+:116,info:27
+  fzf --color=dark,fg:232,bg:255,bg+:116,info:27
+  fzf --color=black,fg:232,bg:255,bg+:116,info:27
+  fzf --color=dark,fg:#260A35,bg:255,bg+:116,info:27
+  fzf --color=dark,fg:#260A35,bg:#00000,bg+:116,info:27
+  fzf --color=dark,fg:#260A35,bg:#000000,bg+:116,info:27
+  fzf --color=dark,fg:#260A35bg+:116,info:27
+  fzf --color=dark,fg:#260A35,info:27
+  fzf --color=dark,fg:#260A35
+  fzf --color=dark,fg:#260A35,info:#260A35
+  fzf --color=dark,bg:#260A35,info:#260A35
+  man fzf
+  man fzf|grep color
+  fzf
+  fzf --color=dark
+  man fzf
+  history|fzf --tac --no-sort
+  cd scripts/
+  ls
+  hist
+  $(history|fzf --tac --no-sort)
+  cat hist
+  hist
+  history|fzf --tac --no-sort
+  history|fzf --tac --no-sort|xargs 
+  man xargs 
+  $(history|fzf --tac --no-sort|xargs)
+  t xargs
+  t fzf
+  eval $(history|fzf --tac --no-sort)
+  convert
+  celar
+  t convert
+  pics
+  cd random/n
+  cd random/
+  convert -size 1920xcanvas:darkblue out.png
+  sxiv out.png 
+  convert -size 1920x-plasma purple canvas:darkblue out.png
+  convert -size 1920xplasma:swirk canvas:darkblue out.png
+  convert -size 1920xplasma:blue canvas:darkblue out.png
+  sxiv out.png 
+  convert -size 1920xplasma:voilet canvas:darkblue out.png
+  convert -size 1920xplasma:yellow canvas:darkblue out.png
+  sxiv out.png 
+  convert -size 1920x canvas:darkblue plasma:blue-purple out.png
+  sxiv out.png 
+  convert -size 1920xplasma:blue-purple canvas:darkblue  out.png
+  convert -size 1920xplasma:blue-purple canvas:darkblue  out.png out.png
+  sxiv out.png 
+  sxiv out-0.png 
+  rm out-0.png out-2.png 
+  clear
+  sxiv out-0.png 
+  sxiv out.png 
+  convert -size 1920x canvas:darkblue plasma:blue-purple  out.png out.png
+  sxiv out.png 
+  rm out-0.png out-1.png out-2.png out.png 
+  clear
+  convert -size 1920x canvas:darkblue plasma:blue-purple  out.png out.png
+  convert -size 1920x canvas:darkblue plasma:blue-purple  out.png 
+  sxiv out-0.png 
+  sxiv out-1.png 
+  convert -size 1920x -swirl canvas:darkblue plasma:blue-purple  out.png 
+  convert -size 1920x swirl canvas:darkblue plasma:blue-purple  out.png 
+  convert -size 1920x swirl -canvas:darkblue plasma:blue-purple  out.png 
+  clear
+  convert -size 1920x -swirl canvas:darkblue plasma:blue-purple  out.png 
+  sxiv out-1.png 
+  convert -size 1920x -swirl canvas:darkblue plasma:purple  out.png 
+  sxiv out-1.png 
+  convert -size 1920x -swirl canvas:darkblue plasma:purple  out.png 
+  sxiv out-1.png 
+  convert -size 1920x -swirl canvas:darkblue plasma:purple  out.png 
+  sxiv out-1.png 
+  convert -size 1920x -swirl canvas:darkblue plasma:#260A out.png 
+  sxiv out-1.png 
+  sxiv out-0.png 
+  convert -size 1920x -swirl canvas:darkblue plasma:260A out.png 
+  convert -size 1920x -swirl canvas:#260Aplasma:#260A out.png 
+  sxiv out-0.png 
+  sxiv out-1.png 
+  vvu
+  tgceejay 
+  telegram 
+  hist
+  text
+  fzf
+  text $(fzf)
+  hist
+  alias hsit
+  alias hist
+  text
   hist
