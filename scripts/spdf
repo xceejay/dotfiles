@@ -8,5 +8,5 @@ while read i; do
 done < <(cat "$HOME/.cache/pdfcache" | cut -f 1)
 select="$(printf '%s\n' "${index[@]}" | rofi -dmenu -p pdf)"
 [ -z "$select" ] && exit 1
-exec ~/scripts/pdf "${booklist[$select]}" &
+zathura "${booklist[$select]}" &
 exit 0
