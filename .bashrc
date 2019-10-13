@@ -160,8 +160,12 @@ alias ebrc='edit ~/.bashrc'
 alias da='date "+%Y-%m-%d %A %T %Z"'
 
 # Alias's to modified commands
-
 #alias a fuzzy finder alias
+#alias javafx='java --module-path $PATH_TO_FX --add-modules javafx.controls $@'
+
+alias javafx=' /usr/lib/jvm/java-11-openjdk-amd64/bin/java --module-path /usr/lib/jvm/jdk-13/lib/fx --add-modules=javafx.controls --add-modules javafx.base,javafx.graphics'
+alias javacfx=' /usr/lib/jvm/java-11-openjdk-amd64/bin/javac --module-path /usr/lib/jvm/jdk-13/lib/fx --add-modules=javafx.controls --add-modules javafx.base,javafx.graphics'
+alias dmenu_run='dmenu_run -nb black -sb "#260A35"'
 alias clear='clear -x'
 alias hist='history > $scripts/history;sed  -i s/"[0-9]\+ "//g $scripts/history && $(tac  $scripts/history|dmenu)'
 alias sxiv='sxiv -b'
@@ -530,6 +534,10 @@ else
 	olddir=$PWD;cd "$*";lf |grep ^total|sed s/total//g> ~/dirsize;cd ~/ && java dirsize;printf "  " ;echo $OLDPWD|sed s/\\/home\\/joel\\//~\\//g;bd;cd $olddir;
 fi
 }
+fr(){ #find and run files with fuzzy search and xdg-open
+arg=$1
+xdg-open "$(fzf -q $arg)"
+}
 vidtomp3(){
 	 ffmpeg -i "$1" -vn "$2".mp3
 }
@@ -573,10 +581,13 @@ tgceejay(){ command ~/Downloads/Programs/telegram/./Telegram -many -workdir ~/ce
 #vim /etc/profile 
 #export JAVA_HOME="path that you found"
 #export PATH=$JAVA_HOME/bin:$PATH
-export JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk-amd64"
+export JAVA_HOME="/usr/lib/jvm/java-1.11.0-openjdk-amd64"
+# java-1.11.0-openjdk-amd64
 export PATH=$JAVA_HOME/bin:$PATH
 export flutter="/home/joel/flutter"
 export PATH=$flutter/bin:$PATH
+#export PATH_TO_FX=/usr/lib/jvm/java-11-openjdk-amd64/lib/javafx 
+export PATH=$PATH_TO_FX:$PATH
 #no need since i apt installed it
 #export M2_HOME="/opt/apache-maven-3.6.1"
 #export PATH=$M2_HOME/bin:$PATH
@@ -591,7 +602,10 @@ export PATH=$ig:$PATH
 export idea="~/idea/bin"
 export PATH=$idea:$PATH
 export GOBIN=/home/joel/bin
-export PATH=$GOBIN:$PATH#test comment
+export PATH=$GOBIN:$PATH
 export scripts=/home/joel/scripts
 export PATH=$scripts:$PATH
+
+export PATH=$PATH:$HOME/bin
 #js
+ 
