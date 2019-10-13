@@ -7,7 +7,7 @@ while read i; do
     title="${i##*/}"
     booklist[$title]="$location"; index+=( "$title" )
 done < <(cat "$HOME/.cache/pdfcache" | cut -f 1)
-select="$(printf '%s\n' "${index[@]}" | dmenu -p pdf)"
+select="$(printf '%s\n' "${index[@]}" | rofi -dmenu -p pdf)"
 [ -z "$select" ] && exit 1
 exec ~/scripts/pdf "${booklist[$select]}" &
 exit 0

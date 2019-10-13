@@ -15,7 +15,7 @@ if [ -f "$1" ]; then
     else 
 	page=1
     fi
-    mupdf -I -r 100 "$1" $page &
+    mupdf -I -r 150 "$1" $page &
     wait
     input=$(echo "$page"|dmenu -l 0 -p "$(basename -s .pdf "$1")" 2>/dev/null)
     

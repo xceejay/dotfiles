@@ -1,3886 +1,627 @@
-     pandoc ass2.md -o assignment2.pdf
-     evince assignment2.pdf 
-     vim ass2.md
-     pandoc ass2.md -o assignment2.pdf
-     evince assignment2.pdf , mj;n-pp;o0juh6yh6yhj8i9op;[']
-     pandoc ass2.md -o assignment2.pdf//hist
-     hsit
-     hist
-     lowriter ass1.md
-    lowriter ass2.md
-    lowriter assignment2.pdf 
-    history > "/home/joel/scripts/history";sed  -i s/"[0-9]\+ "//g "/home/joel/scripts/history" 
-     $(tac  /home/joel/scripts/history|dmenu -l -nb black)
+     ..
+     cd javafx/
+     cd share/openjfx/
+     ls
+     cd lib/
+     sudo cp -f openjfx/lib/* /usr/lib/jvm/java-1.11.0-openjdk-amd64/lib/
+     sudo cp -f lib/* /usr/lib/jvm/java-1.11.0-openjdk-amd64/lib/
+     sudo cp -f * /usr/lib/jvm/java-1.11.0-openjdk-amd64/lib/
+     clear
     ls
-    lec21
-    history > "/home/joel/scripts/history";sed  -i s/"[0-9]\+ "//g "/home/joel/scripts/history" 
-     $(tac  /home/joel/scripts/history|dmenu -l -nb black)
-    sudo bash
-    firefox
-    dir
+    $JAVA_HOME/
+    ls
+    cd lib/
+    ls
+    ..
+    chmod -R java-11-openjdk-amd64/
+    sudo chmod -R java-11-openjdk-amd64/
     clear
-    tgceejay 
-    lec21
-    cd music/
-    ls
-    cd ass/
-    ls
-    pdftotext assignment2.pdf 
+    /usr/lib/jvm/java-1.11.0-openjdk-amd64/bin/java -Dfile.encoding=UTF--cp /home/joel/.config/Code/User/workspaceStorage/35f0c7d3f37bb1535f2ca3db3b37c149/redhat.java/jdt_ws/rawjava_ab9d74c8/bin firstjavafx 
+    java -version 
+    javac --add-modules /usr/share/openjfx/lib/
+    javac --add-modules /usr/share/java
+    javac --add-modules /usr/share/java/ firstjavafx.java 
+    javac --add-modules /usr/share/openjfx/ firstjavafx.java 
+    javac --add-modules firstjavafx.java 
+    javac firstjavafx.java 
+    javac --module-path /usr/share/openjfx/
+    javac --module-path /usr/share/openjfx/ firstjavafx.java 
+    javac --module-path /usr/share/openjfx/lib/ firstjavafx.java 
+    javac --module-path /usr/share/java/ firstjavafx.java 
+    javac Octagontest.java 
+    java Octagontest 
+    javac firstjavafx.java 
     clear
+    javac --upgrade-module-path
+    javac --upgrade-module-path firstjavafx.java 
+    javac --module-path /usr/share/openjfx/lib/ firstjavafx.java 
+    javac --module-source-path /usr/share/openjfx/lib/ firstjavafx.java 
+    javac --module /usr/share/openjfx/lib/ firstjavafx.java 
+    javac --module-path /usr/share/java/ firstjavafx.java 
+    javac --module-path /usr/share/openjfx/lib/ firstjavafx.java 
+    ./clear.sh 
+    javac --module-path /usr/share/openjfx/lib/ firstjavafx.java 
+    javac firstjavafx.java 
+    $JAVA_HOME/
     ls
-    lowriter assignment2.txt 
-    tgceejay 
-    man screen
-    t screen
-    ebrc
-    echo "#js" >> .bashrc
-    text
-    hist
-    nmcli networking on
-    killall xfce4-terminal
-    history > "$scripts/history";sed  -i s/"[0-9]\+ "//g "$scripts/history" 
-     $(tac  /home/joel/scripts/history|dmenu -l -nb black)
-    enu -l -nb black)
-    history > "/home/joel/scripts/history";sed  -i s/"[0-9]\+ "//g "/home/joel/scripts/history" 
-     $(tac  /home/joel/scripts/history|dmenu -l -nb black)
+    cd lib/
     ls
-    clear
-    lt
-    sudo bash
-    ls
-    sudo bash
-    ls
-    clear
-    sudo bash
-    sudo bash
-    systemctl suspend
-    lec21
-    sudo bash
-    ls
-    clear
-    lt
-    text
-    cd scripts/
-    lec21
-    mkdir  networking
-    cd networking/
-    wget https://elearning.vvu.edu.gh/course/view.php?id=192
+    lr
+    cllea
+    lf
     clear
     ls
-    firefox 'view.php?id=192'
-    apt search table
-    apt search ^table
-    apt search ^table$
-    music
-    sudo apt install bat
-    lsblk
+    lf
+    lss
+    lf
+    ls
     clear
-    lt
+    cd /usr/share/openjfx/
+    ls
+    cd lib/
+    ls
+    cat javafx.
+    cat javafx.properties 
+    file src.zip 
+    filesize 
+    $JAVA_HOME/
+    ls
+    cd lib/
+    ls
+    code
+    javac firstjavafx.java 
+    /usr/lib/jvm/jdk-13/bin/java -Dfile.encoding=UTF--cp /usr/share/openjfx/lib/javafx.base.jar:/usr/share/openjfx/lib/javafx.graphics.jar:/usr/share/openjfx/lib/javafx.controls.jar:/usr/share/openjfx/lib/javafx.fxml.jar:/home/joel/Desktop/programming/java/javafxfiles/first/bin app.App 
+    cd /home/joel/Desktop/programming/java/javafxfiles/first ; /usr/lib/jvm/jdk-13/bin/java -Dfile.encoding=UTF--cp /home/joel/Desktop/programming/java/javafxfiles/first/bin app.App 
+    /usr/lib/jvm/jdk-13/bin/java -Dfile.encoding=UTF-@/tmp/cp_2v26rvil172o276co71o5vjzb.argfile app.App 
+    cd src/
+    ls
+    cd app/
     clear
-    do
-    if [ls = ls]; echo "yep"; else
-    if [ls = ls]; echo "yep"; else echo "nope"
-    ckear
-    clear
-    if
-    clear
-    grep if .bashrc
-    clear
-    if [ls=ls]; then echo "yep"; else echo "nope"; fi
-    if [$ls=$ls]; then echo "yep"; else echo "nope"; fi
-    clear
-    if [ssh = ls]; then echo "yep"; else echo "nope"; fi
-    if [$scripts=/home/joel/scripts]; then echo "yep"; else echo "nope"; fi
-    if [$scripts = /home/joel/scripts]; then echo "yep"; else echo "nope"; fi
-    if [ $scripts = /home/joel/scripts]; then echo "yep"; else echo "nope"; fi
-    if ["$scripts" = /home/joel/scripts]; then echo "yep"; else echo "nope"; fi
-    if [$scripts= =e/joel/scripts]; then echo "yep"; else echo "nope"; fi
-    clear
-    cd Desktop/
-   lec21
-   hist
-   if ["$scripts" -eq /home/joel/scripts]; then echo "yep"; else echo "nope"; fi
+    javac App.java 
+    /usr/lib/jvm/jdk-13/bin/java -Dfile.encoding=UTF--cp /home/joel/Desktop/programming/java/javafxfiles/first/bin app.App 
+    cd /home/joel/Desktop/programming/java/javafxfiles/first ; /usr/lib/jvm/jdk-13/bin/java -Dfile.encoding=UTF-@/tmp/cp_43546w1yaanlu78jjrb9ylqjg.argfile app.App 
+    javac --version
+    cd /home/joel/Desktop/programming/java/javafxfiles/first ; /usr/lib/jvm/jdk-13/bin/java -Dfile.encoding=UTF-@/tmp/cp_8n1ls89kt69nqbbmsc7svg830.argfile app.App 
+    cd /usr/lib/jvm/
+    ls
+    cd jdk-13/
+    ls
+    cd lib/
+    ls
+    cd fx/
+    ls
+    ..
+    cd fx/
+    l
+    s
+    ls
+    pwd javafx.base.jar
+    ..
    ls
    clear
-   lt
-   htop
-   clear
-   lt
-   clear
-   sudo bash
-   text
-   mvs
-   lmvs
-   sudo apt install foreui
+   ls
+   ..
+   ls
    dwn
-   extract ForeUI.tar.gz 
-   clear
+   cd minimal/
    ls
-   cd fore
-   cd ForeUI/
+   /usr/lib/jvm/java-1.11.0-openjdk-amd64/bin/java -Dfile.encoding=UTF-@/tmp/cp_8n1ls89kt69nqbbmsc7svg830.argfile app.App 
+   sudo apt install libopenjfx-java
+   sudo apt install libopenjfx-jni 
+   apt search jfx
+   sudo apt install jfx*
+   /usr/lib/jvm/jdk-13/lib/fx
    ls
-   mx ForeUI.exe 
+   cd .vscode/
    ls
-   cat ForeUI.exe 
-   clear
+   cd extensions/
    ls
-   mx launch.sh 
-   ./launch.sh 
-   firefox google.com
-   clear
+   cd vscjava.vscode-java-dependency-0.5.1/
    ls
-   lt
-   lcear
-   clear
-   acpi 
-   ls
-   clear
-   evince
-   mvs
-   cd Tv\ Shows/
-   cd THE\ BOYS/
-   ls
-   clear
-   lmvs
-   text
-   cd $scripts
-   ls
-   text lmvs
-   pdf
-   man pdftotext
-   ls
-   clear
-   lt
-   ls
-   lt
-   lw
-   ld
-   ldir
-   clear
-   dir
-   clear
-   mvs
-   cd The\ Wolf\ of\ Wall\ Street\ \(2013\)/
-   ks
-   clear
+   sxiv *
    ..
-   cd Tv\ Shows/
-   cd THE\ BOYS/
+   cd vscjava.vscode-java-pack-0.8.0/
    ls
-   cear
-   clear
-   lmvs
+   sxiv logo.
+   sxiv logo.png 
+   cd out/
+   ls
+   cd assets/
+   ls
+   cd java-runtime/
+   ls
+   ..
+   l
+   ls
+   cd overview/
+   ls
    ..
    ls
    ..
    ls
-   lmvs
+   cat README.md 
+   code
+   idea
+   javac --version 
+   java --version
+   cd /usr/share/openjfx
    ls
-   Tv\ Shows/
+   cd lib/
    ls
-   cd THE\ BOYS/
-   ;s
-   ls
-   lmvs
-   mvs
-   Tv\ Shows/
-   clear
-   ls
-   cd Teen\ Titans\ Go/
-   ls
-   cd Teen\ Titans\ Go\ Season\ 1\ 720p\ loadstone2k12/
-   clear;ls
-   lmvs
-   clear:lmvs
-   clear;lmvs
-   clear:lmvs
-   clear;lmvs
-   ls
-   clear
-   lt
-   clear
-   sudo bash
-   clear
-   ls
-   clear
-   firefox
-   wifi on
-   nmcli dev wifi
-   clear
-   nmcli networking connectivity 
-   nmcli status
-   nmcli connection 
-   clear
-   hist
-   surf https://192.168.0.254:8090/httpclient.html
-   surf http://192.168.0.254:8090/
-   hist
-   tgceejay 
-   firefox
-   history
-   clear
-   lt
-   text
-   text .bashrc
-   vvu 
-   hist
-   ls|dmenu 
-   t dmeny
-   t dmenu
-   t ls
-   t man
-   clear
-   t "ls"
-   clear
-   t "dmenu"
-   man dmenu
-   ls|dmenu -f
-   ls|dmenu 
-   man dmenu
-   dwm
-   apt search dwm
-   man dmenu
-   ls|dmenu -b
-   man dmenu
-   ls|dmenu -p yes
-   ls|dmenu -p Do you want to open this?
-   ls|dmenu -p "Do you want to open this?"
-   ls|dmenu -p "Do you want to open this?" -p yes -p no
-   clear
-   man dmenu
-   ls|dmenu -fn "Source Code Pro Bold"
-   ls|dmenu -fn "Source Code Pro bold"
-   ls|dmenu -fn "Source Code Pro"
-   ls|dmenu -fn "manrope"
-   clear
-   man dmenu
-   firefox
-   ls
-   clear
-   lt
-   cat typescript 
-   rm typescript 
-   man script
-   tgceejay 
+   free
    htop
-   htop|dmenu
-   top|dmenu
-   ps|dmenu
-   lec21
-   cd database/
+   pg;java/rawjava
+   cat firstjavafx.java 
+   pg
+   cd java/
+   cd rawjava/
+   /usr/lib/jvm/java-11-openjdk-amd64/bin/java --module-path /usr/lib/jvm/jdk-13/lib/fx --add-modules=javafx.controls --add-modules javafx.base,javafx.graphics firstjavafx.java 
+   /usr/lib/jvm/java-11-openjdk-amd64/bin/java --module-path /usr/lib/jvm/jdk-13/lib/fx --add-modules=javafx.controls --add-modules javafx.base,javafx.graphics firstjavafx
+   /usr/lib/jvm/java-11-openjdk-amd64/bin/javac --module-path /usr/lib/jvm/jdk-13/lib/fx --add-modules=javafx.controls --add-modules javafx.base,javafx.graphics firstjavafx.java 
+   /usr/lib/jvm/java-11-openjdk-amd64/bin/java --module-path /usr/lib/jvm/jdk-13/lib/fx --add-modules=javafx.controls --add-modules javafx.base,javafx.graphics firstjavafx
+   /usr/lib/jvm/java-11-openjdk-amd64/bin/javac --module-path /usr/lib/jvm/jdk-13/lib/fx --add-modules=javafx.controls --add-modules javafx.base,javafx.graphics firstjavafx.java 
+   /usr/lib/jvm/java-11-openjdk-amd64/bin/java --module-path /usr/lib/jvm/jdk-13/lib/fx --add-modules=javafx.controls --add-modules javafx.base,javafx.graphics firstjavafx
+   \cat firstjavafx.java 
+   text
+   text firstjavafx.java 
+   /usr/lib/jvm/java-11-openjdk-amd64/bin/javac --module-path /usr/lib/jvm/jdk-13/lib/fx --add-modules=javafx.controls --add-modules javafx.base,javafx.graphics firstjavafx.java 
+   /usr/lib/jvm/java-11-openjdk-amd64/bin/java --module-path /usr/lib/jvm/jdk-13/lib/fx --add-modules=javafx.controls --add-modules javafx.base,javafx.graphics firstjavafx
+   text
+   javac App.java
+   cd src/app/
+   javac App.java 
+   javacfx App.java 
+   javafx App.java 
+   pg
+   cd java/javafxfiles/
    ls
-   cat notes.md 
-   cd assignments/
+   javacfx firstjavafx.java 
+   javafx firstjavafx
+   javacfx firstjavafx.java 
+   javafx firstjavafx
+   code
+   rebootsafe
+   javacfx jfx.java 
+   javafx jfx.
+   javafx jfx
+   killall firefox-esr 
    ls
-   vim assignment2.md
-   c;ear
-   clear
+   lcear
+   lw
    ls
-   lowriter assignment2.odt
-   man lowrite
-   man lowriter
-   lowriter 
-   lsblk
-   msdb1
-   clear
-   ls
-   clear
-   lt
-   clear
-   disk
-   lec21;database
-   ls
-   cd assignments/
-   ls
-   cp assignment2.pdf $disk
-   sudo cp assignment2.pdf $disk
-   clear
-   usdb1
+   lr
+   wait(20)
+   wait
+   help wait
+   hist
+   t wait
+   man wait
    vvu
-   lec21
-   cd database/
-   cd assignments/
-   evince assignment2.pdf 
-   nmcli dev
-   w
-   clear
+   code
+   hist
+   tgceejay 
+   hist
+   dmenu
+   hist
+   xdman
+   dwn
+   cd Compressed/
+   ls
    lt
-   mvs
-   cd Tv\ Shows/
-   wifi off
+   extract Oceanofgames.comGRID2.zip 
+   cd GRID2/
    ls
-   cd THE\ BOYS/
+   wine Setup_Install_Game.exe 
+   thunar
+   logout
+   dwn
+   cd Compressed/GRID2/
+   wine Setup_Install_Game.exe 
+   thunar
+   dwn
+   cd Compressed/
    ls
-   lmvs
-   wifi on
-   nmcli dev wifi
-   wifi off
-   lmvs
+   cd GRID2/
    ls
-   lec21;database;assignments
-   lowriter assignment2.odt 
-   lodraw 
-   lowriter assignment2.odt 
-   evince assignment2.pdf 
-   lsblk
-   msdb1
-   cp assignment2.pdf $disk
-   sudo cp assignment2.pdf $disk
+   cat Setup_Install_Game.exe 
+   mv Setup_Install_Game.exe setup.exe
+   wine setup.exe 
+   winesetup
+   dwn;GRID2
+   dwn;GRID
+   dwn;Compressed;GRID
+   dwn;Compressed;GRID2
    clear
-   disk
-   ls assignment2.pdf 
-   evince assignment2.pdf 
-   usdb1
-   wifi off
+   ls
+   cat setup
+   cat setup.exe 
+   sudo apt-get install --install-recommends winehq-develsudo apt-get install --install-recommends winehq-devel
+   sudo apt-get install --install-recommends winehq-devel
+   sudo apt-get install --install-recommends wine
+   man dmenu
+   sudo apt autoremove
+   rofi
+   sudo apt install rofi
+   /usr/share/rofi/themes
+   ls
+   cat arthur.rasi 
+   text arthur.rasi 
+   basename
+   t basename
+   scripts
+   base name pdf
+   basename pdf
+   basename
+   basename *
+   basename .
+   clear
+   ls
+   basename $(/bin/ls)
+   man basename
+   basename $(realpath *)
+   basename $(realpath .)
+   clear
+   basename $(realpath .)
+   basename $(realpath *)
+   basename $(realpath -r)
+   man realpath 
+   basename $(realpath "*")
+   basename '$(realpath "*")'
+   basename "$(realpath "*")"
+   basename "$(realpath *)"
+   clear
+   ls
+   basename "$(realpath *)"
+   realpath *
+   realpath *|dmenu
+   fc-cache -v
+   sudo fc-cache -
+   sudo fc-cache -f
+   realpath *|dmenu
+   text 
+   man dmenu
+   realpath *|dmenu -fn Roboto
+   realpath *|dmenu -fn 
+   realpath *|dmenu 
+   realpath *|dmenu -fn Roboto 8
+   realpath *|dmenu -fn Roboto 
+   realpath *|dmenu -fn Source Code Pro
+   realpath *|dmenu -fn "Source Code Pro"
+   realpath *|dmenu -fn "Source Code Pro 5"
+   realpath *|dmenu -fn "Source Code Pro "
+   realpath *|dmenu -fn "hack"
+   realpath *|dmenu -fn "Hack"
+   realpath *|dmenu -fn "manrope"
+   realpath *|dmenu 
+   realpath *|rofi
+   realpath *|rofi -show
+   man rofi
+   t rofi
+   realpath *|rofi -dmenu
+   man rofi
+   man rofi|grep color
+   realpath *|rofi -bg black -dmenu
+   spdf
+   lec21
+   cd database/assignments/
+   ls
+   ..
+   pdf qns.pdf 
+   spdf
+   alias hist
+   spdf
+   $scripts
+   ls
+   cat hist
+   cat pdf
+   t ig
+   t if
+   man if
+   help if
+   cat pdf
+   realpath
+   man realpath
+   realpath .
+   realpath pdf
+   clear
+   cat pdf
+   t ed
+   man ed
+   dwn
+   cd Compressed/GRID2/
+   ls
+   wine setup.exe 
+   thunar
+   wine setup.exe 
+   dwn
+   cd Compressed/
+   cat Oceanofgames.comGRID2.zip 
+   man zip
+   zip -@ 
+   man zip
+   t zip
+   less Oceanofgames.comGRID2.zip 
+   grep *setup* Oceanofgames.comGRID2.zip |less
+   grep *setup* Oceanofgames.comGRID2.zip 
+   unzip -l Oceanofgames.comGRID2.zip |less
+   cd GRID2/
+   mv setup.exe Setup_Install_Game.exe
+   wine Setup_Install_Game.exe 
+   alias dmenu
+   hist
+   t rofi
+   googler invalid name GRID2
+   xdman
+   dwn
+   clear
+   ls
+   vis
+   rofi-theme-selector 
+   realpath *
+   realpath *|rofi -show
+   rofi -show
+   vis
+   man rofi
+   neofetch 
+   vis
+   t rofi
+   rofi -dmenu
+   clear
+   rofi -showrun
+   rofi -show run
+   claer
+   cmear
+   ls
+   man rofi
+   rofi -location 2-
+   rofi -location 20
+   rofi -location 8
+   rofi -location 3
+   rofi -location 90
+   rofi -location 0
+   man rofi
+   man rofi|grep location
+   rofi -show -location 1
+   rofi -showrun -location 1
+   rofi -show run -location 1
+   man rofi|grep location
+   rofi -show -location -3
+   rofi -show -location 4
+   rofi -show -yoffset -2
+   rofi -show -xoffset -2
+   neofetch 
+   clear
+   neofetch 
+   t neofetch
+   man neofetch 
+   man screen
+   man screenfetch 
+   screenfetch -n
+   vis
+   rofi -show ;scrot sc.png && exit
+   sxiv sc.png 
+   scrot
+   text
+   lt
+   sxiv 2019-10-1
+   sxiv 2019-10-12-200831_1366x768_scrot.png 
+   pics
+   ls
+   sxiv sss.png 
+   rm sss.png 
+   cd screenshots/
+   lt
+   ..
+   ls
+   ..
+   ls
+   lt
+   sxiv sc.png 
+   rm sc.png 
+   rm 2019-10-12-200831_1366x768_scrot.png 
+   ls
    cd Pictures/
    ls
    cd random/
-   ls calibre
+   ls
+   lt
    ..
-   f calibre
-   his
-   hist
-   wifi on
-   nmcli dev wifi
-   nmcli devi wifi connect VVUITS 
-   clear
-   firefox
-   clear
-   ps java
-   p java
-   clear
-   lec21;database
+   ls
+   cd wallpapers/
+   lt
+   sxiv  ftgj2nn13er31.jpg 
+   ..
+   ls
+   ccd wallpapers/
+   ls
    clear
    ls
-   calibre
-   nmcli connection 
+   dwn
+   ..
+   pics
+   ls
+   neofetch 
+   vis
+   ls
+   t rofi
+   rofi -show drn
+   rofi -show drun
+   man rofi
+   rofi -show drun
+   t rofi
+   rofi
+   rofi modi
+   rofi -modi
+   rofi-sensible-terminal 
+   man rofi| grep mode
+   rofi -show mode
+   rofi -show drun
+   rofi -enable drun
+   cd /usr/share/rofi/
+   ls
+   cd themes/
+   ls
+   rofi drun
+   man rofi
+   rofi --modi drun
+   rofi -single-shot
+   rofi --enable-drun
+   rofi -modi drun -show drun
+   history|rofi
+   history|rofi -show
+   t rofi
+   history|rofi -dmenu
+   history|$(rofi -dmenu)
+   $(history)|rofi -dmenu
+   ls|rofi -dmeu
+   t dmenu
+   t "dmenu"
+   $(history|rofi -dmenu)
+   "$(history|rofi -dmenu)"
+   clear
+   rofi 
+   whatis rofi
+   whatis dmenu
+   rofi -show ssh
+   rofi -show keys
+   rofi -show windowcd
+   rofi -show combi
+   hist
+   rofi
+   /usr/share/rofi/
+   ls
+   cd themes/
+   ls
+   nano arthur.rasi 
+   text arthur.rasi 
+   killall Telegram 
+   /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml
+   text /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml
+   killall rofi
+   htop
    xfce4-panel -r
-   loginctl terminate-user joel
-   rebootsafe
-   sudo reboot
-   ldir|dmenu
-   ldir|cut -c 15-|dmenu
-   ldir|cut -c 25-|dmenu
-   ldir|cut -c 35-|dmenu
-   ldir|cut -c 45-|dmenu
-   ldir|cut -c 50-|dmenu
-   ldir|cut -c 55-|dmenu
-   ldir|cut -c 54-|dmenu
-   cls
-   htop
-   lec21
-   cd database/
-   sl
+   xfce4-panel
+   man xfce4-panel
+   xfce4-panel &
+   man ls
+   /bin/ls -d
+   /bin/ls -D
+   /bin/ls -d
+   man ls
+   dwn
+   cd Compressed/
    ls
-   vim notes.md 
-   cls
-   man clear
-   clear -x
-   clear -x;clear -x
+   lt
+   extract Oceanofgames.comNascar_15.zip 
+   lt
+   rm Nascar_15/
+   extract Oceanofgames.comNeed_for_Speed_World_2010.zip 
+   cd Need_for_Speed_World_2010/
+   ls
+   wine Setup_Install_Game.exe 
+   wineSetup_Install_Game.exe 
+   ..
+   ls
+   lt
+   cd Need_for_Speed_World_2010/
+   ls
+   wine Setup_Install_Game.exe 
+   ..
+   cd GRID2/
+   wine Setup_Install_Game.exe 
+   ..
+   rm Need_for_Speed_World_2010/
+   ls
+   rm Oceanofgames.comNeed_for_Speed_World_2010.zip 
+   clear
+   ls
+   rm *Ocean
+   rm *Ocean*
+   ls
+   rm Soundnode.zip *VPN*
+   clear
+   ls
+   rm SM-G920F_6.0.1_dm_verification_Bypass_Fixfirmwares.com.tar.md5.rar softether-vpnclient-v4.28-9669-beta-2018.09.11-linux-x64-64bit.tar.gz VERSION ticons-white/ source-code-pro-master share/ SHA256SUM
+   ls
+   rm SHA256SUM.asc  README.md roboto
+   y
+   ls
+   clear
+   ls
+   rm __main__.py 
+   ;s
+   ls
+   rm GRID2/
+   rm $(/bin/ls)
+   rm $(/bin/ls|dmenu)
+   rm $(/bin/ls|dmenu -l )
+   rm $(/bin/ls --directory|dmenu -l )
+   rm $(/bin/ls --directory|dmenu -l )
+   rm $(/bin/ls -d|dmenu -l )
+   ls -d
+   ls
+   rm Just\ Cause\ 4\ -\ \[DODI\ Repack\]/
+   rm FTD2XX.dll 
+   rm 7c99b6cf9a8b73c9312a71d1209d9bbb-0841beca9ffaeb4cb3d14d622c75638b6630980d
+   clear
+   ls
+   rm G920FXXU6ERF5_G920FVFG6ERF1_G920FXXU6ERF7_HOME.tar.md
+   rm *Che*
+   rm *bash*
+   rm *.bash*
+   rm .bashrc .bashrc_help .bashrc_help.no_color 
+   clear
+   ls
+   rm *debian*
+   rm Crysis2/
+   ls
+   clear
+   ls|less
+   cat .directory 
+   rm .directory 
+   sudo apt remove dolphin
+   ls
+   rm Keystring_factory.apk/
+   clear
+   ls
+   killall Telegram 
+   rofi
    text
-   ufw
-   sudo bash
-   clear
-   man screenfetch 
-   screenfetch -D "MACOS X"
-   screenfetch -D "ARCH"
-   screenfetch -D "KALI"
-   clear
-   usdb1
-   lsblk
-   msdb1
-   mvs
-   cd Tv\ Shows/
-   ls
-   sudo cp -r THE\ BOYS/ $disk
-   lsblk
-   msdb
-   sudo mount -w /dev/sdb $disk
-   disk
-   bd
-   sudo cp -r THE\ BOYS/ $disk
-   usdb1
-   usdb
-   sudo umount /dev/sdb 
-   acpi
-   man sxic
-   man sxiv
-   wifi on
-   nmcli dev wifi
-   wifi off
-   clear
-   loginctl terminate-user joel
-   mvs
-   cd Tv\ Shows/
-   ls
-   cd THE\ BOYS/
-   ls
-   lmvs
-   disk
-   clear
-   bd
-   lmvs
-   cd project
-   ..
-   pg
-   clear
-   ls
-   cd c\&c++/
-   ls
-   cd c++/
-   ls
-   cd learnc++/
-   ls
-   clear
-   cd learnEc/
-   ls
-   clear
-   ls
-   cd project
-   ls
-   clear
-   ls
-   ./a.out 
-   clear
-   ./a.out 
-   clear
-   ls
-   clear
-   terminal
-   ls
-   clear
-   cat bin.txt 
-   clear
-   evince
-   lsblk
-   clear
-   vvu
-   firefox
-   vid 
-   yt https://www.youtube.com/watch?v=Ag0AQDa3PmU;mv Ag0AQDa3PmU
-   yt https://www.youtube.com/watch?v=Ag0AQDa3PmU;mv Ag0AQDa3PmU kodak
-   clear
-   yt https://www.youtube.com/watch?v=Ag0AQDa3PmU;mv Ag0AQDa3PmU kodak.mkv
-   clear
-   lec21
-   cd database/
-   ls
-   evince notes.pdf 
-   ..
-   ls
-   cd Computer\ Organization/
-   ls
-   evince notes1.pdf 
-   cat assignments 
-   evince organization.pdf 
-   wifi on
-   nmcli dev wifi 
-   evince
-   tgceejay 
-   vid
-   youtube-dl https://www.youtube.com/watch?v=FNZqj16XYrs&t=11s
-   firefox
-   clear
-   lt
-   firefox
-   clear
-   lt
-   clear
-   firefox
-   mvs
-   cd Tv\ Shows/
-   ls
-   cd THE\ BOYS/
-   ls
-   lmvs
    hist
-   history > "/home/joel/scripts/history";sed  -i s/"[0-9]\+ "//g "/home/joel/scripts/history" 
-    $(tac  /home/joel/scripts/history|dmenu -l -nb black)
-   history > "/home/joel/scripts/history";sed  -i s/"[0-9]\+ "//g "/home/joel/scripts/history" 
-    $(tac  /home/joel/scripts/history|dmenu -l -nb black)
-   nmcli dev wifi
-   wifi of
-   wifi off
-   wifi on
-   awwifi
-   avwifi
-   clear
-   vvu
-   vvu
-   firefox
-   clear
-   lt
-   lec12
-   lec21
-   cd Computer\ Organization/
-   ls
-   cat assignments 
-   dwn
-   cd minimal/
-   git clone https://github.com/MinhasKamal/CuteVirusCollection
-   evince
-   tgceejay 
-   ls
-   clear
-   lt
-   vvu
-   firefox
-   neofetch 
-   clear
-   sudo apt update
-   vvu
-   wifi off
-   wifi on
-   vvu
-   firefox
-   logout
-   man chmod
-   firefox
-   lec21
-   database/
-   ls
-   evince notes.pdf 
-   vvu
-   nmcli devi wifi
-   tgceejay
-   man ufw
-   telegram
-   lec21
-   cat *
-   neofetch 
-   clear
-   screenfetch -D "Rice"
-   clear
-   screenfetch -D "Android"
-   screenfetch -D "ANDROID"
-   CLEAR
-   clear
-   wifi off
-   wifi on
-   lec21
-   cd Computer\ Organization/
-   ls
-   mupdf organization.pdf 
-   man mupdf
-   mupdf -r organization.pdf 
-   mupdf -r  organization.pdf 
-   mupdf -r organization.pdf 
-   mupdf -r organization.pdf &
-   man mupdf
-   notify-send Good Morning
-   notify-send Good
-   man notify-send 
-   n
-   notify-send -i Pictures/random/adele 
-   notify-send -i Pictures/random/adele hi
-   clear
-   notify-send -I Pictures/random/adele hi
-   notify-send -i Pictures/random/adele hi
-   cd Pictures/random/
-   sxiv adele 
-   notify-send -i Pictures/random/adele hi
-   mupdf ls
-   lec21
-   mupdf mycourses 
-   cd Computer\ Organization/
-   ls
-   mupdf notes.pdf 
-   lec21
-   cd Computer\ Organization/
-   s
-   ls
-   mupdf notes.pdf 
-   clear
-   aasasasa
-   clear
-   lt
-   lec21
-   cd database/
-   ls
-   ..
-   ls
-   cd computer\ science/
-   ls
-   cd crash\ course/
-   ls
-   lmvs
-   rename s/"\-Youtube"//g *
-   clear
-   ls
-   rename s/"-Youtube"//g *
-   ls
-   rename s/\-Youtube//g *
-   ls
-   rename s/\\-Youtube//g *
-   ls
-   clear
-   rename s/'-Youtube'//g *
-   ls
-   rename s/"\-Youtube"//g *
-   ls
-   rename 's/\-Youtube//g' *
-   ls
-   rename 's/\-Youtube//' *
-   ls
-   clear
-   rename s/"\-Youtube"// *
-   ls
-   rename s/\-// *
-   ls
-   rename s/Youtube// *
-   clear
-   ls
-   rename s/YouTube// *
-   ls
-   clear
-   ..
-   ls
-   ..
-   la
-   clear
-   acpi
-   w
-   htopp
-   htop
-   clear
    text
-   apt install suckless
-   clear
-   apt search suckless
-   clear
-   googler how to automount android device in cli 
-   vvu
-   wifi off
-   wifi on
-   nmcli dev wifi
-   nmcli dev wifi connect VVUITS 
-   chrome
-   my pc
+   hist
+   hsit
+   hist
+   spdf
+   pdf
+   scrips
+   scripts
    ls
-   dir
-   document
-   Downloads
-   ls
-   ..
-   ls
-   pwd
-   opera mini
-   opera
-   my downloads
-   Downloads
-   wifi of
-   wifi off
-   wifi on
-   nmcli dev wifi
-   nmcli devi wifi connect  VVUITS 
-   nmcli dev wifi
-   systemctl status
-   systemctl list-unit-files 
-   systemctl list-unit-files | grep degraded
-   systemctl status 
-   systemctl restart  NetworkManager
-   nmcli dev wifi 
-   avwifi connect VVUITS
-   vvu
-   pg
-   cd java/
-   ls
-   cd books\ \&\ tutorials/
-   ls
-   cd Videos/
-   ls
-   rename s/" "/_/g *
+   cat mdisk 
+   text mdisk 
+   mdisk 
+   udisk
    clear
-   ls
-   lmvs
-   ly
-   lt
-   lmvs
-   vid
-   bd
-   lt
-   wifi off
-   code
-   clear
-   thunar
-   evince
-   vvu
-   acpi
-   kill -9
-   clear
-   javac Triangle2test.java 
-   java Triangle2test
-   javac Triangle2test.java 
-   java Triangle
-   java Triangle2test 
-   javac Triangle2test.java 
-   java Triangle2test 
-   javac Triangle2test.java 
-   java Triangle2test 
-   clear
-   java Triangle2test 
-   clear
-   java Triangle2test 
-   clear
-   java Triangle2test clear
-   clear
-   java Triangle2test 
-   clear
-   java Triangle2test clear
-   lcear
-   ceacals;d
-   cal
-   clear
-   cal
-   clear
-   javac Triangle2
-   javac Triangle2test.java 
-   java Triangle2test 
-   clear
-   javac Triangle2test.java 
-   clear
-   java Triangle2test 
-   evince
-   killall xfce4-terminal 
-   firefox
-   wifi on
-   nmcli dev wifi
-   firefox
-   vvu
-   firefox
-   wifi off
-   wifi on
-   firefox
-   sudo apt install compton
-   avwifi
-   vvu
-   firefox
-   apt search packet tracer
-   traceroute
-   clear
-   dwn
-   lt
-   extract 'Packet Tracer 7.2.for Linux bit.tar.gz' 
-   extract "Packet Tracer 7.2.for Linux bit.tar.gz"
-   clear
-   mv "Packet Tracer 7.2.for Linux bit.tar.gz"  packettracer.tar.gz
-   extract packettracer.tar.gz 
-   ls
-   clear
-   ls
-   lt
-   mv packettracer.tar.gz ~/
-   clear
-   home
-   ls
-   mkdir pt
-   mv packettracer.tar.gz pt
-   cd pt
-   ls
-   extract packettracer.tar.gz 
-   ls
-   clear
-   ls
-   mx install 
-   sudo bash
-   rebootsafe
-   traceroute google.com
-   apt search wireshark
-   sudo apt install wireshark
-   wireshark 
-   sudo apt install wireshark-gtk 
-   wireshark-gtk 
-   vvu
-   sudo packettracer 
-   cd pt/
-   ls
-   packettracer 
-   sudo pack
-   sudo packettracer 
-   packettracer 
-   vvu
-   hjtop
-   htop
-   ls
-   clear
-   sudo packettracer 
-   clear
-   packettracer 
-   pt
-   ls
-   cat install 
-   traceroute
-   traceroute google.com
-   clear
+   mdisk 
+   text mdisk 
+   mdisk
+   lsblkk
+   lsblk
+   mdisk
    text
-   echo $SHELL
-   firefox
-   vvu
+   mdisk
+   udisk
+   mdisk
+   udisk
    clear
-   lt
-   clear
-   ls
-   clear
-   lc
-   la
-   lw
-   lr
-   dirsize
-   vvu
-   apt search stow
-   sudo apt install xstow
-   xstow
-   man xstow
-   nnn
-   sudo apt install nn
-   clear
-   sudo apt install nnn
-   nnn
-   sudo apt remove --purge ranger 
-   nnn
-   xdg-open 
-   man xdg-open 
-   man xdg-settings 
-   xdg-settings 
-   xdg-settings  --list
-   xdg-settings default-web-browser
-   xdg-settings manual
-   xdg-settings --manual 
-   xdg-settings set default-web-browser firefox
-   xdg-settings set default-web-browser firefox-esr
-   xdg-settings set default-web-browser firefox-esr.desktop
-   nnn
-   apt search mtfg
-   apt search mtfs
-   apt search mtpfs
-   sudo apt install go mtpfs
-   sudo apt install go-mtpfs
-   go-mtpfs 
-   man go-mtpfs 
-   t  go-mtpfs 
-   go-mtpfs --help
-   sudo apt remove --purge go-mptfs
-   sudo apt remove --purge go-mtpfs
-   apt search simple-mtpfs
-   mtp-detect 
-   mtp-connect 
-   mtp-folders 
-   man fusermount 
-   dwn
-   min12xxw 
-   minimal/
-   git clone https://github.com/phatina/simple-mtpfs
-   cd simple-mtpfs/
-   ls
-   cat INSTALL 
-   clear
-   ls
-   cat README.md 
-   mkdir build
-   cd build/
-   ../configure
-   clear
-   ...
-   cd simple-mtpfs/
-   ls
-   mx configure.ac 
-   ls
-   cat configure.ac 
-   clear
-   ls
-   make
-   cd debian/
-   ls
-   cd source/
+   format.sh 
+   cat format.sh 
+   realpath $format.sh 
+   realpath format.sh 
    ls
    ..
    ls
-   cat rules 
-   ..
-   ls
-   cd src/
-   sl
-   ls
-   ..
-   ls
-   clear
-   ls
-   cd build/
-   ls
-   ../configure.ac 
-   ../configure
-   ../configure.ac 
-   clear
-   ..
-   cd build/
-   ../configure
-   make
-   m..
-   ..
-   ls
-   ./autogen.sh 
-   make
-   ./configure
-   ls
-   make
-   clear
-   cd build/
-   ../config
-   ../configure
-   clear
-   ls
-   ../configure
-   make distclean
-   ..
-   make distclean
-   clear
-   cd build/
-   ../configure
-   make
-   make install
-   sudo make install
-   ..
-   ./autogen.sh 
-   simple-mtpfs 
-   clear
-   simple-mtpfs -l
-   man simple-mtpfs 
-   c;ear
-   clear
-   simple-mtpfs -device ~/phone
-   clear
-   home 
-   cd p
-   cd phone/
-   ls
-   ..
-   simple-mtpfs -device ~/phone
-   simple-mtpfs -l
-   simple-mtpfs -device ~/phone
-   simple-mtpfs --device ~/phone
-   cd phone/
-   ls
-   clear
-   ls
-   nnn
-   clear
-   man simple-mtpfs 
-   fusermount -u phone
-   nnn
-   charmap 
-   mphone
-   cut
-   $(cat ~/anddev|dmenu -i -p "Which android device do you want to mount?"|cut -c 1)
-   simple-mtpfs -l
-   simple-mtpfs -l|cut -c 2
-   simple-mtpfs -l|cut -c 1
-   clear
-   mphone
-   clear
-   mphone
-   mphone 
-   cd phone/
-   ls
-   ..
-   clear
-   text
-   simple-mtpfs -l
-   hehe=simple-mtpfs -l 
-   hehe='simple-mtpfs -l '
-   hehe
-   echo $hehe
-   simple-mtpfs -l >hehe
-   $echo hehe
-   echo $hehe
-   clear
-   cat hehe
-   clear
-   rm hehe 
-   touch anddev
-  $(cat ~/anddev|dmenu -i -p "Which android device do you want to mount?"|cut -c 1)
-  opt=$(cat ~/anddev|dmenu -i -p "Which android device do you want to mount?"|cut -c 1)
-  cat $opt
-  echo $opt
-  mpone
-  mphone
-  cd phone/
-  ;s
-  ls
-  clear
-  mphont
-  mphone
-  text
-  cd phone/
-  ls
-  ..
-  uphone
-  cd scripts/
-  ls
-  mx uphone 
-  ..
-  ls
-  uphone
-  ls
-  ls phone/
-  mphone 
-  uphone
-  dmenu -i
-  dmenu -i -p hello
-  dmenu -i -p "hello"
-  "man"|dmenu -i -p "whats this"
-  "masdasdasn"|dmenu -i -p "whats this"
-  clear
-  "$PWD"|dmenu -i -p "whats this"
-  echo "$PWD"|dmenu -i -p "whats this"
-  clear
-  man dmenu
-  mphone 
-  mphone 
-  uphone 
-  man notify-send 
-  text
-  mphone
-  uphone
-  mkdir phone
-  clear
-  ls
-  xdg-mime 
-  cd scripts/
-  ls
-  touch mphone
-  text mphone 
-  mx mphone 
-  text mphone 
-  text
-  ranger
-  apt list --upgradeable
-  mphone
-  clear
-  vvu
-  evince
-  ls phone
-  dwn
-  minimal
-  ls
-  cd room\ decor/
-  images
-  dwn
-  cd ForeUI/
-  ls
-  ..
-  rm ForeUI.tar.gz ForeUI extensions/ set_ptenv.sh set_qtenv.sh tpl.packettracer tpl.linguist 
-  y
-  clear
-  ls
-  lt
-  rm cisco_packet_tracer_faqs.pdf 
-  clear
-  lt
-  rm install languages/ backgrounds/ art/
-  clear
-  ls
-  rm eula721.txt 
-  ls
-  clear
-  ls
-  cd bin/
-  ls
-  ..
-  rm bin
-  ls
-  rm extensions/ help/
-  rm -rf extensions/ help/
-  ls
-  rm -rf Sounds/ saves/ templates/
-  clear
-  ls
-  rm -rf Sounds/ saves/ templates/
-  sudo rm saves/
-  sudo rm -rf saves/
-  clear
-  ls
-  lf
-  text
-  clear
-  lf | cut -c -4
-  lf | cut -c 4-
-  lf | cut -c 8
-  clear
-  ls
-  lf | cut -c 8-
-  lf | cut -c 15-
-  lf | cut -c 25-
-  lf | cut -c 35-
-  lf | cut -c 40-
-  lf | cut -c 45-
-  lf | cut -c 42-
-  lf | cut -c 43-
-  lf | cut -c 43-|
-  lf | cut -c 43-
-  clear
-  mv "lf | cut -c 43-" Documents/
-  mv "$(lf | cut -c 43-)" Documents/
-  mv "(lf | cut -c 43-)" Documents/
-  mv "lf | cut -c 43-" Documents/
-  clear
-  ls
-  lf | cut -c 43-
-  lf | cut -c 43-|mv Documents/
-  clear
-  mv $(lf | cut -c 43-|dmenu) Documents/
-  rename 
-  rename s/" "/_/g *
-  clear
-  ls
-  clear
-  hist
-  mv $(lf | cut -c 43-|dmenu) Documents/
-  clear
-  lf
-  lt
-  cd Documents/
-  ls
-  clear
-  ..
-  mv Telegram_Desktop/ "Telegram Desktop/"
-  ls
-  pics
-  imgs
-  img
-  text
-  sudo apt update
-  pics
-  cd scripts/
-  touch pdf
-  pdf
-  rm pdf
-  pdf
-  ..
-  pd
-  pdf
-  cd scripts/
-  pdf
-  #
-  # MUPDF Automation Script
-  # Make MUPDF remember current page when you quit
-  #
-  # Requires: xdotool, zenity
-  #
-  # Copyright © 2014, Mark Karpov
-  #
-  # MUPDF Automation Script is free software: you can redistribute it and/or
-  # modify it under the terms of the GNU General Public License as published
-  # by the Free Software Foundation, either version of the License, or (at
-  # your option) any later version.
-  #
-  # MUPDF Automation Script is distributed in the hope that it will be useful,
-  # but WITHOUT ANY WARRANTY; without even the implied warranty of
-  # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
-  # Public License for more details.
-  #
-  # You should have received a copy of the GNU General Public License along
-  # with this program. If not, see <http://www.gnu.org/licenses/>.
-  ### constants
-  CACHE_DIR="$HOME/.cache/mupdf/"
-  DEFAULT_PAGE=1
-  PAGE_FILE="$CACHE_DIR/$(basename "$1").page"
-  ### functions
-  bad_exit() # prints error message and exits the program
-  { echo "$(basename $0): ${1:-"Unknown Error"}" 1>&2; exit 1; }
-  ### main
-  # It's not recommended to use this automation script as root, because it
-  # would create files with page indexes in /root directory. That's not what
-  # you want. So we check if current user is root.
-  if test $(id -u) -eq 0; then bad_exit "Please run this program as ordinary user, not as root."; fi
-  # Now we need to create a directory where we will store our page indexes for
-  # various PDF files. This command will create such directory only if doesn't
-  # exist yet.
-  mkdir -p "$CACHE_DIR"
-  # OK, here we check if our script has been invoked with at least one command
-  # line argument.
-  if test $# -gt 0
-  then
-  if test -f "$PAGE_FILE"; then page=$(cat "$PAGE_FILE"); else page=$DEFAULT_PAGE; fi
-  mupdf "$1" $page &
-  xdotool search --sync --onlyvisible --class "mupdf"
-  xdotool key f
-  xdotool key W
-  wait
-  input=$(zenity --entry --title="page number" --text="page number:")
-  if test "$input" != ""; then page=$input; fi
-  echo $page > "$PAGE_FILE"; else CACHE_DIR="$HOME/.cache/mupdf/"; DEFAULT_PAGE=1; PAGE_FILE="$CACHE_DIR/$(basename "$1").page" bad_exit() # prints error message and exits the program
-  { echo "$(basename $0): ${1:-"Unknown Error"}" 1>&2; exit 1; } if test $(id -u) -eq 0; then bad_exit "Please run this program as ordinary user, not as root."; fi mkdir -p "$CACHE_DIR" if test $# -gt 0
-  then
-  cd scripts/
-  touch pdf
-  mx pdf
-  nano pdf
-  pdf
-  cd scripts/
-  text pdf
-  nano pdf
-  pdf
-  apt search ed
-  apt search ^ed$
-  ping google.com
-  avwifi
-  vvu
-  doc
-  cd optics/
-  thunar
-  $scripts
-  touch spdf;mx spdf
-  nano spdf 
-  ed
-  man ed
-  spdf
-  cd .cache/
-  cat pdfcache 
-  realpath 
-  man realpath 
-  realpath pwd
-  pdf
-  dwn
-  cd Documents/
-  ls
-  pdf net-intro.pdf 
-  clear
-  scripts
-  $scripts
-  ls
-  text pdf
-  bd
-  pdf Semiconductor\ Physics.pdf 
-  sudo apt install ed
-  pdf Semiconductor\ Physics.pdf 
-  clear
-  ls
-  pdf 0135404673.pdf 
-  pdf SMB_University_120307_Networking_Fundamentals.pdf 
-  clear
-  pdf 0135404673.pdf 
-  clear
-  spdf
-  type spdf
-  file spdf
-  $scripts
-  ls
-  text
-  $scripts/
-  ..
-  lec21
-  Computer\ Organization/
-  ls
-  pdf organization.pdf 
-  pdf 
-  clear
-  spdf
-  clear
-  doc
-  cd books/
-  ls
-  pdf 'The Art of Persuasion.epub' 
-  clear
-  ..
-  cd books/
-  ls
-  pdf Kiyosaki\,\ Robert\ -\ Rich\ Dad\,\ Poor\ Dad\ \(2010\).epub 
-  clear
-  pdf Kiyosaki\,\ Robert\ -\ Rich\ Dad\,\ Poor\ Dad\ \(2010\).epub 
-  spdf
-  $scripts/
-  ls
-  text spdf 
-  cd .cache/
-  ls
-  cd mupdf/
-  ls
-  ..
-  cat pdfcache 
-  nano pdfcache 
-  clear
-  cat pdfcache 
-  systemctl disable modbrc.service 
-  spdf
-  clear
-  text
-  pdfs
-  doc
-  cd books/
-  s;
-  ls
-  pdf
-  ls *.pdf
-  ls *.pdf|dmenu
-  text
-  $scripts
-  text pdfs
-  mx pdfs
-  bd
-  pdfs
-  clear
-  pdfs
-  sudo apt update ; sudo apt upgrade -y
-  dwn
-  cd Documents/
-  ls *.ebub
-  ls *.ebup
-  ls *.ebpub
-  ls *.epub
-  clear
-  ls
-  doc
-  ls
-  cd books/
-  ls
-  mupdf 'Zak George, Dina Roth Port - Dog Training Revolution_ The Complete Guide to Raising the Perfect Pet with Love-Ten Speed Press (2016).epub' 
-  man mupdf
-  mutool
-  echo $PWD
-  us=$(PWD 2>&1)
-  echo $us
-  us=$(pwd 2>&1)
-  echo $us
-  text
-  touch ~/.mupdf.history
-  pdfs
-  $scripts
-  ls
-  nano pdf
-  text pdf
-  bd
-  ls
-  pdfs
-  doc
-  cd books/
-  pdfs
-  text
-  $scripts
-  ls
-  text pdf
-  bd
-  pdfs
-  pdf 'ACV.pdf' 
-  doc
-  bootctl 
-  books
-  pdfs
-  ls *.pdf
-  ls *.pdf|dmenu
-  ls *.pdf|awk '{ print "\""$0"\""}'|dmenu
-  text
-  pdfs
-  doc
-  cd books/
-  ls
-  pdfs
-  doc
-  cd books/
-  pdfs
-  clear
-  ;s
-  ...
-  l
-  ls
-  clear
-  ls
-  cd .cache/
-  ls
-  cat mupdf/
-  cat pdfcache 
-  echo > pdfcache 
-  cat pdfcache 
-  sed -i s/" "//g pdfcache 
-  cat pdfcache 
-  text pdfcache 
-  clear
-  doc
-  bootctl 
-  books
-  pdfs
-  spdf
-  clear
-  spdf
-  clear
-  text
-  doc
-  books/
-  epubs
-  text
-  epubs
-  pdfs
-  doc
-  bootctl 
-  books
-  epubs
-  pdfs
-  spdf
-  clear
-  mphone
-  clear
-  mphone 
-  text
-  text $scripts 
-  text $scripts/mphone
-  javac Triangle2test.java 
-  java Triangle
-  java Triangle2test 
-  clear
-  java Triangle2test 
-  java Triangle2test |grep pink
-  java Triangle2test |cgrep pink
-  clear
-  java Triangle2test |cgrep pink
-  clear
-  alias cgrep
-  javac intArrayListavg.java 
-  clear
-  javac intArrayListavg.java 
-  clear
-  java intArrayListavg 
-  javac intArrayListavg.java 
-  clear
-  java intArrayListavg 
-  c;ear
-  clear
-  javac intArrayListavg.java 
-  java intArrayListavg 
-  clear
-  java intArrayListavg 
-  clear
-  javac Triangle2test.java 
-  java Triangle2test 
-  javac Triangle2test.java 
-  java Triangle2test 
-  javac Triangle2test.java 
-  java Triangle2test 
-  javac Triangle2test.java 
-  java Triangle2test 
-  javac Triangle2test.java 
-  java Triangle2test 
-  javac Triangle2test.java 
-  java Triangle2test 
-  code
-  sudo apt-get install libfftw3-dev libncursesw5-dev cmake
-  cd ~/.config/vis/colors/
-  ls
-  cat basic_colors 
-  cat basic_colors rainbow 
-  touch bnw
-  nano bnw
-  dwn
-  cd minimal/
-  git clone https://github.com/dpayne/cli-visualizer#ubuntu
-  git clone https://github.com/dpayne/cli-visualizer
-  cd cli-visualizer/
-  ls
-  cat ./install.sh 
-  vis
-  clear
-  vis
-  ~/.config/vis/colors/
-  ls
-  ..
-  ls
-  cd colors/
-  ls
-  text
-  ~/.config/vis/colors/
-  ls
-  ..
-  ls
-  text
-  ls
-  clear
-  ls
-  cd colors/
-  touch new
-  nano new
-  cat new
-  nano new
-  ;s
-  ls
-  cat .new.swp 
-  cat newy 
-  rm new
-  rm .new.swp 
-  ls
-  clear
-  ..
-  ls
-  vis
-  cd ~/.config/vis/colors/
-  ls
-  cat basic_colors 
-  ..
-  ls
-  cd colors/
-  ..
-  cat config 
-  text config 
-  text
-  man vis
-  mphone
-  cd phone/
-  ls
-  cat sdcard 
-  rm sdcard 
-  ..
-  uphone
-  firefox
-  ~/.config/vis/colors/
-  ls
-  text cyberpunk 
-  /nano cyberpunk 
-  nano cyberpunk 
-  vis
-  ~/.config/vis/colors/
-  ls
-  rm new.save 
-  nano cyberpunk
-  ..
-  ls
-  text
-  sudo apt upgrade
-  ls
-  cd colors/
-  text neon
-  text
-  ls
-  rm newy 
-  rm bnw 
-  ..
-  text
-  ls
-  lt
-  ls
-  sudo bash
-  clear
-  ls
-  clear
-  ls
-  clear
-  ls
-  clear
-  lt
-  clear
-  ls
-  clear
-  kazam
-  kaza,
-  kazam
-  text
-  cd vid
-  cd Videos/
-  ls
-  sxiv 'Screencast 2019-10-12:27:56.mp4' 
-  mpv 'Screencast 2019-10-12:27:56.mp4' 
-  vlc 'Screencast 2019-10-12:27:56.mp4' 
-  ffmpeg 
-  clear
-  t ffmpeg
-  ffmpeg -i 'Screencast 2019-10-12:27:56.mp4' hm.gf
-  ffmpeg -i 'Screencast 2019-10-12:27:56.mp4' hm.gif
-  sxiv hm.gif 
-  mpv hm.gif 
-  tgceejay 
-  music
-  firefox
-  pics
-  cd wallpapers/
-  ls
-  gthumb  dark-night-mountains-minimalist-4k-o4.jpg 
-  ls
-  clear
-  lt
-  neofetch 
-  ls|wc -l
-  doc
-  cd books/
-  pdfs
-  ls
-  clear
-  doc
-  cd books/
-  $(ls *.pdf|dmenu -nb black -l 30
-  $(ls *.pdf|dmenu -nb black -l 30)
-  $(ls *.pdf|sed s/" "/"\ "/g|dmenu -nb black -l 30)
-  $(ls *.pdf|sed s/" "/"\ "/g
-  $(ls *.pdf|sed s/" "/"\ "/g)
-  ls *.pdf|sed s/" "/"\ "/g)
-  ls *.pdf|sed s/" "/"\ "/g
-  clear
-  ls *.pdf|sed s/" "/"\\ "/g
-  ls *.pdf|sed s/" "/"\\\ "/g
-  $scripts/
-  ls
-  cat pdfs
-  rm pdfs
-  pdfs
-  clear
-  ls
-  touch pdfs;mx pdfs
-  text
-  text pdfs
-  pdfs
-  text
-  $(ls *.pdf|dmenu -nb black -l 30
-  $(ls *.pdf|dmenu -nb black -l 30)
-  doc
-  bootctl 
-  books
-  pfs
-  pdfs
-  pds
-  pdfs
-  clear
-  ..
-  dwn
-  cd Documents/
-  ls
-  pdfs
-  ls *.pdf|sed s/" "/"\\\ "/g
-  pdf $(ls *.pdf|sed s/" "/"\\\ "/g|dmenu -nb black -l 30)
-  pdf (ls *.pdf|sed s/" "/"\\\ "/g|dmenu -nb black -l 30)
-  pdf '(ls *.pdf|sed s/" "/"\\\ "/g|dmenu -nb black -l 30)'
-  pdf $(ls *.pdf|sed s/" "/"\\\ "/g|dmenu -nb black -l 30)
-  clear
-  ls Statistics
-  ls Statistics*
-  ls *Statistics*
-  mv *Statistics* ~/Desktop/lectures/level2001/statistics/
-  cd ~/Desktop/lectures/level2001/statistics/
-  ls
-  pdfs
-  spdf
-  cd ~/.cache/
-  text pdfcache 
-  spdf
-  text pdfcache 
-  bd
-  pdf Neil_A._Weiss_-_Introductory_Statistics\,_9th_Edition____-Addison_Wesley__Pearson_Learning_\(2011\).pdf 
-  spdf
-  pdf Neil_A._Weiss_-_Introductory_Statistics\,_9th_Edition____-Addison_Wesley__Pearson_Learning_\(2011\).pdf 
-  lec21
-  cd Computer\ Organization/
-  ls
-  pdf organization.pdf 
-  lsblk
-  msdb1
-  disk
-  sudo cp -r 'Fresh off the boat'/ ~/Desktop/movies/
-  ..
-  usdb1
-  mvs
-  cp 'Fresh off the boat'/ Tv\ Shows/
-  clear
-  ls
-  clear
-  ls
-  cd Fresh\ off\ the\ boat/
-  ls
-  ..
-  ls
-  cd Tv\ Shows/
-  ls
-  Fresh\ off\ the\ boat/
-  ls
-  ..
-  ls
-  rm 'Fresh off the boat'/
-  rm -rf 'Fresh off the boat'/
-  sudo rm -rf 'Fresh off the boat'/
-  clera
-  ls
-  cd Tv\ Shows/
-  ls
-  cd Fresh\ off\ the\ boat/
-  ls
-  season\ 
-  season\ 1/
-  ls
-  lmvs
-  text
-  lmvs
-  ls
-  lmvs
-  clear
-  neofetch 
-  wc
-  man wc
-  ls| wc
-  ls| wc -l
-  clear
-  ls
-  man wc
-  home
-  ls|wc
-  clear
-  lsblk
-  cd /media/root/B
-  cd /media/root/
-  sudo bash
-  ls
-  clear
-  vvu
-  nmcli dev wifi
-  nmcli dev wifi connect VVUITS 
-  vvu
-  firefox
-  ls
-  clear
-  vis
-  music
-  clear
-  vis
-  ls
-  clear
-  vis
-  vos
-  vis
-  spdf
-  mvs
-  cd Tv\ Shows/
-  rm -rf bleach/
-  ls
-  rm -rf Gumball/
-  ls
-  rm -rf Teen\ Titans\ Go/
-  ls
-  clear
-  ls
-  rm -rf Da.Vinci\'s.Demons/ family\ guy\ 16/ season\ 4/ 
-  rm -rf Da.Vinci\'s.Demons/ family\ guy\ 16/ season\ 4/ THE\ BOYS/
-  clear
-  ls
-  ..
-  ls
-  la
-  mvs
-  rm The\ Wolf\ of\ Wall\ Street\ \(2013\)/
-  clear
-  ls
-  sudo bash
-  doc
-  l
-  bd
-  sudo bash
-  ls
-  sudo bash
-  text
-  clear
-  sudo bash
-  ls
-  sudo bash
-  thunar
-  sudo thunar
-  vvu
-  nmcli dev wifi 
-  nmcli dev wifi connect VVUITS 
-  nmcli dev 
-  nmcli connection 
-  nmcli connection show
-  vvu
-  text
-  cd /opt/sublime_text/
-  ls
-  cd Packages/
-  ls
-  cd hytrast/
-  ls
-  ..
-  ls
-  sudo bash
-  ls
-  ..
-  ls
-  cd Downloads/
-  ls
-  cd minimal/
-  ls
-  ..
-  sudo cp -r minimal/ /media/root/Backups
-  cd .config/calibre/
-  ls
-  touch stylesheetcalibre
-  nano stylesheetcalibre 
-  sudo cp -r stylesheetcalibre /media/root/Backups
-  clear
-  cd .config/
-  ..
-  cd .config/
-  ..
-  cd .gimp-2.8/
-  ls
-  ..
-  sudo cp -r .gimp-2.8/ /media/root/Backups
-  cd .config/
-  cd calibre/
-  ls
-  cd caches/
-  ls
-  calibre
-  nmcli dev wifi
-  nmcli dev wifi connect VVUITS 
-  vvu
-  clear
-  ls
-  clear
-  vvu
-  sudo bash
-  dwn
-  clear
-  ls
-  clear
-  blueman-manager 
-  vvu
-  surf google.com
-  firefox
-  vvu
-  firefox
-  dwn
-  lt
-  aqemu 
-  clear
-  aqemu 
-  clear
-  firefox
-  killall mb_warband.exe
-  mb_warband.exe
-  logout
-  vvu
-  firefox
-  blender
-  sudo dmesg
-  clear
-  vis
-  javac intArrayListavg.java 
-  java intArrayListavg 
-  clear
-  cat /proc/sys/vm/drop_caches 
-  cd /proc/sys/vm/ 
-  ls
-  cat dirty_bytes 
-  clear
-  cat laptop_mode 
-  clear
-  ls
-  blender
-  pg
-  cd general/
-  ls
-  ..
-  cd Ideas\,Algorithms\ etc/
-  ls
-  ..
-  ls
-  sxiv  Screenshot_2019-06-22_17-49-55.png 
-  lt
-  cd java/
-  ls
-  cd books\ \&\ tutorials/
-  ls
-  cd Videos/
-  ls
-  ..
-  ls
-  ..
-  ls
-  cd general/
-  ls
-  cd Algorithms\ \&\ Data\ Structures/
-  ls
-  cd  Videos/
-  ls
-  ..
-  ls
-  ..
-  ls
-  ..
-  ls
-  ..
-  ls
-  cd lectures/
-  ls
-  cd level2001/
-  sl
-  ls
-  ..
-  ls
-  ..
-  cd Desktop/
-  f blender
-  cs
-  cd Videos/
-  ls
-  lmvs
-  ..
-  ls
-  f blender
-  cd Others/
-  cd Videos/
-  ls
-  lmvs
-  blender
-  pg
-  cd java/
-  ls
-  cd books\ \&\ tutorials/
-  ls
-  cd Books/
-  ls
-  pdfs
-  pdf 'Introduction to Java Programming, Brief Version, 11th Global Edition.
-  pdf 'Introduction to Java Programming, Brief Version, 11th Global Edition.pdf' 
-  spdf
-  code
-  clear
-  ls
-  clear
-  ls
-  mvs
-  cd Tv\ Shows/
-  ls
-  clear
-  ls
-  cd Fresh\ off\ the\ boat/
-  ls
-  cd season\ 
-  cd season\ 2/
-  ls
-  lmvs
-  mv Fresh.Off.the.Boat.S02E12.480p\ \(1\).mkv Fresh.Off.the.Boat.S02E12.480p.mkv
-  clear
-  ls
-  lmvs
-  clear
-  ls
-  ..
-  ls
-  ..
-  ls
-  ..
-  ls
-  lmvs
-  firefox
-  cd /usr/share/
-  cd themes/
-  ls
-  ..
-  ls
-  mkdir .themes
-  sudo mkdir .themes
-  clear
-  ..
-  cd /share
-  cd share/
-  sl
-  ls
-  cd themes/
-  ls
-  cp -r Flat-Remix-GTK-Blue-Darkest-Solid/ ../.themes/
-  sudo cp -r Flat-Remix-GTK-Blue-Darkest-Solid/ ../.themes/
-  ../.themes/
-  ls
-  ..
-  mv .themes/ themes/
-  sudo mv .themes/ themes/
-  clear
-  cd themes/
-  ls
-  sudo cp -r Flat-Remix-GTK-Blue-Darkest-Solid/ ../.themes/
-  clear
-  ls
-  ...
-  cd share/
-  cd .themes/
-  ls
-  ..
-  ls
-  cd themes/
-  ls
-  cp -r Flat-Remix-GTK-Blue-Darkest-Solid ../.themes/
-  sudo cp  Flat-Remix-GTK-Blue-Darkest-Solid ../.themes/
-  sudo cp -r Flat-Remix-GTK-Blue-Darkest-Solid ../.themes/
-  clear
-  ..
-  cd .themes/
-  ls
-  rm cinnamon/ gtk-2.0/ gtk-3.0/ index.theme metacity-1/ xfwm4/
-  rm -rf cinnamon/ gtk-2.0/ gtk-3.0/ index.theme metacity-1/ xfwm4/
-  clear
-  sudo rm -rf cinnamon/ gtk-2.0/ gtk-3.0/ index.theme metacity-1/ xfwm4/
-  clear
-  ls
-  ..
-  rm themes/
-  rm -rf  themes/
-  clear
-  sudo rm -rf  themes/
-  mv .themes/ themes
-  sudo mv .themes/ themes
-  cd themes/
-  ls
-  cd Flat-Remix-GTK-Blue-Darkest-Solid/
-  ls
-  ..
-  cd icons/
-  ls
-  ls
-  neofetch 
-  dpkg -l
-  clear
-  ls
-  clear
-  ls
-  man rm
-  t r
-  t rm
-  t 'rm'
-  cd .themes/
-  ls
-  rm "Dots Black"/
-  cd assets/
-  ls
-  ..
-  ls
-  rm assets/
-  ls
-  rm Dots\ White/ Flat-Remix-GTK/ Flat-Remix-GTK-Blue Flat-Remix-GTK-Blue-Darkest/ Flat-Remix-GTK-Dark
-  clear
-  ls
-  rm Flat-Remix-GTK-Yellow Flat-Remix-GTK-Yellow-Dark Flat-Remix-GTK-Yellow-Darker Flat-Remix-GTK-Yellow-Darkest
-  clear
-  ls
-  rm Flat-Remix-GTK-Darker/                   Flat-Remix-GTK-Yellow-Solid/
-  clear
-  ls
-  lt
-  la
-  ls
-  lc
-  lw
-  rm Flat-Remix-GTK-Blue-Darkest-Solid/      Flat-Remix-GTK-Darker/
-  rm Flat-Remix-GTK-Darker-Solid/
-  clear
-  ls
-  rm Flat-Remix-GTK-Darker
-  clear
-  ls
-  ..
-  ls
-  clear
-  ls
-  cd .themes/
-  ls
-  ..
-  mkdir
-  mkdir themes
-  bd
-  ls
-  cp -r Flat-Remix-GTK-Blue-Darkest-Solid/ ~/themes/
-  clear
-  ls
-  rm *
-  clear
-  ..
-  mv themes/ .themes/
-  cd .themes/
-  ls
-  cd themes/
-  ls
-  cp Flat-Remix-GTK-Blue-Darkest-Solid/ .
-  cp Flat-Remix-GTK-Blue-Darkest-Solid/ ../../
-  clear
-  ls
-  ..
-  ls
-  cd themes/
-  cd theme
-  cd themes
-  ls
-  clear
-  ls
-  cp Flat-Remix-GTK-Blue-Darkest-Solid/ ~/.themes/
-  clear
-  ls
-  rm Flat-Remix-GTK-Blue-Darkest-Solid/
-  clear
-  ..
-  ls
-  rm themes/
-  clear
-  ls
-  ..
-  ls
-  lt
-  rm Flat-Remix-GTK-Blue-Darkest-Solid/
-  clear
-  ls
-  cd .themes/
-  ls
-  cat .gitignore 
-  rm .gitignore 
-  clear
-  ls
-  rm .gitmodules 
-  clear
-  ls
-  ..
-  ls
-  lt
-  rm untitled.blend1
-  clear
-  ls
-  thunar
-  conky-manager2
-  vis
-  telegram 
-  firefox
-  vis
-  ls
-  clear
-  ls
-  clear
-  dwn
-  cd minimal/
-  ..
-  images
-  mv *dark* ~/Pictures/wallpapers/
-  clear
-  ls
-  clear
-  xfwm--version
-  text
-  firefox
-  dwn 
-  minimal/
-  git clone https://github.com/wsdfhjxc/xfwm-rounded-corners-patch
-  cd xfwm-rounded-corners-patch/
-  git checkout xfwm4-4.12.5
-  git checkout xfwm-4.12.5-rounded-corners.patch
-  clear
-  ls
-  git apply xfwm-4.12.5-rounded-corners.patch
-  ./autogen.sh --prefix=/usr
-  ..
-  git clone https://github.com/xfce-mirror/xfwm4.git
-  cd xfwm4/
-  ls
-  git checkout xfwm4-4.12.5
-  ./autogen.sh --prefix=/usr
-  sudo apt install xfce4-dev-tools 
-  clear
-  ./autogen.sh --prefix=/usr
-  make
-  clear
-  make
-  ls
-  Make
-  sudo make
-  clear
-  ./autogen.sh --prefix=/usr
-  sudo apt install libxfce4util-common 
-  sudo apt install libxfce4util-dev
-  ./autogen.sh --prefix=/usr
-  sudo apt install libxfce4ui-1-0
-  sudo apt install libxfce4ui-1-dev 
-  ./autogen.sh --prefix=/usr
-  sudo apt install libwnck-dev
-  ./autogen.sh --prefix=/usr
-  make
-  ..
-  cd xfwm-rounded-corners-patch/
-  ls
-  git apply xfwm-4.12.5-rounded-corners.patch
-  cp xfwm-4.12.5-rounded-corners.patch ../xfwm4/
-  clear
-  ..
-  cd xfwm4/
-  ls
-  git apply xfwm-4.12.5-rounded-corners.patch
-  make
-  ./src/xfwm--replace & disown
-  logout
-  vis
-  tee ~/.config/autostart/xfwm-rounded-corners.desktop <<EOF
-  [Desktop Entry]
-  Type=Application
-  Name=xfwm-rounded-corners
-  Exec=$(pwd)/src/xfwm--replace
-  OnlyShowIn=XFCE;
-  EOF
-  clear
-  ls
-  logout
-  cd /usr/share/
-  ls
-  firefox
-  cd xgreeters/
-  ls
-  cat lightdm-g
-  cat lightdm-gtk-greeter.desktop 
-  ..
-  cd xgreeters/
-  cat lightdm-greeter.desktop 
-  clear
-  ls
-  ..
-  ls
-  f lightdm
-  cd xsessions/
-  ls
-  cat lightdm-xsession.desktop 
-  ..
-  ls
-  cd xgreeters/
-  ls
-  cat lightdm-greeter.desktop 
-  ..
-  cd lightdm/
-  ls
-  cd lightdm-gtk-greeter.conf.d/
-  ls
-  cat 01_debian.conf 
-  text 01_debian.conf 
-  ..
-  ls
-  cd lightdm.conf.d/
-  ls
-  text 01_debian.conf 
-  lightdm
-  sudo dpkg-reconfigure lightdm
-  logout
-  vvu
-  cd /etc/X11/
-  ls
-  cat Xsession
-  clear
-  cd Xsession.d/
-  ls
-  cd /usr/
-  ls
-  cd share/
-  ls
-  cd lightdm/
-  ls
-  cd lightdm
-  cd lightdm.conf.d/
-  ls
-  cat 01_debian.conf 
-  ls
-  clear
-  ..
-  ls
-  cd lightdm-gtk-greeter.conf.d/
-  ls
-  cat 01_debian.conf 
-  ..
-  ls
-  ..
-  ls
-  cd themes/
-  ls
-  cd Flat-Remix-GTK-Blue-Darkest-Solid/
-  ls
-  cd gtk-
-  cd gtk-2.0/
-  ls
-  ..
-  nmcli dev wifi connect VVUITS 
-  clear
-  ls
-  ..
-  ls
-  cd gdm
-  ls
-  cd autostart/u
-  cd autostart/
-  ls
-  ..
-  ls
-  cd gtk-3.0/
-  ls
-  cd /etc/lightdm/
-  ls
-  cat lightdm.conf 
-  cat lightdm.conf |grep theme
-  cat lightdm.conf |grep themes
-  cat lightdm.conf |grep theme*
-  cat lightdm.conf |grep *theme*
-  c;ear
-  ..
-  cd light
-  cd lightdm/
-  ls
-  cat lightdm-gtk-greeter.conf
-  text lightdm-gtk-greeter.conf
-  sudo bash
-  firefox
-  cd /usr/share/images/desktop-base/
-  ls
-  images
-  sxiv login-background.svg 
-  gimp login-background.svg 
-  logout
-  acpi
-  ls
-  clear
-  ls
-  clear
-  vis
-  cd Downloads/
-  ls
-  acpi
-  clear
-  l
-  ls
-  cear
-  cd Pictures/
-  ..
-  lcear
-  cd Downloads/
-  ls
-  mv 936378.jpg 77408.jpg 55471.jpg  334554.jpg ~/Pictures/wallpapers/
-  clear
-  ls
-  ls
-  clear
-  ls
-  clear
-  ls
-  clear
-  firefox
-  vvu
-  ls
-  clear
-  ls
-  clear
-  lt
-  clear
-  ls
-  clear
-  ls
-  claer
-  clear
-  ls
-  clear
-  cd Downloads/
-  ls
-  ls
-  clear
-  ls
-  lt
-  clear
-  cd /usr/
-  //
-  ls
-  cd etc/
-  ls
-  clear
-  ls
-  cd..
-  ..
-  pics
-  cd wallpapers/
-  dwn
-  bd
-  cp Gnu_wallpaper.png /usr/share/images/desktop-base/desktop-grub.png
-  cp Gnu_wallpaper.png /usr/share/images/desktop-base/
-  sudo cp Gnu_wallpaper.png /usr/share/images/desktop-base/
-  clear
-  dwn
-  clear
-  rm 'chainimage-space-sci-fi-wallpaper-hd-wallpapers(1).jpg' 
-  clear
-  ls
-  sxiv 121806.jpg
-  rm 121806.jpg 121806.jpg.part 
-  clear
-  ls
-  rm 521477\(1\).jpg 
-  C;EAR
-  CLEAR
-  mv *.jpg ~/Pictures/wallpapers/
-  clear
-  pics
-  cd wallpapers/
-  sl
-  images
-  cd /usr/
-  share
-  ls
-  cd grub/
-  ls
-  cd default/
-  ls
-  ..
-  cd xgreeters/
-  ls
-  ..
-  ls
-  f desktop-base
-  cd desktop-base/
-  ls
-  ..
-  ls
-  cd backgrounds/
-  ls
-  ,,
-  ..
-  sl
-  celar
-  ls
-  sudo update-grub
-  file /usr/share/images/desktop-base/desktop-grub.png
-  cd images/
-  cd desktop-base/
-  sxiv desktop-grub.png
-  sxiv Gnu_wallpaper.png 
-  clear
-  ls
-  sudo bash
-  ls
-  clear
-  vis
-  clear
-  ls
-  clear
-  lt
-  clear
-  sudo bash
-  pics
-  cd wallpapers/
-  images
-  rm 334554.jpg 
-  rebootsafe 
-  ls
-  clear
-  ks
-  clear
-  text
-  text .bashrc
-  sudo bas
-  ls
-  clear
-  dwn
-  text
-  cd $mvs
-  text
-  cd $mvs
-  text
-  cd mvs
-  cd ~/Desktop/movies/
-  cd $mvs
-  cd $cs
-  cd $pics
-  cd $mvs
-  text
-  clear
-  htop
-  cd /usr/
-  cd share/
-  cd xscreensaver/
-  ls
-  cd config/
-  ls
-  ..
-  ls
-  cat xscreensaver-
-  cat xscreensaver-wrapper.sh 
-  clear
-  killall firefox-esr
-  clear
-  apt search music
-  apt search music player
-  sudo apt install drai
-  sudo apt install draii
-  sudo apt install driaa
-  sudo apt install draai
-  clear
-  ls
-  xclipboard 
-  manxclipboard 
-  man xclipboard 
-  text
-  sls
-  sl
-  clip
-  clear
-  sudo bash
-  ls
-  clear
-  asd
-  ls
-  clear
-  ls
-  clear
-  ls
-  clear
-  lt
-  clear
-  l
-  ks
-  sudo /media/root/Backups
-  sudo cd  /media/root/Backups
-  sudo cd /media/root/Backups
-  cd /media/root/Backups
-  sudo bash
-  ls
-  clear
-  lt
-  ls
-  ls
-  clear
-  sudo bash
-  text
-  sudo bash
-  skajdlajsldjalsjdkalsjdlkjaslkdjajsdlasjdkajsdlkjdlajfkljadslkfjaksjfdlajdfljasldjfaslkdjflasjfdlsakdjfls
-  ls
-  clear
-  ls
-  htop
-  cat fonty 
-  rm fonty 
-  clear
-  ls
-  sudo bash
-  clear
-  ls
-  jaskdjkasjdkajskdllkjlajdflajsldjfladsjflkajldkjfadsklfjlasdjflkasjdlfjlsdjfksdalfjsldjfklsdjflasjdlfjslakdjfsjdlfasd
-  clear
-  jaskdjkasjdkajskdllkjlajdflajsldjfladsjflkajldkjfadsklfjlasdjflkasjdlfjlsdjfksdalfjsldjfklsdjflasjdlfjslakdjfsjdlfasd
-  xfce4-panel -r
-  sudo xfce4-panel -r
-  acpi
-  sudo bash
-  clear
-  indicator-cpufreq
-  cpufreq-info 
-  clear
-  cpufreq-info 
-  man cpufreq-info 
-  cpufreq-info -v
-  cpufreq-info -c
-  cpufreq-info -f
-  cpufreq-info -w
-  cpufreq-info -s
-  cpufreq-info -m
-  cpufreq-info -h
-  cpufreq-info -o
-  cclear
-  clear
-  cpufreq-info -o
-  ]]
-  cpufreq-info -o
-  powertop
-  tgceejay 
-  xfce4-panelpanel
-  xfce4-panel -r
-  tgceejay 
-  tgceejay 
-  rebootsafe
-  tgceejay 
-  firefox
-  logout
-  ls
-  clear
-  htop
-  man firefox-esr 
-  firefox
-  alias firefox=firefox duckduckgo.com/
-  alias firefox='firefox duckduckgo.com/'
-  firefox hi
-  telegram
-  killall Telegram 
-  tgceejay 
-  text
-  tgceejay 
-  clear
-  text
-  tgceejay 
-  tgceejay 
-  text
-  telegram 
-  tgceejay 
-  telegram
-  tgceejay 
-  killall Telegram 
-  clear
-  killall Telegram 
-  telegram
-  kill Telegram
-  killall Telegram
-  tgceejay 
-  text
-  tgceejay 
-  killall Telegram
-  tgceejay 
-  htop
-  dwn
-  mkdir natron
-  mv Natron-2.3.14-Linux-x86_64bit.tgz natron/
-  clear
-  cd natron/
-  ls
-  extract Natron-2.3.14-Linux-x86_64bit.tgz 
-  clear
-  ls
-  ./Natron-2.3.14-Linux-x86_64bit 
-  ls
-  natron
-  mpd
-  sudo apt install mpd
-  sudo apt install natron
-  apt search natron
-  ..
-  home
-  cd Natron2/
-  ls
-  ./Natron
-  sudo ./Natron
-  --help
-  cd lib/
-  ls
-  ..
-  cp lib/* /lib/
-  sudo cp lib/* /lib/
-  sudo -r cp lib/* /lib/
-  sudo cp  -r lib/* /lib/
-  clear
-  ./Natronc
-  sudo apt install libcairo2
-  sudo apt install libcairo2-dev 
-  clear
-  ls
-  ./Natron
-  ls
-  ./Natron --help
-  claer
-  clear
-  ./Natron --help
-  ./Natron
-  cd Natron2/
-  ls
-  cd Natron2/lib/
-  cat lib
-  cd libs
-  cd libss
-  cat libss
-  cd Natron2/
-  ls
-  cd lib/
-  ls
-  sudo ls
-  sudo ls 
-  clear
-  sudo ls 
-  sudo ls > libss
-  cd Natron2/
-  ls
-  cd lib/
-  ls
-  cd /lib
-  ls
-  bd
-  ls
-  ls *lib
-  ls *lib*
-  ls *lib*|wc
-  cd /lib
-  ls *lib*|wc
-  ls
-  vvu
-  ls
-  bd
-  ls
-  ls *lib* > libss
-  cat libss
-  clear
-  cd /lib
-  rm $(cat ~/Natron/libss|dmenu)
-  rm $(cat ~/Natron2/libss|dmenu)
-  rm $(cat ~/Natron2/lib/libss|dmenu)
-  rm $(cat ~/Natron2/lib/libss|cut -c 4-|dmenu)
-  rm $(cat ~/Natron2/lib/libss||dmenu)
-  rm $(cat ~/Natron2/lib/libss|dmenu)
-  sudo rm $(cat ~/Natron2/lib/libss|dmenu)
-  claer
-  clear
-  sudo rm $(cat ~/Natron2/lib/libss|dmenu)
-  clear
-  sudo rm $(cat ~/Natron2/lib/libss|dmenu)
-  clear
-  sudo rm $(cat ~/Natron2/lib/libss|dmenu)
-  rm $(cat ~/Natron2/lib/libss)
-  sudo rm $(cat ~/Natron2/lib/libss)
-  clear
-  ls
-  cd Natron2/
-  ls
-  ..
-  rm Natron2/
-  clear
-  ls
-  dwn
-  sxiv  121806.jpg 
-  mv 121806.jpg ~/Pictures/wallpapers/
-  claer
-  pics
-  wall 
-  wallpapers/
-  images
-  sxiv *
-  vvu
-  /usr/bin/ls
-  /usr/sbin/ls
-  type ls
-  clear
-  /bin/ls
-  clear
-  /bin/ls
-  clear
-  vvu
-  wifi off
-  wifi on
-  nmcli dev wifi connect VVUITS 
-  vvu
-  clear
-  vvu
-  dwn
-  dwm
-  dwn
-  extract ButtleOFX_Alpha_Linux64_v2.0.tar.bz
-  cd ButtleOFX_Alpha_Linux64_v2.0/
-  ls
-  ./run_buttleofx.sh 
-  clear
-  cat README.md 
-  ./run_buttleofx.sh 
-  clear
-  ls
-  cd ButtleOFX/
-  ls
-  ..
-  ls
-  car README.md 
-  dwn
-  sudo dpkg -i natron_2.3.14-dmo3_amd64.deb 
-  sudo apt install --fix-broken 
-  sudo dpkg-reconfigure 
-  sudo dpkg-reconfigure -a
-  sudo dpkg-reconfigure --a
-  sudo dpkg --configure -a
-  apt search libc6
-  apt search libc6-dev
-  sudo apt install libboost-serialization1.67
-  sudo apt install libc6
-  sudo apt install libfontconfig1
-  sudo apt install libexpat1
-  sudo apt install libqt4-network 
-  dwn
-  sudo dpkg -i natron_2.3.14-dmo3_amd64.deb 
-  sudo apt install python-pyside2.qtcore 
-  apt --fix-broken installl
-  apt --fix-broken install
-  sudo apt install libgflags2.2
-  apt --fix-broken install
-  sudo apt-get install deb-multimedia-keyring
-  sudo nano /etc/apt/sources.list
-  sudo apt update
-  deb http://www.deb-multimedia.org sid main
-  sudo apt-get install deb-multimedia-keyring
-  sudo nano /etc/apt/sources.list
-  sudo apt update
-  sudo nano /etc/apt/sources.list
-  clear
-  ls
-  cd ButtleOFX_Alpha_Linux64_v2.0/
-  ls
-  ./run_buttleofx.sh 
-  sudo apt-get install libegl1-mesa
-  ..
-  ls
-  cd natron/
-  ls
-  sudo ./Natron-2.3.14-Linux-x86_64bit 
-  cd /opt/Natron2/
-  ls
-  cd bin/
-  ls
-  ./Natron
-  ..
-  ls
-  cd lib/
-  ls
-  ls *cairo*
-  ..
-  ./Natron
-  sudo apt install libcairo2-dev
-  sudo apt install libcairo2
-  cd /opt/Natron2/
-  ls
-  ./NatronSetup 
-  ./Natron
-  cat Natron
-  cat Natron|grep cairo
-  cat Natron|grep cairo*
-  cat Natron|grep *cairo*
-  cd /usr/lib/x86_64-linux-gnu/
-  ls
-  clear
-  cat libcairo.so.2
-  cd /opt/Natron2/
-  ./NatronSetup 
-  dwn
-  sudo apt install nuke
-  sudo apt install snowmix
-  sudo apt install synfig
-  synfig 
-  mansynfig
-  man synfig
-  sudo apt install synfigstudio 
-  synfigstudio 
-  killall mpv
-  timetable 
-  xdman
-  lec21
-  mkdir fof
-  cd fof/
-  touch assignment1
-  nano assignment
-  clear
-  cat assignment
-  mv assignmentassignment1.md
-  type ebrc
-  edit assignment1.md 
-  pandoc assignment1.md assignment1.pdf
-  pandoc -o assignment1.md assignment1.pdf
-  pandoc  assignment1.md -o assignment1.pdf
-  pdf assignment1.
-  pdf assignment1.pdf 
-  cs
-  cd Others/
-  ls
-  cd VI
-  cd Videos/
-  ls
-  youtube-dl https://www.youtube.com/watch?v=KNU5Yiqh73U
-  mv _-KNU5Yiqh73U.webm synfig1
-  mv synfigsynfig1.webm
-  youtube-dl https://www.youtube.com/watch?v=zVFbYm4EnlA&list=PLbvQ5v0SyZnu1GGauoXBJtcRvxr22gbha&index=2
-  t youtube-dl
-  youtube-dl https://www.youtube.com/watch?v=KNU5Yiqh73U&list=PLbvQ5v0SyZnu1GGauoXBJtcRvxr22gbha&index=1
-  youtube-dl https://www.youtube.com/playlist?list=PLbvQ5v0SyZnu1GGauoXBJtcRvxr22gbha
-  ckear
-  clear
-  ls
-  youtube-dl https://www.youtube.com/playlist?list=PLbvQ5v0SyZnu1GGauoXBJtcRvxr22gbha
-  mpv  _-KNU5Yiqh73U.f2
-  mpv  _-KNU5Yiqh73U.f251.webm 
-  rm _-KNU5Yiqh73U.f247.webm 
-  rm _-KNU5Yiqh73U.f247.webm _
-  clear
-  rm _-KNU5Yiqh73U.f251.webm 
-  ls
-  clear
-  ls
-  rm _-U2n5aGqou9E.f248.webm.part 
-  clea
-  clear
-  l
-  sls
-  ls
-  youtube-dl https://www.youtube.com/watch?v=zVFbYm4EnlA
-  cs
-  cd Others/
-  ls
-  cd Videos/
-  vid
-  mv *Synfig* ~/Desktop/lectures/computer science/Others/Videos 
-  clear
-  mv *Synfig* ~/Desktop/lectures/computer science/Others/Videos 
-  mv *Synfig* '~/Desktop/lectures/computer science/Others/Videos '
-  ckear
-  mv *Synfig* '~/Desktop/lectures/computer science/Others/Videos'
-  clear
-  mv *Synfig* '~/Desktop/lectures/computer science/Others/Videos'
-  mv *Synfig* "~/Desktop/lectures/computer science/Others/Videos"
-  clear
-  mv *Synfig* ~/Desktop/lectures/computer\ science/Others/Videos/
-  clear
-  ls
-  lt
-  clear
-  lec21
-  fofo
-  fof
-  evince assignment1.pdf 
-  ls
-  clear
-  sudo bash
-  clear
-  vvu
-  type edit
-  what is edit
-  whatis edit
-  man edit
-  lec21;database
-  clear
-  ls
-  cd assignments/
-  ls
-  sxiv readingreport.pdf 
-  clear
-  pdf readingreport.pdf 
-  spdf
-  acpi
-  spdf
-  type sxiv 
-  text 
-  man sxiv
-  text
-  lowriter readingreport.
-  lec21;database
-  cd assignments/
-  lowriter readingreport.odt 
-  lsblk
-  msdb1
-  lec21;database
-  cd assignments/
-  ls
-  cp readingreport.pdf $disk
-  sudo cp readingreport.pdf $disk
-  usdb1
-  clear
-  home
-  vvu
-  spdf
-  evince
-  lec21;database
-  ls
-  mupdf  fundamentals\ of\ database\ systems.epub 
-  clear
-  lec21
-  cd database/
-  ls
-  pdf intro\ to\ database\ systems.djvu 
-  clear
-  ls
-  pdf fundamentals\ of\ database\ systems.epub 
-  vvu
-  clear
-  sudo bash
-  clear
-  sudo bash
-  home
-  vvu
-  avwifi
-  nmcli dev wifi connect VVUITS 
-  clear
-  vvu
-  killall surf
-  lowriter
-  clear
-  vis
-  sudo apt install mysql-common 
-  clear
-  lec21
-  cd database/
-  youtube-dl https://www.youtube.com/watch?v=4Z9KEBexzcM
-  mv _-4Z9KEBexzcM.mkv 1.mkv
-  youtube-dl https://www.youtube.com/watch?v=kyGVhx5LwXw
-  mv _-kyGVhx5LwXw.webm 2.webm
-  clear
-  ls
-  lmvs
-  youtube-dl https://www.youtube.com/watch?v=kqUIoOM3WEs
-  vvu
-  nmcli dev wifi connect VVUITS 
-  avwifi
-  nmcli dev wifi connect VVUITS 
-  avwifi
-  vvu
-  nmcli dev wifi connect VVUITS  
-  vvu
-  text
-  avwifi
-  vvu
-  avwifi
-  vvu
-  timetable 
-  text
-  da
-  cal
-  date
-  date| cut -c 8
-  date| cut -c 8-
-  clear
-  date| cut -c 15-
-  date| cut -c 12
-  date| cut -c 17-
-  clear
-  date| cut -c 17-
-  date| cut -c 17- -23
-  date| cut -c 17- -c -23
-  date| cut -c 17- -23
-  date| cut -c 17- -d -23
-  date| cut -c 17-|cut -c -23
-  date| cut -c 17-|cut -c -2
-  date| cut -c 17-|cut -c -4
-  date| cut -c 17-|cut -c -7
-  date| cut -c 17-|cut -c -10
-  date| cut -c 17-|cut -c -9
-  clear
-  date| cut -c 17-|cut -c -9
-  date| cut -c 17-|cut -c -12
-  lec21;database
-  clear
-  nano qns
-  mv qns qns.md
-  pandoc qns.md -o qns.pdf
-  mupdf qns.pdf 
-  nano qns.md 
-  mupdf qns.pdf 
-  nano qns.md 
-  pandoc qns.md -o qns.pdf
-  mupdf qns.pdf 
-  evince qns.pdf 
-  mupdf qns.pdf 
-  nano answers.md
-  clear
-  home
-  clear
-  neofetch 
-  tgceejay 
-  xdman
-  tgceejay 
-  lec21;database
-  youtube-dl https://www.youtube.com/watch?v=dMkwFzRgxZY https://www.youtube.com/watch?v=Xk3cgUdoieU https://www.youtube.com/watch?v=4WX2MZvmzho
-  clear
-  ls
-  lt
-  clear
-  ls
-  mv _-dMkwFzRgxZY.mkv 3.mkv
-  mv _-Xk3cgUdoieU.webm 4.webm
-  mv _-4WX2MZvmzho.webm 5.webm
-  clear
-  ls
-  mpv _-B_QU9OGwtbI.webm 
-  mv _-B_QU9OGwtbI.webm 5.webm
-  mv 5.webm  6.webm
-  mv _-4WX2MZvmzho.webm 5.webm
-  mv _-B_QU9OGwtbI.webm 5.webm
-  clear
-  ls
-  mpv 6.webm 
-  mv 6.webm 8.webm
-  clear
-  mpv 5.webm 
-  mpv 4.webm 
-  mv 4.webm 7.webm
-  claer
-  ls
-  mpv 3.mkv 
-  mv 3.mkv 6.mkv
-  clear
-  ls
-  mpv _-kqUIoOM3WEs.webm 
-  mv _-kqUIoOM3WEs.webm 3.webm
-  clear
-  ls
-  mpv 1.mkv 
-  mpv 5.webm 
-  nmcli networking off
-  nmcli networking on
-  nmcli dev wifi connect VVUITS 
-  lodraw 
-  vvu
-  lec21
-  cd database/
-  ls
-  youtube-dl https://www.youtube.com/watch?v=kqUIoOM3WEs
-  tgceejay 
-  vvu
-  vvu
-  nmcli dev wifi connect VVUITS  
-  vvu
-  clear
-  ls
-  lec21
-  ls
-  clear
-  ls
-  cd database/
-  ls
-  lmvsmv _-IfaqkiHpIjo.webm 4.webm
-  mv _-IfaqkiHpIjo.webm 4.webm
-  lmvs
-  lec21
-  cd database/
-  ls
-  youtube-dl https://www.youtube.com/watch?v=B_QU9OGwtbI
-  youtube-dl https://www.youtube.com/watch?v=IfaqkiHpIjo&t=52s
-  vvu
-  cs
-  cd Videos/
-  ls
-  ls|grep *organization*
-  ls|grep *architecture*
-  ..
-  ls
-  cd Books/
-  ls
-  ..
-  ls
-  cd Others/
-  ls
-  cd Videos/
-  ls
-  pg
-  cd general/
-  ls
-  cd Algorithms\ \&\ Data\ Structures/
-  lmvs
-  cd Videos/
-  lmvs
-  cs
-  edit
-  edit ls
-  edit welp
-  alias edit
-  alias ebrc
-  tgceejay & exit
-  text /etc/hosts
-  cat /etc/hosts.deny 
-  nano /etc/hosts
-  sudo nano /etc/hosts
-  dwn
-  extract OffTheBalls.zip 
-  clear
-  ls
-  rm OffTheBalls_Data/
-  clear
-  ls
-  rm OffTheBalls.x86
-  clear
-  rm OffTheBalls.x86_
-  clear
-  ls
-  mk off
-  mkdir off
-  mv OffTheBalls.zip off/
-  clear
-  cd off/
-  extract OffTheBalls.zip OffTheBalls.zip 
-  clear
-  rm *
-  extract OffTheBalls.zip OffTheBalls.zip 
-  ..
-  clear
-  ls
-  cd off/
-  ls
-  ..
-  mv OffTheBalls.zip off/
-  cd off/
-  extract OffTheBalls.zip OffTheBalls.zip 
-  clear
-  ls
-  rm OffTheBalls_Data/
-  rm OffTheBalls.x86
-  rm OffTheBalls.x86_
-  extract OffTheBalls.zip 
-  clear
-  ls
-  clear
-  ls
-  mx OffTheBalls.x86_
-  ./OffTheBalls.x86_
-  lec21
-  cd Computer\ Organization/
-  ls
-  youtube-dl https://www.youtube.com/watch?v=CDO28Esqmcg
-  mv _-CDO28Esqmcg.mplec1.mp4
-  youtube-dl https://www.youtube.com/watch?v=q6oiRtKTpX4
-  ls
-  mv _-q6oiRtKTpX4.mkv intro.mkv
-  youtube-dl https://www.youtube.com/watch?v=Xl2nWDcy0To
-  mpv _-Xl2nWDcy0To.mp
-  mv _-Xl2nWDcy0To.mpmicroprocessors.mp4
-  clear
-  ls
-  sudo apt install deadbeef
-  apt search deadbeef
-  apt search dead beef
-  dwn
-  cd off/
-  ls
-  ./OffTheBalls.x86_
-  vvu
-  dwn
-  ls
-  clear
-  cp ME_SW_1909.12.0.1236.zip $disk
-  sudo cp ME_SW_1909.12.0.1236.zip $disk
-  lsblk
-  usdb1
-  lec21
-  cd Computer\ Organization/
-  ls
-  youtube-dl https://www.youtube.com/watch?v=WsYrUytuG5Y&t=27s
-  vis
-  localc 
-  lsblk
-  msdb1
-  apt search gtypist
-  apt-cache search gtypist
-  vvu
-  sudo su
-  su
-  clear
-  man su
-  man sudo
-  edit todo
-  ebrc
-  man vim
-  cat vim 
-  cd .vim_runtime/
-  ls
-  cd vimrcs/
-  ls
-  cat basic.vim 
-  ckear
-  claer
-  clear
-  ls
-  cat plugins_config.vim 
-  clear
-  ls
-  less extended.vim 
-  ..
-  ls
-  f
-  mx install_awesome_vimrc.sh 
-  ./install_awesome_vimrc.sh 
-  vim
-  mx install_basic_vimrc.sh 
-  ./install_basic_vimrc.sh 
-  clear
-  ls
-  vim
-  clear
-  ls
-  vim
-  vim README.md 
-  ./install_awesome_vimrc.sh 
-  clear
-  vim
-  vim README.md 
-  clear
-  ls
-  cat install_awesome_vimrc.sh 
-  ./install_awesome_parameterized.sh 
-  clear
-  ls
-  cat install_awesome_parameterized.sh 
-  cd vimrcs/
-  ls
-  cat basic.vim 
-  ..
-  ls
-  cd autoload/
-  ;s
-  ls
-  celar
-  clear
-  ..
-  ls
-  cd my_plugins/
-  ls
-  ..
-  cd sources_non_forked/
-  ls
-  cat install_basic_vimrc.sh 
-  cd vimrcs/
-  cat basic.vim 
-  more basic.vim 
-  less basic.vim 
-  sudo asjdkj
-  sdjkfskdjf
-  sdjfkjsdkfjskdjl
-  askdajsd
-  sudo bash
-  clear
-  lec21
-  cd Computer\ Organization/
-  ls
-  cat notes1.md 
-  clear
-  nano lnotes1.md
-  youtube-dl https://www.youtube.com/watch?v=fS7FFOaC_iQ
-  sudo nano /etc/hosts
-  clear
-  ls
-  dwn
-  cd off/
-  ..
-  rm *ButtleOFX*
-  rm -rf *ButtleOFX*
-  clear
-  ls
-  rm -rf *natron*
-  clear
-  ls
-  cd off/
-  ls
-  ./OffTheBalls.x86_
-  tgceejay 
-  bd
-  man bd
-  t bd
-  type bd
-  bc
-  apt search calculator
-  apt search calculator|less
-  localc 
-  libreoffice
-  localc 
-  vvu
-  bc
-  man b
-  man bc
-  bc -i
-  man bc
-  bc -q
-  man
-  nc
-  man nc
-  man bc
-  clear
-  bc
-  quodlibet 
-  qtcreator 
-  vvu
-  ls
-  clear
-  ping google.com
-  ed
-  man ed
-  ed todo 
-  ed todo
-  lsblk
-  thunar
-  cs
-  cd crash\ course/
-  ls
-  lmvs
-  thunar
-  lmvs
-  systemctl suspend
-  as
-  man as
-  vvu
-  tgceejay 
-  clear
-  ls
-  tgceejay 
-  text
-  lsblk
-  msdb1
-  usdb1
-  msdb1
-  usdb1
-  text
-  tgceejay 
-  lsblk
-  text
-  text $scripts/mdisk
-  mdisk
-  mx mdisk
-  mx $scripts/mdisk
-  mdisk
-  apt search emoji picker
-  apt search emoji
-  lsblk|grep "part $"
-  lsblk|grep "part $"|dmenu -p "Which device do you want to mount?"
-  lsblk|grep "part $"|dmenu -p "Which ext device do you want to mount?"
-  lsblk|grep "part $"|dmenu -p "Which ext dev do u want to mount?"
-  lsblk|grep "part $"|dmenu -p "which ext dev do u want to mount?"
-  $(lsblk|grep "part $"|dmenu -p "which ext dev do u want to mount?"|cut -c 3-)
-  lsblk
-  man lsblk 
-  lsblk -l
-  lsblk -fs
-  man lsblk
-  lsblk -a
-  man lsblk 
-  lsblk -O
-  clear
-  man lsblk 
-  lsblk -s
-  man lsblk
-  lsblk -J
-  clear
-  $(lsblk|sed /^/\/dev/|grep "part $"|dmenu -p "which ext dev do u want to mount?"|)
-  $(lsblk|sed s/^/\/dev/g|grep "part $"|dmenu -p "which ext dev do u want to mount?"|)
-  $(lsblk|sed 's/^/\/dev/g'|grep "part $"|dmenu -p "which ext dev do u want to mount?"|)
-  $(lsblk|sed 's/^/\/dev/g'|grep "part $"|dmenu -p "which ext dev do u want to mount?")
-  $(lsblk|sed 's/^└─/\/dev/g'|grep "part $"|dmenu -p "which ext dev do u want to mount?")
-  $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|dmenu -p "which ext dev do u want to mount?")
-  $(lsblk|sed 's/^└─/\/dev\//g'|cut -c 5-|grep "part $"|dmenu -p "which ext dev do u want to mount?")
-  $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c 5-|dmenu -p "choose disk u want mounted"
-  $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c 5-|dmenu -p "choose disk u want mounted")
-  $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c 1-|dmenu -p "choose disk u want mounted")
-  $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -3|dmenu -p "choose disk u want mounted")
-  $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -6|dmenu -p "choose disk u want mounted")
-  $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -10|dmenu -p "choose disk u want mounted")
-  clear
-  $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -10|dmenu -p "choose disk u want mounted")
-  sudo mount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -10|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
-  clear
-  lsblk
-  sudo mount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -10|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
-  clear
-  sudo mount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -10|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
-  sudo mount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -10|sed s/" "//g|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
-  clear
-  sudo mount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -10|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
-  sudo mount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
-  sudo mount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -8|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
-  sudo mount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
-  cat /etc/fstab
-  sudo mount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
-  clear
-  lsblk
-  sudo mount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
-  sudo mount -w (lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
-  sudo mount -w lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted" && notify-send "MOUNTED SUCCESSFULLY 💻"
-  sudo mount -w '(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted")' && notify-send "MOUNTED SUCCESSFULLY 💻"
-  sudo mount -w (lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
-  clear
-  sudo mount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
-  mount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
-  sudo mount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
-  mount -w /dev/sdb
-  sudo mount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted") $disk  && notify-send "MOUNTED SUCCESSFULLY 💻
-  sudo mount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted") "$disk"  && notify-send "MOUNTED SUCCESSFULLY 💻
-  sudo mount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
-  sudo mount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted") "$disk" && notify-send "MOUNTED SUCCESSFULLY 💻"
-  clear
-  usdb1
-  sudo mount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted") "$disk" && notify-send "MOUNTED SUCCESSFULLY 💻"
-  clear
-  sudo mount -w (lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
-  text
-  lsblk
-  sudo mount -w (lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
-  sudo umount -w $(lsblk|sed 's/^└─/\/dev\//g'|grep "part $"|cut -c -9|dmenu -p "choose disk u want mounted") && notify-send "MOUNTED SUCCESSFULLY 💻"
-  sudo umount $disk
-  lsblk
-  mdisk
-  cd $disk
-  clear
-  ls
-  ..
-  echo "mount pendrive?"|dmenu
-  echo "yes?"|dmenu -i -p
-  echo "yes"|dmenu -i -p "mount pendrive"
-  echo "yes" "no"|dmenu -i -p "mount pendrive"
-  echo "yes"|echo "no"|dmenu -i -p "mount pendrive"
-  type mphone
-  text $mphone
-  text \$scripts/mphone
-  text $scripts/mphone
-  echo "yes\n no"|echo "no"|dmenu -i -p "mount pendrive"
-  echo "yes\n |dmenu -i -p "mount pendrive"
-  echo "yes\nno" |dmenu -i -p "mount pendrive"
-  echo "yes\n no" |dmenu -i -p "mount pendrive"
-  echo "yes \n no" |dmenu -i -p "mount pendrive"
-  echo "yes /n no" |dmenu -i -p "mount pendrive"
-  print "yes" |dmenu -i -p "mount pendrive"
-  printf "yes\no" |dmenu -i -p "mount pendrive"
-  printf "yes\n no" |dmenu -i -p "mount pendrive"
-  printf "yes\nno" |dmenu -i -p "mount pendrive"
-  printf "yes\nno" |dmenu -i -p "mount pendrive?"
-  printf "yes\nno\nmaybeso" |dmenu -i -p "mount pendrive?"
-  printf "yes\nno\nmaybe so" |dmenu -i -p "mount pendrive?"
-  man dmenu
-  ls|dmenu -i
-  ls|dmenu 
-  printf "yes\nno\nmaybe so" |dmenu -p "mount pendrive?"
-  printf "yes\nno\nmaybe so" |dmenu -i -p "mount pendrive?"
-  printf "yes\nno\nmaybe so" |dmenu -p "mount pendrive?"
-  lsblk
-  lsblk|grep part
-  clear
-  lsblk|grep part $
-  lsblk|grep "part $"
-  lsblk|cgrep "part $"
-  lsblk|grep part $
-  lsblk|cgrep "part $"
-  lsblk|grep part
-  lsblk|grep part$
-  clear
-  lsblk|grep "part$"
-  lsblk|grep "part $"
-  clear
-  lsblk|cgrep "part$"
-  lsblk|cgrep "part $"
-  lear
-  clear
-  lsblk|cgrep "part $"
-  cd $scripts
-  nano mdisk
-  text
-  mdisk
-  lsblk
-  udisk
-  mdisk
-  man dmenu
-  mdisk
-  mdisk
-  mdisk
-  mdisk
-  man dmenu
-  mdisk
-  mdisk
-  sudo umount $disk
-  lsblk
-  mdisk
-  udisk
-  cd scripts/
-  mx udisk 
-  udisk
-  text
-  udisk
-  clear
-  lsblk
-  text
-  mdisk
-  mdisk
-  text
-  man dmenu
-  mdisk
-  text
-  cat ~/andev
-  cat ~/anddev
-  text
-  mdisk
-  gpick
-  mdisk
-  udsk
-  udisk
-  disk
-  clear
-  mdisk
-  ls
-  udisk
-  ls|dmenu
-  ls|dmenu 
-  lsblk|dmenu 
-  lsblk|dmenu -i 30
-  ls}dmenu
-  lsdmenu
-  ls\dmenu
-  ls|dmenu
-  text
-  text .bashrcc
-  text .bashrc
-  dmenu
-  ls|dmenu
-  dmenu
-  ls|dmenu
-  ls|dmenu
-  text
-  cd scripts/
-  text *
-  text
-  ls
-  usdb1
-  msdb1
-  usdb1
-  mphone
-  clear
-  msdb1
-  usdb1
-  lsblk
-  clear
-  msdb1
-  usdb1
-  notify-send 
-  man notify-send 
-  notify-send --urgency=high hi
-  notify-send --urgency=critical "hi"
-  notify-send --urgency=critical "What's up"
-  notify-send --urgency=low "What's up"
-  notify-send --urgency=normal "What's up"
-  man notify-send 
-  notifier
-  man notifier
-  sudo bash
-  clear
-  mdisk
-  udisk
-  clear
-  mdisk
-  hist
-  text
-  text scripts/hist
-  hist
-  text scripts/hist
-  ls
-  lsblk
-  lsblk|grep Backups
-  lsblk|grep "Backups $"
-  clear
-  lsblk|grep "Backups$"
-  lsblk|cgrep "Backups$"
-  lsblk|cgrep "Backups"
-  lsblk|cgrep "Backup"
-  lsblk|cgrep "up $"
-  lsblk|cgrep "pat $"
-  lsblk|cgrep "part $"
-  lsblk|cgrep "part$"
-  clear
-  ls
-  cat .emulator_console_auth_token 
-  ufw
-  regex
-  clear
-  vvu
-  t for
-  cd testdir/
-  ls
-  cat a 
-  compare
-  man compare
-  dmenu
-  man ls|dmenu
-  pop
-  ls
-  cat essay 
-  rm essay 
-  clear
-  ls
-  cat .qpsrc 
-  ls
-  cat .selected_editor 
-  ls
-  rm .selected_editor 
-  mkdir testdir
-  cd testdir/
-  touch swe
-  touch a
-  touch s
-  touch textfile
-  echo words>> textfile 
-  ls
-  clear
-  if {cat $@"}
-  if {cat "$@" -e ""}; echo "its empty" >> "$@"; fi
-  text
-  text .bashrc
-  text ~/.bashrc
-  if {cat "$@" -e ""}; then echo "its empty" >> "$@"; fi
-  if [cat "$@" -e ""] then; ehco "empty">> "$@"; fi
-  if [cat "$@" -e ""] then; echo "empty">> "$@"; fi
-  if [cat "$@" -e ""] then; echo "empty">> "$@" else; echo "not empty"; fi
-  man if
-  t if
-  vvu
-  if [cat "*$" = ""];then echo "empty";else echo "nope";fi
-  if {cat "*$" = ""};then echo "empty";else echo "nope";fi
-  c;ear
-  if '{cat "*$" = ""}';then echo "empty";else echo "nope";fi
-  if '{ cat "*$" = "" }';then echo "empty";else echo "nope";fi
-  if  cat "*$" = "" ;then echo "empty";else echo "nope";fi
-  if  'cat "*$" = ""' ;then echo "empty";else echo "nope";fi
-  clear
-  if  'cat "*$"  ;then echo "empty";else echo "nope";fi
-  if  cat "*$"  ;then echo "empty";else echo "nope";fi
-  if  cat * =  ;then echo "empty";else echo "nope";fi
-  if  cat *   ;then echo "empty";else echo "nope";fi
-  if  cat * = o  ;then echo "empty";else echo "nope";fi
-  if  cat * == ""  ;then echo "empty";else echo "nope";fi
-  t if
-  if  ! cat *  ;then echo "empty";else echo "nope";fi
-  if  ! cat a  ;then echo "empty";else echo "nope";fi
-  if  ! cat a;then echo "empty";else echo "nope";fi
-  if  cat .selected_editor  a;then echo "empty";else echo "nope";fi
-  if  ! cat a;then echo "empty";else echo "nope";fi
-  clear
-  if  ! cat -e "";then echo "empty";else echo "nope";fi
-  alet
-  alert
-  has
-  help has
-  is
-  help is
-  help =
-  help
-  equal
-  man equal
-  t equal
-  clear
-  ls
-  cat sf
-  rm sf
-  cd testdir/
-  ..
-  rm testdir/
-  clear
-  ls
-  cd recover/
-  ls
-  cat New\ Empty\ File 
-  clear
-  ..
-  ls
-  mdisk
-  udisk
-  mdisk
-  sleep 30;alert
-  ls;alert
-  welp;alert
-  ls;alert
-  cat;alert
-  cat *;alert
-  gparted
-  sudo gparted
-  rebootsafe
-  gnome-disks 
-  evince
-  spdf
-  lec21
-  Computer\ Organization/
-  ls
-  evince organization.pdf 
-  acpi
-  text
-  vvu
-  nnn
-  cd .vim_runtime/
-  ./install_basic_vimrc.sh 
-  vim
-  ls|dmeny
-  ls|dmenu
-  dmenu
-  se
-  sudo apt install fzf
-  fzf
-  ls|fzf
-  fzf
-  cs
-  fzf
-  mpv $(fzf)
-  alias dmenu
-  sudo update-grub
-  sudo update-grub2
-  sudo bash
-  /bin/ls
-  clear
-  /bin/ls -r
-  /bin/ls --re
-  /bin/ls --r
-  /bin/ls --recursive
-  clear
-  /bin/ls --recursive|fzf
-  mpv $(/bin/ls --recursive|fzf)
-  fzf
-  man fzf
-  fzf --color=light,fg:232,bg:255,bg+:116,info:27
-  fzf --color=dark,fg:232,bg:255,bg+:116,info:27
-  fzf --color=black,fg:232,bg:255,bg+:116,info:27
-  fzf --color=dark,fg:#260A35,bg:255,bg+:116,info:27
-  fzf --color=dark,fg:#260A35,bg:#00000,bg+:116,info:27
-  fzf --color=dark,fg:#260A35,bg:#000000,bg+:116,info:27
-  fzf --color=dark,fg:#260A35bg+:116,info:27
-  fzf --color=dark,fg:#260A35,info:27
-  fzf --color=dark,fg:#260A35
-  fzf --color=dark,fg:#260A35,info:#260A35
-  fzf --color=dark,bg:#260A35,info:#260A35
-  man fzf
-  man fzf|grep color
-  fzf
-  fzf --color=dark
-  man fzf
-  history|fzf --tac --no-sort
-  cd scripts/
-  ls
-  hist
-  $(history|fzf --tac --no-sort)
-  cat hist
-  hist
-  history|fzf --tac --no-sort
-  history|fzf --tac --no-sort|xargs 
-  man xargs 
-  $(history|fzf --tac --no-sort|xargs)
-  t xargs
-  t fzf
-  eval $(history|fzf --tac --no-sort)
-  convert
-  celar
-  t convert
-  pics
-  cd random/n
-  cd random/
-  convert -size 1920xcanvas:darkblue out.png
-  sxiv out.png 
-  convert -size 1920x-plasma purple canvas:darkblue out.png
-  convert -size 1920xplasma:swirk canvas:darkblue out.png
-  convert -size 1920xplasma:blue canvas:darkblue out.png
-  sxiv out.png 
-  convert -size 1920xplasma:voilet canvas:darkblue out.png
-  convert -size 1920xplasma:yellow canvas:darkblue out.png
-  sxiv out.png 
-  convert -size 1920x canvas:darkblue plasma:blue-purple out.png
-  sxiv out.png 
-  convert -size 1920xplasma:blue-purple canvas:darkblue  out.png
-  convert -size 1920xplasma:blue-purple canvas:darkblue  out.png out.png
-  sxiv out.png 
-  sxiv out-0.png 
-  rm out-0.png out-2.png 
-  clear
-  sxiv out-0.png 
-  sxiv out.png 
-  convert -size 1920x canvas:darkblue plasma:blue-purple  out.png out.png
-  sxiv out.png 
-  rm out-0.png out-1.png out-2.png out.png 
-  clear
-  convert -size 1920x canvas:darkblue plasma:blue-purple  out.png out.png
-  convert -size 1920x canvas:darkblue plasma:blue-purple  out.png 
-  sxiv out-0.png 
-  sxiv out-1.png 
-  convert -size 1920x -swirl canvas:darkblue plasma:blue-purple  out.png 
-  convert -size 1920x swirl canvas:darkblue plasma:blue-purple  out.png 
-  convert -size 1920x swirl -canvas:darkblue plasma:blue-purple  out.png 
-  clear
-  convert -size 1920x -swirl canvas:darkblue plasma:blue-purple  out.png 
-  sxiv out-1.png 
-  convert -size 1920x -swirl canvas:darkblue plasma:purple  out.png 
-  sxiv out-1.png 
-  convert -size 1920x -swirl canvas:darkblue plasma:purple  out.png 
-  sxiv out-1.png 
-  convert -size 1920x -swirl canvas:darkblue plasma:purple  out.png 
-  sxiv out-1.png 
-  convert -size 1920x -swirl canvas:darkblue plasma:#260A out.png 
-  sxiv out-1.png 
-  sxiv out-0.png 
-  convert -size 1920x -swirl canvas:darkblue plasma:260A out.png 
-  convert -size 1920x -swirl canvas:#260Aplasma:#260A out.png 
-  sxiv out-0.png 
-  sxiv out-1.png 
-  vvu
-  tgceejay 
-  telegram 
-  hist
-  text
-  fzf
-  text $(fzf)
-  hist
-  alias hsit
-  alias hist
-  text
-  hist
+   whatis format.sh 
+   file format.sh 
+   type format.sh 
+   hist
