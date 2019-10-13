@@ -162,14 +162,13 @@ alias da='date "+%Y-%m-%d %A %T %Z"'
 # Alias's to modified commands
 #alias a fuzzy finder alias
 #alias javafx='java --module-path $PATH_TO_FX --add-modules javafx.controls $@'
-
 alias javafx=' /usr/lib/jvm/java-11-openjdk-amd64/bin/java --module-path /usr/lib/jvm/jdk-13/lib/fx --add-modules=javafx.controls --add-modules javafx.base,javafx.graphics'
 alias javacfx=' /usr/lib/jvm/java-11-openjdk-amd64/bin/javac --module-path /usr/lib/jvm/jdk-13/lib/fx --add-modules=javafx.controls --add-modules javafx.base,javafx.graphics'
-alias dmenu_run='dmenu_run -nb black -sb "#260A35"'
+alias dmenu_run='dmenu_run -fn "manrope-10" -nb black -sb "#260A35"'
 alias clear='clear -x'
 alias hist='history > $scripts/history;sed  -i s/"[0-9]\+ "//g $scripts/history && $(tac  $scripts/history|dmenu)'
 alias sxiv='sxiv -b'
-alias dmenu='dmenu -nb black -sb "#260A35"'
+alias dmenu='dmenu -fn "manrope-10" -nb black -sb "#260A35"'
 alias vvu='surf 192.168.0.254:8090'
 alias timetable="cgrep  '(^([a-zA-Z]+)|[0-9]+-[0-9]+am||[0-9]+-[0-9]+pm|[0-9][0-9][a-z][a-z]+|am+|pm+)' ~/timetable" 
 alias upvote='sudo systemctl restart upvotebot.service'
@@ -295,6 +294,7 @@ alias folderssort='find . -maxdepth 1 -type d -print0 | xargs -0 du -sk | sort -
 alias tree='tree -CAhF --dirsfirst'
 alias treed='tree -CAFd'
 
+TERMINAL=xfce4-terminal
 
 # Alias's for archives
 alias mktar='tar -cvf'
@@ -541,7 +541,6 @@ xdg-open "$(fzf -q $arg)"
 vidtomp3(){
 	 ffmpeg -i "$1" -vn "$2".mp3
 }
-
 
 
 
