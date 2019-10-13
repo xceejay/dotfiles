@@ -14,8 +14,8 @@ case "$1" in
       echo -n "$emoji" | xclip -selection c && notify-send -t 200 "$emoji copied to clipboard!"
     fi
     ;;
-  "")
-    bash $0 list | rofi -dmenu -p 'Emojis🙃: ' | bash $0 copy
+  "")  	
+    bash $0 list | rofi -show run -columns 2 -yoffset -210 -dmenu -p 'Emojis🙃: ' | bash $0 copy
     ;;
 esac
 

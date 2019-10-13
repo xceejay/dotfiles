@@ -1,0 +1,8 @@
+
+proc=$RANDOM
+touch /tmp/$proc
+proc=/tmp/$proc
+ps |grep joel>$proc
+
+process=$( ps aux|awk '{print  $2 "\t\t\t" $11 $12}'|rofi -dmenu -width 30 -yoffset -210 -xoffset 485 -p "killprocess️️️️🔌:"|awk '{print $1}')
+processid=$(ps aux|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep "$process"|grep "$process"|awk -F '/' '{print $3}') && sudo kill "$process" && notify-send -t 200 "$process🤔 was killed !"

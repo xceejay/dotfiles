@@ -1,627 +1,625 @@
-     ..
-     cd javafx/
-     cd share/openjfx/
-     ls
-     cd lib/
-     sudo cp -f openjfx/lib/* /usr/lib/jvm/java-1.11.0-openjdk-amd64/lib/
-     sudo cp -f lib/* /usr/lib/jvm/java-1.11.0-openjdk-amd64/lib/
-     sudo cp -f * /usr/lib/jvm/java-1.11.0-openjdk-amd64/lib/
-     clear
+     rofi
+     man -k .|dmenu -l 30|man -Tpdf $(cut -d' ' -f1)|zathura - 
+     man -k .|dmenu -l 30|man -Tpdf $(cut -d' ' -f1)|zathura - n=100
+     man -k .|dmenu -l 30|man -Tpdf $(cut -d' ' -f1)|zathura - -n=100
+     man -k .|dmenu -l 30|man -Tpdf $(cut -d' ' -f1)|zathura - 
+     text ~/.config/zathura/zathurarc
+     man -k .|dmenu -l 30|man -Tpdf $(cut -d' ' -f1)|zathura - 
+     man -k .|rofi -dmenu|man -Tpdf $(cut -d' ' -f1)|zathura - 
+     man -k .|rofi -dmenu -p "manpages"|man -Tpdf $(cut -d' ' -f1)|zathura - 
+    man -k .|rofi -dmenu -p "manpages📖:"|man -Tpdf $(cut -d' ' -f1)|zathura - 
+    man -k .|rofi -dmenu -p "manpages📖:"|man -Tpdf $(cut -d' ' -f1)|zathura -
+    man -k .|dmenu -p "manpages📖:"|man -Tpdf $(cut -d' ' -f1)|zathura -
+    man -k .|rofi -dmenu -p "manpages📖:"|man -Tpdf $(cut -d' ' -f1)|zathura 
+    hist
+    man -k .|rofi -dmenu -p "manpages📖:"|man -Tpdf $(cut -d' ' -f1)|zathura-
+    man -k .|rofi -dmenu -p "manpages📖:"|man -Tpdf $(cut -d' ' -f1)|zathura -
+    man -k .|rofi -dmenu -p "manpages📖:"|man -Tpdf '$(cut -d" " -f1)'|zathura -
+    man -k .|rofi -dmenu -p "manpages📖:"|man -Tpdf $(cut -d" " -f1)|zathura -
+    man -k .||man -Tpdf $(cut -d" " -f1)|zathura -
+    man -k .|rofi -dmenu -p 'manpages📖:'|man -Tpdf $(cut -d" " -f1)|zathura -
+    man -k .|rofi -dmenu  'manpages📖:'|man -Tpdf $(cut -d" " -f1)|zathura -
+    man -k .|rofi -dmenu|man -Tpdf $(cut -d" " -f1)|zathura -
+    man -k .|rofi -show -dmenu|man -Tpdf $(cut -d" " -f1)|zathura -
+    man -k .|rofi -show dmenu|man -Tpdf $(cut -d" " -f1)|zathura -
+    man -k .|dmenu -p "hi" |man -Tpdf $(cut -d" " -f1)|zathura -
+    man -k .|dmenu |man -Tpdf $(cut -d" " -f1)|zathura -
+    man -k .|dmenu -l |man -Tpdf $(cut -d" " -f1)|zathura -
+    man -k .|dmenu -l |man -Tpdf $(cut -d" " -f1)|zathura -
+    man -k .|rofi -dmenu -p 'manpages📖:'|man -Tpdf $(cut -d" " -f1)|zathura -
+    man -k .|rofi -dmenu -p 'manpages📖:'|man -Tpdf $(cut -d" " -f1)|zathura +
+    zathura $(man -k .|rofi -dmenu -p 'manpages📖:'|man -Tpdf $(cut -d" " -f1))
+    zathura - $(man -k .|rofi -dmenu -p 'manpages📖:'|man -Tpdf $(cut -d" " -f1))
+    (man -k .|rofi -dmenu -p 'manpages📖:'|man -Tpdf $(cut -d" " -f1))
+    zathura  '$(man -k .|rofi -dmenu -p 'manpages📖:'|man -Tpdf $(cut -d" " -f1))'
+    zathura  "$(man -k .|rofi -dmenu -p 'manpages📖:'|man -Tpdf $(cut -d" " -f1))"
+    zathura  "$(man -k .|rofi -dmenu -p "manpages📖:"|man -Tpdf $(cut -d" " -f1))"
+    zathura  $(man -k .|rofi -dmenu -p 'manpages📖:'|man -Tpdf $(cut -d" " -f1))
+    welp="$(man -k .|rofi -dmenu -p 'manpages📖:'|man -Tpdf $(cut -d" " -f1))"&& zathura - $welp
+    welp="$(man -k .|rofi -dmenu -p 'manpages📖:'|man -Tpdf $(cut -d" " -f1))"&& zathura $welp
+    welp='$(man -k .|rofi -dmenu -p 'manpages📖:'|man -Tpdf $(cut -d" " -f1))'&& zathura $welp
+    welp=$(man -k .|rofi -dmenu -p 'manpages📖:'|man -Tpdf $(cut -d" " -f1))&& zathura $welp
+    error: Unknown file type: 'inode/x-empty'
+    man -k .|rofi -dmenu -p 'manpages📖:'|man -Tpdf $(cut -d" " -f1)|zathura -
+    man -k .|rofi -dmenu -p 'manpages📖:'|man -Tpdf $(cut -d" " -f1)&&zathura -
+    man -k .|rofi -dmenu -p 'manpages📖:'|man -Tpdf $(cut -d" " -f1)|zathura -
+    man -k .|dmenu|man -Tpdf $(cut -d" " -f1)|zathura -
+    man -k .|dmenu -l 20|man -Tpdf $(cut -d" " -f1)|zathura -
+    man -k .|dmenu -l 30|man -Tpdf $(cut -d" " -f1)|zathura -
+    vim
+    man -k .|dmenu -l 30|man -Tpdf $(cut -d" " -f1)|zathura -
+    lec21
+    cd Computer\ Organization/
     ls
-    $JAVA_HOME/
-    ls
-    cd lib/
-    ls
-    ..
-    chmod -R java-11-openjdk-amd64/
-    sudo chmod -R java-11-openjdk-amd64/
+    zathura notes.pdf 
+    dpkg -L zathua
+    dpkg -l zathua
+    dpkg -Q zathua
+    hist
+    dpkg -l zathura
+    dpkg -L zathura
+    dpkg -l zathura
+    apt depends zathura
+    man rapt
+    man apt
+    man apt|grep recommend
+    man apt|grep recommends
+    man apt|grep *recommends*
+    zathura
+    welp=$(man -k .|dmenu -l 30|man -Tpdf $(cut -d" " -f1))
+    welp="$(man -k .|dmenu -l 30|man -Tpdf $(cut -d" " -f1))"
+    welp=$(man -k .|dmenu -l 30|man -Tpdf $(cut -d" " -f1))
+    hi=$(man -k .|dmenu -l 30|man -Tpdf $(cut -d" " -f1))
+    cat "$hi"
+    hi=$(man -k .|dmenu -l 30|man -Tpdf $(cut -d" " -f1)|grep .)
+    cat $hit
+    cat $hi
+    cat "$hi"
+    hi="$(man -k .|dmenu -l 30|man -Tpdf $(cut -d" " -f1)|grep .)"
+    cat $hi
+    cat hi
+    man -k .|dmenu -l 30|man -Tpdf $(cut -d" " -f1
+    man -k .|dmenu -l 30|man -Tpdf $(cut -d" " -f1)
+    hi='man -k .|dmenu -l 30|man -Tpdf $(cut -d" " -f1)'
+    $hi
+    cat $hi
+    cat "$hi"
     clear
-    /usr/lib/jvm/java-1.11.0-openjdk-amd64/bin/java -Dfile.encoding=UTF--cp /home/joel/.config/Code/User/workspaceStorage/35f0c7d3f37bb1535f2ca3db3b37c149/redhat.java/jdt_ws/rawjava_ab9d74c8/bin firstjavafx 
-    java -version 
-    javac --add-modules /usr/share/openjfx/lib/
-    javac --add-modules /usr/share/java
-    javac --add-modules /usr/share/java/ firstjavafx.java 
-    javac --add-modules /usr/share/openjfx/ firstjavafx.java 
-    javac --add-modules firstjavafx.java 
-    javac firstjavafx.java 
-    javac --module-path /usr/share/openjfx/
-    javac --module-path /usr/share/openjfx/ firstjavafx.java 
-    javac --module-path /usr/share/openjfx/lib/ firstjavafx.java 
-    javac --module-path /usr/share/java/ firstjavafx.java 
-    javac Octagontest.java 
-    java Octagontest 
-    javac firstjavafx.java 
-    clear
-    javac --upgrade-module-path
-    javac --upgrade-module-path firstjavafx.java 
-    javac --module-path /usr/share/openjfx/lib/ firstjavafx.java 
-    javac --module-source-path /usr/share/openjfx/lib/ firstjavafx.java 
-    javac --module /usr/share/openjfx/lib/ firstjavafx.java 
-    javac --module-path /usr/share/java/ firstjavafx.java 
-    javac --module-path /usr/share/openjfx/lib/ firstjavafx.java 
-    ./clear.sh 
-    javac --module-path /usr/share/openjfx/lib/ firstjavafx.java 
-    javac firstjavafx.java 
-    $JAVA_HOME/
-    ls
-    cd lib/
-    ls
-    lr
-    cllea
-    lf
-    clear
-    ls
-    lf
-    lss
-    lf
-    ls
-    clear
-    cd /usr/share/openjfx/
-    ls
-    cd lib/
-    ls
-    cat javafx.
-    cat javafx.properties 
-    file src.zip 
-    filesize 
-    $JAVA_HOME/
-    ls
-    cd lib/
-    ls
-    code
-    javac firstjavafx.java 
-    /usr/lib/jvm/jdk-13/bin/java -Dfile.encoding=UTF--cp /usr/share/openjfx/lib/javafx.base.jar:/usr/share/openjfx/lib/javafx.graphics.jar:/usr/share/openjfx/lib/javafx.controls.jar:/usr/share/openjfx/lib/javafx.fxml.jar:/home/joel/Desktop/programming/java/javafxfiles/first/bin app.App 
-    cd /home/joel/Desktop/programming/java/javafxfiles/first ; /usr/lib/jvm/jdk-13/bin/java -Dfile.encoding=UTF--cp /home/joel/Desktop/programming/java/javafxfiles/first/bin app.App 
-    /usr/lib/jvm/jdk-13/bin/java -Dfile.encoding=UTF-@/tmp/cp_2v26rvil172o276co71o5vjzb.argfile app.App 
-    cd src/
-    ls
-    cd app/
-    clear
-    javac App.java 
-    /usr/lib/jvm/jdk-13/bin/java -Dfile.encoding=UTF--cp /home/joel/Desktop/programming/java/javafxfiles/first/bin app.App 
-    cd /home/joel/Desktop/programming/java/javafxfiles/first ; /usr/lib/jvm/jdk-13/bin/java -Dfile.encoding=UTF-@/tmp/cp_43546w1yaanlu78jjrb9ylqjg.argfile app.App 
-    javac --version
-    cd /home/joel/Desktop/programming/java/javafxfiles/first ; /usr/lib/jvm/jdk-13/bin/java -Dfile.encoding=UTF-@/tmp/cp_8n1ls89kt69nqbbmsc7svg830.argfile app.App 
-    cd /usr/lib/jvm/
-    ls
-    cd jdk-13/
-    ls
-    cd lib/
-    ls
-    cd fx/
-    ls
-    ..
-    cd fx/
-    l
-    s
-    ls
-    pwd javafx.base.jar
-    ..
-   ls
+    hi='$(man -k .|dmenu -l 30|man -Tpdf $(cut -d" " -f1))'
+    $hi
+    "$hi"
+    $(man -k .|dmenu -l 30|man -Tpdf $(cut -d" " -f1))
+    man -k .|dmenu -l 30|man -Tpdf $(cut -d" " -f1)
+    man -k .|dmenu -l 30|man -Tpdf $(cut -d" " -f1)|grep .
+    man -k .|dmenu -l 30|man -Tpdf $(cut -d" " -f1)|
+    man -k .|dmenu -l 30|man -Tpdf $(cut -d" " -f1)
+    man -k .|dmenu -l 30|hi=man -Tpdf $(cut -d" " -f1)
+    man -k .|dmenu -l 30|hi="man -Tpdf $(cut -d" " -f1)"
+    cat $hi
+    cat "$hi"
+   man -k .|dmenu -l 30|hola="man -Tpdf $(cut -d" " -f1)"
+   cat $hola
+   less $hola
+   less "$hola"
+   echo $hola
+   man -k .|dmenu -l 30|hi='man -Tpdf $(cut -d" " -f1)'
+   cat $hi
+   cat "$hi"
+   man -k .|dmenu -l 30|hi=cut -d" " -f1|man -Tpdf
+   man -k .|dmenu -l 30|hi='cut -d" " -f1'|man -Tpdf
+   cat $hi
+   man -k .|dmenu -l 30|cut -d" " -f1|man -Tpdf
+   cat $hi
+   cat "$hi"
+   man -k .|dmenu -l 30|cut -d" " -f1|man -Tpdf -
+   man -k .|dmenu -l 30|cut -d" " -f1
+   hi=$(man -k .|dmenu -l 30|cut -d" " -f1)
+   cat hi
+   cat $hi
    clear
-   ls
-   ..
-   ls
-   dwn
-   cd minimal/
-   ls
-   /usr/lib/jvm/java-1.11.0-openjdk-amd64/bin/java -Dfile.encoding=UTF-@/tmp/cp_8n1ls89kt69nqbbmsc7svg830.argfile app.App 
-   sudo apt install libopenjfx-java
-   sudo apt install libopenjfx-jni 
-   apt search jfx
-   sudo apt install jfx*
-   /usr/lib/jvm/jdk-13/lib/fx
-   ls
-   cd .vscode/
-   ls
-   cd extensions/
-   ls
-   cd vscjava.vscode-java-dependency-0.5.1/
-   ls
-   sxiv *
-   ..
-   cd vscjava.vscode-java-pack-0.8.0/
-   ls
-   sxiv logo.
-   sxiv logo.png 
-   cd out/
-   ls
-   cd assets/
-   ls
-   cd java-runtime/
-   ls
-   ..
-   l
-   ls
-   cd overview/
-   ls
-   ..
-   ls
-   ..
-   ls
-   cat README.md 
-   code
-   idea
-   javac --version 
-   java --version
-   cd /usr/share/openjfx
-   ls
-   cd lib/
-   ls
-   free
-   htop
-   pg;java/rawjava
-   cat firstjavafx.java 
-   pg
-   cd java/
-   cd rawjava/
-   /usr/lib/jvm/java-11-openjdk-amd64/bin/java --module-path /usr/lib/jvm/jdk-13/lib/fx --add-modules=javafx.controls --add-modules javafx.base,javafx.graphics firstjavafx.java 
-   /usr/lib/jvm/java-11-openjdk-amd64/bin/java --module-path /usr/lib/jvm/jdk-13/lib/fx --add-modules=javafx.controls --add-modules javafx.base,javafx.graphics firstjavafx
-   /usr/lib/jvm/java-11-openjdk-amd64/bin/javac --module-path /usr/lib/jvm/jdk-13/lib/fx --add-modules=javafx.controls --add-modules javafx.base,javafx.graphics firstjavafx.java 
-   /usr/lib/jvm/java-11-openjdk-amd64/bin/java --module-path /usr/lib/jvm/jdk-13/lib/fx --add-modules=javafx.controls --add-modules javafx.base,javafx.graphics firstjavafx
-   /usr/lib/jvm/java-11-openjdk-amd64/bin/javac --module-path /usr/lib/jvm/jdk-13/lib/fx --add-modules=javafx.controls --add-modules javafx.base,javafx.graphics firstjavafx.java 
-   /usr/lib/jvm/java-11-openjdk-amd64/bin/java --module-path /usr/lib/jvm/jdk-13/lib/fx --add-modules=javafx.controls --add-modules javafx.base,javafx.graphics firstjavafx
-   \cat firstjavafx.java 
+   hi=$(man -k .|dmenu -l 30|cut -d" " -f1) && man -Tpdf $hi
+   hi=$(man -k .|rofi -dmenu "manpages📖:"|cut -d" " -f1) && man -Tpdf $hi|zathura -
+   hi=$(man -k .|rofi -dmenu "manpages📖:"|cut -d" " -f1) && hola=$(man -Tpdf $hi)&&zathura $hola
+   hi=$(man -k .|rofi -dmenu "manpages📖:"|cut -d" " -f1) && hola="$(man -Tpdf $hi)"&&zathura "$hola"
+   hi=$(man -k .|rofi -dmenu "manpages📖:"|cut -d" " -f1) && hola='$(man -Tpdf $hi)'&&zathura "$hola"
+   hi=$(man -k .|rofi -dmenu "manpages📖:"|cut -d" " -f1) && man -Tpdf $hi|zathura -
+   hi=$(man -k .|rofi -dmenu "manpages📖:"|cut -d" " -f1) && man -Tpdf >> /tmp/tempdf&&zathura /tmp/tempdf
+   hi=$(man -k .|rofi -dmenu "manpages📖:"|cut -d" " -f1) && man -Tpdf $hi >> /tmp/tempdf&&zathura /tmp/tempdf
    text
-   text firstjavafx.java 
-   /usr/lib/jvm/java-11-openjdk-amd64/bin/javac --module-path /usr/lib/jvm/jdk-13/lib/fx --add-modules=javafx.controls --add-modules javafx.base,javafx.graphics firstjavafx.java 
-   /usr/lib/jvm/java-11-openjdk-amd64/bin/java --module-path /usr/lib/jvm/jdk-13/lib/fx --add-modules=javafx.controls --add-modules javafx.base,javafx.graphics firstjavafx
-   text
-   javac App.java
-   cd src/app/
-   javac App.java 
-   javacfx App.java 
-   javafx App.java 
-   pg
-   cd java/javafxfiles/
-   ls
-   javacfx firstjavafx.java 
-   javafx firstjavafx
-   javacfx firstjavafx.java 
-   javafx firstjavafx
-   code
-   rebootsafe
-   javacfx jfx.java 
-   javafx jfx.
-   javafx jfx
-   killall firefox-esr 
-   ls
-   lcear
-   lw
-   ls
-   lr
-   wait(20)
-   wait
-   help wait
-   hist
-   t wait
-   man wait
-   vvu
-   code
-   hist
-   tgceejay 
-   hist
-   dmenu
-   hist
-   xdman
-   dwn
-   cd Compressed/
-   ls
-   lt
-   extract Oceanofgames.comGRID2.zip 
-   cd GRID2/
-   ls
-   wine Setup_Install_Game.exe 
-   thunar
-   logout
-   dwn
-   cd Compressed/GRID2/
-   wine Setup_Install_Game.exe 
-   thunar
-   dwn
-   cd Compressed/
-   ls
-   cd GRID2/
-   ls
-   cat Setup_Install_Game.exe 
-   mv Setup_Install_Game.exe setup.exe
-   wine setup.exe 
-   winesetup
-   dwn;GRID2
-   dwn;GRID
-   dwn;Compressed;GRID
-   dwn;Compressed;GRID2
-   clear
-   ls
-   cat setup
-   cat setup.exe 
-   sudo apt-get install --install-recommends winehq-develsudo apt-get install --install-recommends winehq-devel
-   sudo apt-get install --install-recommends winehq-devel
-   sudo apt-get install --install-recommends wine
-   man dmenu
-   sudo apt autoremove
-   rofi
-   sudo apt install rofi
-   /usr/share/rofi/themes
-   ls
-   cat arthur.rasi 
-   text arthur.rasi 
-   basename
-   t basename
-   scripts
-   base name pdf
-   basename pdf
-   basename
-   basename *
-   basename .
-   clear
-   ls
-   basename $(/bin/ls)
-   man basename
-   basename $(realpath *)
-   basename $(realpath .)
-   clear
-   basename $(realpath .)
-   basename $(realpath *)
-   basename $(realpath -r)
-   man realpath 
-   basename $(realpath "*")
-   basename '$(realpath "*")'
-   basename "$(realpath "*")"
-   basename "$(realpath *)"
-   clear
-   ls
-   basename "$(realpath *)"
-   realpath *
-   realpath *|dmenu
-   fc-cache -v
-   sudo fc-cache -
-   sudo fc-cache -f
-   realpath *|dmenu
-   text 
-   man dmenu
-   realpath *|dmenu -fn Roboto
-   realpath *|dmenu -fn 
-   realpath *|dmenu 
-   realpath *|dmenu -fn Roboto 8
-   realpath *|dmenu -fn Roboto 
-   realpath *|dmenu -fn Source Code Pro
-   realpath *|dmenu -fn "Source Code Pro"
-   realpath *|dmenu -fn "Source Code Pro 5"
-   realpath *|dmenu -fn "Source Code Pro "
-   realpath *|dmenu -fn "hack"
-   realpath *|dmenu -fn "Hack"
-   realpath *|dmenu -fn "manrope"
-   realpath *|dmenu 
-   realpath *|rofi
-   realpath *|rofi -show
-   man rofi
-   t rofi
-   realpath *|rofi -dmenu
-   man rofi
-   man rofi|grep color
-   realpath *|rofi -bg black -dmenu
-   spdf
-   lec21
-   cd database/assignments/
-   ls
-   ..
-   pdf qns.pdf 
-   spdf
-   alias hist
-   spdf
    $scripts
    ls
-   cat hist
-   cat pdf
-   t ig
-   t if
-   man if
-   help if
-   cat pdf
-   realpath
-   man realpath
-   realpath .
-   realpath pdf
+   touch rman
+   mx rman
+   text rman
+   rman
+   hi=$(man -k .|rofi -dmenu "manpages📖:"|cut -d" " -f1) && man -Tpdf $hi >> /tmp/tempdf&&zathura /tmp/tempdf && xdotool key z z
+   hi=$(man -k .|rofi -dmenu "manpages📖:"|cut -d" " -f1) && man -Tpdf $hi >> /tmp/tempdf&&zathura /tmp/tempdf;xdotool z z
+   hi=$(man -k .|rofi -dmenu "manpages📖:"|cut -d" " -f1) && man -Tpdf $hi >> /tmp/tempdf&&zathura 
+   $RANDOM 
+   tempfile='touch /tmp/$RANDOM'
+   car $tempfile 
+   cat $tempfile 
+   $RANDOm
+   $RANDOM
+   tempfile=touch /tmp/$RANDOM
    clear
-   cat pdf
-   t ed
-   man ed
-   dwn
-   cd Compressed/GRID2/
-   ls
-   wine setup.exe 
-   thunar
-   wine setup.exe 
-   dwn
-   cd Compressed/
-   cat Oceanofgames.comGRID2.zip 
-   man zip
-   zip -@ 
-   man zip
-   t zip
-   less Oceanofgames.comGRID2.zip 
-   grep *setup* Oceanofgames.comGRID2.zip |less
-   grep *setup* Oceanofgames.comGRID2.zip 
-   unzip -l Oceanofgames.comGRID2.zip |less
-   cd GRID2/
-   mv setup.exe Setup_Install_Game.exe
-   wine Setup_Install_Game.exe 
-   alias dmenu
-   hist
-   t rofi
-   googler invalid name GRID2
-   xdman
-   dwn
-   clear
-   ls
-   vis
-   rofi-theme-selector 
-   realpath *
-   realpath *|rofi -show
-   rofi -show
-   vis
-   man rofi
-   neofetch 
-   vis
-   t rofi
-   rofi -dmenu
-   clear
-   rofi -showrun
-   rofi -show run
-   claer
-   cmear
-   ls
-   man rofi
-   rofi -location 2-
-   rofi -location 20
-   rofi -location 8
-   rofi -location 3
-   rofi -location 90
-   rofi -location 0
-   man rofi
-   man rofi|grep location
-   rofi -show -location 1
-   rofi -showrun -location 1
-   rofi -show run -location 1
-   man rofi|grep location
-   rofi -show -location -3
-   rofi -show -location 4
-   rofi -show -yoffset -2
-   rofi -show -xoffset -2
-   neofetch 
-   clear
-   neofetch 
-   t neofetch
-   man neofetch 
-   man screen
-   man screenfetch 
-   screenfetch -n
-   vis
-   rofi -show ;scrot sc.png && exit
-   sxiv sc.png 
-   scrot
+   tempfile=touch /tmp/$RANDOM
+   tempfile=touch "/tmp/$RANDOM'
+   tempfile=touch "/tmp/$RANDOM:
+   tempfile=touch "/tmp/$RANDOM"
+   tempfile=echo> "/tmp/$RANDOM"
+   cat $tempfile 
+   touch /tmp/$RANDOM
+   rman
+   rman
    text
-   lt
-   sxiv 2019-10-1
-   sxiv 2019-10-12-200831_1366x768_scrot.png 
-   pics
-   ls
-   sxiv sss.png 
-   rm sss.png 
-   cd screenshots/
-   lt
-   ..
-   ls
-   ..
-   ls
-   lt
-   sxiv sc.png 
-   rm sc.png 
-   rm 2019-10-12-200831_1366x768_scrot.png 
-   ls
-   cd Pictures/
-   ls
-   cd random/
-   ls
-   lt
-   ..
-   ls
-   cd wallpapers/
-   lt
-   sxiv  ftgj2nn13er31.jpg 
-   ..
-   ls
-   ccd wallpapers/
-   ls
-   clear
-   ls
-   dwn
-   ..
-   pics
-   ls
-   neofetch 
-   vis
-   ls
-   t rofi
-   rofi -show drn
-   rofi -show drun
-   man rofi
-   rofi -show drun
-   t rofi
-   rofi
-   rofi modi
-   rofi -modi
-   rofi-sensible-terminal 
-   man rofi| grep mode
-   rofi -show mode
-   rofi -show drun
-   rofi -enable drun
-   cd /usr/share/rofi/
-   ls
-   cd themes/
-   ls
-   rofi drun
-   man rofi
-   rofi --modi drun
-   rofi -single-shot
-   rofi --enable-drun
-   rofi -modi drun -show drun
-   history|rofi
-   history|rofi -show
-   t rofi
-   history|rofi -dmenu
-   history|$(rofi -dmenu)
-   $(history)|rofi -dmenu
-   ls|rofi -dmeu
-   t dmenu
-   t "dmenu"
-   $(history|rofi -dmenu)
-   "$(history|rofi -dmenu)"
-   clear
-   rofi 
-   whatis rofi
-   whatis dmenu
-   rofi -show ssh
-   rofi -show keys
-   rofi -show windowcd
-   rofi -show combi
-   hist
-   rofi
-   /usr/share/rofi/
-   ls
-   cd themes/
-   ls
-   nano arthur.rasi 
-   text arthur.rasi 
-   killall Telegram 
-   /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml
-   text /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml
-   killall rofi
-   htop
-   xfce4-panel -r
-   xfce4-panel
-   man xfce4-panel
-   xfce4-panel &
-   man ls
-   /bin/ls -d
-   /bin/ls -D
-   /bin/ls -d
-   man ls
-   dwn
-   cd Compressed/
-   ls
-   lt
-   extract Oceanofgames.comNascar_15.zip 
-   lt
-   rm Nascar_15/
-   extract Oceanofgames.comNeed_for_Speed_World_2010.zip 
-   cd Need_for_Speed_World_2010/
-   ls
-   wine Setup_Install_Game.exe 
-   wineSetup_Install_Game.exe 
-   ..
-   ls
-   lt
-   cd Need_for_Speed_World_2010/
-   ls
-   wine Setup_Install_Game.exe 
-   ..
-   cd GRID2/
-   wine Setup_Install_Game.exe 
-   ..
-   rm Need_for_Speed_World_2010/
-   ls
-   rm Oceanofgames.comNeed_for_Speed_World_2010.zip 
-   clear
-   ls
-   rm *Ocean
-   rm *Ocean*
-   ls
-   rm Soundnode.zip *VPN*
-   clear
-   ls
-   rm SM-G920F_6.0.1_dm_verification_Bypass_Fixfirmwares.com.tar.md5.rar softether-vpnclient-v4.28-9669-beta-2018.09.11-linux-x64-64bit.tar.gz VERSION ticons-white/ source-code-pro-master share/ SHA256SUM
-   ls
-   rm SHA256SUM.asc  README.md roboto
-   y
-   ls
-   clear
-   ls
-   rm __main__.py 
-   ;s
-   ls
-   rm GRID2/
-   rm $(/bin/ls)
-   rm $(/bin/ls|dmenu)
-   rm $(/bin/ls|dmenu -l )
-   rm $(/bin/ls --directory|dmenu -l )
-   rm $(/bin/ls --directory|dmenu -l )
-   rm $(/bin/ls -d|dmenu -l )
-   ls -d
-   ls
-   rm Just\ Cause\ 4\ -\ \[DODI\ Repack\]/
-   rm FTD2XX.dll 
-   rm 7c99b6cf9a8b73c9312a71d1209d9bbb-0841beca9ffaeb4cb3d14d622c75638b6630980d
-   clear
-   ls
-   rm G920FXXU6ERF5_G920FVFG6ERF1_G920FXXU6ERF7_HOME.tar.md
-   rm *Che*
-   rm *bash*
-   rm *.bash*
-   rm .bashrc .bashrc_help .bashrc_help.no_color 
-   clear
-   ls
-   rm *debian*
-   rm Crysis2/
-   ls
-   clear
-   ls|less
-   cat .directory 
-   rm .directory 
-   sudo apt remove dolphin
-   ls
-   rm Keystring_factory.apk/
-   clear
-   ls
-   killall Telegram 
-   rofi
+   rman
    text
-   hist
+   rman
    text
-   hist
-   hsit
-   hist
-   spdf
-   pdf
-   scrips
+   rman
+   t awk
+   texxt
+   text
+   cd scripts/
+   text killprocess 
+   ps|rofi
+   ps|rofi -dmenu
+   top|rofi -dmenu
+   ps|rofi -dmenu
+   ps|awk {print $$3}|rofi -dmenu
+   ps|awk '{print $$3}'|rofi -dmenu
+   ps|awk '{print $$6}'|rofi -dmenu
+   ps|awk '{print $$2}'|rofi -dmenu
+   ps|awk '{print  $2}'|rofi -dmenu
+   ps|awk '{print  $$8}'|rofi -dmenu
+   ps|awk '{print  $$10}'|rofi -dmenu
+   ps|awk '{print  $ $10}'|rofi -dmenu
+   ps|awk '{print  $$11}'|rofi -dmenu
+   ps|awk '{print  $$11$12}'|rofi -dmenu
+   ps|awk '{print  $$11$12}'|sed s/[0-9]+/" "/g|rofi -dmenu
+   ps|awk '{print  $$11$12}'|sed s/[0-9]+/"  "/g|rofi -dmenu
+   ps|awk '{print  $$11$12}'|sed s/\[0-9\]+/" "/g|rofi -dmenu
+   ps|awk '{print  $$11$12}'|PID/"PID "/g'/|rofi -dmenu
+   ps|awk '{print  $$11$12}'|sed s/"PID/"PID "/g|rofi -dmenu
+   ps|awk '{print  $$11$12}'|sed s/"PID"/"PID "/g|rofi -dmenu
+   ps|awk '{print  $$11$12}'|sed s/"PID"/"PID     "/g|rofi -dmenu
+   ps|awk '{print  $2" " $11$12}'|sed s/"PID"/"PID     "/g|sed s/|rofi -dmenu
+   ps|awk '{print  $2" " $11$12}'|sed s/"PID"/"PID     "/g|rofi -dmenu
+   ps|awk '{print  "$2"  $11$12}'|sed s/"PID"/"PID     "/g|rofi -dmenu
+   ps|awk '{print  $ $11$12}'|sed s/"PID"/"PID     "/g|rofi -dmenu
+   ps|awk \t '{print  $ $11$12}'|sed s/"PID"/"PID     "/g|rofi -dmenu
+   ps|awk "\t" '{print  $ $11$12}'|sed s/"PID"/"PID     "/g|rofi -dmenu
+   ps|awk " " '{print  $ $11$12}'|sed s/"PID"/"PID     "/g|rofi -dmenu
+   ps|awk ' ' '{print  $ $11$12}'|sed s/"PID"/"PID     "/g|rofi -dmenu
+   ps|awk '\t' '{print  $ $11$12}'|sed s/"PID"/"PID     "/g|rofi -dmenu
+   ps|awk -F '{print  $ $11$12}'|sed s/"PID"/"PID     "/g|rofi -dmenu
+   man awk|grep
+   man awk|grep space
+   ps|awk '{print  $2\t$11$12}'|sed s/"PID"/"PID     "/g|rofi -dmenu
+   ps|awk '{print  $2"\t"$11$12}'|sed s/"PID"/"PID     "/g|rofi -dmenu
+   ps|awk '{print  $2"\t"$11$12}'|rofi -dmenu
+   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu
+   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu -width 20
+   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu -width -yoffset -1
+   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu -width -yoffset -10
+   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu -width -yoffset -20
+   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu -width -yoffset -100
+   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu -width -yoffset -190
+   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu -width -yoffset -210
+   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu -width -yoffset --xoffset 200
+   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu -width -yoffset --xoffset 300
+   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu -width -yoffset --xoffset 400
+   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu -width -yoffset --xoffset 500
+   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu -width -yoffset --xoffset 600
+   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu -width -yoffset --xoffset 550
+   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu -width -yoffset --xoffset -borders none
+   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu -width -yoffset --xoffset 
+   clear
+   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu -width -yoffset --xoffset |awk {print $1}
+   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu -width -yoffset --xoffset |awk '{print $1}'
+   ps|awk '{print   |awk '{print $1}'
+   ps|awk '{print  }' |awk '{print $1}'
+   ps|awk '{print  $2"\t\t\t"$11$12}'|awk {print $1}
+   ps|awk '{print  $2"\t\t\t"$11$12}'|awk '{print $1}'
+   ps|awk '{print  $2"\t\t"$11$12}'|awk '{print $1}'
+   ps|awk '{print  $2"\t"$11$12}'|awk '{print $1}'
+   ps|awk '{print  $2"\t"$11$12}'|
+   ps|awk '{print  $2"\t"$11$12}'
+   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+ \/'  
+   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+ /'  
+   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'  
+   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/\\\;
+   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/\\\;/g
+   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/\\\;//g
+   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/\\;//g
+   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/\\\\;//g
+   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/\\\;//g
+   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/\\\;_//g
+   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/"\\\;_"//g
+   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/'\\\;_'//g
+   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/'\;_'//g
+   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/'_'//g
+   ps|awk '{print  $2"\t"$11$12}'|grep -v //g
+   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/'_'//g
+   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/'_'//g|sed s/'\\\'//g
+   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/'_'//g|sed s/\\\'//g
+   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/'_'//g|sed s/"\\\"//g
+   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\"//g
+   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\//g
+   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/"_"//g|sed s/\\\//g
+   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/"_"//g
+   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\"//g
+   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g
+   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\"//g
+   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\\{"//g
+   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\{\"//g
+   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g
+   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/\[//g
+   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g
+   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|
+   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g
+   killprocess 
+   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu -width -yoffset --xoffset |awk '{print $1}'
+   killprocess 
+   scripts/
+   ./killprocess 
+   killprocess 
+   cat $process 
+   ./killprocess 
+   proc=$RANDOM
+   touch /tmp/$proc
+   proc=/tmp/$proc
+   cat $proc
+   echo $proc
+   ./killprocess 
+   proc=$RANDOM
+   touch /tmp/$proc
+   proc=/tmp/$proc
+   echo $proc
+   ./killprocess 
+   ps
+   ps >file
+   cat file 
+   rm file 
+   cat $proc
+   proc=$RANDOM
+   touch /tmp/$proc
+   proc=/tmp/$proc
+   ps>$proc
+   cat $proc
+   ./killprocess 
+   man source
+   t source
+   ./killprocess 
+   cat /tmp/
+   ./killprocess 
+   source killprocess 
+   t kill
+   pkill firefox-esr 
+   cd scripts/
+   ls
+   touch killprocess
+   mx killprocess 
+   nano killprocess 
+   ./killprocess 
+   ls
+   source killprocess 
+   text
+   . killprocess 
+   man grep
+   rman
+   scr
    scripts
    ls
-   cat mdisk 
-   text mdisk 
-   mdisk 
-   udisk
-   clear
-   mdisk 
-   text mdisk 
-   mdisk
-   lsblkk
-   lsblk
-   mdisk
+   . killprocess 
+   🔌
+   processid=$(cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g
+   processid=$(cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g)
+   processid=$(ps|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g)
+   cat $processid
+   processid=$(ps|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g)
+   ps|grep 1|
+   ps|grep 1
+   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g
+   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process
+   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|grep -v [0-9]+
+   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|grep -v "[0-9]+"
+   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|grep -v '[0-9]+'
+   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|cgrep -v '[0-9]+'
+   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|egrep -v '[0-9]+'
+   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|egrep -v [0-9]+
+   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|egrep -v "[0-9]+"
+   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|egrep -v ([0-9]+)
+   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|egrep -v '([0-9]+)'
+   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|egrep -v [0-9]
+   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|egrep -v "[0-9]"
+   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|egrep -v "[0-9]+"
+   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|egrep -v "[0-9]+ "
+   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|egrep -v "[0-9]+  "
+   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|egrep -v "[0-9]+   "
+   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|awk '{print $2}'
+   . killprocess 
    text
-   mdisk
-   udisk
-   mdisk
-   udisk
+   processid=$(cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|awk '{print $2}')
+   cat $processid
+   cat "$processid"
+   echo "$processid"
+   processid=$(cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|awk '{print $2}')
+   echo $processid 
+   processid=$(cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|awk '{print $2}')
+   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|egrep -v "[0-9]+"
+   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|awk '{print $2}'
+   . killprocess 
+   ls
+   lks
+   lk
    clear
-   format.sh 
-   cat format.sh 
-   realpath $format.sh 
-   realpath format.sh 
+   lf
+   ls|grep -v "/"
+   ls|grep "/"
+   top|rofi -dmenu
+   top|awk '{$"\t\t" $3}'|rofi -dmenu
+   top|awk '{$"\t\t" $3}'|
+   top|awk '{$"\t\t" $3}'
+   top|awk '{print $"\t\t" $3}'|rofi -dmenu
+   top|awk '{print $"\t\t" $3}'|
+   top|awk '{print $"\t\t" $3}'
+   top|awk '{print $"\t\t" $5}'
+   top|awk '{print $"\t\t" $6}'
+   top|awk '{print $"\t\t" $8}'
+   top|awk '{print $"\t\t" $9}'
+   top|awk '{print $"\t\t" $10}'
+   top|awk '{print $"\t\t" $11}'
+   top|awk '{print $"\t\t" $13}'
+   hi=$(top|awk '{print $"\t\t" $13}')
+   top -b 100|awk '{print $"\t\t" $13}'
+   top -v
+   top -b
+   top -b 100
+   t top
+   top -b 89
+   top -hv
+   top -m 20
+   top -b 20
+   top -b|awk '{print $"\t\t" $13}'
+   top -b
+   top -b|awk '{print $"\t\t" $13}'
+   top |awk '{print $"\t\t" $13}'
+   top |awk '{print $"\t\t" $13}'|grep .
+   top |awk '{print $"\t\t" $13}'|sed '2,4!d
+   top |awk '{print $"\t\t" $13}'|sed '2,4!d'
+   top |awk '{print $"\t\t" $13}'
+   top |sed '2,4!d'|awk '{print $"\t\t" $13}'
+   top |sed '2,4!d'|
+   top |sed '2,4!d'
+   top |sed '3,4!d'
+   top |sed '5,20!d'
+   top |sed '7,25!d'
+   top |sed '7,50!d'
+   top |sed '7,70!d'
+   top |sed '7,50!d'
+   top |sed '7,30!d'
+   ps
+   cd scripts/
+   . killprocess 
+   text killprocess 
+   . killprocess 
+   text killprocess 
+   . killprocess 
+   strace
+   strace -h
+   strace -a
+   strace -a column
+   t strace
+   t ps
+   t "ps"
+   man ps
+   rman
+   ps ef
+   ps 
+   ps ef
+   ps 
+   ps |joel
+   ps |grep joel
+   scripts
+   . killprocess 
+   text
+   $(cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep "$process"|awk '{print $2}')
+   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep "$process"|awk '{print $2}'
+   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed 
+   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|
+   text
+   " libbz2-1.0:ilibgdbm-compat4:ilibgdbm6:ilibieee1284-3:ilibmariadb3:i386
+     libncurses5:ilibpci3:ilibperl5.28:ilibsane:ilibsnmp30:ilibtinfo5:i386
+     wine-stable wine-stable-amdwine-stable-i386:i386
+   "
+   hi=" libbz2-1.0:ilibgdbm-compat4:ilibgdbm6:ilibieee1284-3:ilibmariadb3:i386
+     libncurses5:ilibpci3:ilibperl5.28:ilibsane:ilibsnmp30:ilibtinfo5:i386
+     wine-stable wine-stable-amdwine-stable-i386:i386
+   "
+   sudo apt-mark manual
+   sudo apt-mark manual $hi
+   sudo apt autoremove
+   ps -U joel
+   t "
+   ps --user joel
+   ps
+   t "
+   t "ps"
+   ps --user $(id -u) -F
+   ps --user $(joel -u) -F
+   ps --joel $(joel -u) -F
+   ps --joel
+   t "ps"
+   ps -o ppid
+   ps -o 
+   ps joel
+   > $HOME/.xbindkeysrc
+   $HOME/.xbindkeysrc
+   cat $HOME/.xbindkeysrc
+   text $HOME/.xbindkeysrc
+   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g
+   ps|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g
+   ps|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep "$process"|awk '{print $2}'
+   cd scripts/
+   . killprocess 
+   text
+   processid=$(ps|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep "$process"|awk '{print $2}')
+   cat $processid 
+   cat "$processid" 
+   ps|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep "$process"|awk '{print $2}'
+   ps|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep "$process"|'
+   ps|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep "$process"
+   ps|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep "$process"|grep $process
+   ps|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep "$process"|grep "$process"
+   cat $process
+   ps|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep "$process"|grep "$process"
+   ps|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep "$process"|grep "$process"|awk '{print $2}'
+   . killprocess 
+   sudo apt install xbindkeys
+   rman
+   rman 
+   xbindkeys_show 
+   text
+   xbindkeys_show 
+   lsof
+   sudolsof
+   sudo lsof
+   xbindkeys --key
+   xbindkeys_show 
+   sudo nano /etc/X11/xinit/xinitrc
+   killall rofi
+   kilall rofi
+   ki;=llall rofi
+   killall rofi
+   killall rofi
+   killall rofi
+   killall rofi
+   rebootsafe
+   killall rofi
+   logout
+   killall xbindkeys && xbindkeys
+   killall rofi
+   killall xbindkeys && xbindkeys
+   text .xbindkeysrc 
+   killall xbindkeys && xbindkeys
+   scripts/killprocess
+   killall xbindkeys && xbindkeys
+   cd scripts/\
+   cd scripts/
+   bash killprocess 
+   env killprocess 
+   sudo env killprocess 
+   sudo env ~/scripts/killprocess 
+   env killprocess 
+   xbindkeys-config
+   cd scripts/
+   . ./killprocess 
+   killprocess 
+   sourec
+   source
+   man source
+   text
+   text $scripts/killprocess
+   find -L /bin -samefile /bin/sh
+   file -h /bin/sh
+   dash
+   killall xbindkeys && xbindkeys
+   text .bashrc
+   cd scripts/
+   ls
+   rm killprocess 
+   killprocess 
+   type source
+   builtin source 
+   text
+   killall xbindkeys && xbindkeys
+   text
+   killall xbindkeys && xbindkeys
+   text scripts/
+   cd  scripts/
    ls
    ..
+   hist
+   text $HOME/.xbindkeysrc
+   killall xbindkeys && xbindkeys
+   xbindkeys
+   killall xbindkeys && xbindkeys
+   cd scripts/
+   touch killprocess
+   mx killprocess 
+   nano killprocess 
+   killall xbindkeys && xbindkeys
+   mx killprocess 
    ls
-   whatis format.sh 
-   file format.sh 
-   type format.sh 
+   cat killprocess 
+   text killprocess 
+   ls
+   text
+   killprocess 
+   ..
+   nano .xbindkeysrc 
+   killall xbindkeys && xbindkeys
+   nano .xbindkeysrc 
+   text .xbindkeysrc 
+   killall xbindkeys && xbindkeys
+   xbindkeys
+   killall xbindkeys && xbindkeys
+   xbindkeys
+   xbindkeys_show 
+   text
+   xbindkeys --key
+   xfce-e
+   xfce4-terminal -e
+   xfce4-terminal -e ls
+   hist
+   killall xbindkeys 
+   xbindkeys
+   killall xbindkeys && xbindkeys
+   sxhkd 
+   man sxhkd 
+   $TERMINAL
+   cat $TERMINAL
+   echo $TERMINAL
+   text
+   echo $TERMINAL
+   $TERMINAL 
+   apt search hotkey
+   apt search hotkey daemon
+   sudo apt install sxhkd 
+   rman
+   sxhkd -c
+   text /home/joel/.config/sxhkd/sxhkdrc
+   rman
+   touch /home/joel/.config/sxhkd/sxhkdrc
+   echo data>> /home/joel/.config/sxhkd/sxhkdrc
+   cd .config/
+   mkdir sxhkd
+   text /home/joel/.config/sxhkd/sxhkdrc
+   sxhkd 
+   killall xbindkeys 
+   sxhkd 
+   sxhkd &
+   killall sxhkd && sxhkd 
+   killall sxhkd && sxhkd &
+   sxhkd &
+   killall sxhkd 
+   killall zathura 
+   rman
+   text
+   sxhkd 
+   killall sxhkd && sxhkd 
+   sxhkd 
+   killall sxhkd && sxhkd 
+   sxhkd 
+   killall xbindkeys
+   sxhkd 
+   text 
+   sxhkd 
+   text
+   rm .xbindkeysrc 
+   sudo apt remove --purge xbindkeys 
+   sudo apt autoremove
+   text .xinitrc 
    hist

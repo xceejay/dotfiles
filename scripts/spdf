@@ -1,6 +1,5 @@
 #!/bin/bash
 shopt -s expand_aliases
-alias dmenu='dmenu -l 30 -nb black -sb "#260A35"'
 declare -A booklist; declare -a index
 while read i; do
     location="$i"

@@ -1,1 +1,2 @@
-query=$(echo|dmenu -nb black -sb "#260A35" -p "Search on Google") && firefox-esr "https://www.google.com/search?q=$query"
+alias dmenu='dmenu -fn "manrope-10" -nb black -sb "#260A35"'
+query=$(echo|dmenu -p "Search on Google 🙃:") && firefox-esr "https://www.google.com/search?q=$query"

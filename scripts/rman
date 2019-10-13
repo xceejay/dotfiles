@@ -1,0 +1,6 @@
+#!/bin/bash
+#read manpages in pdf format
+number=$RANDOM
+touch /tmp/$number
+tempfile=/tmp/$number
+hi=$(man -k .|rofi -dmenu -p "manpages📖:"|cut -d" " -f1) && man -Tpdf $hi >> $tempfile&&zathura $tempfile
