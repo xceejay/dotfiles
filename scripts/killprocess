@@ -4,4 +4,4 @@ touch /tmp/$proc
 proc=/tmp/$proc
 ps |grep joel>$proc
 
-process=$( ps aux|awk '{print  $2 "\t\t\t" $11 $12}'|rofi -dmenu -width 30 -yoffset -210 -xoffset 485 -p "killprocess️️️️🔌:"|awk '{print $1}')&&sudo kill "$process" && notify-send -t 200 "$process🤔 was killed !"
+process=$( ps auxc|awk '{print  $2 "\t\t\t" $11 $12}'|rofi -dmenu -width 30 -yoffset -210 -xoffset 485 -p "killprocess️️️️🔌:"|awk '{print $1}')&&pname=$( ps auxc|egrep -w "$process"|awk '{print $11}')&&sudo kill "$process" && notify-send -t 200 "$pname was killed !🔪"

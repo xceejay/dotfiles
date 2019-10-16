@@ -1,625 +1,1010 @@
-     rofi
-     man -k .|dmenu -l 30|man -Tpdf $(cut -d' ' -f1)|zathura - 
-     man -k .|dmenu -l 30|man -Tpdf $(cut -d' ' -f1)|zathura - n=100
-     man -k .|dmenu -l 30|man -Tpdf $(cut -d' ' -f1)|zathura - -n=100
-     man -k .|dmenu -l 30|man -Tpdf $(cut -d' ' -f1)|zathura - 
-     text ~/.config/zathura/zathurarc
-     man -k .|dmenu -l 30|man -Tpdf $(cut -d' ' -f1)|zathura - 
-     man -k .|rofi -dmenu|man -Tpdf $(cut -d' ' -f1)|zathura - 
-     man -k .|rofi -dmenu -p "manpages"|man -Tpdf $(cut -d' ' -f1)|zathura - 
-    man -k .|rofi -dmenu -p "manpages📖:"|man -Tpdf $(cut -d' ' -f1)|zathura - 
-    man -k .|rofi -dmenu -p "manpages📖:"|man -Tpdf $(cut -d' ' -f1)|zathura -
-    man -k .|dmenu -p "manpages📖:"|man -Tpdf $(cut -d' ' -f1)|zathura -
-    man -k .|rofi -dmenu -p "manpages📖:"|man -Tpdf $(cut -d' ' -f1)|zathura 
-    hist
-    man -k .|rofi -dmenu -p "manpages📖:"|man -Tpdf $(cut -d' ' -f1)|zathura-
-    man -k .|rofi -dmenu -p "manpages📖:"|man -Tpdf $(cut -d' ' -f1)|zathura -
-    man -k .|rofi -dmenu -p "manpages📖:"|man -Tpdf '$(cut -d" " -f1)'|zathura -
-    man -k .|rofi -dmenu -p "manpages📖:"|man -Tpdf $(cut -d" " -f1)|zathura -
-    man -k .||man -Tpdf $(cut -d" " -f1)|zathura -
-    man -k .|rofi -dmenu -p 'manpages📖:'|man -Tpdf $(cut -d" " -f1)|zathura -
-    man -k .|rofi -dmenu  'manpages📖:'|man -Tpdf $(cut -d" " -f1)|zathura -
-    man -k .|rofi -dmenu|man -Tpdf $(cut -d" " -f1)|zathura -
-    man -k .|rofi -show -dmenu|man -Tpdf $(cut -d" " -f1)|zathura -
-    man -k .|rofi -show dmenu|man -Tpdf $(cut -d" " -f1)|zathura -
-    man -k .|dmenu -p "hi" |man -Tpdf $(cut -d" " -f1)|zathura -
-    man -k .|dmenu |man -Tpdf $(cut -d" " -f1)|zathura -
-    man -k .|dmenu -l |man -Tpdf $(cut -d" " -f1)|zathura -
-    man -k .|dmenu -l |man -Tpdf $(cut -d" " -f1)|zathura -
-    man -k .|rofi -dmenu -p 'manpages📖:'|man -Tpdf $(cut -d" " -f1)|zathura -
-    man -k .|rofi -dmenu -p 'manpages📖:'|man -Tpdf $(cut -d" " -f1)|zathura +
-    zathura $(man -k .|rofi -dmenu -p 'manpages📖:'|man -Tpdf $(cut -d" " -f1))
-    zathura - $(man -k .|rofi -dmenu -p 'manpages📖:'|man -Tpdf $(cut -d" " -f1))
-    (man -k .|rofi -dmenu -p 'manpages📖:'|man -Tpdf $(cut -d" " -f1))
-    zathura  '$(man -k .|rofi -dmenu -p 'manpages📖:'|man -Tpdf $(cut -d" " -f1))'
-    zathura  "$(man -k .|rofi -dmenu -p 'manpages📖:'|man -Tpdf $(cut -d" " -f1))"
-    zathura  "$(man -k .|rofi -dmenu -p "manpages📖:"|man -Tpdf $(cut -d" " -f1))"
-    zathura  $(man -k .|rofi -dmenu -p 'manpages📖:'|man -Tpdf $(cut -d" " -f1))
-    welp="$(man -k .|rofi -dmenu -p 'manpages📖:'|man -Tpdf $(cut -d" " -f1))"&& zathura - $welp
-    welp="$(man -k .|rofi -dmenu -p 'manpages📖:'|man -Tpdf $(cut -d" " -f1))"&& zathura $welp
-    welp='$(man -k .|rofi -dmenu -p 'manpages📖:'|man -Tpdf $(cut -d" " -f1))'&& zathura $welp
-    welp=$(man -k .|rofi -dmenu -p 'manpages📖:'|man -Tpdf $(cut -d" " -f1))&& zathura $welp
-    error: Unknown file type: 'inode/x-empty'
-    man -k .|rofi -dmenu -p 'manpages📖:'|man -Tpdf $(cut -d" " -f1)|zathura -
-    man -k .|rofi -dmenu -p 'manpages📖:'|man -Tpdf $(cut -d" " -f1)&&zathura -
-    man -k .|rofi -dmenu -p 'manpages📖:'|man -Tpdf $(cut -d" " -f1)|zathura -
-    man -k .|dmenu|man -Tpdf $(cut -d" " -f1)|zathura -
-    man -k .|dmenu -l 20|man -Tpdf $(cut -d" " -f1)|zathura -
-    man -k .|dmenu -l 30|man -Tpdf $(cut -d" " -f1)|zathura -
-    vim
-    man -k .|dmenu -l 30|man -Tpdf $(cut -d" " -f1)|zathura -
-    lec21
-    cd Computer\ Organization/
+     ls *thunder*
+     cd org.
+     cd org.thunderdog.challegram/
+     ls
+     claer
+     ls
+     cd files/
+     ls
+     ....
+    ..
+    cd Xender/
     ls
-    zathura notes.pdf 
-    dpkg -L zathua
-    dpkg -l zathua
-    dpkg -Q zathua
-    hist
-    dpkg -l zathura
-    dpkg -L zathura
-    dpkg -l zathura
-    apt depends zathura
-    man rapt
-    man apt
-    man apt|grep recommend
-    man apt|grep recommends
-    man apt|grep *recommends*
-    zathura
-    welp=$(man -k .|dmenu -l 30|man -Tpdf $(cut -d" " -f1))
-    welp="$(man -k .|dmenu -l 30|man -Tpdf $(cut -d" " -f1))"
-    welp=$(man -k .|dmenu -l 30|man -Tpdf $(cut -d" " -f1))
-    hi=$(man -k .|dmenu -l 30|man -Tpdf $(cut -d" " -f1))
-    cat "$hi"
-    hi=$(man -k .|dmenu -l 30|man -Tpdf $(cut -d" " -f1)|grep .)
-    cat $hit
-    cat $hi
-    cat "$hi"
-    hi="$(man -k .|dmenu -l 30|man -Tpdf $(cut -d" " -f1)|grep .)"
-    cat $hi
-    cat hi
-    man -k .|dmenu -l 30|man -Tpdf $(cut -d" " -f1
-    man -k .|dmenu -l 30|man -Tpdf $(cut -d" " -f1)
-    hi='man -k .|dmenu -l 30|man -Tpdf $(cut -d" " -f1)'
-    $hi
-    cat $hi
-    cat "$hi"
+    cd video/
+    ls
+    mv * ~/Desktop/movies/
+    ls
+    home
+    uphone
+    mvs
+    lmvs
+    tgceejay 
+    lmvs
+    doc
+    ..
+    ls
+    rm .putty/
+    ls
     clear
-    hi='$(man -k .|dmenu -l 30|man -Tpdf $(cut -d" " -f1))'
-    $hi
-    "$hi"
-    $(man -k .|dmenu -l 30|man -Tpdf $(cut -d" " -f1))
-    man -k .|dmenu -l 30|man -Tpdf $(cut -d" " -f1)
-    man -k .|dmenu -l 30|man -Tpdf $(cut -d" " -f1)|grep .
-    man -k .|dmenu -l 30|man -Tpdf $(cut -d" " -f1)|
-    man -k .|dmenu -l 30|man -Tpdf $(cut -d" " -f1)
-    man -k .|dmenu -l 30|hi=man -Tpdf $(cut -d" " -f1)
-    man -k .|dmenu -l 30|hi="man -Tpdf $(cut -d" " -f1)"
-    cat $hi
-    cat "$hi"
-   man -k .|dmenu -l 30|hola="man -Tpdf $(cut -d" " -f1)"
-   cat $hola
-   less $hola
-   less "$hola"
-   echo $hola
-   man -k .|dmenu -l 30|hi='man -Tpdf $(cut -d" " -f1)'
-   cat $hi
-   cat "$hi"
-   man -k .|dmenu -l 30|hi=cut -d" " -f1|man -Tpdf
-   man -k .|dmenu -l 30|hi='cut -d" " -f1'|man -Tpdf
-   cat $hi
-   man -k .|dmenu -l 30|cut -d" " -f1|man -Tpdf
-   cat $hi
-   cat "$hi"
-   man -k .|dmenu -l 30|cut -d" " -f1|man -Tpdf -
-   man -k .|dmenu -l 30|cut -d" " -f1
-   hi=$(man -k .|dmenu -l 30|cut -d" " -f1)
-   cat hi
-   cat $hi
-   clear
-   hi=$(man -k .|dmenu -l 30|cut -d" " -f1) && man -Tpdf $hi
-   hi=$(man -k .|rofi -dmenu "manpages📖:"|cut -d" " -f1) && man -Tpdf $hi|zathura -
-   hi=$(man -k .|rofi -dmenu "manpages📖:"|cut -d" " -f1) && hola=$(man -Tpdf $hi)&&zathura $hola
-   hi=$(man -k .|rofi -dmenu "manpages📖:"|cut -d" " -f1) && hola="$(man -Tpdf $hi)"&&zathura "$hola"
-   hi=$(man -k .|rofi -dmenu "manpages📖:"|cut -d" " -f1) && hola='$(man -Tpdf $hi)'&&zathura "$hola"
-   hi=$(man -k .|rofi -dmenu "manpages📖:"|cut -d" " -f1) && man -Tpdf $hi|zathura -
-   hi=$(man -k .|rofi -dmenu "manpages📖:"|cut -d" " -f1) && man -Tpdf >> /tmp/tempdf&&zathura /tmp/tempdf
-   hi=$(man -k .|rofi -dmenu "manpages📖:"|cut -d" " -f1) && man -Tpdf $hi >> /tmp/tempdf&&zathura /tmp/tempdf
-   text
+    l
+    ls
+    rm VirtualBox\ VMs/
+    ls
+    cat nmap 
+    rm nmap 
+    cat nmap 
+    rm nmap 
+    clear
+    dwn
+    cd Telegram\ Desktop/
+    lt
+    extract Justin\ Bieber\ -\ Purpose\ \(Deluxe\ Edition\).zip 
+    extract 'Justin\ Bieber\ -\ Purpose\ \(Deluxe\ Edition\).zip '
+    extract 'Justin\ Bieber\ -\ Purpose\ \(Deluxe\ Edition\).zip'
+    extract "Justin\ Bieber\ -\ Purpose\ \(Deluxe\ Edition\).zip"
+    wifi off
+    wifi on
+    cd ~/Music/
+    t youtube-dl
+    lec21
+    cd database/
+    cd assignments/
+    ls
+    pdf assignment2.
+    zathura assignment1.pdf 
+    pdf assignment2.pdf 
+    lec21
+    database/assignments/
+    ls
+    pdf assignment2.pdf 
+    spdf
+    dwn
+    rm openjfx-11.0.2_linux-x64_bin-sdk.zip  ME_SW_1909.12.0.1236.zip 
+    clear
+    rm "(Introduction to Networking) Cisco Networking Academy - Introduction to Networks vCompanion Guide-Cisco Press (2016).pdf" 
+    clear
+    ls
+    mv debian-10.1.0-amd64-netinst.iso debian-10.1.0-amd64-xfce-CD-1.iso ~/Documents/
+    rm F21FD1A172258E0DF70FA0D1B181E9E90631889F.torrent 
+    ks
+    ls
+    sxiv image.png 
+    dwn
+    sxiv image\(1\).png 
+    sxiv image\(1\).png & exit
+    dwn
+    sxiv image\(1\).png & exit
+    touch database
+    nano database 
+    mv database database.txt
+    lec21
+    cd database/
+    ls
+    pdf answers.pdf 
+    nmcli dev wifi
+    nmcli dev wifi|rofi -dmenu
+    nmcli dev wifi connect $(nmcli dev wifi|rofi -dmenu)
+    nmcli dev wifi connect $(nmcli dev wifi|rofi -dmenu|awk '{print $1}')
+    'nmcli dev wifi connect $(nmcli dev wifi|rofi -dmenu|awk '{print $1}') && notify-send "Connected!🎯"
+    nmcli dev wifi connect $(nmcli dev wifi|rofi -dmenu|awk '{print $1}') && notify-send 'Connected!🎯'
+    $scripts
+    text wificonnect
+    text wifidisconnect
+    mx *
+    sudo mx *
+    ls
+    rm gmail.pl 
+    apt search database
+    apt search entity relation
+    dwn
+   pdf dvla.pdf 
+   Music/
+   ls
+   ls *justin*
+   ls *Justin*
+   ls
+   dwn
+   ls *Justin
+   ls *Justin*
+   ls
+   extract *Believe*
+   extract *'Believe'*
+   extract 'Believe (Deluxe Edition).zip' 
+   extract "Believe (Deluxe Edition).zip"
+   unzip "Believe (Deluxe Edition).zip"
+   ls
+   lslt
+   lt
+   mv Believe\ \(Deluxe\ Edition\) ~/Music/
+   cd Believe\ \(Deluxe\ Edition\)/
+   ls
+   ..
+   rm 'Believe (Deluxe Edition)
+   rm Believe\ \(Deluxe\ Edition\)
+   dwn
+   sxiv dvla.pdf 
+   pdftohtml 
+   pdftohtml dvla.pdf 
+   ls
+   lt
+   rm dvla.html dvlas.html dvla_ind.html 
+   ls
+   mkdir dv
+   pdftohtml dvla.pdf dv/
+   cd dv/
+   ks
+   ls
+   ..
+   ls
+   cd dv/
+   ls
+   ..
+   cd dv/
+   rm*
+   rm *
+   pdftohtml ../dvla.pdf 
+   ls
+   ..
+   l
+   sls
+   ls
+   rm *html*
+   ls
+   mv dvla.pdf dv
+   cd dv/
+   l
+   ls
+   rm .html 
+   ls
+   pdftohtml dvla.pdf 
+   ls
+   firefox-esr dvla.html 
+   firefox-esr dvlas.html 
+   rm *html*
+   ls
+   pdftops
+   pdftops dvla.pdf 
+   ls
+   zathura dvla.ps 
+   cat dvla.ps
+   rm dvla.ps
+   l
+   ls
+   gthumb dvla.pdf 
+   evince dvla.pdf 
+   dwn
+   mv dv/dvla.pdf >
+   mv dv/dvla.pdf .
+   ls
+   rm dv
+   lec21
+   database/
+   ls
+   cd assignments/
+   ls
+   pdf assignment3.
+   pdf assignment3.pdf 
    $scripts
    ls
-   touch rman
-   mx rman
-   text rman
-   rman
-   hi=$(man -k .|rofi -dmenu "manpages📖:"|cut -d" " -f1) && man -Tpdf $hi >> /tmp/tempdf&&zathura /tmp/tempdf && xdotool key z z
-   hi=$(man -k .|rofi -dmenu "manpages📖:"|cut -d" " -f1) && man -Tpdf $hi >> /tmp/tempdf&&zathura /tmp/tempdf;xdotool z z
-   hi=$(man -k .|rofi -dmenu "manpages📖:"|cut -d" " -f1) && man -Tpdf $hi >> /tmp/tempdf&&zathura 
-   $RANDOM 
-   tempfile='touch /tmp/$RANDOM'
-   car $tempfile 
-   cat $tempfile 
-   $RANDOm
-   $RANDOM
-   tempfile=touch /tmp/$RANDOM
+   ..
+   mx scripts
+   ls
+   lt
+   chmods
+   cmhmod -R scripts/ 
+   chmod -R scripts/ 
+   sudo chmod -R scripts/ 
    clear
-   tempfile=touch /tmp/$RANDOM
-   tempfile=touch "/tmp/$RANDOM'
-   tempfile=touch "/tmp/$RANDOM:
-   tempfile=touch "/tmp/$RANDOM"
-   tempfile=echo> "/tmp/$RANDOM"
-   cat $tempfile 
-   touch /tmp/$RANDOM
+   cd scripts/
+   ls
+   cat modbrc 
+   ..
+   kt
+   lt
+   rm database.txt 
+   cd scripts/
+   ls
+   touch hi
+   ..
+   cd scripts/
+   ls
+   rm hi
+   man chmod 
+   t chmod
    rman
-   rman
+   t animate
+   ls
+   pivs
+   pics
+   ls
+   cd random/
+   ls
+   sxiv  vs.png 
+   sxiv  salma.jpg.png 
+   sxiv  salma.jpg
+   animate salma.jpg 
+   rman animate
    text
+   type rman
+   $scripts
+   text rman
+   text pdf
+   text ~/.bashrc
+   man -k animate
+   rman animate
+   bd
+   animate -monochrome salma.jpg 
+   man animate
+   rman animate
+   rman image
+   ls
+   animate rex1.jpg 
+   animate rex1_upscaled_image_x4.jpg 
+   animate rex1.jpg 
+   sxiv rex1.jpg 
+   man animate|grep resize
+   animate -resize xrex1.jpg 
+   animate -resize xrex1.jpg 
+   animate -resize xrex1.jpg 
+   animate -resize xrex1.jpg 
+   animate -resize xrex1.jpg 
+   animate -resize -monochrome xrex1.jpg 
+   pics
+   animate -resize  x-monochrome rex1.jpg 
+   cd random/
+   animate -resize  x-monochrome rex1.jpg 
+   rman animate
+   animate -resize  x-transparent-color black rex1.jpg 
+   animate -resize  x-transparent-color red rex1.jpg 
+   animate -resize  x-transparent-color rex1.jpg 
+   animate -resize  x-transparent-color #rex1.jpg 
+   animate -resize  x-transparent-color '#000000' rex1.jpg 
+   animate -resize  x-transparent-color  rex1.jpg 
+   animate -resize  xrex1.jpg 
+   animate -resize  500x rex1.jpg 
+   animate -resize  200x rex1.jpg 
+   animate -resize  500x rex1.jpg 
+   animate -resize  300x rex1.jpg 
+   man animate
+   animate -resize 300x -extract geometry rex1.jpg 
+   animate -resize 300x -extract xrex1.jpg 
+   animate -resize 300x -extract xrex1.jpg 
+   animate -resize 300x -extract xrex1.jpg 
+   animate -resize 300x -extract xrex1.jpg 
+   animate -resize 300x -extract rex1.jpg 
+   animate -resize 300x -extract rex1.jpg 
+   animate -resize 300x -extract rex1.jpg 
+   rman convert
+   rman ls
+   rman love
+   rman 
+   rman convert
+   rman convert image
+   rman "convert imagemagick"
+   rman convert
+   lec21
+   cd database/
+   ls
+   cd assignments/
+   ls
+   lowriter assignment3.odt & exit
+   dwn
+   sxiv dvla.png &
+   docs
+   doc
+   cd books/
+   ls
+   pdf *
+   spdf
+   rman realpath
+   rman real
+   rman *real*
+   rman real
+   rman readlink
+   man urlview
+   rman urlview
+   t urlview
+   systemctl suspend
+   man urlview
+   vvu
+   dwn
+   sxiv dvla.png & exit
+   rman wall 
+   sudo apt remove ufw
+   cat /etc/hosts
+   less /etc/hosts
+   nl /etc/hosts
    rman
+   man flutter
+   flutter -help
+   flutter -h
+   man flutter
+   flutter -h
+   t flutter
+   flutter doctor
+   flutter help
+   killlall flutter
+   killall flutter
+   killall -flutter
+   killall -dart
+   killall -flutter
+   killall -dart
+   flutter help
+   cd flutter/bin/cache/
+   ls
+   rm lockfile 
+   l
+   ls
+   rm lockfile 
+   ls
+   htop
+   vvu
+   mdisk
+   mphone
+   phone
+   ls
+   cd Android/
+   ls
+   cd data/
+   ls
+   lt
+   ls
+   cd org.telegram.messenger/
+   ls
+   cd cache/
+   ls
+   images
+   ..
+   ls
+   adb devices
+   rman adb
+   adb -d
+   adb devices
+   adb devices 4200f77cd8094569
+   adb -l
+   rman adb
+   adb reboot
+   adb kill-server 
+   adb devices
+   home 
+   cd flutter
+   ls
+   ..
+   cd flutterworkspace/
+   ls
+   cd Music\ player/
+   ls
+   flutter run
+   adb kill-server 
+   flutter run
+   flutter doctor
    text
+   flutter doctor
+   java
+   java --version
+   $JAVA_HOME/
+   ls
+   ..
+   ls
+   flutter doctor -v
+   man adb
+   adb devices
+   man adb
+   adb
+   adb start-server 
+   adb devices
+   cd flutterworkspace/
+   ls
+   cd testproject/
+   ls
+   flutter run
+   dwn
+   images
+   alias images
+   type images
+   apt search thumbnail
+   apt-cache search thumbnail
+   apt-cache search thumbnail|dmenu -l 40
+   apt search thumbnail|dmenu -l 30
+   adb devices
+   ls
+   clear
+   adb reboot
+   adb devices
+   adb shell
+   ls -a
+   ls
+   alias ls
+   man adb
+   adb reboot-bootloader 
+   ls
+   sudo bash
+   cd p
+   cd phone/
+   ls
+   ..
+   uphone 
+   mphone
+   uphone
+   mphone
+   adb shell
+   ls
+   top - 20
+   top -w 20
+   top
+   top -b >> hi
+   top -b >> hi
+   t top
+   rman top
+   neotop
+   top
+   man top | grep -b
+   man top | grep \-b
+   man top | grep \-b'
+   man top | grep '\-b'
+   man top 
+   man top
    rman
-   text
+   top -b 
+   top -b > top
+   cat top
+   lt
+   rm top hi 
+   top -b &
+   top -b disown
+   top -b disown;
+   top -b & disown
+   sudo echo > /proc/sys/vm/drop_caches
+   sudo bash
+   ls
+   free
+   htop
+   top -b disown;
+   man disown
+   help disown
+   ls
+   vvu
+   htop
+   vvu
+   ls
+   hist
+   /proc/sys/vm/drop_caches
+   ┌─[📂 ~ ]
+   cat /proc/sys/vm/drop_caches
+   hist
+   ls
+   dwn
+   pdf dvla\ er.pdf 
+   dwn
+   xclip dvla.png 
+   xclip -o
+   xclip -selection clipboard -t image/png -i dvla.png 
+   xclip -selection clipboard -t image/png -i 'dvla er.png' 
+   rman cpu
+   rman temparatue
+   rman temparature
+   rman temperature
+   freee
+   free
+   lec21
+   cd database/
+   ls
+   cd assignments/
+   ls
+   lowriter assignment3.odt 
+   vvu
+   sudo apt install audacity
+   startx
+   ls
+   startx
+   sudo startx
+   ls
+   tgceejay 
+   ls
+   adb devices
+   adb kill-server 
+   audacity
+   cd scripts/
+   ls
+   text youtube
+   text google 
+   mx youtube 
+   text youtube 
+   lec21
+   ls
+   cd database/
+   ls
+   cd assignments/
+   ls
+   lowriter 
+   killall libreoffice
+   dwn
+   ls
+   rm dvla\ er.csv 
+   ls
+   vvu
+   udsk
+   udisk
+   lsblk
+   phone
+   ls
+   mphone
+   dwn
+   sxiv 'dvla(6).png' 
+   cp 'dvla(6).png' ~/phone/
+   uphone
+   cd ~/phone/
+   ls
+   ..
+   mphone
+   phone
+   ls
+   rm *
+   phone
+   ..
+   mphone
+   cd phone/
+   ls
+   ..
+   dwn
+   cp 'dvla(6).png' ~/phone/
+   uphone
+   sudo apt install cmus
+   dwn
+   lec21;database
+   ls
+   cd assignments/
+   ls
+   lowriter assignment3.
+   killall lowriter
+   lowriter assignment3.odt 
+   sudo apt install mariadb
+   sudo apt install mariadb-common 
+   sudo apt install -reinatall mariadb-common 
+   sudo apt install --reinstall mariadb-common 
+   sudo bash
+   mysqlconfig 
+   sudo bash
    rman
-   t awk
+   mysql -u root
+   difp nsdj
+   sudo bash
+   vvu
+   sudo bash
+   mdisk
+   lec21
+   cd database/
+   ls
+   cd assignments/
+   ls
+   cp assignment3.pdf $disk
+   sudo cp assignment3.pdf $disk
+   udisk
+   sudo apt install mariadb-server
+   sudo updatedb
+   sudo apt install --reinstall mariadb-common 
+   vvu
+   sudo apt install --reinstall mariadb-common 
+   sudo bash
+   sudo apt install mariadb*
+   sudo apt install mariadb-*
+   sqlite
+   sudo bash
+   systemctl start mariadb
+   sudo bash
+   pip install -U mycli
+   mycli
+   sudo apt install mycli
+   mycli
+   sudo mycli
+   mycli
    texxt
    text
+   mycli
+   mdisk
+   dwn
+   mv 'dvla er.csv' $disk 
+   sudo cp  'dvla er.csv' $disk 
+   $disk
+   ls
+   ..
+   mdisk
+   dwn
+   sudo cp  'dvla er.csv' $disk 
+   udisk
+   mdisk
+   $disk
+   ls
+   ..
+   udis
+   udisk
+   ..
+   sudo bash
+   rman
+   ls
+   lt
+   mysqlconfig 
+   cd /var/lib/
+   ls
+   cd mysql/
+   ls
+   cd test/
+   ls
+   sudo bash
+   mycli --help
+   t "mycli
+   t "mycli"
+   rman
+   mycli
+   sudo bash
+   mycli
+   sudo apt install bashhub
+   mysql
+   sudo apt install mixxx
+   mixxx 
+   ip addr
+   ipa
+   systemctl start apache
+   systemctl start apache2
+   sudo apt install goto
+   lec21
+   cd database/
+   ls
+   sxiv hospital-database-e-r-diagram.png 
+   sxiv hospital-database-e-r-diagram.png &
+   lec21;database;sxiv h* & exit
+   lec21;database;zathura h* & exit
+   mycli use hospitaldb
+   mycli --help
+   mycli hospitaldb
+   mycli hospitaldb;show tables
+   rman
+   cat << EOF
+   ks
+   ls
+   cat << EOF
+   sadkaksda
+   dskfjsd
+   dksjfksdf
+   klsakdas
+   skaldaksd
+   sakdl
+   '
+   cat <<
+   cat << s
+   man bash
+   rman
+   cat todo <<
+   cat todo << welmp
+   cat todo
+   cat todo << EOF
+   cat<<
+   cat<<s
+   <<
+   << s
+   s
+   << hello
+   sda
+   sd
+   hello
+   sqlinsert 
+   sudo sqlinsert 
+   sqlinsert
+   mycli
+   sqlinsert hospitaldb
+   mycli hospitaldb
+   sqlinsert
+   mkdir randomdata
+   cd randomdata/
+   ls
+   dwn
    cd scripts/
-   text killprocess 
-   ps|rofi
-   ps|rofi -dmenu
-   top|rofi -dmenu
-   ps|rofi -dmenu
-   ps|awk {print $$3}|rofi -dmenu
-   ps|awk '{print $$3}'|rofi -dmenu
-   ps|awk '{print $$6}'|rofi -dmenu
-   ps|awk '{print $$2}'|rofi -dmenu
-   ps|awk '{print  $2}'|rofi -dmenu
-   ps|awk '{print  $$8}'|rofi -dmenu
-   ps|awk '{print  $$10}'|rofi -dmenu
-   ps|awk '{print  $ $10}'|rofi -dmenu
-   ps|awk '{print  $$11}'|rofi -dmenu
-   ps|awk '{print  $$11$12}'|rofi -dmenu
-   ps|awk '{print  $$11$12}'|sed s/[0-9]+/" "/g|rofi -dmenu
-   ps|awk '{print  $$11$12}'|sed s/[0-9]+/"  "/g|rofi -dmenu
-   ps|awk '{print  $$11$12}'|sed s/\[0-9\]+/" "/g|rofi -dmenu
-   ps|awk '{print  $$11$12}'|PID/"PID "/g'/|rofi -dmenu
-   ps|awk '{print  $$11$12}'|sed s/"PID/"PID "/g|rofi -dmenu
-   ps|awk '{print  $$11$12}'|sed s/"PID"/"PID "/g|rofi -dmenu
-   ps|awk '{print  $$11$12}'|sed s/"PID"/"PID     "/g|rofi -dmenu
-   ps|awk '{print  $2" " $11$12}'|sed s/"PID"/"PID     "/g|sed s/|rofi -dmenu
-   ps|awk '{print  $2" " $11$12}'|sed s/"PID"/"PID     "/g|rofi -dmenu
-   ps|awk '{print  "$2"  $11$12}'|sed s/"PID"/"PID     "/g|rofi -dmenu
-   ps|awk '{print  $ $11$12}'|sed s/"PID"/"PID     "/g|rofi -dmenu
-   ps|awk \t '{print  $ $11$12}'|sed s/"PID"/"PID     "/g|rofi -dmenu
-   ps|awk "\t" '{print  $ $11$12}'|sed s/"PID"/"PID     "/g|rofi -dmenu
-   ps|awk " " '{print  $ $11$12}'|sed s/"PID"/"PID     "/g|rofi -dmenu
-   ps|awk ' ' '{print  $ $11$12}'|sed s/"PID"/"PID     "/g|rofi -dmenu
-   ps|awk '\t' '{print  $ $11$12}'|sed s/"PID"/"PID     "/g|rofi -dmenu
-   ps|awk -F '{print  $ $11$12}'|sed s/"PID"/"PID     "/g|rofi -dmenu
-   man awk|grep
-   man awk|grep space
-   ps|awk '{print  $2\t$11$12}'|sed s/"PID"/"PID     "/g|rofi -dmenu
-   ps|awk '{print  $2"\t"$11$12}'|sed s/"PID"/"PID     "/g|rofi -dmenu
-   ps|awk '{print  $2"\t"$11$12}'|rofi -dmenu
-   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu
-   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu -width 20
-   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu -width -yoffset -1
-   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu -width -yoffset -10
-   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu -width -yoffset -20
-   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu -width -yoffset -100
-   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu -width -yoffset -190
-   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu -width -yoffset -210
-   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu -width -yoffset --xoffset 200
-   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu -width -yoffset --xoffset 300
-   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu -width -yoffset --xoffset 400
-   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu -width -yoffset --xoffset 500
-   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu -width -yoffset --xoffset 600
-   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu -width -yoffset --xoffset 550
-   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu -width -yoffset --xoffset -borders none
-   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu -width -yoffset --xoffset 
-   clear
-   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu -width -yoffset --xoffset |awk {print $1}
-   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu -width -yoffset --xoffset |awk '{print $1}'
-   ps|awk '{print   |awk '{print $1}'
-   ps|awk '{print  }' |awk '{print $1}'
-   ps|awk '{print  $2"\t\t\t"$11$12}'|awk {print $1}
-   ps|awk '{print  $2"\t\t\t"$11$12}'|awk '{print $1}'
-   ps|awk '{print  $2"\t\t"$11$12}'|awk '{print $1}'
-   ps|awk '{print  $2"\t"$11$12}'|awk '{print $1}'
-   ps|awk '{print  $2"\t"$11$12}'|
-   ps|awk '{print  $2"\t"$11$12}'
-   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+ \/'  
-   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+ /'  
-   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'  
-   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/\\\;
-   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/\\\;/g
-   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/\\\;//g
-   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/\\;//g
-   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/\\\\;//g
-   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/\\\;//g
-   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/\\\;_//g
-   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/"\\\;_"//g
-   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/'\\\;_'//g
-   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/'\;_'//g
-   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/'_'//g
-   ps|awk '{print  $2"\t"$11$12}'|grep -v //g
-   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/'_'//g
-   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/'_'//g|sed s/'\\\'//g
-   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/'_'//g|sed s/\\\'//g
-   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/'_'//g|sed s/"\\\"//g
-   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\"//g
-   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\//g
-   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/"_"//g|sed s/\\\//g
-   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/"_"//g
-   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\"//g
-   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g
-   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\"//g
-   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\\{"//g
-   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\{\"//g
-   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g
-   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/\[//g
-   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g
-   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|
-   ps|awk '{print  $2"\t"$11$12}'|cgrep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g
-   killprocess 
-   ps|awk '{print  $2"\t\t\t"$11$12}'|rofi -dmenu -width -yoffset --xoffset |awk '{print $1}'
-   killprocess 
+   sqlinsert
+   touch sqlinsert
+   mx sqlinsert 
+   text sqlinsert 
+   dwn
+   rm 'MOCK_DATA.txt' 
+   cat MOCK_DATA\(1\).txt 
+   dwn
+   rm MOCK_DATA\(1\).txt 
+   dwn
+   awk {print $1}
+   awk '{print $1}' MOCK_DATA.txt 
+   awk '{print $1}' MOCK_DATA.txt |less
+   mv MOCK_DATA.txt ~/randomdata/
+   awk '{print $1}' ~/randomdata/MOCK_DATA.txt
+   ls
+   awk '{print $1}' ~/randomdata/MOCK_DATA.txt
+   awk '{print $2}' ~/randomdata/MOCK_DATA.txt
+   awk '{print $$5}' ~/randomdata/MOCK_DATA.txt
+   cat MOCK_DATA.txt 
+   mv MOCK_DATA.txt ~/randomdata/
+   cat sedsyntax 
+   text
+   cd scripts
+   ./sqlinsert 
+   ..
+   randomdata/
+   awk -v '{print $1}' /home/joel/randomdata/MOCK_DATA.txt
+   awk  '{print $1}' /home/joel/randomdata/MOCK_DATA.txt
+   awk  '{print $1}' /home/joel/randomdata/MOCK_DATA.txt|sed 198,213dwn
+   awk  '{print $1}' /home/joel/randomdata/MOCK_DATA.txt|sed '198,213!d'
+   awk  '{print $1}' /home/joel/randomdata/MOCK_DATA.txt|sed '1,1!d'
+   awk  '{print $1}' /home/joel/randomdata/MOCK_DATA.txt|sed '1!d'
+   i=1;
+   while [ $i -lt ]; do A=$(awk  '{print $1}' /home/joel/randomdata/MOCK_DATA.txt|sed '1!d');     echo $A;     ((i++)); done
+   i=1;
+   while [ $i -lt ]; do A=$(awk  '{print $1}' /home/joel/randomdata/MOCK_DATA.txt|sed "$idwn");     echo $A;     ((i++)); done
+   i=1;
+   while [ $i -lt ]; do A=$(awk  '{print $1}' /home/joel/randomdata/MOCK_DATA.txt|sed '$i!d');     echo $A;     ((i++)); done
+   i=1;
+   while [ $i -lt ]; do A=$(awk  '{print $1}' /home/joel/randomdata/MOCK_DATA.txt|sed $idwn);     echo $A;     ((i++)); done
+   hi <<
+   hi <<s
+   cd randomdata/
+   cat MOCK_DATA.txt 
+   sudo bash
    scripts/
-   ./killprocess 
-   killprocess 
-   cat $process 
-   ./killprocess 
-   proc=$RANDOM
-   touch /tmp/$proc
-   proc=/tmp/$proc
-   cat $proc
-   echo $proc
-   ./killprocess 
-   proc=$RANDOM
-   touch /tmp/$proc
-   proc=/tmp/$proc
-   echo $proc
-   ./killprocess 
-   ps
-   ps >file
-   cat file 
-   rm file 
-   cat $proc
-   proc=$RANDOM
-   touch /tmp/$proc
-   proc=/tmp/$proc
-   ps>$proc
-   cat $proc
-   ./killprocess 
-   man source
-   t source
-   ./killprocess 
-   cat /tmp/
-   ./killprocess 
-   source killprocess 
-   t kill
-   pkill firefox-esr 
-   cd scripts/
+   ./sqlinsert 
+   text
+   ./sqlinsert 
+   sudo bash
+   awk  '{print $1}' /home/joel/randomdata/MOCK_DATA.txt|sed $idwn
+   awk  '{print $1}' /home/joel/randomdata/MOCK_DATA.txt|sed '$i!d'
+   awk  '{print $1}' /home/joel/randomdata/MOCK_DATA.txt|sed "$idwn"
+   sudo bash
+   sudo bash
+   sudo 
+   sudo bash
+   cat MOCK_DATA.txt 
+   sudo bash
+   mphone
+   phone
+   cd SD\ card/
    ls
-   touch killprocess
-   mx killprocess 
-   nano killprocess 
-   ./killprocess 
+   cd Music/
    ls
-   source killprocess 
-   text
-   . killprocess 
-   man grep
-   rman
-   scr
-   scripts
+   ls *Dua
+   ls *Dua*
+   cp 'Dua Lipa - Dua Lipa (Complete Edition)'/ ~/Music/
+   ..
+   home
+   uphone
+   scripts/
+   ./sqlinsert 
+   sudo bash
+   lec21
+   cd database/
    ls
-   . killprocess 
-   🔌
-   processid=$(cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g
-   processid=$(cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g)
-   processid=$(ps|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g)
-   cat $processid
-   processid=$(ps|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g)
-   ps|grep 1|
-   ps|grep 1
-   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g
-   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process
-   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|grep -v [0-9]+
-   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|grep -v "[0-9]+"
-   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|grep -v '[0-9]+'
-   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|cgrep -v '[0-9]+'
-   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|egrep -v '[0-9]+'
-   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|egrep -v [0-9]+
-   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|egrep -v "[0-9]+"
-   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|egrep -v ([0-9]+)
-   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|egrep -v '([0-9]+)'
-   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|egrep -v [0-9]
-   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|egrep -v "[0-9]"
-   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|egrep -v "[0-9]+"
-   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|egrep -v "[0-9]+ "
-   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|egrep -v "[0-9]+  "
-   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|egrep -v "[0-9]+   "
-   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|awk '{print $2}'
-   . killprocess 
-   text
-   processid=$(cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|awk '{print $2}')
-   cat $processid
-   cat "$processid"
-   echo "$processid"
-   processid=$(cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|awk '{print $2}')
-   echo $processid 
-   processid=$(cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|awk '{print $2}')
-   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|egrep -v "[0-9]+"
-   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep $process|awk '{print $2}'
-   . killprocess 
+   sxiv hospital-database-e-r-diagram.png & exit
+   lec21
+   cd database/
+   sxiv hospital-database-e-r-diagram.png & exit
+   sudo bash
+   dwn
+   cat MOCK_DATA.txt 
+   mv MOCK_DATA.txt newdata
+   mv newdata ~/randomdata/
+   home
+   cd randomdata/
    ls
-   lks
-   lk
-   clear
-   lf
-   ls|grep -v "/"
-   ls|grep "/"
-   top|rofi -dmenu
-   top|awk '{$"\t\t" $3}'|rofi -dmenu
-   top|awk '{$"\t\t" $3}'|
-   top|awk '{$"\t\t" $3}'
-   top|awk '{print $"\t\t" $3}'|rofi -dmenu
-   top|awk '{print $"\t\t" $3}'|
-   top|awk '{print $"\t\t" $3}'
-   top|awk '{print $"\t\t" $5}'
-   top|awk '{print $"\t\t" $6}'
-   top|awk '{print $"\t\t" $8}'
-   top|awk '{print $"\t\t" $9}'
-   top|awk '{print $"\t\t" $10}'
-   top|awk '{print $"\t\t" $11}'
-   top|awk '{print $"\t\t" $13}'
-   hi=$(top|awk '{print $"\t\t" $13}')
-   top -b 100|awk '{print $"\t\t" $13}'
-   top -v
-   top -b
-   top -b 100
-   t top
-   top -b 89
-   top -hv
-   top -m 20
-   top -b 20
-   top -b|awk '{print $"\t\t" $13}'
-   top -b
-   top -b|awk '{print $"\t\t" $13}'
-   top |awk '{print $"\t\t" $13}'
-   top |awk '{print $"\t\t" $13}'|grep .
-   top |awk '{print $"\t\t" $13}'|sed '2,4!d
-   top |awk '{print $"\t\t" $13}'|sed '2,4!d'
-   top |awk '{print $"\t\t" $13}'
-   top |sed '2,4!d'|awk '{print $"\t\t" $13}'
-   top |sed '2,4!d'|
-   top |sed '2,4!d'
-   top |sed '3,4!d'
-   top |sed '5,20!d'
-   top |sed '7,25!d'
-   top |sed '7,50!d'
-   top |sed '7,70!d'
-   top |sed '7,50!d'
-   top |sed '7,30!d'
-   ps
+   text newdata 
+   text
+   text
+   cd randomdata/
+   touch sqlinsertnurse
+   text sqlinsertnurse 
+   sudo bash
+   text
+   ls
+   cd cd scripts/
    cd scripts/
-   . killprocess 
-   text killprocess 
-   . killprocess 
-   text killprocess 
-   . killprocess 
-   strace
-   strace -h
-   strace -a
-   strace -a column
-   t strace
-   t ps
-   t "ps"
-   man ps
-   rman
-   ps ef
-   ps 
-   ps ef
-   ps 
-   ps |joel
-   ps |grep joel
-   scripts
-   . killprocess 
+   text sqlinsert 
+   dwn
+   cat MOCK_DATA.txt 
+   mv MOCK_DATA.txt ~/randomdata/
+   mv MOCK_DATA.txt newdata
+   mv newdata ~/randomdata/
+   home 
+   cd randomdata/
+   cat newdata 
+   ls
+   mx sqlinsertnurse 
+   ./sqlinsertnurse 
+   sudo bash
+   cd randomdata/
+   ls
+   cat newdata 
+   cd randomdata/
+   ls
+   text newdata 
+   sudo bash
+   cd randomdata/
+   text sqlinsertnurse 
+   sudo bash
    text
-   $(cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep "$process"|awk '{print $2}')
-   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep "$process"|awk '{print $2}'
-   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed 
-   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|
+   sudo bash
+   date
+   date|awk '{print $5}'
+   date|awk '{print $5}'|cgrep .
+   nofity-send $(date|awk '{print $5}')
+   notify-send -t $(date|awk '{print $5}')
+   notify-send -t $(date|awk '{print $5⏰}')
+   notify-send -t "$(date|awk '{print $5}')⏰"
+   tm
    text
-   " libbz2-1.0:ilibgdbm-compat4:ilibgdbm6:ilibieee1284-3:ilibmariadb3:i386
-     libncurses5:ilibpci3:ilibperl5.28:ilibsane:ilibsnmp30:ilibtinfo5:i386
-     wine-stable wine-stable-amdwine-stable-i386:i386
-   "
-   hi=" libbz2-1.0:ilibgdbm-compat4:ilibgdbm6:ilibieee1284-3:ilibmariadb3:i386
-     libncurses5:ilibpci3:ilibperl5.28:ilibsane:ilibsnmp30:ilibtinfo5:i386
-     wine-stable wine-stable-amdwine-stable-i386:i386
-   "
-   sudo apt-mark manual
-   sudo apt-mark manual $hi
-   sudo apt autoremove
-   ps -U joel
-   t "
-   ps --user joel
-   ps
-   t "
-   t "ps"
-   ps --user $(id -u) -F
-   ps --user $(joel -u) -F
-   ps --joel $(joel -u) -F
-   ps --joel
-   t "ps"
-   ps -o ppid
-   ps -o 
-   ps joel
-   > $HOME/.xbindkeysrc
-   $HOME/.xbindkeysrc
-   cat $HOME/.xbindkeysrc
-   text $HOME/.xbindkeysrc
-   cat $proc|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g
-   ps|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g
-   ps|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep "$process"|awk '{print $2}'
-   cd scripts/
-   . killprocess 
-   text
-   processid=$(ps|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep "$process"|awk '{print $2}')
-   cat $processid 
-   cat "$processid" 
-   ps|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep "$process"|awk '{print $2}'
-   ps|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep "$process"|'
-   ps|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep "$process"
-   ps|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep "$process"|grep $process
-   ps|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep "$process"|grep "$process"
-   cat $process
-   ps|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep "$process"|grep "$process"
-   ps|awk '{print  $2"\t"$11$12}'|grep -v '[a-z]+/'|sed s/"_"//g|sed s/"\\\\"//g|sed s/"\["//g|sed s/"\]"//g|grep "$process"|grep "$process"|awk '{print $2}'
-   . killprocess 
-   sudo apt install xbindkeys
-   rman
-   rman 
-   xbindkeys_show 
-   text
-   xbindkeys_show 
-   lsof
-   sudolsof
-   sudo lsof
-   xbindkeys --key
-   xbindkeys_show 
-   sudo nano /etc/X11/xinit/xinitrc
-   killall rofi
-   kilall rofi
-   ki;=llall rofi
-   killall rofi
-   killall rofi
-   killall rofi
-   killall rofi
-   rebootsafe
-   killall rofi
-   logout
-   killall xbindkeys && xbindkeys
-   killall rofi
-   killall xbindkeys && xbindkeys
-   text .xbindkeysrc 
-   killall xbindkeys && xbindkeys
-   scripts/killprocess
-   killall xbindkeys && xbindkeys
-   cd scripts/\
-   cd scripts/
-   bash killprocess 
-   env killprocess 
-   sudo env killprocess 
-   sudo env ~/scripts/killprocess 
-   env killprocess 
-   xbindkeys-config
-   cd scripts/
-   . ./killprocess 
-   killprocess 
-   sourec
-   source
-   man source
-   text
-   text $scripts/killprocess
-   find -L /bin -samefile /bin/sh
-   file -h /bin/sh
-   dash
-   killall xbindkeys && xbindkeys
    text .bashrc
+   tm
+   man date
+   t date
+   time
+   time terminal
+   apt search bible
+   cat $HOSTFILE
+   echo $HOSTFILE
+   hostnam
+   hostname
+   $HOSTFILE
+   cat $SHELL
+   echo $SHELL
+   echo $TIMEFORMAT
+   cd /dev/
+   ls
+   file stdout 
+   ..
+   cd proc/self/fd
+   ls
+   file 
+   cd /dev/pts/
+   ls
+   file 4
+   cat 4
+   grep 4
+   mkdir .caa/caa.conf
+   cd .caa/
+   s
+   ls
+   rm caa.conf/
+   touch caa.conf
+   wait 3
+   man wait
+   t wait
+   rman 
+   rman
+   dwn
+   extract caa_x64.tar.gz 
+   ls
+   cd bin/ .caa/
+   rm bin/ .caa/
+   ls
+   rm *dvla*
+   ls
+   sxiv image
+   sxiv image.png 
+   rm *image*
+   ls
+   mkdir sophos
+   mv caa_x64.tar.gz sophos/
+   cd sophos/
+   extract *
+   ls
+   cd bin/
+   ls
+   ./caa 
+   cat caa 
+   ls
+   ./caa 
+   ..
+   cd sophos/bin/
+   ./caa 
+   cd .caa/
+   ls
+   nano caa.conf 
+   hostname
+   man hostname
+   cat /etc/hosts
+   cat /etc/hosts|less
+   cd /var/lib/
+   ls
+   cd mysql/
+   ls
+   cd hospitaldb/
+   sudo bash
+   home
+   ls
+   cd randomdata/
+   ls
+   text newdata 
+   sudo bash
+   text sqlinsertnurse 
+   nano sqlinsertnurse 
+   sudo nano sqlinsertnurse 
+   ./sqlinsertnurse 
+   sudo bash
+   text
+   .
+   ls
    cd scripts/
    ls
-   rm killprocess 
-   killprocess 
-   type source
-   builtin source 
-   text
-   killall xbindkeys && xbindkeys
-   text
-   killall xbindkeys && xbindkeys
-   text scripts/
-   cd  scripts/
+   sudo bash
+   tm
+   da
+   alias da
+   lec
+   cd statistics/
+   nano notes
+   killall xfce4-terminal 
+   lec21
+   cd statistics/
+   ls
+   cat ass
+   ss
+   systemctl suspe
+   systemctl suspend
+   pics
+   ls
+   cd random/
+   sxiv salma.jpg 
+   ls
+   home
+   cd Telegram/
+   ..
+   docs
+   doc
+   cls
+   cd optics/
+   ls
+   cd tg/
+   ls
+   cd files/
+   ls
+   cd photos/
+   images
+   thunar
+   ..
+   ls
+   cd videos/
+   ls
+   thnar
+   thunar
+   ..
+   ls
+   cd photos/
+   ls
+   thunar
+   vvu
+   traceroute google.como
+   traceroute google.com
+   sudo bash
+   traceroute google.com
+   rman
+   ping google.com
+   traceroute google.com
+   firefox-esr 254.255.168.191.isp.timbrasil.com.br
+   cd .cache/
+   ls
+   ls|ls
+   ls|less
+   cat rofi3.druncache 
+   cd rhythmbox/
+   ls
+   cd metadata/
+   ls
+   cat android-mtp.tdb 
+   ks
    ls
    ..
-   hist
-   text $HOME/.xbindkeysrc
-   killall xbindkeys && xbindkeys
-   xbindkeys
-   killall xbindkeys && xbindkeys
-   cd scripts/
-   touch killprocess
-   mx killprocess 
-   nano killprocess 
-   killall xbindkeys && xbindkeys
-   mx killprocess 
    ls
-   cat killprocess 
-   text killprocess 
-   ls
-   text
-   killprocess 
-   ..
-   nano .xbindkeysrc 
-   killall xbindkeys && xbindkeys
-   nano .xbindkeysrc 
-   text .xbindkeysrc 
-   killall xbindkeys && xbindkeys
-   xbindkeys
-   killall xbindkeys && xbindkeys
-   xbindkeys
-   xbindkeys_show 
-   text
-   xbindkeys --key
-   xfce-e
-   xfce4-terminal -e
-   xfce4-terminal -e ls
-   hist
-   killall xbindkeys 
-   xbindkeys
-   killall xbindkeys && xbindkeys
-   sxhkd 
-   man sxhkd 
-   $TERMINAL
-   cat $TERMINAL
-   echo $TERMINAL
-   text
-   echo $TERMINAL
-   $TERMINAL 
-   apt search hotkey
-   apt search hotkey daemon
-   sudo apt install sxhkd 
-   rman
-   sxhkd -c
-   text /home/joel/.config/sxhkd/sxhkdrc
-   rman
-   touch /home/joel/.config/sxhkd/sxhkdrc
-   echo data>> /home/joel/.config/sxhkd/sxhkdrc
-   cd .config/
-   mkdir sxhkd
-   text /home/joel/.config/sxhkd/sxhkdrc
-   sxhkd 
-   killall xbindkeys 
-   sxhkd 
-   sxhkd &
-   killall sxhkd && sxhkd 
-   killall sxhkd && sxhkd &
-   sxhkd &
-   killall sxhkd 
-   killall zathura 
-   rman
-   text
-   sxhkd 
-   killall sxhkd && sxhkd 
-   sxhkd 
-   killall sxhkd && sxhkd 
-   sxhkd 
-   killall xbindkeys
-   sxhkd 
-   text 
-   sxhkd 
-   text
-   rm .xbindkeysrc 
-   sudo apt remove --purge xbindkeys 
-   sudo apt autoremove
-   text .xinitrc 
-   hist
+   cd lyrics/
+  ls
+  cd 21\ savage\,\ offset\ and\ metro\ boomin/
+  ls
+  ..
+  ls
+  ..
+  ls
+  ..
+  ls
+  text
+  hist

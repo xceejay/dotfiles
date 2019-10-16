@@ -1,0 +1,15 @@
+#!/bin/bash -x
+
+#insert into patient(lastname,firstname,address,phone) values ("Joel","Amoako","Kwabenya","0541053593")
+i=1;
+while [ $i -lt 6 ]; do
+_lastname=$(awk  '{print $1}' /home/joel/randomdata/MOCK_DATA.txt|sed $i!d)
+_firstname=$(awk  '{print $2}' /home/joel/randomdata/MOCK_DATA.txt|sed $i!d)
+_address=$(awk  '{print $3}' /home/joel/randomdata/MOCK_DATA.txt|sed $i!d)
+_phone=$(awk  '{print $4}' /home/joel/randomdata/MOCK_DATA.txt|sed $i!d)
+_insuranceid=$(awk  '{print $5}' /home/joel/randomdata/MOCK_DATA.txt|sed $i!d)
+    ((i++))
+mysql hospitaldb << EOF
+INSERT INTO  patient(lastname,firstname,address,phone,insuranceid) VALUES ('$_lastname', '$_firstname', '$_address', '$_phone', $_insuranceid);
+EOF
+done
