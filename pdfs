@@ -1,0 +1,5 @@
+#!/bin/bash
+shopt -s expand_aliases
+alias dmenu='dmenu -fn "manrope-10" -nb black -sb "#260A35"'
+
+pdf $(ls *.pdf|sed s/" "/"\\\ "/g|dmenu -nb black -l 30)

@@ -1,0 +1,2 @@
+wifi off && notify-send -t 1500 'disconnected...!️️️️😞'
+wifi on && notify-send -t 1500 'back on 💪!'

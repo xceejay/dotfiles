@@ -1,0 +1,6 @@
+#!/bin/bash
+alias dmenu='dmenu -fn "manrope-10" -nb black -sb "#260A35"'
+HISTFILE=~/.bash_history
+set -o history
+history > "/home/joel/scripts/history";sed  -i s/"[0-9]\+ "//g "/home/joel/scripts/history" 
+$(tac  /home/joel/scripts/history|dmenu)
