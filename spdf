@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+shopt -s expand_aliases
+declare -A booklist; declare -a index
+while read i; do
+    location="$i"
+    title="${i##*/}"
+    booklist[$title]="$location"; index+=( "$title" )
+done < <(cat "$HOME/.cache/pdfcache" | cut -f 1)
+select="$(printf '%s\n' "${index[@]}" | rofi -dmenu -width 35 -p "enter book you wanna read 📖:")"
+[ -z "$select" ] && exit 1
+zathura "${booklist[$select]}" &
+exit 0
