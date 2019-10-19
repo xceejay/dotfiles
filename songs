@@ -1,3 +1,0 @@
-first=~/Music/
-song="$(realpath ~/Music/* ~/Music/*/*|grep .[mw][eokp4][abv43]|sed s/"\/home\/joel\/Music\/"//g|rofi -dmenu -i -p "music 🎶")" && /usr/bin/rhythmbox "$first$song" > /dev/null 2>&1 & disown
-

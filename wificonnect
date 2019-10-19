@@ -1,1 +1,0 @@
-nmcli dev wifi connect $(nmcli dev wifi|rofi -dmenu -p "connect to wifi🐸:"|awk '{print $1}') && notify-send 'Connected!🎯'

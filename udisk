@@ -1,2 +1,0 @@
-#!/bin/bash
-sudo umount /media/joel/disk &&  notify-send "UNMOUNTED SUCCESSFULLY 💻"

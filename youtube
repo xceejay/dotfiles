@@ -1,2 +1,0 @@
-alias dmenu='dmenu -fn "manrope-10" -nb black -sb "#260A35"'
-query=$(echo|dmenu -p "Search on Youtube 😃:") && firefox-esr "https://www.youtube.com/results?search_query=$query"
