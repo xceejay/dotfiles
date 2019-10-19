@@ -1,2 +1,2 @@
-#!/bin/bash
+#!/usr/bin/env bash
 fusermount -u ~/phone &&  notify-send "📱unmounted Sucessfully!"

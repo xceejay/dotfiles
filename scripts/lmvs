@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 shopt -s expand_aliases
 alias dmenu='dmenu -fn "manrope-10" -nb black -sb "#260A35"'
 alias lf="ls -l | egrep -v '^d'" 

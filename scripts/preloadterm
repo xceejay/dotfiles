@@ -1,1 +1,3 @@
-xfce4-terminal --drop-down;xfce4-terminal --drop-down
+xfce4-terminal --drop-down 
+sleep 2
+xdotool key F12

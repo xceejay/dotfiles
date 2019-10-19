@@ -1,3 +1,3 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 sudo mount -w $(lsblk|sed 's/^└─/\/dev\//g'|sed 's/^├─/\/dev\//g'|grep "part $"|rofi -dmenu -nb black -sb "#260A35" -p "choose disk u want mounted 💽:"|cut -c -9) "/media/joel/disk" && notify-send "MOUNTED SUCCESSFULLY 💻"
