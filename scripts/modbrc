@@ -1,1 +1,2 @@
-/home/joel/scripts/modbrc
+#!/usr/bin/env bash
+echo /home/joel/.bashrc|entr -p notify-send 'Bashrc updated' 

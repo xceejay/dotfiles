@@ -1,1 +1,2 @@
-/home/joel/scripts/currentsong
+current=$(rhythmbox-client --print-playing)
+notify-send -t 500 "$current🎶🎹"

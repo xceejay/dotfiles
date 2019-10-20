@@ -1,1 +1,2 @@
-/home/joel/scripts/uphone
+#!/usr/bin/env bash
+fusermount -u ~/phone &&  notify-send "📱unmounted Sucessfully!"

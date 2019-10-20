@@ -1,1 +1,1 @@
-/home/joel/scripts/create_ap
+sudo create_ap --daemon wlp2s0 enp1s0 VVUITS 
