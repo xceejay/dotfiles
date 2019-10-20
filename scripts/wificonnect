@@ -1,7 +1,1 @@
-nmcli dev wifi connect $(nmcli dev wifi|rofi -dmenu -p "connect to wifi🐸:"|awk '{print $1}')&& sleep 20 && 
-if [ $(nmcli|grep -o -w "connected") == "connected" ]
-    then 
-    notify-send -t 1000 "connected🎯"
-    else
-        notify-send -t 1000 "disconnected...🐳"
-        fi
+/home/joel/scripts/wificonnect

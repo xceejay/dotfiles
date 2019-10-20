@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-shopt -s expand_aliases
-alias dmenu='dmenu -fn "manrope-10" -nb black -sb "#260A35"'
-simple-mtpfs -l >~/anddev
-opt=$(cat ~/anddev|dmenu -i -p "which device do you want to mount?"|cut -c 1)
-simple-mtpfs --device "$opt" ~/phone && notify-send "📱mounted Sucessfully!"

@@ -1,2 +1,0 @@
-#!/usr/bin/env bash
-sudo iwconfig wlp2s0 power off 

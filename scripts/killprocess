@@ -1,9 +1,1 @@
-
-proc=$RANDOM
-touch /tmp/$proc
-proc=/tmp/$proc
-ps |grep joel>$proc
-p='killprocess️️️️🔌:'
-k=$(free -h|awk '/^Mem:/ {print $3"("$2")"}')
-p=$k$p
-process=$(ps auxch --sort -%cpu,-%mem|awk  '{print $3 "\t\t"$4"\t\t"$2"\t\t"$11}'|rofi -dmenu -width 30 -yoffset -210 -xoffset 485 -p "$p"|awk '{print $3}')&&pname=$(ps cax|egrep -w -m1 $process|awk '{print $5}')&&sudo kill "$process" && notify-send -t 200 "$pname was killed !🔪"
+/home/joel/scripts/killprocess

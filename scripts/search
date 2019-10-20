@@ -1,3 +1,1 @@
-alias dmenu='dmenu -fn "manrope-10" -nb black -sb "#260A35"'
-
-webpage=$(echo|dmenu  -p "Enter a webpage ️️😊:") && firefox-esr $webpage
+/home/joel/scripts/search

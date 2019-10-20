@@ -1,2 +1,1 @@
-#!/usr/bin/env bash
-sudo umount /media/joel/disk &&  notify-send "UNMOUNTED SUCCESSFULLY 💻"
+/home/joel/scripts/udisk

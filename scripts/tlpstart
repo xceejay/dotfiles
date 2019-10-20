@@ -1,2 +1,1 @@
-#!/usr/bin/env bash
-sudo tlp start
+/home/joel/scripts/tlpstart
