@@ -376,3 +376,7 @@ endfunction
      hi Normal     ctermbg=NONE guibg=NONE
       hi LineNr     ctermbg=NONE guibg=NONE
       hi SignColumn ctermbg=NONE guibg=NONE
+      
+  "save file with ctrl+s
+      noremap <C-s> :w<CR>
+
