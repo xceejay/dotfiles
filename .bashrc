@@ -630,3 +630,4 @@ export PATH=$ANDROID_SDK_ROOT:$PATH
 
  #keybindings
 bind -x '"\C-b": vim ~/.bashrc'
+bind -x '"\C-g": goto'
