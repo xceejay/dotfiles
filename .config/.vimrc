@@ -96,11 +96,6 @@ if has("gui_macvim")
     autocmd GUIEnter * set vb t_vb=
 endif
 
-
-" Add a bit extra margin to the left
-set foldcolumn=1
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -376,7 +371,7 @@ endfunction
   colorscheme space-vim-dark
      hi Normal     ctermbg=NONE guibg=NONE
       hi LineNr     ctermbg=NONE guibg=NONE ctermfg=green
-     hi SignColumn guibg=red
+      highlight clear SignColumn
       hi StatusLine ctermbg=000000 guibg=#000000 
 hi TabLineFill ctermfg=NONE ctermbg=NONE
 hi TabLine ctermfg=NONE ctermbg=NONE
