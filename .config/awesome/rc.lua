@@ -1,9 +1,4 @@
---[[
-
-     Awesome WM configuration template
-     github.com/lcpz
-
---]]
+-- joel config
 
 -- {{{ Required libraries
 local awesome, client, mouse, screen, tag = awesome, client, mouse, screen, tag
