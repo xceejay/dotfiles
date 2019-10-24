@@ -568,7 +568,6 @@ adbp(){ #adbpull
  #ls *.pdf|awk '{ print "\""$0"\""}'|dmenu
 
 #Lauch Gui application and redirect sdtout and stderr to /dev/null to prevent terminal logging
-mpv() { command mpv "$@" > /dev/null 2>&1 & disown ;}
 vlc() { command vlc "$@" > /dev/null 2>&1 & disown ;}
 chrome() { command chromium "$@" > /dev/null 2>&1 & disown ;}
 evince() { command evince  "$@" > /dev/null 2>&1 & disown ;}
