@@ -152,6 +152,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # Edit this .bashrc file
 alias ebrc='edit ~/.bashrc'
 
+wallpaper=/home/joel/.config/awesome/themes/purple/wall.png
 
 # Show help for this .bashrc file2alias hlp='less ~/.bashrc_hel2'
 
@@ -161,6 +162,8 @@ alias da='date "+%Y-%m-%d %A %T %Z"'
 # Alias's to modified commands
 #alias a fuzzy finder alias
 #alias javafx='java --module-path $PATH_TO_FX --add-modules javafx.controls $@'
+alias cjpg='xclip -sel clip -t image/jpeg'
+alias cpng='xclip -sel clip -t image/png'
 alias calc='rofi -modi "calc":/home/joel/scripts/calc -show calc'
 alias xinitc="sudo vim /etc/X11/xinit/xinitrc"
 alias tm="notify-send -t 200 "$(date|awk '{print $5}')⏰""
