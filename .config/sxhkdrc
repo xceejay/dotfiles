@@ -28,3 +28,5 @@ super + w
  rofi -show
 F12
  xfce4-terminal --drop-down
+XF86AudioPlay
+ rhythmbox-client --play-pause 
