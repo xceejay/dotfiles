@@ -1,7 +1,7 @@
 super + k
  source ~/scripts/killprocess
 super + e
- source ~/scripts/killprocess
+ ~/scripts/./emojis
 super + g
  source ~/scripts/google
 super + b
@@ -17,6 +17,8 @@ super + d
 super + y
  source ~/scripts/youtube
 Print
+ xfce4-screenshooter
+ctrl + Print 
  kazam
 ctrl + XF86AudioPlay
  rhythmbox
@@ -24,4 +26,5 @@ super + r
  rofi -modi drun -show drun
 super + w
  rofi -show
-
+F12
+ xfce4-terminal --drop-down

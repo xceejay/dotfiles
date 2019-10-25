@@ -53,10 +53,9 @@ end
 
 run_once({ "urxvtd", "unclutter -root" }) -- entries must be separated by commas
 awful.util.spawn("compton -b")
-awful.util.spawn("nm-applet &")
 awful.util.spawn("xfce4-clipman &")
-awful.util.spawn("xfce4-terminal --drop-down")
 awful.util.spawn("sxhkd")
+awful.util.spawn("xfce4-terminal --drop-down" )
 -- This function implements the XDG autostart specification
 --[[
 awful.spawn.with_shell(
@@ -93,8 +92,8 @@ awful.layout.layouts = {
     awful.layout.suit.tile.left,
     awful.layout.suit.tile.bottom,
     awful.layout.suit.tile.top,
-    awful.layout.suit.fair,
-    --awful.layout.suit.fair.horizontal,
+   -- awful.layout.suit.fair,
+   -- awful.layout.suit.fair.horizontal,
     --awful.layout.suit.spiral,
     --awful.layout.suit.spiral.dwindle,
     --awful.layout.suit.max,
@@ -219,9 +218,6 @@ awful.screen.connect_for_each_screen(function(s) beautiful.at_screen_connect(s) 
 
 -- {{{ Key bindings
 globalkeys = my_table.join(
-    awful.key({ altkey }, "p", function() os.execute("screenshot") end,
-              {description = "take a screenshot", group = "hotkeys"}),
-
     -- X screen locker
     awful.key({ altkey, "Control" }, "l", function () os.execute(scrlocker) end,
               {description = "lock screen", group = "hotkeys"}),
@@ -258,25 +254,25 @@ globalkeys = my_table.join(
     ),
 
     -- By direction client focus
-    awful.key({ modkey }, "Left",
+    awful.key({ modkey }, "Down",
         function()
             awful.client.focus.global_bydirection("down")
             if client.focus then client.focus:raise() end
         end,
         {description = "focus down", group = "client"}),
-    awful.key({ modkey }, "Right",
+    awful.key({ modkey }, "Up",
         function()
             awful.client.focus.global_bydirection("up")
             if client.focus then client.focus:raise() end
         end,
         {description = "focus up", group = "client"}),
-    awful.key({ modkey }, "m",
+    awful.key({ modkey }, "Left",
         function()
             awful.client.focus.global_bydirection("left")
             if client.focus then client.focus:raise() end
         end,
         {description = "focus left", group = "client"}),
-    awful.key({ modkey }, "Left",
+    awful.key({ modkey }, "Right",
         function()
             awful.client.focus.global_bydirection("right")
             if client.focus then client.focus:raise() end
