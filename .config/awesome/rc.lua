@@ -1,5 +1,4 @@
 -- joel config
-
 -- {{{ Required libraries
 local awesome, client, mouse, screen, tag = awesome, client, mouse, screen, tag
 local ipairs, string, os, table, tostring, tonumber, type = ipairs, string, os, table, tostring, tonumber, type
@@ -53,7 +52,11 @@ local function run_once(cmd_arr)
 end
 
 run_once({ "urxvtd", "unclutter -root" }) -- entries must be separated by commas
-
+awful.util.spawn("compton -b")
+awful.util.spawn("nm-applet &")
+awful.util.spawn("xfce4-clipman &")
+awful.util.spawn("xfce4-terminal --drop-down")
+awful.util.spawn("sxhkd")
 -- This function implements the XDG autostart specification
 --[[
 awful.spawn.with_shell(
@@ -83,7 +86,7 @@ local guieditor    = "/opt/sublime_text/sublime_text"
 local scrlocker    = "slock"
 
 awful.util.terminal = terminal
-awful.util.tagnames = { "1", "2", "3", "4", "5" }
+awful.util.tagnames = { "1", "2", "3", "4", "5","6" }
 awful.layout.layouts = {
     awful.layout.suit.floating,
     awful.layout.suit.tile,
@@ -279,8 +282,6 @@ globalkeys = my_table.join(
             if client.focus then client.focus:raise() end
         end,
         {description = "focus right", group = "client"}),
-    awful.key({ modkey,           }, "w", function () awful.util.mymainmenu:show() end,
-              {description = "show main menu", group = "awesome"}),
 
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "Left", function () awful.client.swap.byidx(  1)    end,
@@ -324,7 +325,7 @@ globalkeys = my_table.join(
               {description = "add new tag", group = "tag"}),
 
     -- Standard program
-    awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
+    awful.key({ "Control", altkey          }, "t", function () awful.spawn(terminal) end,
               {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),

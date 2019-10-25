@@ -1,0 +1,27 @@
+super + k
+ source ~/scripts/killprocess
+super + e
+ source ~/scripts/killprocess
+super + g
+ source ~/scripts/google
+super + b
+ source ~/scripts/search
+ctrl + shift + XF86AudioPlay 
+ source ~/scripts/songs
+super + p
+ source ~/scripts/spdf
+super + c
+ source ~/scripts/wificonnect
+super + d
+ source ~/scripts/wifidisconnect
+super + y
+ source ~/scripts/youtube
+Print
+ kazam
+ctrl + XF86AudioPlay
+ rhythmbox
+super + r
+ rofi -modi drun -show drun
+super + w
+ rofi -show
+
