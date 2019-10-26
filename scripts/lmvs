@@ -1,5 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-alias lf="ls -l | egrep -v '^d'" 
 mpv() { command mpv "$@" > /dev/null 2>&1 & disown ;}
-mpv $(lf *.[mw][eokp][bv4]*|cut -c 13-|sed s/matches//g|dmenu -fn "manrope-10" -nb black -sb "#260A35")
+mpv $(ls -l *.[mw][eokp][bv4]*|cut -c 13-|sed s/matches//g|dmenu -fn "manrope-10" -nb black -sb "#260A35")
