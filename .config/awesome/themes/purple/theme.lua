@@ -226,7 +226,8 @@ local terminal     = "xfce4-terminal"
 net_wireless = net_widgets.wireless({interface="wlp2s0"})
 net_wired = net_widgets.indicator({
     interfaces  = {"enp1s0"},
-    timeout     = 5
+    timeout     = 5,
+
 })
 net_internet = net_widgets.internet({indent = 0, timeout = 5})
 net_wireless = net_widgets.wireless({interface   = "wlp2s0", }) 
