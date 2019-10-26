@@ -20,14 +20,15 @@ Print
  xfce4-screenshooter
 ctrl + Print 
  kazam
-ctrl + XF86AudioPlay
- rhythmbox
 super + r
  rofi -modi drun -show drun
 super + w
  rofi -show
 F12
  xfce4-terminal --drop-down
+super + "-"
+ gpick -p
+ctrl + XF86AudioPlay
+ rhythmbox
 XF86AudioPlay
- rhythmbox-client --play-pause 
-
+ rhythmbox-client --play-pause
