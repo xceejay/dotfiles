@@ -3,4 +3,4 @@ message="added changes"
 git add .
 read -p "Enter your commit message💬:" message
 git commit -m "$message"
-git push origin && notify-send -t 1000 "succesfully pushed changes to origin📌"
+git push origin && notify-send -t 300 "succesfully pushed changes to origin📌"

@@ -220,20 +220,6 @@ local spr     = wibox.widget.textbox(' ')
 local arrl_dl = separators.arrow_left(theme.bg_focus, "alpha")
 local arrl_ld = separators.arrow_left("alpha", theme.bg_focus)
 
--- Net icons
-local net_widgets = require("net_widgets")
-local terminal     = "xfce4-terminal"
-net_wireless = net_widgets.wireless({interface="wlp2s0"})
-net_wired = net_widgets.indicator({
-    interfaces  = {"enp1s0"},
-    timeout     = 5
-})
-net_internet = net_widgets.internet({indent = 0, timeout = 5})
-net_wireless = net_widgets.wireless({interface   = "wlp2s0", }) 
-
-
-
-
 function theme.at_screen_connect(s)
     -- Quake application
     s.quake = lain.util.quake({ app = awful.util.terminal })
@@ -293,7 +279,6 @@ function theme.at_screen_connect(s)
             arrl_dl,
             spr,
             wibox.container.background( wibox.widget.systray(),theme.bg_focus),
-           net_wireless,
             s.mylayoutbox,
         },
     }
