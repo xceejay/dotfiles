@@ -9,6 +9,8 @@ case $- in
 *) return;;
 esac
 
+#ignore history duplicates
+export HISTCONTROL=ignoreboth:erasedups
 
 # append to the history file, don't overwrite it
 shopt -s histappend
@@ -197,6 +199,8 @@ alias free='free --mega'
 alias terminal='xfce4-terminal'
 alias nmap='nmap -sP'
 alias mount="mount -w"
+alias grep='egrep'
+alias iw='sudo iw'
 alias cgrep='egrep --color=always'
 alias distupgrade='sudo apt update && sudo apt dist-upgrade'
 alias update='sudo apt  update && sudo apt upgrade'
