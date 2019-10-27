@@ -1,2 +1,2 @@
 current=$(rhythmbox-client --print-playing)
-notify-send -t 500 "$current🎶🎹"
+notify-send  "$current🎶🎹"

@@ -189,7 +189,7 @@ alias kdec=kdeconnect-cli
 alias anboxrun=' anbox launch --package=org.anbox.appmgr $* >/dev/null 2>&1 &'
 alias avwifi='nmcli dev wifi'
 alias kdeconnect=kdeconnectd
-alias logout='loginctl kill-user joel'
+alias logout='loginctl terminate-user joel'
 alias gateway='ip r'
 alias inkscape='inkscape $* >/dev/null 2>&1 &'
 alias tgcli='~/tg/bin/./telegram-cli'

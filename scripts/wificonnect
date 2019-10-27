@@ -2,7 +2,7 @@ nmcli dev wifi connect $(nmcli dev wifi|sed '2,30 s/ /  /g'|rofi -dmenu -p      
 
 if [ $(nmcli|grep -o -w "connected") == "connected" ]
     then 
-    notify-send -t 1000 "connected🎯"
+    notify-send  "connected🎯"
     else
-        notify-send -t 1000 "disconnected...🐳"
+        notify-send  "disconnected...🐳"
         fi
