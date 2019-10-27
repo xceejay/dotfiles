@@ -1,0 +1,5 @@
+#!/bin/bash
+for video in *.mp4 ; do
+sound=$(echo $video|sed s/.mp4//g)
+ffmpeg -i "$video" -vn "$sound.mp3"
+done 
