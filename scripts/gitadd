@@ -1,6 +1,34 @@
+#!/bin/bash
+
+declare -f
+
+file='/home/joel/scripts/gitadd'
+choice=$(cat $file|egrep -w -o '^_[a-z]+.+_'|sed 's/_/ /g'|rofi -dmenu -p "what you wanna do in this local git repo❔"|sed 's/ /_/g')
+
+
+
+
+_push_to_origin_(){
 git status
-message="added changes"
+local message="added changes"
 git add .
 read -p "Enter your commit message💬:" message
 git commit -m "$message"
-git push origin && notify-send -t 1000 "succesfully pushed changes to origin📌"
+git push origin && notify-send "succesfully pushed changes to origin📌"
+}
+
+
+_revert_changes_(){
+echo "hello world"
+} #todo
+
+
+
+
+
+#where implementation of functions begin
+export -f _push_to_origin_
+export -f _revert_changes_
+ eval $choice
+
+
