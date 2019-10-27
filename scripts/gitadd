@@ -19,7 +19,12 @@ git push origin && notify-send "succesfully pushed changes to origin📌"
 
 
 _revert_changes_(){
-echo "hello world"
+ local hash=""
+
+ git whatchanged|enscript --output=/tmp/git|ps2pdf /tmp/git /tmp/git.pdf|zathura /tmp/git.pdf > /dev/null 2>&1
+hash=$(git whatchanged|awk '/^commit/ {print $2}'|rofi -dmenu -p "Choose a commit hash you want revert👣:")
+git revert --no-commit $hash && notify-send "succesfully reverted local changes👈"
+
 } #todo
 
 
