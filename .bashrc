@@ -11,7 +11,6 @@ esac
 
 #ignore history duplicates
 export HISTCONTROL=ignoreboth:erasedups
-
 # append to the history file, don't overwrite it
 shopt -s histappend
 
@@ -301,7 +300,7 @@ alias folderssort='find . -maxdepth 1 -type d -print0 | xargs -0 du -sk | sort -
 alias tree='tree -CAhF --dirsfirst'
 alias treed='tree -CAFd'
 
-TERMINAL=xfce4-terminal
+
 
 # Alias's for archives
 alias mktar='tar -cvf'
@@ -392,6 +391,14 @@ up ()
 		d=..
 	fi
 	cd $d
+}
+
+
+#echo path into tempfile after every cd 
+cd (){
+
+builtin cd "$@" && echo "$PWD" > /tmp/cpath
+
 }
 
 #Automatically do an ls after each cd
@@ -566,7 +573,13 @@ adbp(){ #adbpull
 }
 
 wallp(){
-    cp "$1" home/joel/.config/awesome/themes/purple/wall.png 
+    local pics="/home/joel/Pictures/"
+     if [ $# -eq 0 ]
+then
+    wallp "$pics$(img)" >/dev/null 2>&1
+else
+    cp "$1" /home/joel/.config/awesome/themes/purple/wall.png 
+    fi
 }
 
 ###SYNTAX FOR DMENU
