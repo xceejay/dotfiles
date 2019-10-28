@@ -6,6 +6,7 @@ function run {
     $@&
   fi
 }
+killall pulseaudio
 run pulseaudio --start
 run compton
 run sxhkd
