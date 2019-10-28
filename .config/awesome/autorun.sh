@@ -7,9 +7,9 @@ function run {
   fi
 }
 killall pulseaudio
-run pulseaudio --start
 run compton
 run sxhkd
 run xfce4-clipman
 run xfce4-terminal --drop-down
 run pasystray -a
+run pulseaudio --start

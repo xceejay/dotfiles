@@ -9,7 +9,6 @@ local dpi   = require("beautiful.xresources").apply_dpi
 
 local os = os
 local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
-
 local theme                                     = {}
 theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/purple"
 theme.wallpaper                                 = theme.dir .. "/wall.png"
@@ -17,7 +16,7 @@ theme.font                                      = "manrope Bold 9"
 theme.fg_normal                                 = "#DDDDFF"
 theme.fg_focus                                  = "#EA6F81"
 theme.fg_urgent                                 = "#CC9393"
-theme.bg_normal                                 = "#000000"
+theme.bg_normal                                 = "#020102"
 theme.bg_focus                                  = "#260A35"
 theme.bg_urgent                                 = "#1A1A1A"
 theme.border_width                              = dpi(3)
@@ -204,6 +203,13 @@ theme.volume = lain.widget.alsa({
     end
 })
 
+local mytagbox = wibox.widget.textbox(' ')
+screen[1]:connect_signal("tag::history::update", function()
+       mytagbox.text = awful.tag.selected(1).name
+mytagbox.font = "manrope Bold 8"
+   end)
+
+
 -- Net
 local neticon = wibox.widget.imagebox(theme.widget_net)
 local net = lain.widget.net({
@@ -276,11 +282,12 @@ function theme.at_screen_connect(s)
      spr,
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-
-            spr,
+          -- arrl_ld,
+           -- wibox.container.background(volicon,theme.bg_focus),
+           -- wibox.container.background(theme.volume.widget,theme.bg_focus),
+           -- arrl_dl,
             arrl_ld,
-            wibox.container.background(volicon,theme.bg_focus),
-            wibox.container.background(theme.volume.widget,theme.bg_focus),
+            wibox.container.background(net_wireless,theme.bg_focus),
             arrl_dl,
             memicon,
             mem.widget,
@@ -294,8 +301,9 @@ function theme.at_screen_connect(s)
             arrl_dl,
             spr,
             wibox.container.background( wibox.widget.systray(),theme.bg_focus),
-           net_wireless,
-            s.mylayoutbox,
+            wibox.container.background(mytagbox,theme.bg_focus),
+
+            -- s.mylayoutbox,
         },
     }
 end
