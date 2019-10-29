@@ -370,12 +370,12 @@ endfunction
      
   colorscheme space-vim-dark
      hi Normal     ctermbg=NONE guibg=NONE
-      hi LineNr     ctermbg=NONE guibg=NONE ctermfg=red
-      highlight clear SignColumn
-      hi StatusLine ctermbg=000000 guibg=#000000 
-hi TabLineFill ctermfg=NONE ctermbg=NONE
-hi TabLine ctermfg=NONE ctermbg=NONE
-hi TabLineSel ctermfg=NONE ctermbg=NONE
-  "save file with ctrl+s
-      noremap <C-s> :w<CR>
+     hi LineNr     ctermbg=NONE guibg=NONE ctermfg=red
+     highlight clear SignColumn
+     hi StatusLine ctermbg=000000 guibg=#000000 
+     hi TabLineFill ctermfg=NONE ctermbg=NONE
+     hi TabLine ctermfg=NONE ctermbg=NONE
+     hi TabLineSel ctermfg=NONE ctermbg=NONE
+     "save file with ctrl+s
+     noremap <C-s> :w<CR>
 

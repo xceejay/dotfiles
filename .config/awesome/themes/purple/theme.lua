@@ -288,6 +288,7 @@ function theme.at_screen_connect(s)
            -- arrl_dl,
             arrl_ld,
             wibox.container.background(net_wireless,theme.bg_focus),
+            wibox.container.background(net_wired,theme.bg_focus),
             arrl_dl,
             memicon,
             mem.widget,
