@@ -15,8 +15,8 @@ export HISTCONTROL=ignoreboth:erasedups
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=""
-HISTFILESIZE=10000000000000000000000000000000 #infinite history
+HISTSIZE=-1
+HISTFILESIZE=-1 #infinite history
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -213,6 +213,9 @@ alias less='less -R'
 alias cls='clear'
 alias apt='sudo apt'
 alias multitail='multitail --no-repeat -c'
+
+
+
 
 # Change directory aliases
 alias pics='cd ~/Pictures'
@@ -611,6 +614,7 @@ krita(){ command krita "$@">/dev/null 2>&1 & disown;}
 telegram(){ command Telegram/Telegram >/dev/null 2>&1 & disown;} 
 tgceejay(){ command ~/Downloads/Programs/telegram/./Telegram -many -workdir ~/ceejay >/dev/null 2>&1 & disown;}
 scrcpy(){ command scrcpy >/dev/null 2>&1 & disown;} 
+
 #() { command  "$@" > /dev/null 2>&1 & disown ;}
 
 ####EXPORTS######
