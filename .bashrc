@@ -161,6 +161,7 @@ alias da='date "+%Y-%m-%d %A %T %Z"'
 # Alias's to modified commands
 #alias a fuzzy finder alias
 #alias javafx='java --module-path $PATH_TO_FX --add-modules javafx.controls $@'
+alias bible='~/Downloads/minimal/kjv/kjv'
 alias cjpg='xclip -sel clip -t image/jpeg'
 alias cpng='xclip -sel clip -t image/png'
 alias calc='rofi -modi "calc":/home/joel/scripts/calc -show calc'
@@ -202,8 +203,8 @@ alias mount="mount -w"
 alias grep='egrep'
 alias iw='sudo iw'
 alias cgrep='egrep --color=always'
-alias distupgrade='sudo apt update && sudo apt dist-upgrade'
-alias update='sudo apt  update && sudo apt upgrade'
+alias distupgrade='sudo aptitude update && sudo aptitude safe-upgrade'
+alias update='sudo aptitude  update && sudo aptitude upgrade'
 alias cp='cp -rv'
 alias mv='mv -i'
 alias rm='rm -Ivr'
@@ -211,7 +212,7 @@ alias mkdir='mkdir -p'
 alias ping='ping -c 10'
 alias less='less -R'
 alias cls='clear'
-alias apt='sudo apt'
+alias apt='sudo aptitude'
 alias multitail='multitail --no-repeat -c'
 
 
@@ -585,6 +586,7 @@ else
     fi
 }
 
+
 ###SYNTAX FOR DMENU
 #$(grep  "surf [0-1]"* .bash_history|dmenu -l 30)
 
@@ -650,10 +652,12 @@ export PATH=$scripts:$PATH
 export PATH=$PATH:$HOME/bin
 export ANDROID_SDK_ROOT=/home/joel/Android/sdk
 export PATH=$ANDROID_SDK_ROOT:$PATH
-
+export lectures="/home/joel/Desktop/lectures"
 #js
  [ -f ~/.fzf.bash ]  && source ~/.fzf.bash
 
  #keybindings
-bind -x '"\C-b": vim ~/.bashrc'
+bind -x '"\C-b": vim ~/.bashrc && source ~/.bashrc'
+bind -x '"\C-s": cd ~/scripts && sc="$(fzf)" && vim $sc; bd'
+bind -x '"\C-n": cd $lectures && xdg-open "$(fzf --tac)" && bd'
 bind -x '"\C-g": goto'
