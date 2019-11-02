@@ -1,6 +1,19 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"makes mouse be able to highlighr=t
+set mouse=a
+
+"makes autoclosing of brackets ps. make sure you dont set paste
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
+
+
 "sets numbering of lines
 set number
 
@@ -349,6 +362,8 @@ function! VisualSelection(direction, extra_filter) range
     let @/ = l:pattern
     let @" = l:saved_reg
 endfunction
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
   " =>Vim plug
   """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -381,6 +396,10 @@ endfunction
      hi TabLineFill ctermfg=NONE ctermbg=NONE
      hi TabLine ctermfg=NONE ctermbg=NONE
      hi TabLineSel ctermfg=NONE ctermbg=NONE
+
+     
+     
      "save file with ctrl+s
      noremap <C-s> :w<CR>
+
 

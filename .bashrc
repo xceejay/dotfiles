@@ -161,7 +161,7 @@ alias da='date "+%Y-%m-%d %A %T %Z"'
 # Alias's to modified commands
 #alias a fuzzy finder alias
 #alias javafx='java --module-path $PATH_TO_FX --add-modules javafx.controls $@'
-
+alias v='vim'
 alias nmr='sudo systemctl restart NetworkManager'
 alias nms='sudo systemctl stop NetworkManager'
 alias bible='~/Downloads/minimal/kjv/kjv'
