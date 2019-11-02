@@ -120,10 +120,6 @@ fi
 
 
 
-#######################################################
-####################SPECIAL CONFIG##########################
-#######################################################
-#######################################################
 # MACHINE SPECIFIC ALIAS'S
 #######################################################			
 shopt -s expand_aliases
@@ -321,14 +317,11 @@ alias mkzip='zip -rv'
 # Show all logs in /var/log
 alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f &"
 
-# SHA1
-alias sha1='openssl sha1'
 
 #######################################################
 # SPECIAL FUNCTIONS
 #######################################################
 
-# Use the best version of pico installed
 
 # Extracts any archive(s) (if unp isn't installed)
 extract () {
@@ -418,42 +411,6 @@ builtin cd "$@" && echo "$PWD" > /tmp/cpath
  #	fi
  #}
 
-# Returns the last 2 fields of the working directory
-pwdtail ()
-{
-	pwd|awk -F/ '{nlast = NF -1;print $nlast"/"$NF}'
-}
-
-
-
-# Show current network information
-netinfo ()
-{
-	echo "--------------- Network Information ---------------"
-	/sbin/ifconfig | awk /'inet addr/ {print $2}'
-	echo ""
-	/sbin/ifconfig | awk /'Bcast/ {print $3}'
-	echo ""
-	/sbin/ifconfig | awk /'inet addr/ {print $4}'
-
-	/sbin/ifconfig | awk /'HWaddr/ {print $4,$5}'
-	echo "---------------------------------------------------"
-}
-
-# IP address lookup
-alias whatismyip="whatsmyip"
-function whatsmyip ()
-{
-	# Dumps a list of all IP addresses for every device
-	# /sbin/ifconfig |grep -B1 "inet addr" |awk '{ if ( $1 == "inet" ) { print $2 } else if ( $2 == "Link" ) { printf "%s:" ,$1 } }' |awk -F: '{ print $1 ": " $3 }';
-
-	# Internal IP Lookup
-	echo -n "Internal IP: " ; /sbin/ifconfig eth0 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}'
-
-	# External IP Lookup
-	echo -n "External IP: " ; wget http://smart-ip.net/myip -O - -q
-}
-
 # View Apache logs
 apachelog ()
 {
@@ -468,9 +425,9 @@ apachelog ()
 apacheconfig ()
 {
 	if [ -f /etc/httpd/conf/httpd.conf ]; then
-		nano /etc/httpd/conf/httpd.conf
+		vim /etc/httpd/conf/httpd.conf
 	elif [ -f /etc/apache2/apache2.conf ]; then
-		nano /etc/apache2/apache2.conf
+		vim /etc/apache2/apache2.conf
 	else
 		echo "Error: Apache config file could not be found."
 		echo "Searching for possible locations:"
@@ -482,15 +439,15 @@ apacheconfig ()
 phpconfig ()
 {
 	if [ -f /etc/php.ini ]; then
-		nano /etc/php.ini
+		vim /etc/php.ini
 	elif [ -f /etc/php/php.ini ]; then
-		nano /etc/php/php.ini
+		vim /etc/php/php.ini
 	elif [ -f /etc/php5/php.ini ]; then
-		nano /etc/php5/php.ini
+		vim /etc/php5/php.ini
 	elif [ -f /usr/bin/php5/bin/php.ini ]; then
-		nano /usr/bin/php5/bin/php.ini
+		vim /usr/bin/php5/bin/php.ini
 	elif [ -f /etc/php5/apache2/php.ini ]; then
-		nano /etc/php5/apache2/php.ini
+		vim /etc/php5/apache2/php.ini
 	else
 		echo "Error: php.ini file could not be found."
 		echo "Searching for possible locations:"
@@ -502,17 +459,17 @@ phpconfig ()
 mysqlconfig ()
 {
 	if [ -f /etc/my.cnf ]; then
-		nano /etc/my.cnf
+		vim /etc/my.cnf
 	elif [ -f /etc/mysql/my.cnf ]; then
-		nano /etc/mysql/my.cnf
+		vim /etc/mysql/my.cnf
 	elif [ -f /usr/local/etc/my.cnf ]; then
-		nano /usr/local/etc/my.cnf
+		vim /usr/local/etc/my.cnf
 	elif [ -f /usr/bin/mysql/my.cnf ]; then
-		nano /usr/bin/mysql/my.cnf
+		vim /usr/bin/mysql/my.cnf
 	elif [ -f ~/my.cnf ]; then
-		nano ~/my.cnf
+		vim ~/my.cnf
 	elif [ -f ~/.my.cnf ]; then
-		nano ~/.my.cnf
+		vim ~/.my.cnf
 	else
 		echo "Error: my.cnf file could not be found."
 		echo "Searching for possible locations:"
@@ -520,14 +477,7 @@ mysqlconfig ()
 	fi
 }
 
-# For some reason, rot13 pops up everywhere
-rot13 () {
-	if [ $# -eq 0 ]; then
-		tr '[a-m][n-z][A-M][N-Z]' '[n-z][a-m][N-Z][A-M]'
-	else
-		echo $* | tr '[a-m][n-z][A-M][N-Z]' '[n-z][a-m][N-Z][A-M]'
-	fi
-}
+
 
 # Trim leading and trailing spaces (for scripts)
 trim()
@@ -583,7 +533,7 @@ wallp(){
     local pics="/home/joel/Pictures/"
      if [ $# -eq 0 ]
 then
-    wallp "$pics$(img)" >/dev/null 2>&1
+    cpp "$pics$(img)" /home/joel/.config/awesome/themes/purple/wall.png>/dev/null 2>&1
 else
     cp "$1" /home/joel/.config/awesome/themes/purple/wall.png 
     fi
