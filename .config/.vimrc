@@ -402,4 +402,6 @@ endfunction
      "save file with ctrl+s
      noremap <C-s> :w<CR>
 
-
+"change cursor in modes
+au InsertEnter * silent execute "!echo -en \<esc>[6 q"
+au InsertLeave * silent execute "!echo -en \<esc>[2 q"
