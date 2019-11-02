@@ -5,8 +5,19 @@
   #     read -p "Enter Title of the video📺:" title
    #    youtube-dl "$link" && rename s/"$query"/"$title"/g *
  
-link=$1
+link=$2
      query="-$(echo $link|cut -c 33-)" 
-  youtube-dl -f best  "$link" && rename s/"$query"//g *
- 
+     vid(){  youtube-dl -f best  "$link" && rename s/"$query"//g *
+     }
+ audio(){
+ youtube-dl -f bestaudio "$link" && rename s/"$query"//g *
 
+ }
+
+if [ "$1" = "audio" ]; then
+    audio
+elif [ "$1" = "video" ]; then 
+vid
+else 
+    vid 
+    fi

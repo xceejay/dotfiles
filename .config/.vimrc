@@ -357,17 +357,22 @@ endfunction
   " - Avoid using standard Vim directory names like 'plugin'
    call plug#begin('~/.vim/plugged')
  
-  " spacemacs dark
+
+   " spacemacs dark
   Plug 'liuchengxu/space-vim-dark'
  
 " Plugin outside ~/.vim/plugged with post-update hook
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
- 
+  
+  
+  
   " Initialize plugin system
+
   call plug#end()
 
-  "Spacemacs theme
-     
+"Pathogen
+  execute pathogen#infect() 
+
   colorscheme space-vim-dark
      hi Normal     ctermbg=NONE guibg=NONE
      hi LineNr     ctermbg=NONE guibg=NONE ctermfg=red

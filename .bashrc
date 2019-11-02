@@ -161,6 +161,9 @@ alias da='date "+%Y-%m-%d %A %T %Z"'
 # Alias's to modified commands
 #alias a fuzzy finder alias
 #alias javafx='java --module-path $PATH_TO_FX --add-modules javafx.controls $@'
+
+alias nmr='sudo systemctl restart NetworkManager'
+alias nms='sudo systemctl stop NetworkManager'
 alias bible='~/Downloads/minimal/kjv/kjv'
 alias cjpg='xclip -sel clip -t image/jpeg'
 alias cpng='xclip -sel clip -t image/png'
@@ -200,7 +203,7 @@ alias free='free --mega'
 alias terminal='xfce4-terminal'
 alias nmap='nmap -sP'
 alias mount="mount -w"
-alias grep='egrep'
+alias grep='egrep -i'
 alias iw='sudo iw'
 alias cgrep='egrep --color=always'
 alias distupgrade='sudo aptitude update && sudo aptitude safe-upgrade'
