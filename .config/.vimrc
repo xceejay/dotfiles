@@ -1,7 +1,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"makes mouse be able to highlighr=t
+"makes mouse be able to highlight
 set mouse=a
 
 "makes autoclosing of brackets ps. make sure you dont set paste
@@ -12,6 +12,7 @@ inoremap [ []<left>
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
+autocmd FileType markdown inoremap * **<left>
 
 
 "sets numbering of lines
@@ -45,11 +46,6 @@ command W w !sudo tee % > /dev/null
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
 
-" Avoid garbled characters in Chinese language windows OS
-let $LANG='en' 
-set langmenu=en
-source $VIMRUNTIME/delmenu.vim
-source $VIMRUNTIME/menu.vim
 
 " Turn on the Wild menu
 set wildmenu
@@ -95,6 +91,7 @@ set magic
 
 " Show matching brackets when text indicator is over them
 set showmatch 
+
 " How many tenths of a second to blink when matching brackets
 set mat=2
 
@@ -115,17 +112,6 @@ endif
 " Enable syntax highlighting
 syntax enable 
 
-" Enable 256 colors palette in Gnome Terminal
-if $COLORTERM == 'gnome-terminal'
-    set t_Co=256
-endif
-
-try
-    colorscheme desert
-catch
-endtry
-
-set background=dark
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -208,11 +194,10 @@ map <leader>l :bnext<cr>
 map <leader>h :bprevious<cr>
 
 " Useful mappings for managing tabs
-map <leader>tn :tabnew<cr>
+map <leader>tn :tabnext<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove 
-map <leader>t<leader> :tabnext 
 
 " Let 'tl' toggle between this and the last accessed tab
 let g:lasttab = 1
@@ -229,8 +214,8 @@ map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " Specify the behavior when switching between buffers 
 try
-  set switchbuf=useopen,usetab,newtab
-  set stal=2
+    set switchbuf=useopen,usetab,newtab
+    set stal=2
 catch
 endtry
 
@@ -261,10 +246,10 @@ vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
 vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
 if has("mac") || has("macunix")
-  nmap <D-j> <M-j>
-  nmap <D-k> <M-k>
-  vmap <D-j> <M-j>
-  vmap <D-k> <M-k>
+    nmap <D-j> <M-j>
+    nmap <D-k> <M-k>
+    vmap <D-j> <M-j>
+    vmap <D-k> <M-k>
 endif
 
 " Delete trailing white space on save, useful for some filetypes ;)
@@ -365,43 +350,50 @@ endfunction
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-  " =>Vim plug
-  """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-  " Specify a directory for plugins
-  " - For Neovim: stdpath('data') . '/plugged'
-  " - Avoid using standard Vim directory names like 'plugin'
-   call plug#begin('~/.vim/plugged')
- 
+" =>Vim plug
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Specify a directory for plugins
+" - For Neovim: stdpath('data') . '/plugged'
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
 
-   " spacemacs dark
-  Plug 'liuchengxu/space-vim-dark'
- 
+
+" spacemacs dark
+Plug 'liuchengxu/space-vim-dark'
+
 " Plugin outside ~/.vim/plugged with post-update hook
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-  
-  
-  
-  " Initialize plugin system
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
-  call plug#end()
+
+
+" Initialize plugin system
+
+call plug#end()
 
 "Pathogen
-  execute pathogen#infect() 
+execute pathogen#infect() 
 
-  colorscheme space-vim-dark
-     hi Normal     ctermbg=NONE guibg=NONE
-     hi LineNr     ctermbg=NONE guibg=NONE ctermfg=red
-     highlight clear SignColumn
-     hi StatusLine ctermbg=000000 guibg=#000000 
-     hi TabLineFill ctermfg=NONE ctermbg=NONE
-     hi TabLine ctermfg=NONE ctermbg=NONE
-     hi TabLineSel ctermfg=NONE ctermbg=NONE
+colorscheme space-vim-dark
+hi Normal     ctermbg=NONE guibg=NONE
+hi LineNr     ctermbg=NONE guibg=NONE ctermfg=red
+highlight clear SignColumn
+hi StatusLine ctermbg=000000 guibg=#000000 
+hi TabLineFill ctermfg=NONE ctermbg=NONE
+hi TabLine ctermfg=NONE ctermbg=NONE
+hi TabLineSel ctermfg=NONE ctermbg=NONE
 
-     
-     
-     "save file with ctrl+s
-     noremap <C-s> :w<CR>
+
+
+"save file with ctrl+s
+noremap <C-s> :w<CR>
+
+"Disable You complete me other annoying pane
+set completeopt=menu
+
 
 "change cursor in modes
 au InsertEnter * silent execute "!echo -en \<esc>[6 q"
 au InsertLeave * silent execute "!echo -en \<esc>[2 q"
+
+"fuzzy finder to find file with ctrl+p in vim and open it
+noremap <c-p> :tabnew \| :FZF <CR>
