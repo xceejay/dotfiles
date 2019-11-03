@@ -1,15 +1,15 @@
 #!/bin/bash
 
-#insert into patient(lastname,firstname,roomtype,unavailable) values ("Joel","Amoako","Kwabenya","0541053593")
+#insert into patient(cname,coursereg,courseyear,coursedesc) values ("Joel","Amoako","Kwabenya","0541053593")
 i=1;
-while [ $i -lt 6 ]; do
-#_lastname=$(awk  '{print $1}' /home/joel/randomdata/room|sed $i!d)
-#_firstname=$(awk  '{print $2}' /home/joel/randomdata/room|sed $i!d)
-_roomtype=$(awk  '{print $1}' /home/joel/randomdata/room|sed $i!d)
-_unavailable=$(awk  '{print $2}' /home/joel/randomdata/room|sed $i!d)
-_blockfloor=$(awk  '{print $3}' /home/joel/randomdata/room|sed $i!d)
+while [ $i -lt 20 ]; do
+_cname=$(awk  '{print $1}' /home/joel/randomdata/Course|sed $i!d)
+_coursereg=$(awk  '{print $2}' /home/joel/randomdata/Course|sed $i!d)
+_courseyear=$(awk  '{print $3}' /home/joel/randomdata/Course|sed $i!d)
+_coursedesc=$(awk  '{print $4}' /home/joel/randomdata/Course|sed $i!d)
+#_blockfloor=$(awk  '{print $3}' /home/joel/randomdata/Course|sed $i!d)
     ((i++))
-mysql hospitaldb << EOF
-INSERT INTO  room(roomtype,unavailable,blockfloor) VALUES ('$_roomtype', $_unavailable, $_blockfloor);
-EOF
+mysql schooldb << end
+INSERT INTO  Course(cname,coursereg,courseyear,coursedesc) VALUES ('$_cname', $_coursereg, $_courseyear,$_coursedesc);
+end
 done

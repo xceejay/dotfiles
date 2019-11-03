@@ -7,7 +7,7 @@ set mouse=a
 "makes autoclosing of brackets ps. make sure you dont set paste
 inoremap " ""<left>
 inoremap ' ''<left>
-inoremap ( ()<left>
+"inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
@@ -390,6 +390,8 @@ noremap <C-s> :w<CR>
 "Disable You complete me other annoying pane
 set completeopt=menu
 
+"shows command being typed in normal mode
+set showcmd
 
 "change cursor in modes
 au InsertEnter * silent execute "!echo -en \<esc>[6 q"

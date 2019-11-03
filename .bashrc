@@ -5,8 +5,8 @@
 
 # If not running interactively, don't do anything
 case $- in
-	*i*) ;;
-*) return;;
+    *i*) ;;
+    *) return;;
 esac
 
 #ignore history duplicates
@@ -31,12 +31,12 @@ shopt -s checkwinsize
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-	debian_chroot=$(cat /etc/debian_chroot)
+    debian_chroot=$(cat /etc/debian_chroot)
 fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-	xterm-color|*-256color) color_prompt=yes;;
+    xterm-color|*-256color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -45,33 +45,33 @@ esac
 #force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
-	if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
-else
-	color_prompt=
-fi
-fi
+    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+        # We have color support; assume it's compliant with Ecma-48
+        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+        # a case would tend to support setf rather than setaf.)
+        color_prompt=yes
+    else
+        color_prompt=
+    fi
+    fi
 
-if [ "$color_prompt" = yes ]; then
-	#PS1='${debian_chroot:+($debian_chroot)}\[\033[01;35m\]\u@\[\033[00;93m\]void\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-	#PS1="┌─[\`if [ \$? = 0 ]; then echo \[\e[32m\]✔\[\e[0m\]; else echo \[\e[31m\]✘\[\e[0m\]; fi\`]───[\[\e[01;49;39m\]\u\[\e[00m\]\[\e[01;49;39m\]@\H\[\e[00m\]]───[\[\e[1;49;34m\]\W\[\e[0m\]]───[\[\e[1;49;39m\]\$(ls | wc -l) files, \$(ls -lah | grep -m 1 total | sed 's/total //')\[\e[0m\]]\n└───▶ "
+    if [ "$color_prompt" = yes ]; then
+        #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;35m\]\u@\[\033[00;93m\]void\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+        #PS1="┌─[\`if [ \$? = 0 ]; then echo \[\e[32m\]✔\[\e[0m\]; else echo \[\e[31m\]✘\[\e[0m\]; fi\`]───[\[\e[01;49;39m\]\u\[\e[00m\]\[\e[01;49;39m\]@\H\[\e[00m\]]───[\[\e[1;49;34m\]\W\[\e[0m\]]───[\[\e[1;49;39m\]\$(ls | wc -l) files, \$(ls -lah | grep -m 1 total | sed 's/total //')\[\e[0m\]]\n└───▶ "
 
-PS1='\[\033[0;31m\]┌─\[\033[0;31m\][\[\033[01;35m\]\[\033[01;34m\]\w\[\033[0;32m\]]\n\[\033[0;93m\]└───▶\[\033[0;00m\] '
-else
-	PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-fi
-unset color_prompt force_color_prompt
+        PS1='\[\033[0;31m\]┌─\[\033[0;31m\][\[\033[01;35m\]\[\033[01;34m\]\w\[\033[0;32m\]]\n\[\033[0;93m\]└───▶\[\033[0;00m\] '
+    else
+        PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    fi
+    unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
-	xterm*|rxvt*)
-PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-;;
-*)
-;;
+    xterm*|rxvt*)
+        PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+        ;;
+    *)
+        ;;
 esac
 stty -ixon #disable terminal pausing
 
@@ -79,8 +79,8 @@ shopt -s autocd #allows autocd into directory by just typing dir name
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-	test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-	alias ls='ls --color=auto'
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
@@ -103,19 +103,19 @@ fi
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 if [ -f ~/.bash_aliases ]; then
-	. ~/.bash_aliases
+    . ~/.bash_aliases
 fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if ! shopt -oq posix; then
-	if [ -f /usr/share/bash-completion/bash_completion ]; then
-		. /usr/share/bash-completion/bash_completion
-	elif [ -f /etc/bash_completion ]; then
-		. /etc/bash_completion
-	fi
-fi
+    if [ -f /usr/share/bash-completion/bash_completion ]; then
+        . /usr/share/bash-completion/bash_completion
+    elif [ -f /etc/bash_completion ]; then
+        . /etc/bash_completion
+    fi
+    fi
 
 
 
@@ -212,7 +212,6 @@ alias ping='ping -c 10'
 alias less='less -R'
 alias cls='clear'
 alias apt='sudo aptitude'
-alias multitail='multitail --no-repeat -c'
 
 
 
@@ -243,8 +242,6 @@ alias diraliases='sed '208,226!d' .bashrc|egrep  --color '^alias' '
 # cd into the old directory
 alias bd='cd "$OLDPWD"'
 
-# Remove a directory and all files
-alias rmd='/bin/rm  --recursive --force --verbose '
 
 # Alias's for multiple directory listing commands
 alias la='ls -Alh' # show hidden files
@@ -325,156 +322,122 @@ alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' 
 
 # Extracts any archive(s) (if unp isn't installed)
 extract () {
-	for archive in $*; do
-		if [ -f $archive ] ; then
-			case $archive in
-				*.tar.bz2)   tar xvjf $archive    ;;
-*.tar.gz)    tar xvzf $archive    ;;
-*.bz2)       bunzip2 $archive     ;;
-*.rar)       rar x $archive       ;;
-*.gz)        gunzip $archive      ;;
-*.tar)       tar xvf $archive     ;;
-*.tbz2)      tar xvjf $archive    ;;
-*.tgz)       tar xvzf $archive    ;;
-*.zip)       unzip $archive       ;;
-*.Z)         uncompress $archive  ;;
-*.7z)        7z x $archive        ;;
-*)           echo "don't know how to extract '$archive'..." ;;
-esac
-else
-	echo "'$archive' is not a valid file!"
-fi
-done
+    for archive in $*; do
+        if [ -f $archive ] ; then
+            case $archive in
+                *.tar.bz2)   tar xvjf $archive    ;;
+                *.tar.gz)    tar xvzf $archive    ;;
+                *.bz2)       bunzip2 $archive     ;;
+                *.rar)       rar x $archive       ;;
+                *.gz)        gunzip $archive      ;;
+                *.tar)       tar xvf $archive     ;;
+                *.tbz2)      tar xvjf $archive    ;;
+                *.tgz)       tar xvzf $archive    ;;
+                *.zip)       unzip $archive       ;;
+                *.Z)         uncompress $archive  ;;
+                *.7z)        7z x $archive        ;;
+                *)           echo "don't know how to extract '$archive'..." ;;
+            esac
+        else
+            echo "'$archive' is not a valid file!"
+        fi
+    done
 }
 
 # Searches for text in all files in the current folder
 ftext ()
 {
-	# -i case-insensitive
-	# -I ignore binary files
-	# -H causes filename to be printed
-	# -r recursive search
-	# -n causes line number to be printed
-	# optional: -F treat search term as a literal, not a regular expression
-	# optional: -l only print filenames and not the matching lines ex. grep -irl "$1" *
-	grep -iIHrn --color=always "$1" . | less -r
+    # -i case-insensitive
+    # -I ignore binary files
+    # -H causes filename to be printed
+    # -r recursive search
+    # -n causes line number to be printed
+    # optional: -F treat search term as a literal, not a regular expression
+    # optional: -l only print filenames and not the matching lines ex. grep -irl "$1" *
+    grep -iIHrn --color=always "$1" . | less -r
 }
-
-# Move and go to the directory
-mvg ()
-{
-	if [ -d "$2" ];then
-		mv $1 $2 && cd $2
-	else
-		mv $1 $2
-	fi
-}
-
-# Create and go to the directory
-mkdirg ()
-{
-	mkdir -p $1
-	cd $1
-}
-
-# Goes up a specified number of directories  (i.e. up 4)
-up ()
-{
-	local d=""
-	limit=$1
-	for ((i=1 ; i <= limit ; i++))
-	do
-		d=$d/..
-	done
-	d=$(echo $d | sed 's/^\///')
-	if [ -z "$d" ]; then
-		d=..
-	fi
-	cd $d
-}
-
 
 #echo path into tempfile after every cd 
 cd (){
 
-builtin cd "$@" && echo "$PWD" > /tmp/cpath
+    builtin cd "$@" && echo "$PWD" > /tmp/cpath
 
 }
 
 #Automatically do an ls after each cd
- #cd ()
- #{
-	#if [ -n "$1" ]; then
- 	#	builtin cd "$@" && ls
- 	#else
- 	#	builtin cd ~ && ls
- #	fi
- #}
+#cd ()
+#{
+#if [ -n "$1" ]; then
+#	builtin cd "$@" && ls
+#else
+#	builtin cd ~ && ls
+#	fi
+#}
 
 # View Apache logs
 apachelog ()
 {
-	if [ -f /etc/httpd/conf/httpd.conf ]; then
-		cd /var/log/httpd && ls -xAh && multitail --no-repeat -c -s 2 /var/log/httpd/*_log
-	else
-		cd /var/log/apache2 && ls -xAh && multitail --no-repeat -c -s 2 /var/log/apache2/*.log
-	fi
+    if [ -f /etc/httpd/conf/httpd.conf ]; then
+        cd /var/log/httpd && ls -xAh && multitail --no-repeat -c -s 2 /var/log/httpd/*_log
+    else
+        cd /var/log/apache2 && ls -xAh && multitail --no-repeat -c -s 2 /var/log/apache2/*.log
+    fi
 }
 
 # Edit the Apache configuration
 apacheconfig ()
 {
-	if [ -f /etc/httpd/conf/httpd.conf ]; then
-		vim /etc/httpd/conf/httpd.conf
-	elif [ -f /etc/apache2/apache2.conf ]; then
-		vim /etc/apache2/apache2.conf
-	else
-		echo "Error: Apache config file could not be found."
-		echo "Searching for possible locations:"
-		sudo updatedb && locate httpd.conf && locate apache2.conf
-	fi
+    if [ -f /etc/httpd/conf/httpd.conf ]; then
+        vim /etc/httpd/conf/httpd.conf
+    elif [ -f /etc/apache2/apache2.conf ]; then
+        vim /etc/apache2/apache2.conf
+    else
+        echo "Error: Apache config file could not be found."
+        echo "Searching for possible locations:"
+        sudo updatedb && locate httpd.conf && locate apache2.conf
+    fi
 }
 
 # Edit the PHP configuration file
 phpconfig ()
 {
-	if [ -f /etc/php.ini ]; then
-		vim /etc/php.ini
-	elif [ -f /etc/php/php.ini ]; then
-		vim /etc/php/php.ini
-	elif [ -f /etc/php5/php.ini ]; then
-		vim /etc/php5/php.ini
-	elif [ -f /usr/bin/php5/bin/php.ini ]; then
-		vim /usr/bin/php5/bin/php.ini
-	elif [ -f /etc/php5/apache2/php.ini ]; then
-		vim /etc/php5/apache2/php.ini
-	else
-		echo "Error: php.ini file could not be found."
-		echo "Searching for possible locations:"
-		sudo updatedb && locate php.ini
-	fi
+    if [ -f /etc/php.ini ]; then
+        vim /etc/php.ini
+    elif [ -f /etc/php/php.ini ]; then
+        vim /etc/php/php.ini
+    elif [ -f /etc/php5/php.ini ]; then
+        vim /etc/php5/php.ini
+    elif [ -f /usr/bin/php5/bin/php.ini ]; then
+        vim /usr/bin/php5/bin/php.ini
+    elif [ -f /etc/php5/apache2/php.ini ]; then
+        vim /etc/php5/apache2/php.ini
+    else
+        echo "Error: php.ini file could not be found."
+        echo "Searching for possible locations:"
+        sudo updatedb && locate php.ini
+    fi
 }
 
 # Edit the MySQL configuration file
 mysqlconfig ()
 {
-	if [ -f /etc/my.cnf ]; then
-		vim /etc/my.cnf
-	elif [ -f /etc/mysql/my.cnf ]; then
-		vim /etc/mysql/my.cnf
-	elif [ -f /usr/local/etc/my.cnf ]; then
-		vim /usr/local/etc/my.cnf
-	elif [ -f /usr/bin/mysql/my.cnf ]; then
-		vim /usr/bin/mysql/my.cnf
-	elif [ -f ~/my.cnf ]; then
-		vim ~/my.cnf
-	elif [ -f ~/.my.cnf ]; then
-		vim ~/.my.cnf
-	else
-		echo "Error: my.cnf file could not be found."
-		echo "Searching for possible locations:"
-		sudo updatedb && locate my.cnf
-	fi
+    if [ -f /etc/my.cnf ]; then
+        vim /etc/my.cnf
+    elif [ -f /etc/mysql/my.cnf ]; then
+        vim /etc/mysql/my.cnf
+    elif [ -f /usr/local/etc/my.cnf ]; then
+        vim /usr/local/etc/my.cnf
+    elif [ -f /usr/bin/mysql/my.cnf ]; then
+        vim /usr/bin/mysql/my.cnf
+    elif [ -f ~/my.cnf ]; then
+        vim ~/my.cnf
+    elif [ -f ~/.my.cnf ]; then
+        vim ~/.my.cnf
+    else
+        echo "Error: my.cnf file could not be found."
+        echo "Searching for possible locations:"
+        sudo updatedb && locate my.cnf
+    fi
 }
 
 
@@ -482,46 +445,46 @@ mysqlconfig ()
 # Trim leading and trailing spaces (for scripts)
 trim()
 {
-	local var=$@
-	var="${var#"${var%%[![:space:]]*}"}"  # remove leading whitespace characters
-	var="${var%"${var##*[![:space:]]}"}"  # remove trailing whitespace characters
-	echo -n "$var"
+    local var=$@
+    var="${var#"${var%%[![:space:]]*}"}"  # remove leading whitespace characters
+    var="${var%"${var##*[![:space:]]}"}"  # remove trailing whitespace characters
+    echo -n "$var"
 }
 disk=/media/joel/disk
 
 dirsize(){ #Recursively  Calculate Total Size of specified Directory
-if [ $# -eq 0 ]		
-then
-	lr |grep ^total|sed s/total//g> ~/dirsize;cd ~/ && java dirsize;printf "  " ;echo $OLDPWD|sed s/\\/home\\/joel\\//~\\//g;bd;
-else
-	olddir=$PWD;cd "$*";lr |grep ^total|sed s/total//g> ~/dirsize;cd ~/ && java dirsize;printf "  " ;echo $OLDPWD|sed s/\\/home\\/joel\\//~\\//g;bd;cd $olddir;
-fi
+    if [ $# -eq 0 ]		
+    then
+        lr |grep ^total|sed s/total//g> ~/dirsize;cd ~/ && java dirsize;printf "  " ;echo $OLDPWD|sed s/\\/home\\/joel\\//~\\//g;bd;
+    else
+        olddir=$PWD;cd "$*";lr |grep ^total|sed s/total//g> ~/dirsize;cd ~/ && java dirsize;printf "  " ;echo $OLDPWD|sed s/\\/home\\/joel\\//~\\//g;bd;cd $olddir;
+    fi
 }
 filesize(){ #Recursively  Calculate Total Size of FILES within specified Directory
-if [ $# -eq 0 ]	
-then
-	lf |grep ^total|sed s/total//g> ~/dirsize;cd ~/ && java dirsize;printf "   " ;echo $OLDPWD|sed s/\\/home\\/joel\\//~\\//g;bd;
-else
-	olddir=$PWD;cd "$*";lf |grep ^total|sed s/total//g> ~/dirsize;cd ~/ && java dirsize;printf "  " ;echo $OLDPWD|sed s/\\/home\\/joel\\//~\\//g;bd;cd $olddir;
-fi
+    if [ $# -eq 0 ]	
+    then
+        lf |grep ^total|sed s/total//g> ~/dirsize;cd ~/ && java dirsize;printf "   " ;echo $OLDPWD|sed s/\\/home\\/joel\\//~\\//g;bd;
+    else
+        olddir=$PWD;cd "$*";lf |grep ^total|sed s/total//g> ~/dirsize;cd ~/ && java dirsize;printf "  " ;echo $OLDPWD|sed s/\\/home\\/joel\\//~\\//g;bd;cd $olddir;
+    fi
 }
 fr(){ #find and run files with fuzzy search and xdg-open
 
-xdg-open "$(fzf -q $1)"
+    xdg-open "$(fzf -q $1)"
 }
 vidtomp3(){
-	 ffmpeg -i "$1" -vn "$2".mp3
+    ffmpeg -i "$1" -vn "$2".mp3
 }
 
- goto(){
+goto(){
 
-     if [ $# -eq 0 ]
- 		then
-	cd "$(dirname "$(fzf --height=20 )")"
+    if [ $# -eq 0 ]
+    then
+        cd "$(dirname "$(fzf --height=20 )")"
 
-else
-	cd "$(dirname "$(fzf --height=20 -q "$1")")"
-fi
+    else
+        cd "$(dirname "$(fzf --height=20 -q "$1")")"
+    fi
 }
 
 adbp(){ #adbpull
@@ -531,11 +494,11 @@ adbp(){ #adbpull
 
 wallp(){
     local pics="/home/joel/Pictures/"
-     if [ $# -eq 0 ]
-then
-    cpp "$pics$(img)" /home/joel/.config/awesome/themes/purple/wall.png>/dev/null 2>&1
-else
-    cp "$1" /home/joel/.config/awesome/themes/purple/wall.png 
+    if [ $# -eq 0 ]
+    then
+        cpp "$pics$(img)" /home/joel/.config/awesome/themes/purple/wall.png>/dev/null 2>&1
+    else
+        cp "$1" /home/joel/.config/awesome/themes/purple/wall.png 
     fi
 }
 
@@ -545,8 +508,8 @@ else
 
 # save stderr and stdout to us var
 # us=$(pwd 2>&1)
- # add quotes to beginning and end of line 
- #ls *.pdf|awk '{ print "\""$0"\""}'|dmenu
+# add quotes to beginning and end of line 
+#ls *.pdf|awk '{ print "\""$0"\""}'|dmenu
 
 #Lauch Gui application and redirect sdtout and stderr to /dev/null to prevent terminal logging
 vlc() { command vlc "$@" > /dev/null 2>&1 & disown ;}
@@ -607,10 +570,12 @@ export ANDROID_SDK_ROOT=/home/joel/Android/sdk
 export PATH=$ANDROID_SDK_ROOT:$PATH
 export lectures="/home/joel/Desktop/lectures"
 #js
- [ -f ~/.fzf.bash ]  && source ~/.fzf.bash
+[ -f ~/.fzf.bash ]  && source ~/.fzf.bash
 
  #keybindings
-bind -x '"\C-b": vim ~/.bashrc && source ~/.bashrc'
-bind -x '"\C-s": cd ~/scripts && sc="$(fzf)" && vim $sc; bd'
-bind -x '"\C-n": cd $lectures && xdg-open "$(fzf --tac)" && bd'
-bind -x '"\C-g": goto'
+ bind -x '"\C-b": vim ~/.bashrc && source ~/.bashrc'
+ bind -x '"\C-s": cd ~/scripts && sc="$(fzf)" && vim $sc; bd'
+ bind -x '"\C-n": cd $lectures && xdg-open "$(fzf --tac)" && bd'
+ bind -x '"\C-g": goto'
+ bind 'set show-all-if-ambiguous on' #zsh-like auto-completion
+ bind 'TAB:menu-complete'
