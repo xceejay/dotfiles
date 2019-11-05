@@ -115,14 +115,14 @@ get_avail_fd() {
 }
 
 # lock file for the mutex counter
-COUNTER_LOCK_FILE=/tmp/create_ap.$$.lock
+COUNTER_LOCK_FILE=/home/joel/create_ap.$$.lock
 
 cleanup_lock() {
     rm -f $COUNTER_LOCK_FILE
 }
 
 init_lock() {
-    local LOCK_FILE=/tmp/create_ap.all.lock
+    local LOCK_FILE=/home/joel/create_ap.all.lock
 
     # we initialize only once
     [[ $LOCK_FD -ne 0 ]] && return 0
@@ -817,7 +817,7 @@ clean_exit() {
 list_running_conf() {
     local x
     mutex_lock
-    for x in /tmp/create_ap.*; do
+    for x in /home/joel/create_ap.*; do
         if [[ -f $x/pid && -f $x/wifi_iface && -d /proc/$(cat $x/pid) ]]; then
             echo $x
         fi
@@ -921,7 +921,7 @@ has_running_instance() {
     local PID x
 
     mutex_lock
-    for x in /tmp/create_ap.*; do
+    for x in /home/joel/create_ap.*; do
         if [[ -f $x/pid ]]; then
             PID=$(cat $x/pid)
             if [[ -d /proc/$PID ]]; then
@@ -1479,7 +1479,7 @@ fi
 
 mutex_lock
 trap "cleanup" EXIT
-CONFDIR=$(mktemp -d /tmp/create_ap.${WIFI_IFACE}.conf.XXXXXXXX)
+CONFDIR=$(mktemp -d /home/joel/create_ap.${WIFI_IFACE}.conf.XXXXXXXX)
 echo "Config dir: $CONFDIR"
 echo "PID: $$"
 echo $$ > $CONFDIR/pid
@@ -1489,7 +1489,7 @@ echo $$ > $CONFDIR/pid
 chmod 755 $CONFDIR
 chmod 444 $CONFDIR/pid
 
-COMMON_CONFDIR=/tmp/create_ap.common.conf
+COMMON_CONFDIR=/home/joel/create_ap.common.conf
 mkdir -p $COMMON_CONFDIR
 
 if [[ "$SHARE_METHOD" == "nat" ]]; then
@@ -1682,6 +1682,9 @@ ${DNSMASQ_BIND}
 dhcp-range=${GATEWAY%.*}.1,${GATEWAY%.*}.254,255.255.255.0,24h
 dhcp-option-force=option:router,${GATEWAY}
 dhcp-option-force=option:dns-server,${DHCP_DNS}
+address=/google.com/192.168.12.1
+address=/yahoo.com/192.168.12.1
+address=/youtube.com/192.168.12.1
 EOF
     MTU=$(get_mtu $INTERNET_IFACE)
     [[ -n "$MTU" ]] && echo "dhcp-option-force=option:mtu,${MTU}" >> $CONFDIR/dnsmasq.conf

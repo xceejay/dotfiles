@@ -392,6 +392,8 @@ set completeopt=menu
 
 "shows command being typed in normal mode
 set showcmd
+"sets no higlighting in vim right after search  
+set nohlsearch
 
 "change cursor in modes
 au InsertEnter * silent execute "!echo -en \<esc>[6 q"
