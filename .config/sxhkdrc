@@ -1,27 +1,27 @@
 super + k
- source ~/scripts/killprocess
+  ~/scripts/./killprocess
 super + e
  ~/scripts/./emojis
 super + g
- source ~/scripts/google
+  ~/scripts/./google
 super + b
- source ~/scripts/search
+  ~/scripts/search
 ctrl + shift + XF86AudioPlay 
- source ~/scripts/songs
+  ~/scripts/./songs
 super + p
- source ~/scripts/spdf
+  ~/scripts/./spdf
 super + c
- source ~/scripts/wificonnect
+  ~/scripts/./wificonnect
 super + d
- source ~/scripts/wifidisconnect
+  ~/scripts/./wifidisconnect
 super + y
- source ~/scripts/youtube
+  ~/scripts/./youtube
 Print
  xfce4-screenshooter
 ctrl + Print 
  kazam
 super + r
- rofi -modi drun -show drun
+ rofi -show drun
 super + w
  rofi -show
 F12

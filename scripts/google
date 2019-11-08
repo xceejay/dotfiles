@@ -1,2 +1,26 @@
+#!/bin/bash
 
-query=$(echo|dmenu -fn "manrope-10" -nb black -sb "#260A35" -p "Search on Google 🙃:") && firefox-esr "https://www.google.com/search?q=$query"
+query=$(echo|dmenu -fn "manrope-10" -nb black -sb "#260A35" -p "Search 😃:") && choice=$(printf "Duckduckgo\nGoogle"|dmenu -fn "manrope-10" -nb black -sb "#260A35" -p "Search with ?") 
+
+
+googles(){
+chromium "https://www.google.com/search?q=$query"
+
+}
+
+duckduckgo(){
+chromium "https://www.duckduckgo.com/?q=$query"
+
+}
+
+
+if [ $choice == 'Duckduckgo' ]; then
+ duckduckgo
+
+elif [ "$choice" == "" ]; then
+ echo > /dev/null
+else
+ googles
+fi
+
+
