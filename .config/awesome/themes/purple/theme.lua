@@ -206,7 +206,7 @@ theme.volume = lain.widget.alsa({
 local mytagbox = wibox.widget.textbox(' ')
 screen[1]:connect_signal("tag::history::update", function()
        mytagbox.text = awful.tag.selected(1).name
-mytagbox.font = "manrope Bold 8"
+mytagbox.font = "manrope Bold 9"
    end)
 
 
@@ -302,6 +302,7 @@ function theme.at_screen_connect(s)
             arrl_dl,
             spr,
             wibox.container.background( wibox.widget.systray(),theme.bg_focus),
+            arrl_ld,
             wibox.container.background(mytagbox,theme.bg_focus),
 
             -- s.mylayoutbox,

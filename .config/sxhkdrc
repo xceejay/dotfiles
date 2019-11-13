@@ -3,7 +3,7 @@ super + k
 super + e
  ~/scripts/./emojis
 super + g
-  ~/scripts/./google
+  ~/scripts/./searchengine
 super + b
   ~/scripts/search
 ctrl + shift + XF86AudioPlay 
@@ -14,8 +14,6 @@ super + c
   ~/scripts/./wificonnect
 super + d
   ~/scripts/./wifidisconnect
-super + y
-  ~/scripts/./youtube
 Print
  xfce4-screenshooter
 ctrl + Print 

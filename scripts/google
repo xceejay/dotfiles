@@ -1,26 +1,32 @@
 #!/bin/bash
 
-query=$(echo|dmenu -fn "manrope-10" -nb black -sb "#260A35" -p "Search 😃:") && choice=$(printf "Duckduckgo\nGoogle"|dmenu -fn "manrope-10" -nb black -sb "#260A35" -p "Search with ?") 
-
+query=$(echo|dmenu -fn "manrope-10" -nb black -sb "#260A35" -p "Search 😃:") && choice=$(printf "Duckduckgo\nGoogle\nGithub\nArch Wiki"|dmenu -fn "manrope-10" -nb black -sb "#260A35" -p "Search with ?") 
 
 googles(){
-chromium "https://www.google.com/search?q=$query"
-
+    chromium "https://www.google.com/search?q=$query"
 }
 
 duckduckgo(){
-chromium "https://www.duckduckgo.com/?q=$query"
-
+    chromium "https://www.duckduckgo.com/?q=$query"
+}
+github(){
+    chromium "https://github.com/search?q=$query"
+}
+archwiki(){
+    chromium "https://wiki.archlinux.org/index.php?search=$query"
 }
 
 
 if [ $choice == 'Duckduckgo' ]; then
- duckduckgo
-
-elif [ "$choice" == "" ]; then
- echo > /dev/null
+    duckduckgo
+elif [ "$choice" == "Google" ]; then
+    googles
+elif [ "$choice" == "Github" ]; then
+    github
+elif [ "$choice" == "Arch Wiki" ]; then
+    archwiki
 else
- googles
+    echo > /dev/null
 fi
 
 

@@ -404,4 +404,6 @@ noremap <c-p> :tabnew \| :FZF <CR>
 
 "auto compile pandoc on F9 key press
 nnoremap <buffer><nowait><silent> <F9> :<c-u>silent call system('pandoc '.expand('%:p:S').' -o '.expand('%:p:r:S').'.pdf')<cr>
+"auto compile latex on f10 press
+nnoremap <buffer><nowait><silent> <F10> :<c-u>silent call system('pdflatex *.tex') <cr>
 
