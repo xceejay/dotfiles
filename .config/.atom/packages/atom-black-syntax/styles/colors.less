@@ -1,0 +1,51 @@
+// These colors are specific to the theme. Do not use in a package!
+// Black and white
+@black: #000;
+@white: #fff;
+// Grays
+@dark-gray: #141414;
+@gray: #0d0d0d;
+@light-gray: #777777;
+@very-light-gray: lighten(@light-gray,100%); //Should be white;
+@barely-visible-gray: #010102;
+// Magenta
+@light-magenta: #ffbbff; //Light Pink: ffbbff
+@magenta: #ff64ff; //Magenta: //Dark pink: ff64ff
+
+// Blues
+@cyan: #22bbff; //Cyan
+@blue: #00c3ff; // Blue
+@light-cyan: #00f3ff; //Cyan - a bit lighter
+@light-cyan-alt: #00c3ff; //Blue from bash terminal: #00c3ff
+
+// Orange
+@light-orange: #fc0;  //Orange Rich: ;
+@orange: #ffc333; //Orange, walked back a bit. //Orange from bash terminal: #ffc333
+
+// Yellow
+@nice-yellow: #fc0;
+@nice-yellow-muted: darken(@nice-yellow, 25%); // Nice Yellow same as orange rich
+@nice-yellow-very-muted: darken(@nice-yellow, 40%); // Nice Yellow same as orange rich
+
+// Teal
+@nice-teal: hsl(170, 100%, 50%); // #00ffd5; // hsl(170.1,100%,50%)
+@nice-teal-muted: darken(@nice-teal, 25%); // #00806a // hsl(170.1,100%,25.1%) // Nice Yellow same as orange rich
+@nice-teal-very-muted: darken(@nice-teal, 43%); // rgb(0,36,30) // hsl(170.1,100%,7.1%) // Nice Yellow same as orange rich
+@nicer-teal-muted: hsl(60,17.6%,18%); // rgb(100,100,70); // #646446 // hsl(60,17.6%,33.3%); hunter green really.
+
+// Green
+@green: hsl(85, 93%, 76%); //Dark Green
+@rich-nice-green: #cbfb89; // rich light green
+@light-green: hsl( 85, 59%, 76%); //Light Green
+@nice-green: #a5f56d; //was #cf0; Nice green: a5f575; Green from terminal: #a5f56d // Terminal
+@very-light-green: lighten(@nice-green, 10%);
+@very-light-green: #fc0;
+
+// Purple
+@purple: #ff64ff; //Magenta equal to @magenta
+
+// Terminal
+@blue-terminal: #00c3ff; //Blue from bash terminal: #00c3ff
+@light-blue-terminal: #00f3ff; //Cyan - a bit lighter
+@orange-terminal: #ffc333; //Orange, walked back a bit. //Orange from bash terminal: #ffc333
+@green-terminal: #a5f56d; //was #cf0; Nice green: a5f575; Green from terminal: #a5f56d // Terminal

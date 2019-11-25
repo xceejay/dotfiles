@@ -1,0 +1,37 @@
+"*":
+  "activate-power-mode":
+    comboMode: {}
+    particles:
+      spawnCount: {}
+    playAudio: {}
+    plugins:
+      playAudio: true
+      screenShake: true
+  "autocomplete-plus":
+    confirmCompletion: "enter"
+  core:
+    autoHideMenuBar: true
+    disabledPackages: [
+      "wrap-guide"
+    ]
+    packagesWithKeymapsDisabled: [
+      "atom-hide-tabs"
+    ]
+    telemetryConsent: "limited"
+    themes: [
+      "atom-black-ui"
+      "one-dark-syntax"
+    ]
+  editor:
+    fontFamily: "Source Code Pro SemiBold"
+    fontSize: 13
+    preferredLineLength: 100
+    showIndentGuide: true
+    softWrap: true
+    userId: "369c73c9-2fd4-499f-9ea2-8d2ca1e0a30e"
+    zoomFontWhenCtrlScrolling: false
+  "exception-reporting":
+    userId: "4ecb6ae8-13d2-40da-87fd-dc652d2c6687"
+  "status-bar": {}
+  welcome:
+    showOnStartup: false

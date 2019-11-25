@@ -1,0 +1,89 @@
+// UI colors
+@dark-blue: #010111; // rgb(1,1,17);
+// colors
+@nice-yellow: rgb(48,100%,50%); // #fc0; // Nice Yellow same as orange rich
+@nice-yellow-muted: darken(@nice-yellow, 25%); // Nice Yellow same as orange rich
+@nice-yellow-very-muted: darken(@nice-yellow, 40%); // Nice Yellow same as orange rich
+@nice-teal: hsl(170, 100%, 50%); // #00ffd5; // hsl(170.1,100%,50%)
+@nice-teal-muted: darken(@nice-teal, 25%); // #00806a // hsl(170.1,100%,25.1%) // Nice Yellow same as orange rich
+@nice-teal-very-muted: darken(@nice-teal, 43%); // rgb(0,36,30) // hsl(170.1,100%,7.1%) // Nice Yellow same as orange rich
+@nicer-teal-muted: hsl(60,17.6%,18%); // rgb(100,100,70); // #646446 // hsl(60,17.6%,33.3%); hunter green really.
+@orange: #fc0;
+@white: #fff;
+@black: #000;
+// UI Variables
+@search-area: #fc0;
+@search-box: #000;
+@search-box-text: #fff;
+@text-color: hsl(0,0%,66%);
+@text-color-subtle: hsl(0,0%,50%); //Might try #555 or 33% // Placeholder in "Replace in current folder"
+@text-color-highlight: hsl(0,0%,94%); //94=light gray. Might try white.
+@text-color-selected: hsl(0,0%,100%); //or fff
+@text-color-info: #5293d8;
+@text-color-success: #2BDA77;
+@text-color-warning: #ff982d;
+@text-color-error: #c00;
+@text-color-ignored: @text-color-subtle;
+@text-color-added: @text-color-success;
+@text-color-renamed: @text-color-info;
+@text-color-modified: @text-color-warning;
+@text-color-removed: @text-color-error;
+// Background colors
+@background-color-info: hsl(208, 100%, 50%); //hsl(208, 100%, 50%); //0098ff
+@background-color-success: hsl(145,  88%, 79%); //hsl(160,  70%, 36%); //17ca65
+@background-color-warning: hsl(35,   82%, 100%); //hsl(32,   60%, 50%); //ffaa2c
+@background-color-error: hsl(0,   100%, 80%); //hsl(0,    70%, 50%); //c00
+@background-color-highlight: rgba(255, 255, 255, 0.07); //lighten(@base-background-color, 5%);
+@background-color-selected: #4182C4; //lighten(@base-background-color, 10%);
+@app-background-color: @black; //darken(@base-background-color, 5%); //Background of the ui area
+@app-background-color-contrasted: #212226; // Main tab unselected. And background of find and replace
+@base-background-color: @app-background-color;
+@base-border-color: @base-background-color;
+// Component colors
+@pane-item-background-color: @base-background-color;
+@pane-item-border-color: @base-border-color;
+@input-background-color: @app-background-color-contrasted; //@app-background-color;
+@input-border-color: @nice-teal-very-muted; // @base-border-color;
+@tool-panel-background-color: @base-background-color;
+@tool-panel-border-color: @nice-teal-very-muted; // @base-border-color;
+@inset-panel-background-color: @app-background-color; //lighten(@base-background-color, 4%);
+@inset-panel-border-color: @base-border-color;
+@panel-heading-background-color: @app-background-color; //was lighten(@base-background-color, 4%);
+@panel-heading-border-color: fadein(@base-border-color, 10%); //@base-border-color;
+@overlay-background-color: @app-background-color; //waslighten(@base-background-color, 5%);
+@overlay-border-color: @background-color-highlight; //@base-border-color;
+@button-background-color: @app-background-color-contrasted; //lighten(@base-background-color, 10%);
+@button-background-color-hover: lighten(@button-background-color, 5%); //lighten(@button-background-color, 12%);
+@button-background-color-selected: @app-background-color; //@button-background-color-hover;
+@button-border-color: @base-border-color;
+@tab-bar-background-color: @base-background-color; //Behind tabs //Behind tabs //was #222; //0cf is nice //was: @base-background-color;
+@tab-background-color: @app-background-color-contrasted; // @tab-bar-background-color; // Other open tabs.
+@tab-background-color-active: @app-background-color; //lighten(@tab-bar-background-color, 10%); // The active tabs
+@tab-border-color: @app-background-color; //@base-border-color;
+@tab-bar-border-color: #fc0; // @app-background-color; //darken(@tab-background-color-active, 10%); //@base-border-color;
+// @text-color-info: @orange;
+@tree-view-background-color: @base-background-color;
+@tree-view-border-color: @base-border-color;
+@scrollbar-background-color: @app-background-color; //was #222425; // Needs to be opaque -> atom/atom/issues/4578
+@scrollbar-color: #fc0; // rgba(92, 92, 92, 0.5);
+@x-button: @text-color;
+@doc-resize-handle: #320;
+// Site colors
+@ui-site-color-1: @background-color-success; // green was: hsl(208, 100%, 50%); // blue
+@ui-site-color-2: @background-color-info; // blue was: hsl(160,  70%, 42%); // green
+@ui-site-color-3: @background-color-warning; // orange was: hsl(32,   60%, 50%); // orange
+@ui-site-color-4: #db2ff4; // purple was: #D831B0;             // pink
+@ui-site-color-5: #f5e11d; // yellow was: #EBDD5B;             // yellow
+// Sizes
+@font-size: 11px;
+@input-font-size: 14px;
+@disclosure-arrow-size: 12px;
+@component-padding: 10px;
+@component-icon-padding: 5px;
+@component-icon-size: 16px;
+@component-line-height: 25px;
+@component-border-radius: 2px;
+@tab-height: 4rem;
+// Misc
+@component-border-radius: 2px;
+@font-family: system-ui, '.SFNSText-Regular', 'SF UI Text', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;

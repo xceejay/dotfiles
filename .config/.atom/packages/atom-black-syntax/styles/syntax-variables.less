@@ -1,0 +1,91 @@
+@import "colors";
+// This defines all syntax variables that syntax themes must implement when they
+// include a syntax-variables.less file.
+
+// General colors
+@syntax-text-color: @white;
+@syntax-cursor-color: @cyan;
+@syntax-selection-color: lighten(@dark-gray, 10%);
+@syntax-background-color: @black;
+
+// Guide colors
+@syntax-wrap-guide-color: @black; // Vertical line down right of the screen
+@syntax-indent-guide-color: @nicer-teal-muted;
+@syntax-invisible-character-color: @nicer-teal-muted;
+
+// For find and replace markers
+@syntax-result-marker-color: @light-gray;
+@syntax-result-marker-color-selected: @white;
+
+// Gutter colors
+@syntax-gutter-text-color: @very-light-gray;
+@syntax-gutter-text-color-selected: @syntax-gutter-text-color;
+@syntax-gutter-background-color: @dark-gray;
+@syntax-gutter-background-color-selected: @gray;
+@folder-marker: @white;
+
+// For git diff info. i.e. in the gutter
+@syntax-color-renamed: @blue;
+@syntax-color-added: @green;
+@syntax-color-modified: @orange;
+@syntax-color-removed: @light-cyan;
+//Other
+@string: @green;
+@stringQuotes: @white;
+@stringAtSymbol: @white;
+@parameterParentheses: @white;
+@syntax-array: #900; //
+@syntax-heading: #900; //
+@syntax-italic: #900; //
+@syntax-bold: #900; //
+@syntax-identity: #900; //
+@objectMethod: @cyan; //src in gulp.src
+@objectName: @magenta; //gulp in gulp.src
+@methodName: @blue; //function in function myFunc() {}
+@functionName: @blue; //function in function myFunc() {}
+@functionValue: @blue; // myFunc in function myFunc() {}
+@console: @light-green; //"console" as in console.log. Also strings.
+@tag: @light-cyan; //head, html, body
+@JSON: @light-orange;  //JSON in JSON.parse
+@attributeName: @orange; //name  in name="viewport"
+@attributeValue: @orange;  //viewport  in name="viewport"
+@variableTag: @blue;  //var in var = "test"
+@variableName: @white;  //test in var = "test"
+@parameterValue: @magenta;
+@objectProperty: @white;
+@objectPropertyValue: @orange;
+@integer: @orange;
+@comment: @light-gray;
+@arrow: @nice-green;
+@scrollbar: @light-orange;
+@git-line-modified: #870;
+
+// Comments
+@comment-color:@light-gray;
+@comment:@light-gray;
+@unit: @rich-nice-green;
+
+// For language entity colors
+//nice-green
+@syntax-css-property: @white;
+@syntax-css-value: @white; // the values in less
+@syntax-css-punctuation: @white; // The brackets in .less
+@syntax-support: @white;
+@syntax-constant: @nice-yellow;
+@syntax-font-name: @white;
+@syntax-keyword-unit: @green; // the percentages in RGB(10%, 10%, 20%)
+@syntax-constant-numeric: @green; // The numbers in RGB(10,10,10);
+@syntax-css-less-value: @rich-nice-green; // The @rich-nice-green (i.e., the values) in this file
+@syntax-css-less-property: @green; // The class attributes in an html file.
+@syntax-color-variable: #DF6A73;
+@syntax-color-constant: #DF6A73;
+@syntax-color-property: #DF6A73;
+@syntax-color-value: #D29B67;
+@syntax-color-function: #61AEEF;
+@syntax-color-method: @syntax-color-function;
+@syntax-color-class: #E5C17C;
+@syntax-color-keyword: #a431c4;
+@syntax-color-tag: #b72424;
+@syntax-color-attribute: #87400d;
+@syntax-color-import: #97C378;
+@syntax-color-snippet: #97C378;

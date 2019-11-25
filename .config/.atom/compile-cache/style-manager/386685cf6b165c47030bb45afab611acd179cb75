@@ -1,0 +1,1 @@
+{"source":".editor {\n  font-weight: bold;\n  background: black;\n}\n.title-bar {\n  background-color: black;\n}\n.atom-text-editor {\n  background-color: black;\n}\n"}

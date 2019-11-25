@@ -1,0 +1,1 @@
+{"source":"atom-pane .tab-bar .tab.pinned .title:not(.icon)[data-path][data-name]:before {\n  content: \"\\f06a\";\n  font-family: \"Octicons Regular\";\n  font-size: medium;\n  text-align: center;\n  margin-right: 5px;\n  vertical-align: middle;\n  -webkit-font-smoothing: antialiased;\n}\n"}

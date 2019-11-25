@@ -1,0 +1,48 @@
+{
+  "_from": "https://www.atom.io/api/packages/atom-black-syntax/versions/0.29.0/tarball",
+  "_id": "atom-black-syntax@0.29.0",
+  "_inBundle": false,
+  "_integrity": "sha512-RCnMWHmf4/oMoY1umF9fsZ36pE2tOvKnyBPDBLjb/o8xILQhvQh5ICZhttu8X3ZA6tsSYHyH2a+WH5wwCd3Xyg==",
+  "_location": "/atom-black-syntax",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "https://www.atom.io/api/packages/atom-black-syntax/versions/0.29.0/tarball",
+    "rawSpec": "https://www.atom.io/api/packages/atom-black-syntax/versions/0.29.0/tarball",
+    "saveSpec": "https://www.atom.io/api/packages/atom-black-syntax/versions/0.29.0/tarball",
+    "fetchSpec": "https://www.atom.io/api/packages/atom-black-syntax/versions/0.29.0/tarball"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://www.atom.io/api/packages/atom-black-syntax/versions/0.29.0/tarball",
+  "_shasum": "1ff5c14d01d9e141e82f793873203c9ddd250684",
+  "_spec": "https://www.atom.io/api/packages/atom-black-syntax/versions/0.29.0/tarball",
+  "_where": "/tmp/apm-install-dir-1191019-10219-1q8vmu.y7c4oi",
+  "bugs": {
+    "url": "https://github.com/academicjargon/atom-black-syntax/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "A truly black (seriously) high-contrast syntax theme to go with the equally black Atom Black UI theme",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/academicjargon/atom-black-syntax#readme",
+  "keywords": [
+    "syntax",
+    "theme",
+    "atom",
+    "black",
+    "framer"
+  ],
+  "license": "MIT",
+  "name": "atom-black-syntax",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/academicjargon/atom-black-syntax.git"
+  },
+  "theme": "syntax",
+  "version": "0.29.0"
+}

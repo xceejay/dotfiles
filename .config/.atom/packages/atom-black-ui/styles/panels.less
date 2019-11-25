@@ -1,0 +1,43 @@
+
+// Panels
+// -------------------
+// Overrides: atom/static/panels.less
+.panel-heading {
+  border-bottom: 1px solid @panel-heading-border-color;
+  background-color: @panel-heading-background-color;
+}
+.inset-panel {
+  background-color: @inset-panel-background-color;
+  .panel-heading {
+    background-color: darken(@inset-panel-background-color, 0%);
+  }
+}
+.package-card {
+  background-color: #000F1A !important;
+}
+// Modal -------------------
+// Used on top of the editor, like the Command Palette.
+atom-panel.modal {
+  border: 1px solid @overlay-border-color;
+  border-top: none;
+  box-shadow: 0 2px 8px 1px hsla(0,0%,0%,.3);
+}
+// Styles the thin border left of line numbers. Don't know why we did.
+.atom-dock-resize-handle {
+    cursor: col-resize;
+    border-right: 1px solid @doc-resize-handle;
+}
+.atom-dock-toggle-button-inner {
+    background-color: #111;
+    border: 1px none #111;
+    color:#fc0;
+    transition: transform 0.1s ease-out 0s;
+}
+atom-panel i.icon.icon-x, atom-panel i.icon.icon-plus {
+  &:before {
+    color: @x-button; // @x-button;
+  }
+  &:hover {
+    color:@x-button;
+  }
+}

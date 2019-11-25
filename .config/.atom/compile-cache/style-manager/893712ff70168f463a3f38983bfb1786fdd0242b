@@ -1,0 +1,1 @@
+{"source":".editor {\n  background: black;\n}\n::-webkit-scrollbar {\n  display: none;\n}\n.tab-bar {\n  display: none;\n}\n"}

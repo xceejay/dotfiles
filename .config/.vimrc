@@ -393,7 +393,7 @@ set completeopt=menu
 "shows command being typed in normal mode
 set showcmd
 "sets no higlighting in vim right after search  
-set nohlsearch
+"set nohlsearch
 
 "change cursor in modes
 au InsertEnter * silent execute "!echo -en \<esc>[6 q"
@@ -407,3 +407,7 @@ nnoremap <buffer><nowait><silent> <F9> :<c-u>silent call system('pandoc '.expand
 "auto compile latex on f10 press
 nnoremap <buffer><nowait><silent> <F10> :<c-u>silent call system('pdflatex *.tex') <cr>
 
+"spell checking and correction
+map<F6> :setlocal spell spelllang=en_gb<cr> 
+nmap<F5> [sz=
+nmap<F7> ]sz=
