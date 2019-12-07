@@ -59,7 +59,7 @@ if [ -n "$force_color_prompt" ]; then
         #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;35m\]\u@\[\033[00;93m\]void\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
         #PS1="┌─[\`if [ \$? = 0 ]; then echo \[\e[32m\]✔\[\e[0m\]; else echo \[\e[31m\]✘\[\e[0m\]; fi\`]───[\[\e[01;49;39m\]\u\[\e[00m\]\[\e[01;49;39m\]@\H\[\e[00m\]]───[\[\e[1;49;34m\]\W\[\e[0m\]]───[\[\e[1;49;39m\]\$(ls | wc -l) files, \$(ls -lah | grep -m 1 total | sed 's/total //')\[\e[0m\]]\n└───▶ "
 
-        PS1='\[\033[0;31m\]┌─\[\033[0;31m\][\[\033[01;35m\]\[\033[01;34m\]\w\[\033[0;32m\]]\n\[\033[0;93m\]└───▶\[\033[0;00m\] '
+        PS1='\[\033[38;5;54m\]┌─\[\033[38;5;54m\][\[\033[01;35m\]\[\033[38;5;192m\]\w\[\033[38;5;54m\]]\n\[\033[38;5;54m\]└───▶\[\033[0;00m\] '
     else
         PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
     fi
@@ -172,6 +172,7 @@ alias javacfx=' /usr/lib/jvm/java-11-openjdk-amd64/bin/javac --module-path /usr/
 alias dmenu_run='dmenu_run -fn "manrope-10" -nb black -sb "#260A35"'
 alias sxiv='sxiv -b'
 alias dmenu='dmenu -fn "manrope-10" -nb black -sb "#260A35"'
+alias wireshark='sudo wireshark-gtk & exit'
 alias vvu='surf 192.168.0.254:8090'
 alias timetable="cgrep  '(^([a-zA-Z]+)|[0-9]+-[0-9]+am||[0-9]+-[0-9]+pm|[0-9][0-9][a-z][a-z]+|am+|pm+)' ~/timetable" 
 alias upvote='sudo systemctl restart upvotebot.service'
@@ -187,8 +188,7 @@ alias kdec=kdeconnect-cli
 alias anboxrun=' anbox launch --package=org.anbox.appmgr $* >/dev/null 2>&1 &'
 alias avwifi='nmcli dev wifi'
 alias kdeconnect=kdeconnectd
-alias feh='feh -B black'
-alias logout='loginctl terminate-user joel'
+alias logout='loginctl kill-user joel'
 alias gateway='ip r'
 alias inkscape='inkscape $* >/dev/null 2>&1 &'
 alias tgcli='~/tg/bin/./telegram-cli'
@@ -210,9 +210,10 @@ alias ping='ping -c 10'
 alias less='less -R'
 alias cls='clear'
 alias apt='sudo aptitude'
-
-
-
+alias ctrlx='xte' #control x display server by faking input using xte
+alias feh="feh -B black"
+alias z="zathura"
+alias kallp='sudo killall5 -9' #killall processes
 
 # Change directory aliases
 alias pics='cd ~/Pictures'
@@ -242,6 +243,7 @@ alias bd='cd "$OLDPWD"'
 
 
 # Alias's for multiple directory listing commands
+alias l='/bin/ls -Ah' #mostly used for scripts and dmenu stuff
 alias la='ls -Alh' # show hidden files
 alias ls='ls -aFh --color=always' # add colors and file type extensions
 alias lx='ls -lXBh' # sort by extension
@@ -273,7 +275,10 @@ alias p="ps aux | grep "
 alias topcpu="/bin/ps -eo pcpu,pid,user,args | sort -k 1 -r | head -10"
 
 # Search files in the current folder
-alias f="find . | grep "
+
+f(){
+locate --ignore-case "$*" | grep "$PWD"
+}
 
 # Count all files (recursively) in the current folder
 alias countfiles="for t in files links directories; do echo \`find . -type \${t:0:1} | wc -l\` \$t; done 2> /dev/null"
@@ -311,7 +316,6 @@ alias mkzip='zip -rv'
 
 # Show all logs in /var/log
 alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f &"
-
 
 #######################################################
 # SPECIAL FUNCTIONS
@@ -494,11 +498,18 @@ wallp(){
     local pics="/home/joel/Pictures/"
     if [ $# -eq 0 ]
     then
-        cpp "$pics$(img)" /home/joel/.config/awesome/themes/purple/wall.png>/dev/null 2>&1
+        cp "$pics$(img)" /home/joel/.config/awesome/themes/purple/wall.png
     else
         cp "$1" /home/joel/.config/awesome/themes/purple/wall.png 
     fi
 }
+
+
+ofile(){ 
+    cd $lectures && ffile="$(fzf --tac)"
+    xdg-open "$ffile" >/dev/null 2>&1 & disown ;
+}
+
 
 
 ###SYNTAX FOR DMENU
@@ -518,7 +529,7 @@ music() { command rhythmbox "$@" > /dev/null 2>&1 & disown ;}
 gimp() { command gimp "$@" > /dev/null 2>&1 & disown ;}
 firefox() { command  firefox-esr "$@" > /dev/null 2>&1 & disown ;}
 eclipse() { command eclipse "$@" > /dev/null 2>&1 & disown ;}
-code() { command  code "$@" > /dev/null 2>&1 & disown ;}
+code() { command codium "$@" > /dev/null 2>&1 & disown ;}
 transmission() { command  transmission-gtks "$@" > /dev/null 2>&1 & disown ;}
 torbrowser() { command  torbrowser-launcher  "$@" > /dev/null 2>&1 & disown ;}
 idea() { command  idea.sh  "$@" > /dev/null 2>&1 & disown ;}
@@ -529,16 +540,14 @@ images(){ command sxiv -t *>/dev/null 2>&1 & disown;}
 krita(){ command krita "$@">/dev/null 2>&1 & disown;}
 telegram(){ command Telegram/Telegram >/dev/null 2>&1 & disown;} 
 tgceejay(){ command ~/Downloads/Programs/telegram/./Telegram -many -workdir ~/ceejay >/dev/null 2>&1 & disown;}
-scrcpy(){ command scrcpy >/dev/null 2>&1 & disown;} 
-
 #() { command  "$@" > /dev/null 2>&1 & disown ;}
-
 ####EXPORTS######
 #find /usr/lib/jvm/java-1.x.x-openjdk
 #vim /etc/profile 
 #export JAVA_HOME="path that you found"
 #export PATH=$JAVA_HOME/bin:$PATH
 export JAVA_HOME="/usr/lib/jvm/java-1.11.0-openjdk-amd64"
+#export JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk-amd64"
 export PATH=$JAVA_HOME/bin:$PATH
 # java-1.11.0-openjdk-amd64
 export PATH=$JAVA_HOME/bin:$PATH
@@ -556,16 +565,20 @@ export PATH=$androidstudio:$PATH
 export scripts=/home/joel/scripts
 export PATH=$scripts:$PATH
 export PATH=$PATH:$HOME/bin
-export ANDROID_SDK_ROOT=/home/joel/Android/sdk
+export ANDROID_SDK_ROOT="/home/joel/Android/sdk/tools/bin"
 export PATH=$ANDROID_SDK_ROOT:$PATH
 export lectures="/home/joel/Desktop/lectures"
+export LOCALBIN=/home/joel/.local/bin
+export PATH=$LOCALBIN:$PATH
+export ANDROID_HOME="/home/joel/Android/sdk"
+export PATH=$PATH:ANDROID_HOME
 #js
 [ -f ~/.fzf.bash ]  && source ~/.fzf.bash
 
  #keybindings
  bind -x '"\C-b": vim ~/.bashrc && source ~/.bashrc'
  bind -x '"\C-s": cd ~/scripts && sc="$(fzf)" && vim $sc; bd'
- bind -x '"\C-n": cd $lectures && xdg-open "$(fzf --tac)" && bd'
+ bind -x '"\C-n": ofile'
  bind -x '"\C-g": goto'
  bind 'set show-all-if-ambiguous on' #zsh-like auto-completion
  bind 'TAB:menu-complete'
