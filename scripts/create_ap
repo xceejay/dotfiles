@@ -1,1 +1,1 @@
-sudo create_ap --daemon wlp2s0 enp1s0 test 
+sudo create_ap --daemon wlp2s0 enp1s0 joel 

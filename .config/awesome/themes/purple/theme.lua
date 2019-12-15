@@ -17,11 +17,11 @@ theme.fg_normal                                 = "#DDDDFF"
 theme.fg_focus                                  = "#EA6F81"
 theme.fg_urgent                                 = "#CC9393"
 theme.bg_normal                                 = "#020102"
-theme.bg_focus                                  = "#260A35"
+theme.bg_focus                                  =  "#260A35"
 theme.bg_urgent                                 = "#1A1A1A"
-theme.border_width                              = dpi(3)
-theme.border_normal                             = "#000000"
-theme.border_focus                              = "#260A35"
+theme.border_width                              = dpi(2)
+theme.border_normal                             = "#00000000" --transparency
+theme.border_focus                              = "#4F005C"-- "#260A35"
 theme.border_marked                             = "#CC9393"
 theme.tasklist_bg_focus                         = "#1A1A1A"
 theme.titlebar_bg_focus                         = theme.bg_focus
@@ -63,7 +63,7 @@ theme.widget_mail                               = theme.dir .. "/icons/mail.png"
 theme.widget_mail_on                            = theme.dir .. "/icons/mail_on.png"
 theme.tasklist_plain_task_name                  = true
 theme.tasklist_disable_icon                     = true
-theme.useless_gap                               = dpi(0)
+theme.useless_gap                               = dpi(4)  --useless gap 
 theme.titlebar_close_button_focus               = theme.dir .. "/icons/titlebar/close_focus.png"
 theme.titlebar_close_button_normal              = theme.dir .. "/icons/titlebar/close_normal.png"
 theme.titlebar_ontop_button_focus_active        = theme.dir .. "/icons/titlebar/ontop_focus_active.png"
@@ -89,7 +89,7 @@ local separators = lain.util.separators
 -- Textclock
 local clockicon = wibox.widget.imagebox(theme.widget_clock)
 local clock = awful.widget.watch(
-    "date +'%a %d %b %R'", 60,
+    "date +'%a %d %b %r'", 60,
     function(widget, stdout)
         widget:set_markup(" " .. markup.font(theme.font, stdout))
     end
@@ -162,6 +162,14 @@ theme.fs = lain.widget.fs({
     end
 })
 --]]
+--rounded corners
+client.connect_signal("manage", function (c)
+    c.shape = function(cr,w,h)
+        gears.shape.rounded_rect(cr,w,h,5)
+    end
+end)
+
+
 
 -- Battery
 local baticon = wibox.widget.imagebox(theme.widget_battery)

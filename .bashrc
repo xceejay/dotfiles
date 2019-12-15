@@ -212,7 +212,6 @@ alias cls='clear'
 alias apt='sudo aptitude'
 alias ctrlx='xte' #control x display server by faking input using xte
 alias feh="feh -B black"
-alias z="zathura"
 alias kallp='sudo killall5 -9' #killall processes
 
 # Change directory aliases
@@ -506,8 +505,15 @@ wallp(){
 
 
 ofile(){ 
+    local ffile=""
     cd $lectures && ffile="$(fzf --tac)"
+
+    if [ ffile == "" ]
+    then
+    cd $OLDPWD
+    else
     xdg-open "$ffile" >/dev/null 2>&1 & disown ;
+    fi
 }
 
 
@@ -522,7 +528,6 @@ ofile(){
 
 #Lauch Gui application and redirect sdtout and stderr to /dev/null to prevent terminal logging
 vlc() { command vlc "$@" > /dev/null 2>&1 & disown ;}
-chrome() { command chromium "$@" > /dev/null 2>&1 & disown ;}
 evince() { command evince  "$@" > /dev/null 2>&1 & disown ;}
 surf() { command surf "$@" > /dev/null 2>&1 & disown ;}
 music() { command rhythmbox "$@" > /dev/null 2>&1 & disown ;}
@@ -538,6 +543,7 @@ lowriter() { command  lowriter  "$@" > /dev/null 2>&1 & disown ;}
 nautilus() { command  nautilus "$1" > /dev/null 2>&1 & disown ;}
 images(){ command sxiv -t *>/dev/null 2>&1 & disown;}
 krita(){ command krita "$@">/dev/null 2>&1 & disown;}
+z(){  zathura "$@" >/dev/null 2>&1 & disown;}
 telegram(){ command Telegram/Telegram >/dev/null 2>&1 & disown;} 
 tgceejay(){ command ~/Downloads/Programs/telegram/./Telegram -many -workdir ~/ceejay >/dev/null 2>&1 & disown;}
 #() { command  "$@" > /dev/null 2>&1 & disown ;}
@@ -570,6 +576,8 @@ export PATH=$ANDROID_SDK_ROOT:$PATH
 export lectures="/home/joel/Desktop/lectures"
 export LOCALBIN=/home/joel/.local/bin
 export PATH=$LOCALBIN:$PATH
+export LATESTCHROME=/home/joel/.local/bin/chrome-linux
+export PATH=$LATESTCHROME:$PATH
 export ANDROID_HOME="/home/joel/Android/sdk"
 export PATH=$PATH:ANDROID_HOME
 #js
