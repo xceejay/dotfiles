@@ -32,3 +32,5 @@ XF86AudioPlay
  rhythmbox-client --play-pause
 super + h
  ~/scripts/./openhi
+super + m
+ ~/scripts/./prevmvs

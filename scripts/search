@@ -1,1 +1,1 @@
-webpage=$(echo|dmenu -fn "manrope-10" -nb black -sb "#260A35"  -p "Enter a webpage ️️😊:") && chromium $webpage
+webpage=$(echo|dmenu -fn "manrope-10" -nb black -sb "#260A35"  -p "Enter a webpage ️️😊:") && firefox-esr $webpage

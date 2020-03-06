@@ -15,5 +15,6 @@ run xfce4-terminal --drop-down
 run pasystray -a
 run pulseaudio
 run devilspie
-run transmission-gtk
+#run transmission-gtk
+blueman-adapters
 run kdeconnect-indicator

@@ -2,7 +2,7 @@
 
 wifi off && notify-send  'disconnected...!️️️️😞'
 wifi on && sleep 20
-if [ $(nmcli|grep -o -w connected) == "connected" ]
+if [ "$(nmcli|grep -o -w connected)" = "connected" ]
     then
 notify-send  'back on 💪!'
 else 

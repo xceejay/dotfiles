@@ -140,6 +140,11 @@ alias web='cd /var/www/html'
 # To temporarily bypass an alias, we preceed the command with a \
 # EG: the ls command is aliased, but to use the normal ls command you would type \ls
 
+#do as
+#alias doas="doas -- "
+#alias sudo="doas"
+
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -164,8 +169,8 @@ alias bible='~/Downloads/minimal/kjv/kjv'
 alias cjpg='xclip -sel clip -t image/jpeg'
 alias cpng='xclip -sel clip -t image/png'
 alias calc='rofi -modi "calc":/home/joel/scripts/calc -show calc'
-alias xinitc="sudo vim /etc/X11/xinit/xinitrc"
-alias tm="notify-send -t 200 "$(date|awk '{print $5}')⏰""
+alias xinitrc="sudo vim /etc/X11/xinit/xinitrc"
+alias tm="notify-send -t 2000 "$(date|awk '{print $5}')⏰""
 alias mycli='sudo mycli'
 alias javafx=' /usr/lib/jvm/java-11-openjdk-amd64/bin/java --module-path /usr/lib/jvm/jdk-13/lib/fx --add-modules=javafx.controls --add-modules javafx.base,javafx.graphics'
 alias javacfx=' /usr/lib/jvm/java-11-openjdk-amd64/bin/javac --module-path /usr/lib/jvm/jdk-13/lib/fx --add-modules=javafx.controls --add-modules javafx.base,javafx.graphics'
@@ -188,7 +193,6 @@ alias kdec=kdeconnect-cli
 alias anboxrun=' anbox launch --package=org.anbox.appmgr $* >/dev/null 2>&1 &'
 alias avwifi='nmcli dev wifi'
 alias kdeconnect=kdeconnectd
-alias logout='loginctl kill-user joel'
 alias gateway='ip r'
 alias inkscape='inkscape $* >/dev/null 2>&1 &'
 alias tgcli='~/tg/bin/./telegram-cli'
@@ -197,6 +201,7 @@ alias dict=sdcv
 alias free='free --mega'
 alias terminal='xfce4-terminal'
 alias nmap='nmap -sP'
+alias localtunnel='/usr/local/bin/lt'
 alias mount="mount -w"
 alias grep='egrep -i'
 alias iw='sudo iw'
@@ -213,11 +218,12 @@ alias apt='sudo aptitude'
 alias ctrlx='xte' #control x display server by faking input using xte
 alias feh="feh -B black"
 alias kallp='sudo killall5 -9' #killall processes
+alias pip="pip3"
 
 # Change directory aliases
 alias pics='cd ~/Pictures'
 alias disk='cd /media/joel/disk;la'
-alias lec21='cd ~/Desktop/lectures/level2001;ls'
+alias lec22='cd ~/Desktop/lectures/level2002;ls'
 alias lec='cd ~/Desktop/lectures;ls'
 alias doc='cd ~/Documents;ls'
 alias vid='cd ~/Downloads/Video;lt'
@@ -257,7 +263,7 @@ alias ll='ls -Fls' # long listing format
 alias labc='ls -lap' #alphabetical sort
 alias lf="ls -l | egrep -v '^d'" # files only
 alias ldir="ls -l | egrep '^d'" # directories only
-
+alias projector="python ~/Downloads/ProjectorTool.py & exit"
 # alias chmod commands
 alias mx='chmod a+x'
 alias 000='chmod -R 000'
@@ -291,9 +297,8 @@ alias ipview="netstat -anpl | grep :80 | awk {'print \$5'} | cut -d\":\" -f1 | s
 # Show open ports
 alias openports='netstat -nape --inet'
 
-# Alias's for safe and forced reboots
+# Alias's for safe reboot
 alias rebootsafe='sudo shutdown -r now'
-alias rebootforce='sudo shutdown -r -n now'
 
 # Alias's to show disk space and space used in a folder
 alias diskspace="du -S | sort -n -r |more"
@@ -365,6 +370,11 @@ cd (){
 
 }
 
+
+mpv (){
+
+command mpv "$@" && echo "$PWD">/tmp/mvspath
+}
 #Automatically do an ls after each cd
 #cd ()
 #{
@@ -490,7 +500,7 @@ goto(){
 
 adbp(){ #adbpull
     start=/storage/emulated/0/
-    adb pull "$start$1"
+    adb  pull "$start$1"
 }
 
 wallp(){
@@ -516,6 +526,9 @@ ofile(){
     fi
 }
 
+logout(){
+    loginctl terminate-session $(loginctl |grep joel|awk '{print $1}')
+}
 
 
 ###SYNTAX FOR DMENU
@@ -544,8 +557,8 @@ nautilus() { command  nautilus "$1" > /dev/null 2>&1 & disown ;}
 images(){ command sxiv -t *>/dev/null 2>&1 & disown;}
 krita(){ command krita "$@">/dev/null 2>&1 & disown;}
 z(){  zathura "$@" >/dev/null 2>&1 & disown;}
-telegram(){ command Telegram/Telegram >/dev/null 2>&1 & disown;} 
-tgceejay(){ command ~/Downloads/Programs/telegram/./Telegram -many -workdir ~/ceejay >/dev/null 2>&1 & disown;}
+telegram(){ command ~/Telegram/Telegram >/dev/null 2>&1 & disown;} 
+tgceejay(){ command ~/Telegram/Telegram -many -workdir ~/ceejay >/dev/null 2>&1 & disown;}
 #() { command  "$@" > /dev/null 2>&1 & disown ;}
 ####EXPORTS######
 #find /usr/lib/jvm/java-1.x.x-openjdk
@@ -564,7 +577,7 @@ export PATH=$flutter/bin:$PATH
 #no need since i apt installed it
 #export M2_HOME="/opt/apache-maven-3.6.1"
 #export PATH=$M2_HOME/bin:$PATH
-export eclipse="/home/joel/eclipse/"
+export eclipse="/home/joel/eclipse/java-2019-12/eclipse/"
 export PATH=$eclipse:$PATH
 export androidstudio='/home/joel/android-studio/bin'
 export PATH=$androidstudio:$PATH
@@ -580,6 +593,10 @@ export LATESTCHROME=/home/joel/.local/bin/chrome-linux
 export PATH=$LATESTCHROME:$PATH
 export ANDROID_HOME="/home/joel/Android/sdk"
 export PATH=$PATH:ANDROID_HOME
+export NETBEANS="/home/joel/netbeans/bin"
+export PATH=$PATH:$NETBEANS
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp'
+
 #js
 [ -f ~/.fzf.bash ]  && source ~/.fzf.bash
 
@@ -590,3 +607,16 @@ export PATH=$PATH:ANDROID_HOME
  bind -x '"\C-g": goto'
  bind 'set show-all-if-ambiguous on' #zsh-like auto-completion
  bind 'TAB:menu-complete'
+
+
+ #bash insults
+
+
+ if [ -f /etc/bash.command-not-found-messages ]; then
+    . /etc/bash.command-not-found-messages
+fi
+
+if [ -f /etc/bash.command-not-found ]; then
+    . /etc/bash.command-not-found
+fi
+
