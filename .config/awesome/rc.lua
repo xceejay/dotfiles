@@ -16,6 +16,7 @@ local hotkeys_popup = require("awful.hotkeys_popup").widget
                       require("awful.hotkeys_popup.keys")
 local my_table      = awful.util.table or gears.table -- 4.{0,1} compatibility
 local dpi           = require("beautiful.xresources").apply_dpi
+local treetile      = require("treetile")
 
 
 -- {{{ Error handling
@@ -50,23 +51,14 @@ local function run_once(cmd_arr)
         awful.spawn.with_shell(string.format("pgrep -u $USER -fx '%s' > /dev/null || (%s)", cmd, cmd))
     end
 end
+awful.spawn.with_shell("~/.config/awesome/autorun.sh")
 
-run_once({ "urxvtd", "unclutter -root" }) -- entries must be separated by commas
-awful.util.spawn("compton -b")
-awful.util.spawn("xfce4-clipman &")
-awful.util.spawn("sxhkd")
-awful.util.spawn("xfce4-terminal --drop-down" )
--- This function implements the XDG autostart specification
---[[
-awful.spawn.with_shell(
-    'if (xrdb -query | grep -q "^awesome\\.started:\\s*true$"); then exit; fi;' ..
-    'xrdb -merge <<< "awesome.started:true";' ..
-    -- list each of your autostart commands, followed by ; inside single quotes, followed by ..
-    'dex --environment Awesome --autostart --search-paths "$XDG_CONFIG_DIRS/autostart:$XDG_CONFIG_HOME/autostart"' -- https://github.com/jceb/dex
-)
---]]
 
 -- }}}
+
+-- defaults
+naughty.config.defaults['icon_size'] = 80
+
 
 -- {{{ Variable definitions
 
@@ -85,18 +77,19 @@ local guieditor    = "/opt/sublime_text/sublime_text"
 local scrlocker    = "slock"
 
 awful.util.terminal = terminal
-awful.util.tagnames = { "1", "2", "3", "4", "5","6" }
+awful.util.tagnames = { "www(1)", "pg(2)", "doc(3)", "term(4)", "social(5)","🎶","7","8","bg"}
 awful.layout.layouts = {
    
-    awful.layout.suit.tile,
     awful.layout.suit.tile.left,
-    awful.layout.suit.floating,
-  --  awful.layout.suit.tile.bottom,
-   -- awful.layout.suit.tile.top,
-   -- awful.layout.suit.fair,
-   -- awful.layout.suit.fair.horizontal,
-    --awful.layout.suit.spiral,
-    --awful.layout.suit.spiral.dwindle,
+    awful.layout.suit.tile,
+  --  treetile
+   awful.layout.suit.tile.bottom,
+    awful.layout.suit.tile.top,
+    awful.layout.suit.fair,
+    awful.layout.suit.fair.horizontal,
+  --  awful.layout.suit.floating,
+   -- awful.layout.suit.spiral,
+   -- awful.layout.suit.spiral.dwindle,
     --awful.layout.suit.max,
     --awful.layout.suit.max.fullscreen,
     --awful.layout.suit.magnifier,
@@ -174,7 +167,6 @@ lain.layout.cascade.tile.offset_y      = dpi(32)
 lain.layout.cascade.tile.extra_padding = dpi(5)
 lain.layout.cascade.tile.nmaster       = 5
 lain.layout.cascade.tile.ncol          = 2
-
 beautiful.init(string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), chosen_theme))
 -- }}}
 
@@ -217,6 +209,10 @@ awful.screen.connect_for_each_screen(function(s) beautiful.at_screen_connect(s) 
 --))
 -- }}}
 
+
+  
+
+
 -- {{{ Key bindings
 globalkeys = my_table.join(
     -- X screen locker
@@ -241,18 +237,18 @@ globalkeys = my_table.join(
               {description = "view  previous nonempty", group = "tag"}),
 
     -- Default client focus
-    awful.key({ altkey,           }, "Left",
-        function ()
-            awful.client.focus.byidx( 1)
-        end,
-        {description = "focus next by index", group = "client"}
-    ),
-    awful.key({ altkey,           }, "Right",
-        function ()
-            awful.client.focus.byidx(-1)
-        end,
-        {description = "focus previous by index", group = "client"}
-    ),
+    --awful.key({ altkey,           }, "Left",
+      --  function ()
+        --    awful.client.focus.byidx( 1)
+        --end,
+        --{description = "focus next by index", group = "client"}
+    --),
+    --awful.key({ altkey,           }, "Right",
+      --  function ()
+        --    awful.client.focus.byidx(-1)
+        --end,
+        --{description = "focus previous by index", group = "client"}
+    --),
 
     -- By direction client focus
     awful.key({ modkey }, "Down",
@@ -312,9 +308,9 @@ globalkeys = my_table.join(
         -- {description = "toggle wibox", group = "awesome"}),
 
     -- On the fly useless gaps change
-    awful.key({ altkey, "Control" }, "+", function () lain.util.useless_gaps_resize(1) end,
+    awful.key({ altkey, "Shift" }, "u", function () lain.util.useless_gaps_resize(1) end,
               {description = "increment useless gaps", group = "tag"}),
-    awful.key({ altkey, "Control" }, "-", function () lain.util.useless_gaps_resize(-1) end,
+    awful.key({ altkey, "Shift" }, "i", function () lain.util.useless_gaps_resize(-1) end,
               {description = "decrement useless gaps", group = "tag"}),
 
     -- Dynamic tagging
@@ -369,19 +365,19 @@ globalkeys = my_table.join(
     -- ALSA volume control
     awful.key({ }, "XF86AudioRaiseVolume",
         function ()
-            os.execute(string.format("amixer -q set %s 1%%+", beautiful.volume.channel))
+            os.execute(string.format("pulsemixer  --change-volume +1", beautiful.volume.channel))
             beautiful.volume.update()
         end,
         {description = "volume up", group = "hotkeys"}),
     awful.key({ }, "XF86AudioLowerVolume",
         function ()
-            os.execute(string.format("amixer -q set %s 1%%-", beautiful.volume.channel))
+            os.execute(string.format("pulsemixer  --change-volume -1", beautiful.volume.channel))
             beautiful.volume.update()
         end,
         {description = "volume down", group = "hotkeys"}),
     awful.key({}, "XF86AudioMute",
         function ()
-            os.execute(string.format("amixer -q set %s toggle", beautiful.volume.togglechannel or beautiful.volume.channel))
+            os.execute(string.format("pulsemixer  --toggle-mute", beautiful.volume.togglechannel or beautiful.volume.channel))
             beautiful.volume.update()
         end,
         {description = "volume 100%", group = "hotkeys"}),
@@ -464,7 +460,7 @@ clientkeys = my_table.join(
         function (c)
             -- The client currently has the input focus, so it cannot be
             -- minimized, since minimized clients can't have the focus.
-            c.minimized = true
+            c.minimized = false
         end ,
         {description = "minimize", group = "client"}),
     awful.key({ modkey,           }, "o",

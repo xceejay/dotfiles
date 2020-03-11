@@ -234,6 +234,7 @@ alias sshs='cd ~/sshserver;la'
 alias cs='cd ~/Desktop/lectures/computer\ science/;ls'
 alias jpg='cd ~/Desktop/programming/java;ls'
 alias pg='cd ~/Desktop/programming;ls'
+alias ddc='cd ~/Desktop/programming/ddc;ls'
 alias dp='cd ~/Desktop/'
 alias home='cd ~'
 alias cd..='cd ..'
@@ -596,6 +597,7 @@ export PATH=$PATH:ANDROID_HOME
 export NETBEANS="/home/joel/netbeans/bin"
 export PATH=$PATH:$NETBEANS
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp'
+export DE="generic"
 
 #js
 [ -f ~/.fzf.bash ]  && source ~/.fzf.bash

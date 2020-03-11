@@ -16,5 +16,5 @@ run pasystray -a
 run pulseaudio
 run devilspie
 #run transmission-gtk
-blueman-adapters
+blueman-applet
 run kdeconnect-indicator
