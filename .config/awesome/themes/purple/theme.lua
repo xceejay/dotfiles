@@ -178,9 +178,9 @@ local bat = lain.widget.bat({
     if bat_now.status and bat_now.status ~= "N/A" then
       if bat_now.ac_status == 1 then
         baticon:set_image(theme.widget_ac)
-      elseif not bat_now.perc and tonumber(bat_now.perc) <= 5 then
-        baticon:set_image(theme.widget_battery_empty)
       elseif not bat_now.perc and tonumber(bat_now.perc) <= 15 then
+        baticon:set_image(theme.widget_battery_empty)
+      elseif not bat_now.perc and tonumber(bat_now.perc) <= 25 then
         baticon:set_image(theme.widget_battery_low)
       else
         baticon:set_image(theme.widget_battery)
