@@ -1,0 +1,11 @@
+#!/bin/sh
+
+arg="$1"
+
+
+[ "$arg" = "setupworkspaces" ] && phonectrl setupworkspaces
+[ "$arg" = "moveto1" ] && phonectrl moveto1
+[ "$arg" = "moveto2" ] && phonectrl moveto2
+[ "$arg" = "moveto3" ] && phonectrl moveto3
+[ "$arg" = "moveto4" ] && phonectrl moveto4
+[ "$arg" = "moveto5" ] && phonectrl moveto5

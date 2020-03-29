@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd /home/joel/scripts/psiconf
+./psiphon;gsettings set org.gnome.system.proxy mode auto
+sudo cp -f /home/joel/scripts/environment.bak /etc/environment

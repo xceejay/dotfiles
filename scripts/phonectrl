@@ -1,0 +1,54 @@
+#!/bin/sh
+
+arg="$1"
+
+moveto1(){
+wmctrl -s 0
+}
+moveto2(){
+wmctrl -s 1
+}
+moveto3(){
+wmctrl -s 2
+}
+moveto4(){
+wmctrl -s 3
+}
+movto5(){
+wmctrl -s 4
+}
+moveto6(){
+wmctrl -s 5
+}
+moveto7(){
+wmctrl -s 6
+}
+moveto8(){
+wmctrl -s 7
+}
+moveto9(){
+wmctrl -s 8
+}
+
+
+setupworkspaces(){
+firefox-esr & moveto2; xfce4-terminal --command vim; moveto3;calibre & moveto4;xfce4-terminal  --command "phonectrl lolcmatrix";xfce4-terminal  --command "phonectrl lolhtop";xfce4-terminal  --command  vis
+}
+lolcmatrix(){
+[ -z "$(pgrep cmatrix)" ] && cmatrix|lolcat
+}
+
+lolhtop(){
+[ -z "$(pgrep htop)" ] && htop|lolcat
+}
+
+
+[ "$arg" = "setupworkspaces" ] && setupworkspaces 
+[ "$arg" = "lolhtop" ] && lolhtop
+[ "$arg" = "lolcmatrix" ] && lolcmatrix
+[ "$arg" = "moveto1" ] && moveto1
+[ "$arg" = "moveto2" ] && moveto2
+[ "$arg" = "moveto3" ] && moveto3
+[ "$arg" = "moveto4" ] && moveto4
+[ "$arg" = "moveto5" ] && moveto5
+

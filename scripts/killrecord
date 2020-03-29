@@ -1,0 +1,3 @@
+#!/bin/sh
+
+pkill ffmpeg && notify-send "Killed Recording💀"

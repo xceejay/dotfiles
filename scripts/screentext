@@ -1,0 +1,4 @@
+#/bin/sh
+
+temp=$(tempfile) && scrot $temp.png && tesseract $temp.png $temp && enscript $temp.txt --output=$temp.pdf && zathura $temp.pdf
+#convert $temp.png -grayscale average $temp1.png && mv $temp1.png $temp.png 
