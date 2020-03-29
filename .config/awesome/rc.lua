@@ -82,12 +82,12 @@ awful.layout.layouts = {
    
     awful.layout.suit.tile.left,
     awful.layout.suit.tile,
-  --  treetile
-   awful.layout.suit.tile.bottom,
-    awful.layout.suit.tile.top,
     awful.layout.suit.fair,
+  --  treetile
+    awful.layout.suit.tile.top,
     awful.layout.suit.fair.horizontal,
   --  awful.layout.suit.floating,
+    awful.layout.suit.tile.bottom,
    -- awful.layout.suit.spiral,
    -- awful.layout.suit.spiral.dwindle,
     --awful.layout.suit.max,
@@ -170,6 +170,7 @@ lain.layout.cascade.tile.ncol          = 2
 beautiful.init(string.format("%s/.config/awesome/themes/%s/theme.lua", os.getenv("HOME"), chosen_theme))
 -- }}}
 
+---move to tag when a program opens
 
 
 -- {{{ Screen

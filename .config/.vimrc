@@ -421,6 +421,27 @@ map<F6> :setlocal spell spelllang=en_gb<cr>
 nmap<F5> [sz=
 nmap<F7> ]sz=
 
+"autoadd skeleton text anytime i create a markdown file
+autocmd BufNewFile *.md r ~/pandoc/mdskeltontxt | :norm ggddjwwl
+
+"autoadd skeleton text anytime i create a new java file 
+autocmd BufNewFile *.java r ~/pandoc/javaskeletontxt| :norm jjjww 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 "vscode 
 

@@ -17,11 +17,15 @@ super + d
 Print
  xfce4-screenshooter
 ctrl + Print 
- kazam
+ ~/scripts/./screenrecord
+ctrl + shift + Print 
+ ~/scripts/./killrecord
 super + r
  rofi -show drun
 super + w
  rofi -show
+F8
+ ~/scripts/./screentext
 F12
  xfce4-terminal --drop-down
 super + "-"

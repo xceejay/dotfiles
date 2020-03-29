@@ -76,6 +76,10 @@ esac
 stty -ixon #disable terminal pausing
 
 shopt -s autocd #allows autocd into directory by just typing dir name
+shopt -s extglob #allows extended global expressions globally
+
+
+
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -174,6 +178,8 @@ alias tm="notify-send -t 2000 "$(date|awk '{print $5}')⏰""
 alias mycli='sudo mycli'
 alias javafx=' /usr/lib/jvm/java-11-openjdk-amd64/bin/java --module-path /usr/lib/jvm/jdk-13/lib/fx --add-modules=javafx.controls --add-modules javafx.base,javafx.graphics'
 alias javacfx=' /usr/lib/jvm/java-11-openjdk-amd64/bin/javac --module-path /usr/lib/jvm/jdk-13/lib/fx --add-modules=javafx.controls --add-modules javafx.base,javafx.graphics'
+
+alias javadb='java -cp :/usr/share/java/mariadb-java-client-2.5.4.jar'
 alias dmenu_run='dmenu_run -fn "manrope-10" -nb black -sb "#260A35"'
 alias sxiv='sxiv -b'
 alias dmenu='dmenu -fn "manrope-10" -nb black -sb "#260A35"'
@@ -183,7 +189,7 @@ alias timetable="cgrep  '(^([a-zA-Z]+)|[0-9]+-[0-9]+am||[0-9]+-[0-9]+pm|[0-9][0-
 alias upvote='sudo systemctl restart upvotebot.service'
 alias tee='tee -a '  
 alias t="tldr $1 "
-alias regex='sed "s/-/    /" ~/regex|egrep --color ^[^Aa-Zz].?[^Aa-Zz0-9]'
+alias regex='sed "s/-/    /" ~/scripts/regex|egrep --color ^[^Aa-Zz].?[^Aa-Zz0-9]'
 alias cwlc='/home/joel/Desktop/programming/java/CWLC/./CWLC'
 alias ipa=' ip add|egrep global|egrep   --color "(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)"'
 wipa=$(ip addr|awk "/inet/ {print \$2}"|grep 19)
@@ -194,7 +200,6 @@ alias anboxrun=' anbox launch --package=org.anbox.appmgr $* >/dev/null 2>&1 &'
 alias avwifi='nmcli dev wifi'
 alias kdeconnect=kdeconnectd
 alias gateway='ip r'
-alias inkscape='inkscape $* >/dev/null 2>&1 &'
 alias tgcli='~/tg/bin/./telegram-cli'
 alias text=/opt/sublime_text/sublime_text
 alias dict=sdcv
@@ -214,13 +219,15 @@ alias mkdir='mkdir -p'
 alias ping='ping -c 10'
 alias less='less -R'
 alias cls='clear'
-alias apt='sudo aptitude'
+alias apt='sudo apt'
 alias ctrlx='xte' #control x display server by faking input using xte
-alias feh="feh -B black"
+#alias feh="feh -B black"
 alias kallp='sudo killall5 -9' #killall processes
 alias pip="pip3"
 
 # Change directory aliases
+
+alias scr='cd ~/Videos/screenrecordings'
 alias pics='cd ~/Pictures'
 alias disk='cd /media/joel/disk;la'
 alias lec22='cd ~/Desktop/lectures/level2002;ls'
@@ -251,13 +258,13 @@ alias bd='cd "$OLDPWD"'
 # Alias's for multiple directory listing commands
 alias l='/bin/ls -Ah' #mostly used for scripts and dmenu stuff
 alias la='ls -Alh' # show hidden files
-alias ls='ls -aFh --color=always' # add colors and file type extensions
+alias ls='ls -Fh --color=always' # add colors and file type extensions
 alias lx='ls -lXBh' # sort by extension
 alias lk='ls -lSrh' # sort by size
 alias lc='ls -lcrh' # sort by change time
 alias lu='ls -lurh' # sort by access time
 alias lr='ls -lRh' # recursive ls
-alias lt='ls -ltrh' # sort by date
+alias lt='ls -altrh' # sort by date
 alias lm='ls -alh |more' # pipe through 'more'
 alias lw='ls -xAh' # wide listing format
 alias ll='ls -Fls' # long listing format
@@ -531,6 +538,20 @@ logout(){
     loginctl terminate-session $(loginctl |grep joel|awk '{print $1}')
 }
 
+initlolcat(){
+alias htop="htop|lolcat"
+alias top="top|lolcat"
+alias cmatrix="cmatrix|lolcat"
+alias toilet="toilet $*|lolcat"
+alias ps="ps aux|lolcat"
+alias neofetch="neofetch|lolcat"
+alias screenfetch="screenfetch|lolcat"
+
+}
+
+
+
+
 
 ###SYNTAX FOR DMENU
 #$(grep  "surf [0-1]"* .bash_history|dmenu -l 30)
@@ -596,8 +617,13 @@ export ANDROID_HOME="/home/joel/Android/sdk"
 export PATH=$PATH:ANDROID_HOME
 export NETBEANS="/home/joel/netbeans/bin"
 export PATH=$PATH:$NETBEANS
-export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp'
+#export _JAVA_OPTIONS='-Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel' 
+#export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp' #hate seeing the errors
+
+
 export DE="generic"
+export GOROOT="/usr/local/go"
+
 
 #js
 [ -f ~/.fzf.bash ]  && source ~/.fzf.bash
@@ -611,14 +637,4 @@ export DE="generic"
  bind 'TAB:menu-complete'
 
 
- #bash insults
-
-
- if [ -f /etc/bash.command-not-found-messages ]; then
-    . /etc/bash.command-not-found-messages
-fi
-
-if [ -f /etc/bash.command-not-found ]; then
-    . /etc/bash.command-not-found
-fi
 
