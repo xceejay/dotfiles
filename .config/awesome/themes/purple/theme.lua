@@ -12,8 +12,8 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 local theme                                     = {}
 theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/purple"
 theme.wallpaper                                 = theme.dir .. "/wall.png"
-theme.font                                      = "manrope Bold 9"
-theme.fg_normal                                 = "#DDDDFF"
+theme.font                                      = "Helvetica Neue Medium 10"-- "manrope Bold 9"
+theme.fg_normal                                 = "#FFFFFF"
 theme.fg_focus                                  = "#EA6F81"
 theme.fg_urgent                                 = "#CC9393"
 theme.bg_normal                                 = "#020102"
@@ -214,7 +214,7 @@ theme.volume = lain.widget.alsa({
 local mytagbox = wibox.widget.textbox(' ')
 screen[1]:connect_signal("tag::history::update", function()
   mytagbox.text = awful.tag.selected(1).name
-  mytagbox.font = "manrope Bold 9"
+  mytagbox.font = theme.font
 end)
 
 

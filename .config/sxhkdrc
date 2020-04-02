@@ -31,9 +31,9 @@ F12
 super + "-"
  gpick -p
 ctrl + XF86AudioPlay
- rhythmbox
+ clementine
 XF86AudioPlay
- rhythmbox-client --play-pause
+ clementine --play-pause
 super + h
  ~/scripts/./openhi
 super + m

@@ -1,47 +1,58 @@
-#!/bin/sh
+#!/bin/bash
 
 arg="$1"
 
 moveto1(){
-wmctrl -s 0
+  wmctrl -s 0
 }
 moveto2(){
-wmctrl -s 1
+  wmctrl -s 1
 }
 moveto3(){
-wmctrl -s 2
+  wmctrl -s 2
 }
 moveto4(){
-wmctrl -s 3
+  wmctrl -s 3
 }
 movto5(){
-wmctrl -s 4
+  wmctrl -s 4
 }
 moveto6(){
-wmctrl -s 5
+  wmctrl -s 5
 }
 moveto7(){
-wmctrl -s 6
+  wmctrl -s 6
 }
 moveto8(){
-wmctrl -s 7
+  wmctrl -s 7
 }
 moveto9(){
-wmctrl -s 8
+  wmctrl -s 8
 }
 
-
+## PHONE COMMANDS 
 setupworkspaces(){
-firefox-esr & moveto2; xfce4-terminal --command vim; moveto3;calibre & moveto4;xfce4-terminal  --command "phonectrl lolcmatrix";xfce4-terminal  --command "phonectrl lolhtop";xfce4-terminal  --command  vis
+  firefox-esr & moveto2; codium & echo ; moveto3;calibre & moveto4;xfce4-terminal  --command "phonectrl lolcmatrix";xfce4-terminal  --command "phonectrl lolhtop";xfce4-terminal  --command  vis
 }
 lolcmatrix(){
-[ -z "$(pgrep cmatrix)" ] && cmatrix|lolcat
+  [ -z "$(pgrep cmatrix)" ] && cmatrix|lolcat
 }
 
 lolhtop(){
-[ -z "$(pgrep htop)" ] && htop|lolcat
+  [ -z "$(pgrep htop)" ] && htop|lolcat
 }
 
+#kdeconnect-cli --send-sms "hello bro " --destination 024469901 -d 7c413f1b475af133
+## COMPUTER COMMANDS
+sendmsg2p(){
+
+echo "Available Phones"
+    kdeconnect-cli -l|grep rea
+    read -r -p "choose phone by ID👱:" id && read -r -p "enter your message📜:" msg && read -r -p "enter the recievers number📱:" num
+    kdeconnect-cli --send-sms "$msg" --destination "$num" -d "$id"
+printf "\nSuccessfully Sent️️️️️✅\nMessage:$msg\nRecieptient:$num\n"
+
+}
 
 [ "$arg" = "setupworkspaces" ] && setupworkspaces 
 [ "$arg" = "lolhtop" ] && lolhtop
@@ -51,4 +62,5 @@ lolhtop(){
 [ "$arg" = "moveto3" ] && moveto3
 [ "$arg" = "moveto4" ] && moveto4
 [ "$arg" = "moveto5" ] && moveto5
+[ "$arg" = "sendmsg2p" ] && sendmsg2p
 

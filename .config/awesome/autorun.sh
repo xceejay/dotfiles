@@ -17,9 +17,10 @@ run nm-applet
 run pulseaudio
 run devilspie
 #run transmission-gtk
+run kdeconnect-indicator
 run blueman-applet
-run rhythmbox
+run clementine
+#run rhythmbox
 #run xdman
-run "/home/joel/Telegram/Telegram -many -workdir ~/ceejay"
-
+#tgceejay="/home/joel/Telegram/Telegram -many -workdir ~/ceejay" && run "$tgceejay"
 

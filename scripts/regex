@@ -1,4 +1,5 @@
 .-Any Character Except New Line  
+\r-new line
 \d-digit(0-9)     
 \D-not    
 \w-Word Char(a-z,A-z,0-9,_)    

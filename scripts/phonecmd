@@ -9,3 +9,4 @@ arg="$1"
 [ "$arg" = "moveto3" ] && phonectrl moveto3
 [ "$arg" = "moveto4" ] && phonectrl moveto4
 [ "$arg" = "moveto5" ] && phonectrl moveto5
+[ "$arg" = "sendmsg2p" ] && phonectrl sendmsg2p

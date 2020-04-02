@@ -149,10 +149,8 @@ alias web='cd /var/www/html'
 #alias sudo="doas"
 
 
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
+alias man="info"
 # Edit this .bashrc file
 alias ebrc='edit ~/.bashrc'
 
@@ -166,6 +164,7 @@ alias da='date "+%Y-%m-%d %A %T %Z"'
 # Alias's to modified commands
 #alias a fuzzy finder alias
 #alias javafx='java --module-path $PATH_TO_FX --add-modules javafx.controls $@'
+alias mutt="neomutt|lolcat"
 alias v='vim'
 alias nmr='sudo systemctl restart NetworkManager'
 alias nms='sudo systemctl stop NetworkManager'
@@ -227,6 +226,7 @@ alias pip="pip3"
 
 # Change directory aliases
 
+alias tmp='cd /tmp'
 alias scr='cd ~/Videos/screenrecordings'
 alias pics='cd ~/Pictures'
 alias disk='cd /media/joel/disk;la'
@@ -258,7 +258,7 @@ alias bd='cd "$OLDPWD"'
 # Alias's for multiple directory listing commands
 alias l='/bin/ls -Ah' #mostly used for scripts and dmenu stuff
 alias la='ls -Alh' # show hidden files
-alias ls='ls -Fh --color=always' # add colors and file type extensions
+alias ls='ls -Fh --color=always  --group-directories-first' # add colors and file type extensions
 alias lx='ls -lXBh' # sort by extension
 alias lk='ls -lSrh' # sort by size
 alias lc='ls -lcrh' # sort by change time
@@ -591,7 +591,7 @@ export JAVA_HOME="/usr/lib/jvm/java-1.11.0-openjdk-amd64"
 #export JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk-amd64"
 export PATH=$JAVA_HOME/bin:$PATH
 # java-1.11.0-openjdk-amd64
-export PATH=$JAVA_HOME/bin:$PATH
+#export PATH=$JAVA_HOME/bin:$PATH
 export flutter="/home/joel/flutter"
 export PATH=$flutter/bin:$PATH
 #export PATH_TO_FX=/usr/lib/jvm/java-11-openjdk-amd64/lib/javafx 
@@ -620,10 +620,9 @@ export PATH=$PATH:$NETBEANS
 #export _JAVA_OPTIONS='-Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel' 
 #export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp' #hate seeing the errors
 
-
 export DE="generic"
 export GOROOT="/usr/local/go"
-
+export XDG_CONFIG_HOME=/home/joel/.config
 
 #js
 [ -f ~/.fzf.bash ]  && source ~/.fzf.bash
@@ -635,6 +634,8 @@ export GOROOT="/usr/local/go"
  bind -x '"\C-g": goto'
  bind 'set show-all-if-ambiguous on' #zsh-like auto-completion
  bind 'TAB:menu-complete'
+
+
 
 
 
