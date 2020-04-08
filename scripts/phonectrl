@@ -32,7 +32,7 @@ moveto9(){
 
 ## PHONE COMMANDS 
 setupworkspaces(){
-  firefox-esr & moveto2; codium & echo ; moveto3;calibre & moveto4;xfce4-terminal  --command "phonectrl lolcmatrix";xfce4-terminal  --command "phonectrl lolhtop";xfce4-terminal  --command  vis
+  brave-browser & moveto2; codium & echo ; moveto3;calibre & moveto4;xfce4-terminal  --command "phonectrl lolcmatrix";xfce4-terminal  --command "phonectrl lolhtop";xfce4-terminal  --command  vis
 }
 lolcmatrix(){
   [ -z "$(pgrep cmatrix)" ] && cmatrix|lolcat
