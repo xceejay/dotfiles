@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-
 function run {
   if ! pgrep -f "$1" ;
   then
@@ -12,9 +11,13 @@ run compton
 run sxhkd
 run xfce4-clipman
 run xfce4-terminal --drop-down
+#run pnmixer
+#run volumeicon
+# run volti ##run pasystray -a
 run pasystray -a
 run nm-applet
-run pulseaudio
+run pulseaudio --start
+#run pulseaudio
 run devilspie
 #run transmission-gtk
 run kdeconnect-indicator

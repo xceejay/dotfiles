@@ -55,7 +55,9 @@ if [ -n "$force_color_prompt" ]; then
     fi
     fi
 
-    if [ "$color_prompt" = yes ]; then
+
+ ###%%%%   commented if statement %%%%####
+   if [ "$color_prompt" = yes ]; then
         #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;35m\]\u@\[\033[00;93m\]void\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
         #PS1="┌─[\`if [ \$? = 0 ]; then echo \[\e[32m\]✔\[\e[0m\]; else echo \[\e[31m\]✘\[\e[0m\]; fi\`]───[\[\e[01;49;39m\]\u\[\e[00m\]\[\e[01;49;39m\]@\H\[\e[00m\]]───[\[\e[1;49;34m\]\W\[\e[0m\]]───[\[\e[1;49;39m\]\$(ls | wc -l) files, \$(ls -lah | grep -m 1 total | sed 's/total //')\[\e[0m\]]\n└───▶ "
 
@@ -122,7 +124,9 @@ if ! shopt -oq posix; then
     fi
 
 
+##first export default display
 
+export DISPLAY=:0
 
 # MACHINE SPECIFIC ALIAS'S
 #######################################################			
@@ -150,7 +154,7 @@ alias web='cd /var/www/html'
 
 
 
-alias man="info"
+alias iman="info"
 # Edit this .bashrc file
 alias ebrc='edit ~/.bashrc'
 
@@ -623,6 +627,8 @@ export PATH=$PATH:$NETBEANS
 export DE="generic"
 export GOROOT="/usr/local/go"
 export XDG_CONFIG_HOME=/home/joel/.config
+#export PULSE_SERVER=remote_host
+
 
 #js
 [ -f ~/.fzf.bash ]  && source ~/.fzf.bash

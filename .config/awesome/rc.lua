@@ -72,7 +72,7 @@ local altkey       = "Mod1"
 local terminal     = "xfce4-terminal"
 local editor       = os.getenv("EDITOR") or "vim"
 local gui_editor   = "gvim"
-local browser      = "firefox-esr"
+local browser      = "brave-browser"
 local guieditor    = "/opt/sublime_text/sublime_text"
 local scrlocker    = "slock"
 
@@ -364,30 +364,30 @@ globalkeys = my_table.join(
               {description = "-10%", group = "hotkeys"}),
 
     -- ALSA volume control
-    awful.key({ }, "XF86AudioRaiseVolume",
-        function ()
-            os.execute(string.format("pulsemixer  --change-volume +1", beautiful.volume.channel))
-            beautiful.volume.update()
-        end,
-        {description = "volume up", group = "hotkeys"}),
-    awful.key({ }, "XF86AudioLowerVolume",
-        function ()
-            os.execute(string.format("pulsemixer  --change-volume -1", beautiful.volume.channel))
-            beautiful.volume.update()
-        end,
-        {description = "volume down", group = "hotkeys"}),
+   awful.key({ }, "XF86AudioRaiseVolume",
+     function ()
+       os.execute(string.format("amixer -D pulse sset Master 2%%+", beautiful.volume.channel))
+         beautiful.volume.update()
+       end,
+       {description = "volume up", group = "hotkeys"}),
+   awful.key({ }, "XF86AudioLowerVolume",
+     function ()
+       os.execute(string.format("amixer -D pulse sset Master 2%%-", beautiful.volume.channel))
+        beautiful.volume.update()
+       end,
+       {description = "volume down", group = "hotkeys"}),
     awful.key({}, "XF86AudioMute",
-        function ()
-            os.execute(string.format("pulsemixer  --toggle-mute", beautiful.volume.togglechannel or beautiful.volume.channel))
-            beautiful.volume.update()
+      function ()
+        os.execute(string.format("amixer -D pulse sset Master toggle", beautiful.volume.togglechannel or beautiful.volume.channel))
+      beautiful.volume.update()
         end,
-        {description = "volume 100%", group = "hotkeys"}),
-    awful.key({ altkey, "Control" }, "0",
-        function ()
-            os.execute(string.format("amixer -q set %s 0%%", beautiful.volume.channel))
-            beautiful.volume.update()
-        end,
-        {description = "volume 0%", group = "hotkeys"}),
+     {description = "volume 100%", group = "hotkeys"}),
+   awful.key({ altkey, "Control" }, "0",
+       function ()
+      os.execute(string.format("amixer -q set %s 0%%", beautiful.volume.channel))
+beautiful.volume.update()
+end,
+  {description = "volume 0%", group = "hotkeys"}),
 
     
 

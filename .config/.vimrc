@@ -5,18 +5,19 @@
 set mouse=a
 
 "makes autoclosing of brackets ps. make sure you dont set paste
-inoremap " ""<left>
-inoremap ' ''<left>
+"inoremap " ""<left>
+"inoremap ' ''<left>
 "inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
+"inoremap [ []<left>
+"inoremap { {}<left>
+"inoremap {<CR> {<CR>}<ESC>O
+"inoremap {;<CR> {<CR>};<ESC>O
 autocmd FileType markdown inoremap * **<left>
 
 
+
 "sets numbering of lines
-set relativenumber
+set number relativenumber
 
 " Sets how many lines of history VIM has to remember
 set history=500
@@ -384,7 +385,8 @@ execute pathogen#infect()
 
 colorscheme space-vim-dark
 hi Normal     ctermbg=NONE guibg=NONE
-hi LineNr     ctermbg=NONE guibg=NONE ctermfg=red
+hi LineNr     ctermbg=NONE guibg=NONE ctermfg=red 
+hi CursorLineNr ctermfg=magenta
 highlight clear SignColumn
 hi StatusLine ctermbg=000000 guibg=#000000 
 hi TabLineFill ctermfg=NONE ctermbg=NONE
@@ -427,8 +429,8 @@ autocmd BufNewFile *.md r ~/pandoc/mdskeltontxt | :norm ggddjwwl
 "autoadd skeleton text anytime i create a new java file 
 autocmd BufNewFile *.java r ~/pandoc/javaskeletontxt| :norm jjjww 
 
-
-
+"autoadd skeleton text anytime i start an assignment in latex
+autocmd BufNewFile *ass[0-9].tex r ~/pandoc/latexassskeletontxt | :norm 35Gww 
 
 
 
