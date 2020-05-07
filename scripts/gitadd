@@ -14,7 +14,7 @@ local message="added changes"
 git add .
 read -p "Enter your commit message💬:" message
 git commit -m "$message"
-git push origin && notify-send "succesfully pushed changes to origin📌"
+git push origin && git push server && notify-send "succesfully pushed changes to origin📌"
 }
 
 

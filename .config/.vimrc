@@ -384,7 +384,7 @@ call plug#end()
 execute pathogen#infect() 
 
 colorscheme space-vim-dark
-hi Normal     ctermbg=NONE guibg=NONE
+:hi Normal     ctermbg=NONE guibg=NONE
 hi LineNr     ctermbg=NONE guibg=NONE ctermfg=red 
 hi CursorLineNr ctermfg=magenta
 highlight clear SignColumn
@@ -407,8 +407,8 @@ set showcmd
 "set nohlsearch
 
 "change cursor in modes
-au InsertEnter * silent execute "!echo -en \<esc>[6 q"
-au InsertLeave * silent execute "!echo -en \<esc>[2 q"
+"au InsertEnter * silent execute "!echo -en \<esc>[6 q"
+"au InsertLeave * silent execute "!echo -en \<esc>[2 q"
 
 "fuzzy finder to find file with ctrl+p in vim and open it
 noremap <c-p> :tabnew \| :FZF <CR>
@@ -430,7 +430,7 @@ autocmd BufNewFile *.md r ~/pandoc/mdskeltontxt | :norm ggddjwwl
 autocmd BufNewFile *.java r ~/pandoc/javaskeletontxt| :norm jjjww 
 
 "autoadd skeleton text anytime i start an assignment in latex
-autocmd BufNewFile *ass[0-9].tex r ~/pandoc/latexassskeletontxt | :norm 35Gww 
+autocmd BufNewFile \(*ass?.tex\|*ass.tex\) r ~/pandoc/latexassskeletontxt | :norm 35Gww 
 
 
 
@@ -455,13 +455,17 @@ nmap ++ <plug>NERDCommenterToggle
 let g:NERDTreeIgnore = ['^node_modules$']
 
 " vim-prettier
-"let g:prettier#quickfix_enabled = 0
-"let g:prettier#quickfix_auto_focus = 0
+let g:prettier#quickfix_enabled = 0
+let g:prettier#quickfix_auto_focus = 0
+
 " prettier command for coc
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
 " run prettier on save
-"let g:prettier#autoformat = 0
-"autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+let g:prettier#autoformat = 0
+
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html Prettier
+
 
 
 " ctrlp

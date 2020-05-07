@@ -21,15 +21,13 @@ ctrl + Print
 ctrl + shift + Print 
  ~/scripts/./killrecord
 super + r
- rofi -show drun
+ rofi -show drun -show-icons
 super + w
  rofi -show
 F8
  ~/scripts/./screentext
 F12
  xfce4-terminal --drop-down
-super + "-"
- gpick -p
 ctrl + XF86AudioPlay
  clementine
 XF86AudioPlay

@@ -63,8 +63,9 @@ naughty.config.defaults['icon_size'] = 80
 -- {{{ Variable definitions
 
 local themes = {
-    "purple",       -- 1
-}
+    "purple", 
+    "floppy",-- 1
+  }
 
 local chosen_theme = "purple" 
 local modkey       = "Mod4"

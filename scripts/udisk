@@ -1,2 +1,2 @@
-#!/usr/bin/env bash
-sudo umount /media/joel/disk &&sudo rm -rf ~/media/joel/disk  && notify-send "UNMOUNTED SUCCESSFULLY 💻"
+#!/bin/sh
+sudo umount /media/joel/disk && sudo rm -rf ~/media/joel/disk  && notify-send "UNMOUNTED SUCCESSFULLY 💻"
