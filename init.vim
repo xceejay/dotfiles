@@ -149,7 +149,7 @@ endfunction
 " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('/home/joel/nvim/plugged')
-
+Plug 'lervag/vimtex'
 
 Plug 'hashivim/vim-terraform'
 Plug 'juliosueiras/vim-terraform-completion'
@@ -169,6 +169,10 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug 'rip-rip/clang_complete'
+
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+Plug 'voldikss/vim-floaterm'
 
 call plug#end()
 
@@ -235,7 +239,8 @@ set shiftwidth=2
 " always uses spaces instead of tab characters
 set expandtab
 
-
+"find and replace pattern highlight
+set inccommand=nosplit
 
 " sync open file with NERDTree
 " " Check if NERDTree is open or active
@@ -401,12 +406,21 @@ nnoremap <buffer><nowait><silent> <F9> :c-u><silent call system'(pandoc '.expand
 nnoremap <buffer><nowait><silent> <F10> :<c-u>silent call system(pdflatex *.tex'') <cr>
 "
 ""spell checking and correction
-map<F6> :setlocal spell spelllang=en_gb<>cr> 
+map<F6> :setlocal spell spelllang=en_gb
 nmap<F5> [sz=
 nmap<F7> ]>sz=
+
+""make line, go to line, indent and return to marked line
 nmap<c-I> maG=gg`a
 "autoadd skeleton text anytime i create a markdown file
 autocmd BufNewFile *.md r ~/pandoc/mdskeltontxt | :norm ggddjwwl
+
+
+
+
+
+
+
 
 "syntaxcheck
 
@@ -431,7 +445,11 @@ autocmd BufNewFile \(*ass?.tex\|*ass.tex\) r ~/pandoc/latexassskeletontxt | :nor
 "set Color scheme
 colorscheme spacemacsvimdark
 
-
+"floaterm
+let g:floaterm_keymap_new    = '<F1>'
+let g:floaterm_keymap_prev   = '<F2>'
+let g:floaterm_keymap_next   = '<F3>'
+let g:floaterm_keymap_toggle = '<F4>'
 
 
 "%%% THEMING %%""
@@ -444,5 +462,5 @@ hi StatusLine ctermbg=232 ctermfg=140
 hi TabLineFill ctermfg=NONE ctermbg=NONE
 hi TabLine ctermfg=NONE ctermbg=NONE
 hi TabLineSel ctermfg=NONE ctermbg=NONE
-
+hi FloatermNC guibg=skyblue
 

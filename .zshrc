@@ -290,3 +290,7 @@ export DE="generic"
 export GOROOT="/usr/local/go"
 export XDG_CONFIG_HOME=/home/joel/.config
 #export PULSE_SERVER=remote_host
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/joel/.sdkman"
+[[ -s "/home/joel/.sdkman/bin/sdkman-init.sh" ]] && source "/home/joel/.sdkman/bin/sdkman-init.sh"
