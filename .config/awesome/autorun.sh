@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+
+xset  r rate 300 50
+
 function run {
   if ! pgrep -f "$1" ;
   then

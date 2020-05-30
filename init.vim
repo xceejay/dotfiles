@@ -239,6 +239,9 @@ set shiftwidth=2
 " always uses spaces instead of tab characters
 set expandtab
 
+" copy and pastinggggggggggggggggggggggg
+set clipboard+=unnamedplus
+
 "find and replace pattern highlight
 set inccommand=nosplit
 
