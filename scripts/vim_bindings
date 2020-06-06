@@ -1,0 +1,16 @@
+visual mode highlight capitalize
+- U
+open file in vim 
+- :e
+move to relative line number up or down
+- ${number} up or down
+move to line number
+- :${number}
+decrement number 
+- C-x 
+increment number
+- C-a
+read stdout into a file
+- :read !command 
+
+

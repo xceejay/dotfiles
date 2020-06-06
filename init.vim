@@ -1,12 +1,12 @@
 
 "Sets numbering
-set relativenumber number
+set  number relativenumber
 
 "Enable Syntax highlighting
 syntax enable
 
 " Sets how many lines of history VIM has to remember
-set history=500
+set history=1000
 
 " Enable filetype plugins
 filetype plugin on
@@ -160,6 +160,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 "coc for vscode inspired emulation
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+
 "Nerdtree
 Plug 'scrooloose/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -169,6 +170,8 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug 'rip-rip/clang_complete'
+
+Plug 'junegunn/goyo.vim'
 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
@@ -200,7 +203,6 @@ hi TabLine ctermfg=NONE ctermbg=NONE
 hi TabLineSel ctermfg=NONE ctermbg=NONE
 
 
-
 ""%%%%KEY BINDINGS%%%""
 
 "Save file with Ctrl+s
@@ -214,6 +216,8 @@ vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
 
 let g:NERDTreeIgnore = ['^node_modules$']
+let g:NERDTreeQuitOnOpen = 1
+
 
 " vim-prettier
 let g:prettier#quickfix_enabled = 0
@@ -260,8 +264,8 @@ function! SyncTree()
   endif
 endfunction
 
-" Highlight currently open buffer in NERDTree
-autocmd BufEnter * call SyncTree()
+" Highlight currently open buffer in NERDTree ("makes nerd tree open twice")
+"autocmd BufEnter * call SyncTree()
 
 " coc config
 let g:coc_global_extensions = [
@@ -401,7 +405,7 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 ""%%Recent Conf%%""
 "fuzzy finder to find file with ctrl+p in vim and open it
-noremap <c-p> :tabnew \| :FZF <CR>
+noremap <c-p> :vsplit \| :FZF <CR>
 
 ""auto compile pandoc on F9 key press
 nnoremap <buffer><nowait><silent> <F9> :c-u><silent call system'(pandoc '.expand('%:p:S').' -o '.expand('%:p:r:S').'.pdf')<cr>
@@ -418,10 +422,14 @@ nmap<c-I> maG=gg`a
 "autoadd skeleton text anytime i create a markdown file
 autocmd BufNewFile *.md r ~/pandoc/mdskeltontxt | :norm ggddjwwl
 
+"move between splits 
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
 
-
-
-
+"toggle split 
+nmap <silent> <C-\> :vsplit 
 
 
 
@@ -466,4 +474,6 @@ hi TabLineFill ctermfg=NONE ctermbg=NONE
 hi TabLine ctermfg=NONE ctermbg=NONE
 hi TabLineSel ctermfg=NONE ctermbg=NONE
 hi FloatermNC guibg=skyblue
+
+
 

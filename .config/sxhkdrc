@@ -13,7 +13,7 @@ super + p
 super + c
   ~/scripts/./wificonnect
 super + d
-  ~/scripts/./wifidisconnect
+  dmenu_run -fn "Iosevka Term Medium-11" -nb black -sb "#260A35"
 Print
  xfce4-screenshooter
 ctrl + Print 

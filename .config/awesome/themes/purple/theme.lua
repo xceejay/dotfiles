@@ -12,7 +12,7 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 local theme                                     = {}
 theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/purple"
 theme.wallpaper                                 = theme.dir .. "/wall.png"
-theme.font                                      = "Helvetica Neue Medium 10"-- "manrope Bold 9"
+theme.font                                      = "Iosevka Term Medium 10"-- "manrope Bold 9"
 theme.fg_normal                                 = "#FFFFFF"
 theme.fg_focus                                  = "#EA6F81"
 theme.fg_urgent                                 = "#CC9393"
@@ -99,7 +99,7 @@ end
 theme.cal = lain.widget.cal({
   attach_to = { clock },
   notification_preset = {
-    font = "manrope Bold 10",
+    font = theme.font,
     fg   = theme.fg_normal,
     bg   = theme.bg_normal
   }
@@ -298,24 +298,23 @@ function theme.at_screen_connect(s)
   -- wibox.container.background(net_wireless,theme.bg_focus),
   --wibox.container.background(net_wired,theme.bg_focus),
   --arrl_dl, wibox.container.background(net_wireless,theme.bg_focus),
-arrl_ld,
+spr,
   wibox.container.background(tempicon,theme.bg_focus), 
 wibox.container.background(temp.widget,theme.bg_focus),
- arrl_dl,
 
+spr,
   memicon,
   mem.widget,
-  arrl_ld,
+spr,
   wibox.container.background(temp.widget,theme.bg_focus),
-  arrl_dl,
+spr,
   baticon,
   bat.widget,
-  arrl_ld,
   wibox.container.background(clock,theme.bg_focus),
-  arrl_dl,
-  spr,
+spr,
+spr,
   wibox.container.background( wibox.widget.systray(),theme.bg_focus),
-  arrl_ld,
+spr,
   wibox.container.background(mytagbox,theme.bg_focus),
 
   -- s.mylayoutbox,

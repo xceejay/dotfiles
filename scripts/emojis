@@ -15,7 +15,7 @@ case "$1" in
     fi
     ;;
   "")  	
-    bash $0 list | rofi -show run -columns 2 -yoffset -210 -dmenu -p 'Emojis🙃: ' | bash $0 copy
+    bash $0 list | rofi -show run -columns 2 -width 63 -yoffset -210 -dmenu -p 'Emojis🙃: ' | bash $0 copy
     ;;
 esac
 
