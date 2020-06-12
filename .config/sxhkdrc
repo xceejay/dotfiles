@@ -23,7 +23,7 @@ ctrl + shift + Print
 super + r
  rofi -show drun -show-icons
 super + w
- rofi -show
+ rofi -show window
 F8
  ~/scripts/./screentext
 F12

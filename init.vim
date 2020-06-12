@@ -29,7 +29,7 @@ set noswapfile
 set magic
 
 "makes mouse be able to highlight
-set mouse=c
+set mouse=a
 
 "Remap Vim 0 to first non-blank character
 map 0 ^
@@ -151,6 +151,7 @@ endfunction
 call plug#begin('/home/joel/nvim/plugged')
 Plug 'lervag/vimtex'
 
+
 Plug 'hashivim/vim-terraform'
 Plug 'juliosueiras/vim-terraform-completion'
 
@@ -160,29 +161,60 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 "coc for vscode inspired emulation
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+"autoclosing tags
+Plug 'townk/vim-autoclose'
+
+"airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+"devicon
+Plug 'ryanoasis/vim-devicons'
 
 "Nerdtree
 Plug 'scrooloose/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-
-
 Plug 'scrooloose/nerdcommenter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
+"Clang
 Plug 'rip-rip/clang_complete'
 
+
+"goyo
 Plug 'junegunn/goyo.vim'
 
+
+"golang
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
+"floating terminal
 Plug 'voldikss/vim-floaterm'
 
+"tables in vim
+Plug 'dhruvasagar/vim-table-mode'
+
+
+Plug 'tpope/vim-fugitive'
+
+
+Plug 'ap/vim-css-color'
+
+Plug 'honza/vim-snippets'
+
+
+"temp js
+Plug 'pangloss/vim-javascript'
+"Plug 'mxw/vim-jsx'
+"Plug 'leafgarland/typescript-vim'
+"Plug 'peitalin/vim-jsx-typescript'
+"Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+"Plug 'jparise/vim-graphql'
 call plug#end()
 
 
 " path to directory where library can be found
 let g:clang_library_path='/usr/lib/llvm-10/lib'
-
 
 "Pathogen
 execute pathogen#infect() 
@@ -205,6 +237,8 @@ hi TabLineSel ctermfg=NONE ctermbg=NONE
 
 ""%%%%KEY BINDINGS%%%""
 
+noremap <S-tab> :next<CR>
+
 "Save file with Ctrl+s
 noremap <C-s> :w!<CR>
 
@@ -217,10 +251,9 @@ nmap ++ <plug>NERDCommenterToggle
 
 let g:NERDTreeIgnore = ['^node_modules$']
 let g:NERDTreeQuitOnOpen = 1
-
-
+let g:NERDTreeGlyphReadOnly = "RO"
 " vim-prettier
-let g:prettier#quickfix_enabled = 0
+let g:prettier#quickfix_enabled = 1
 let g:prettier#quickfix_auto_focus = 0
 " prettier command for coc
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
@@ -235,6 +268,9 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 " j/k will move virtual lines (lines that wrap)
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
+set guifont=Iosevka\ Term\ Medium\ 11
+let g:airline_powerline_fonts = 1
+
 
 set smarttab
 set cindent
@@ -270,12 +306,22 @@ endfunction
 " coc config
 let g:coc_global_extensions = [
       \ 'coc-snippets',
-      \ 'coc-pairs',
-      \ 'coc-tsserver',
-      \ 'coc-eslint', 
+      \ 'coc-html',
+      \ 'coc-lua',
+      \ 'coc-python',
+      \ 'coc-docker',
+      \ 'coc-vimtex',
+      \'coc-tsserver',
+      \ 'coc-yaml',
+      \ 'coc-markdownlint',
+      \ 'coc-emmet',
+      \ 'coc-sh',
       \ 'coc-prettier', 
+      \ 'coc-eslint', 
       \ 'coc-json', 
       \ ]
+
+"  \ 'coc-pairs',
 " from readme
 " if hidden is not set, TextEdit might fail.
 set hidden " Some servers have issues with backup files, see #649 set nobackup set nowritebackup " Better display for messages set cmdheight=2 " You will have bad experience for diagnostic messages when it's default 4000.
@@ -307,7 +353,7 @@ inoremap <silent><expr> <c-space> coc#refresh()
 " Coc only does snippet and additional edit on confirm.
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " Or use `complete_info` if your vim support it, like:
-" inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " Use `[g` and `]g` to navigate diagnostics
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
@@ -399,10 +445,6 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 
 
-
-
-
-
 ""%%Recent Conf%%""
 "fuzzy finder to find file with ctrl+p in vim and open it
 noremap <c-p> :vsplit \| :FZF <CR>
@@ -431,6 +473,10 @@ nmap <silent> <A-Right> :wincmd l<CR>
 "toggle split 
 nmap <silent> <C-\> :vsplit 
 
+"react stuff
+
+
+
 
 
 "syntaxcheck
@@ -447,11 +493,22 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_aggregate_errors = 1
 
+
+
+"emmet auto close tags etc key binding
+let g:user_emmet_mode='n'
+let g:user_emmet_leader_key=','
+
+"This unsets the "last search pattern" register by hitting return
+nnoremap <CR> :noh<CR><CR>
+
+
 "autoadd skeleton text anytime i create a new java file 
 "autocmd BufNewFile *.java r ~/pandoc/javaskeletontxt| :norm jjjww 
 
 "autoadd skeleton text anytime i start an assignment in latex
 autocmd BufNewFile \(*ass?.tex\|*ass.tex\) r ~/pandoc/latexassskeletontxt | :norm 35Gww "
+let g:tex_flavor = 'latex'
 
 "set Color scheme
 colorscheme spacemacsvimdark
@@ -463,16 +520,43 @@ let g:floaterm_keymap_next   = '<F3>'
 let g:floaterm_keymap_toggle = '<F4>'
 
 
+"go pls
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
+
+
+
+"quickly enable / disable table mode in insert mode by using || or __ :
+function! s:isAtStartOfLine(mapping)
+  let text_before_cursor = getline('.')[0 : col('.')-1]
+  let mapping_pattern = '\V' . escape(a:mapping, '\')
+  let comment_pattern = '\V' . escape(substitute(&l:commentstring, '%s.*$', '', ''), '\')
+  return (text_before_cursor =~? '^' . ('\v(' . comment_pattern . '\v)?') . '\s*\v' . mapping_pattern . '\v$')
+endfunction
+
+inoreabbrev <expr> <bar><bar>
+      \ <SID>isAtStartOfLine('\|\|') ?
+      \ '<c-o>:TableModeEnable<cr><bar><space><bar><left><left>' : '<bar><bar>'
+inoreabbrev <expr> __
+      \ <SID>isAtStartOfLine('__') ?
+      \ '<c-o>:silent! TableModeDisable<cr>' : '__'
+
+
+
+" this is handled by LanguageClient [LC]
+let g:go_def_mapping_enabled = 0
+
+
 "%%% THEMING %%""
 
 hi Normal     ctermbg=NONE guibg=NONE
 hi LineNr     ctermbg=NONE ctermfg=NONE guibg=NONE ctermfg=red 
 hi CursorLineNr ctermfg=magenta ctermbg=NONE
 highlight clear SignColumn
-hi StatusLine ctermbg=232 ctermfg=140
-hi TabLineFill ctermfg=NONE ctermbg=NONE
-hi TabLine ctermfg=NONE ctermbg=NONE
-hi TabLineSel ctermfg=NONE ctermbg=NONE
+"hi StatusLine ctermbg=232 ctermfg=140
+"hi TabLineFill ctermfg=NONE ctermbg=NONE
+"hi TabLine ctermfg=NONE ctermbg=NONE
+"hi TabLineSel ctermfg=NONE ctermbg=NONE
 hi FloatermNC guibg=skyblue
 
 
