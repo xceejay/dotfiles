@@ -151,6 +151,8 @@ endfunction
 call plug#begin('/home/joel/nvim/plugged')
 Plug 'lervag/vimtex'
 Plug 'chr4/nginx.vim'
+"fish
+Plug 'dag/vim-fish'
 
 Plug 'hashivim/vim-terraform'
 Plug 'juliosueiras/vim-terraform-completion'
@@ -306,6 +308,7 @@ endfunction
 " coc config
 let g:coc_global_extensions = [
       \ 'coc-snippets',
+      \ 'coc-fish',
       \ 'coc-html',
       \ 'coc-lua',
       \ 'coc-python',
