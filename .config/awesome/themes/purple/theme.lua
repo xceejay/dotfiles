@@ -12,7 +12,7 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 local theme                                     = {}
 theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/purple"
 theme.wallpaper                                 = theme.dir .. "/wall.png"
-theme.font                                      = "Iosevka Term Medium 10"-- "manrope Bold 9"
+theme.font                                      = "SF Pro Display Medium 10"-- "manrope Bold 9"
 theme.fg_normal                                 = "#FFFFFF"
 theme.fg_focus                                  = "#EA6F81"
 theme.fg_urgent                                 = "#CC9393"
@@ -178,9 +178,9 @@ local bat = lain.widget.bat({
     if bat_now.status and bat_now.status ~= "N/A" then
       if bat_now.ac_status == 1 then
         baticon:set_image(theme.widget_ac)
-      elseif not bat_now.perc and tonumber(bat_now.perc) <= 15 then
+      elseif not bat_now.perc and tonumber(bat_now.perc) <= 20 then
         baticon:set_image(theme.widget_battery_empty)
-      elseif not bat_now.perc and tonumber(bat_now.perc) <= 25 then
+      elseif not bat_now.perc and tonumber(bat_now.perc) <= 30 then
         baticon:set_image(theme.widget_battery_low)
       else
         baticon:set_image(theme.widget_battery)
@@ -298,23 +298,24 @@ function theme.at_screen_connect(s)
   -- wibox.container.background(net_wireless,theme.bg_focus),
   --wibox.container.background(net_wired,theme.bg_focus),
   --arrl_dl, wibox.container.background(net_wireless,theme.bg_focus),
-spr,
-  wibox.container.background(tempicon,theme.bg_focus), 
-wibox.container.background(temp.widget,theme.bg_focus),
+arrl_ld,
+  wibox.container.background(cpuicon,theme.bg_focus), 
+wibox.container.background(cpu.widget,theme.bg_focus),
+ arrl_dl,
 
-spr,
   memicon,
   mem.widget,
-spr,
+  arrl_ld,
   wibox.container.background(temp.widget,theme.bg_focus),
-spr,
+  arrl_dl,
   baticon,
   bat.widget,
+  arrl_ld,
   wibox.container.background(clock,theme.bg_focus),
-spr,
-spr,
+  arrl_dl,
+  spr,
   wibox.container.background( wibox.widget.systray(),theme.bg_focus),
-spr,
+  arrl_ld,
   wibox.container.background(mytagbox,theme.bg_focus),
 
   -- s.mylayoutbox,
