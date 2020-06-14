@@ -150,7 +150,7 @@ endfunction
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('/home/joel/nvim/plugged')
 Plug 'lervag/vimtex'
-
+Plug 'chr4/nginx.vim'
 
 Plug 'hashivim/vim-terraform'
 Plug 'juliosueiras/vim-terraform-completion'
