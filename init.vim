@@ -1,4 +1,3 @@
-
 "Sets numbering
 set  number relativenumber
 
@@ -156,6 +155,8 @@ Plug 'dag/vim-fish'
 
 Plug 'hashivim/vim-terraform'
 Plug 'juliosueiras/vim-terraform-completion'
+
+
 
 " Plugin outside ~/.vim/plugged with post-update hook
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -450,7 +451,7 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 ""%%Recent Conf%%""
 "fuzzy finder to find file with ctrl+p in vim and open it
-noremap <c-p> :vsplit \| :FZF <CR>
+"noremap <c-p> :vsplit \| :FZF <CR>
 
 ""auto compile pandoc on F9 key press
 nnoremap <buffer><nowait><silent> <F9> :c-u><silent call system'(pandoc '.expand('%:p:S').' -o '.expand('%:p:r:S').'.pdf')<cr>
@@ -462,8 +463,9 @@ map<F6> :setlocal spell spelllang=en_gb
 nmap<F5> [sz=
 nmap<F7> ]>sz=
 
-""make line, go to line, indent and return to marked line
-nmap<c-I> maG=gg`a
+""make line, go to line, indent and return to marked line in insert mode
+inoremap<c-I> <ESC>maG=gg`ai
+
 "autoadd skeleton text anytime i create a markdown file
 autocmd BufNewFile *.md r ~/pandoc/mdskeltontxt | :norm ggddjwwl
 
@@ -477,6 +479,7 @@ nmap <silent> <A-Right> :wincmd l<CR>
 nmap <silent> <C-\> :vsplit 
 
 "react stuff
+
 
 
 

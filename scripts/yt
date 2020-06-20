@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+#!/bin/bash
+
 #Minimal script to download a youtube video/audio using youtube-dl and rename the file to preferred file name
 #     link=$1
 #    query="_-$(echo $link|cut -c 33-)" 

@@ -8,4 +8,16 @@ function export
 end
 end
 
+
+# PATH VARS
 export PATH="$PATH:/home/joel/scripts"
+export PATH="$PATH:/home/joel/.local/bin"
+export PATH="$PATH:/home/joel/.emacs.d/bin"
+
+
+
+
+
+# EXPORTS
+export GOROOT="/usr/local/go"
+export GOPATH="/home/joel/Desktop/programming/go/projects"

@@ -23,7 +23,7 @@ run pulseaudio --start
 #run pulseaudio
 run devilspie
 #run transmission-gtk
-run kdeconnect-indicator
+#run kdeconnect-indicator
 run blueman-applet
 run clementine
 #run rhythmbox
