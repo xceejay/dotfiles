@@ -3,6 +3,12 @@ alias apt='sudo apt'
 alias t='tldr'
 alias cp='cp -v'
 alias xclip='xclip -sel clip'
+alias zathura='devour zathura'
+alias mpv='devour mpv'
+alias sxiv='devour sxiv'
+alias feh='devour feh'
+alias mupdf='devour mupdf'
+
 
 #ls aliases
 alias lt='ls -altrh' # sort by date

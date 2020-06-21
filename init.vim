@@ -156,6 +156,9 @@ Plug 'dag/vim-fish'
 Plug 'hashivim/vim-terraform'
 Plug 'juliosueiras/vim-terraform-completion'
 
+"Show vim buffers
+Plug 'pacha/vem-tabline'
+
 
 
 " Plugin outside ~/.vim/plugged with post-update hook
@@ -452,6 +455,7 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 ""%%Recent Conf%%""
 "fuzzy finder to find file with ctrl+p in vim and open it
 "noremap <c-p> :vsplit \| :FZF <CR>
+noremap <C-p> :FZF <CR>
 
 ""auto compile pandoc on F9 key press
 nnoremap <buffer><nowait><silent> <F9> :c-u><silent call system'(pandoc '.expand('%:p:S').' -o '.expand('%:p:r:S').'.pdf')<cr>
@@ -564,6 +568,21 @@ highlight clear SignColumn
 "hi TabLine ctermfg=NONE ctermbg=NONE
 "hi TabLineSel ctermfg=NONE ctermbg=NONE
 hi FloatermNC guibg=skyblue
+highlight VemTablineNormal           term=reverse cterm=none ctermfg=255   ctermbg=234 
+highlight VemTablineLocation         term=reverse cterm=none ctermfg=239 ctermbg=251 
+highlight VemTablineNumber           term=reverse cterm=none ctermfg=239 ctermbg=251 
+highlight VemTablineSelected         term=bold    cterm=bold ctermfg=0   ctermbg=255 
+highlight VemTablineLocationSelected term=bold    cterm=none ctermfg=239 ctermbg=255 
+highlight VemTablineNumberSelected   term=bold    cterm=none ctermfg=239 ctermbg=255 
+highlight VemTablineShown            term=reverse cterm=none ctermfg=0   ctermbg=251 
+highlight VemTablineLocationShown    term=reverse cterm=none ctermfg=0   ctermbg=251 
+highlight VemTablineNumberShown      term=reverse cterm=none ctermfg=0   ctermbg=251 
+highlight VemTablineSeparator        term=reverse cterm=none ctermfg=246 ctermbg=251 
+highlight VemTablinePartialName      term=reverse cterm=none ctermfg=246 ctermbg=251 
+highlight VemTablineTabNormal        term=reverse cterm=none ctermfg=0   ctermbg=251 
+highlight VemTablineTabSelected      term=bold    cterm=bold ctermfg=0   ctermbg=255 
+
+
 
 
 
