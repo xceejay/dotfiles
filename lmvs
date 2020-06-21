@@ -1,0 +1,3 @@
+#!/bin/bash
+
+mpv "$(/bin/ls -Ah *.[mw][eokp][bv4]|dmenu -i -fn  "manrope-10" -nb black -sb "#260A35")" &

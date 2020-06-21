@@ -1,0 +1,2 @@
+#!/bin/sh
+tldr "$1"|sed 's/\x1b\[[0-9;]*m//g'|pandoc  -o "/tmp/$1.pdf" && zathura "/tmp/$1.pdf" 

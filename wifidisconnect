@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+wifi off && notify-send  'disconnected...!️️️️😞'
+wifi on && sleep 20
+if [ "$(nmcli|grep -o -w connected)" = "connected" ]
+    then
+notify-send  'back on 💪!'
+else 
+     notify-send  'wifi could not connect...😿'
+     fi

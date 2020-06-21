@@ -1,0 +1,39 @@
+#!/bin/bash
+
+declare -f
+
+file='/home/joel/scripts/gitadd'
+choice=$(cat $file|egrep -w -o '^_[a-z]+.+_'|sed 's/_/ /g'|rofi -dmenu -p "what you wanna do in this local git repo❔"|sed 's/ /_/g')
+
+
+
+
+_push_to_origin_(){
+git status
+local message="added changes"
+git add .
+read -p "Enter your commit message💬:" message
+git commit -m "$message"
+git push origin  && notify-send "succesfully pushed changes to origin📌"
+}
+
+
+_revert_changes_(){
+ local hash=""
+
+ git whatchanged|enscript --output=/tmp/git|ps2pdf /tmp/git /tmp/git.pdf|zathura /tmp/git.pdf > /dev/null 2>&1
+hash=$(git whatchanged|awk '/^commit/ {print $2}'|rofi -dmenu -p "Choose a commit hash you want revert👣:")
+git revert --no-commit $hash && notify-send "succesfully reverted local changes👈"
+
+} #todo
+
+
+
+
+
+#where implementation of functions begin
+export -f _push_to_origin_
+export -f _revert_changes_
+ eval $choice
+
+
