@@ -13,7 +13,7 @@ if [ -f "$1" ]; then
     else 
 	page=1
     fi
-    zathura "$1" & 
+    devour zathura "$1" & 
 	printf "%b\n" "0a\n$pageline\n.\nw" | ed -s "$CACHE"
 else
     exit 1

@@ -93,6 +93,23 @@ set tw=500
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
+set smarttab
+set cindent
+set tabstop=2
+set shiftwidth=2
+" always uses spaces instead of tab characters
+set expandtab
+
+" copy and pastinggggggggggggggggggggggg
+set clipboard+=unnamedplus
+
+"find and replace pattern highlight
+set inccommand=nosplit
+
+
+"Change leader key
+:let mapleader = ","
+
 
 "remember where i last left off #cursor
 if has("autocmd")
@@ -141,6 +158,10 @@ function! HasPaste()
   return ''
 endfunction
 
+
+
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " =>Vim plug
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -148,18 +169,23 @@ endfunction
 " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('/home/joel/nvim/plugged')
+
+
+"latex
 Plug 'lervag/vimtex'
+
+"nginx 
 Plug 'chr4/nginx.vim'
+
 "fish
 Plug 'dag/vim-fish'
 
+"terraform
 Plug 'hashivim/vim-terraform'
 Plug 'juliosueiras/vim-terraform-completion'
 
 "Show vim buffers
 Plug 'pacha/vem-tabline'
-
-
 
 " Plugin outside ~/.vim/plugged with post-update hook
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -186,10 +212,8 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 "Clang
 Plug 'rip-rip/clang_complete'
 
-
 "goyo
 Plug 'junegunn/goyo.vim'
-
 
 "golang
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -200,13 +224,20 @@ Plug 'voldikss/vim-floaterm'
 "tables in vim
 Plug 'dhruvasagar/vim-table-mode'
 
-
+"Git
 Plug 'tpope/vim-fugitive'
 
-
+"Colors
 Plug 'ap/vim-css-color'
 
+"snippets
 Plug 'honza/vim-snippets'
+
+"notes
+"Plug 'vimwiki/vimwiki'
+
+"org mode
+"Plug 'jceb/vim-orgmode'
 
 
 "temp js
@@ -216,6 +247,8 @@ Plug 'pangloss/vim-javascript'
 "Plug 'peitalin/vim-jsx-typescript'
 "Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 "Plug 'jparise/vim-graphql'
+
+
 call plug#end()
 
 
@@ -229,27 +262,11 @@ execute pathogen#infect()
 
 
 
-""%%% THEMING %%""
-
-hi Normal     ctermbg=NONE guibg=NONE
-hi LineNr     ctermbg=NONE ctermfg=NONE guibg=NONE ctermfg=red 
-hi CursorLineNr ctermfg=magenta ctermbg=NONE
-highlight clear SignColumn
-hi StatusLine ctermbg=232 ctermfg=140
-hi TabLineFill ctermfg=NONE ctermbg=NONE
-hi TabLine ctermfg=NONE ctermbg=NONE
-hi TabLineSel ctermfg=NONE ctermbg=NONE
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""%%%%CODE EMULATION%%%""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
-""%%%%KEY BINDINGS%%%""
-
-noremap <S-tab> :next<CR>
-
-"Save file with Ctrl+s
-noremap <C-s> :w!<CR>
-
-
-""%%%%VSCODE%%%""
 inoremap jk <ESC>
 nmap <C-n> :NERDTreeToggle<CR>
 vmap ++ <plug>NERDCommenterToggle
@@ -277,19 +294,6 @@ noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 set guifont=Iosevka\ Term\ Medium\ 11
 let g:airline_powerline_fonts = 1
 
-
-set smarttab
-set cindent
-set tabstop=2
-set shiftwidth=2
-" always uses spaces instead of tab characters
-set expandtab
-
-" copy and pastinggggggggggggggggggggggg
-set clipboard+=unnamedplus
-
-"find and replace pattern highlight
-set inccommand=nosplit
 
 " sync open file with NERDTree
 " " Check if NERDTree is open or active
@@ -452,49 +456,15 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 
 
-""%%Recent Conf%%""
-"fuzzy finder to find file with ctrl+p in vim and open it
-"noremap <c-p> :vsplit \| :FZF <CR>
-noremap <C-p> :FZF <CR>
 
-""auto compile pandoc on F9 key press
-nnoremap <buffer><nowait><silent> <F9> :c-u><silent call system'(pandoc '.expand('%:p:S').' -o '.expand('%:p:r:S').'.pdf')<cr>
-"auto compile latex on f10 press
-nnoremap <buffer><nowait><silent> <F10> :<c-u>silent call system(pdflatex *.tex'') <cr>
-"
-""spell checking and correction
-map<F6> :setlocal spell spelllang=en_gb
-nmap<F5> [sz=
-nmap<F7> ]>sz=
-
-""make line, go to line, indent and return to marked line in insert mode
-inoremap<c-I> <ESC>maG=gg`ai
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""%%PERSONAL CONFIG
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "autoadd skeleton text anytime i create a markdown file
 autocmd BufNewFile *.md r ~/pandoc/mdskeltontxt | :norm ggddjwwl
 
-"move between splits 
-nmap <silent> <A-Up> :wincmd k<CR>
-nmap <silent> <A-Down> :wincmd j<CR>
-nmap <silent> <A-Left> :wincmd h<CR>
-nmap <silent> <A-Right> :wincmd l<CR>
-
-"toggle split 
-nmap <silent> <C-\> :vsplit 
-
-"move between buffer
-nmap <c-i> <Plug>vem_prev_buffer-
-nmap <c-o> <Plug>vem_next_buffer-
-
-
-
-
-
-
 "syntaxcheck
-
-
-
 set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -505,14 +475,9 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_aggregate_errors = 1
 
-
-
 "emmet auto close tags etc key binding
 let g:user_emmet_mode='n'
 let g:user_emmet_leader_key=','
-
-"This unsets the "last search pattern" register by hitting return
-nnoremap <CR> :noh<CR><CR>
 
 
 "autoadd skeleton text anytime i create a new java file 
@@ -558,12 +523,69 @@ inoreabbrev <expr> __
 " this is handled by LanguageClient [LC]
 let g:go_def_mapping_enabled = 0
 
+"vim wiki 2 markdown
+"let g:vimwiki_list = [{'path': '~/vimwiki/',
+                      "\ 'syntax': 'markdown', 'ext': '.md'}]
 
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""%%%%KEY BINDINGS%%%""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+noremap <S-tab> :next<CR>
+
+"Save file with Ctrl+s
+noremap <C-s> :w!<CR>
+
+
+"fuzzy finder to find file with ctrl+p in vim and open it
+"noremap <c-p> :vsplit \| :FZF <CR>
+noremap <C-p> :FZF <CR>
+
+""auto compile pandoc on F9 key press
+nnoremap <buffer><nowait><silent> <F9> :c-u><silent call system'(pandoc '.expand('%:p:S').' -o '.expand('%:p:r:S').'.pdf')<cr>
+"auto compile latex on f10 press
+nnoremap <buffer><nowait><silent> <F10> :<c-u>silent call system(pdflatex *.tex'') <cr>
+"
+
+""spell checking and correction
+map<F6> :setlocal spell spelllang=en_gb
+nmap<F5> [sz=
+nmap<F7> ]>sz=
+
+""make line, go to line, indent and return to marked line in insert mode
+inoremap<c-I> <ESC>maG=gg`aa
+
+
+"move between splits 
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
+
+"toggle split 
+nmap <silent> <C-\> :vsplit 
+
+"move between buffer
+nmap <c-i> <Plug>vem_prev_buffer-
+nmap <c-o> <Plug>vem_next_buffer-
+
+"This unsets the "last search pattern" register by hitting return
+nnoremap <CR> :noh<CR><CR>
+
+
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "%%% THEMING %%""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 hi Normal     ctermbg=NONE guibg=NONE
 hi LineNr     ctermbg=NONE ctermfg=NONE guibg=NONE ctermfg=red 
-hi CursorLineNr ctermfg=magenta ctermbg=NONE
+"hi CursorLineNr ctermfg=magenta ctermbg=NONE
+hi CursorLineNr ctermfg=203 ctermbg=NONE
 highlight clear SignColumn
 "hi StatusLine ctermbg=232 ctermfg=140
 "hi TabLineFill ctermfg=NONE ctermbg=NONE
