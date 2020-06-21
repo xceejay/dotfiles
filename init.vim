@@ -482,7 +482,9 @@ nmap <silent> <A-Right> :wincmd l<CR>
 "toggle split 
 nmap <silent> <C-\> :vsplit 
 
-"react stuff
+"move between buffer
+nmap <c-i> <Plug>vem_prev_buffer-
+nmap <c-o> <Plug>vem_next_buffer-
 
 
 
