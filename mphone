@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
-[ -f ~/phone ] && rm ~/phone 
+[ -e ~/phone ] && rm -rf ~/phone 
 mkdir -p ~/phone 
 
-simple-mtpfs -l >~/anddev
-opt=$(cat ~/anddev|dmenu -fn "manrope-10" -nb black -sb "#260A35" -i -p "which device do you want to mount?"|cut -c 1)
+opt=$(simple-mtpfs -l |dmenu -fn "manrope-10" -nb black -sb "#260A35" -i -p "which device do you want to mount?"|cut -c 1)
 simple-mtpfs --device "$opt" ~/phone && notify-send "📱mounted Sucessfully!"

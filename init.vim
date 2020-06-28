@@ -198,7 +198,13 @@ Plug 'townk/vim-autoclose'
 
 "airline
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline-themes'
+
+"todolist 
+Plug 'aserebryakov/vim-todo-lists'
+
+"surround
+Plug 'tpope/vim-surround'
 
 "devicon
 Plug 'ryanoasis/vim-devicons'
@@ -463,7 +469,7 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "autoadd skeleton text anytime i create a markdown file
-autocmd BufNewFile *.md r ~/pandoc/mdskeltontxt | :norm ggddjwwl
+"autocmd BufNewFile *.md r ~/pandoc/mdskeltontxt | :norm ggddjwwl
 
 "syntaxcheck
 set statusline+=%#warningmsg#
@@ -471,7 +477,7 @@ set statusline+=%#warningmsg#
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 0
+let g:syntastic_auto_loc_list = 0 "modified"
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_aggregate_errors = 1

@@ -21,3 +21,4 @@ export PATH="$PATH:/home/joel/.emacs.d/bin"
 # EXPORTS
 export GOROOT="/usr/local/go"
 export GOPATH="/home/joel/Desktop/programming/go/projects"
+export XDG_CONFIG_HOME="/home/joel/.config"

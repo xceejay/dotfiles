@@ -5,6 +5,7 @@ alias cp='cp -v'
 alias xclip='xclip -sel clip'
 alias zathura='devour zathura'
 alias mpv='devour mpv'
+alias mplayer='devour mplayer'
 alias sxiv='devour sxiv'
 alias feh='devour feh'
 alias mupdf='devour mupdf'
@@ -24,6 +25,7 @@ alias 777='chmod -R 777'
 
 
 # Change directory aliases
+alias gotodo="cd $GOPATH/src/github.com/xceejay/gotodo;ls"
 alias chmods="cat /home/joel/scripts/chmods"
 alias jod='cd /home/joel/Desktop/personal/jod;ls'
 alias wk='cd /home/joel/Desktop/work;ls'

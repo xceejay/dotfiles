@@ -1,6 +1,6 @@
 #!/bin/bash
 
-[  -n "$1" ] && mkdir -p "$1"/{notes,videos,books,assignments/{personal,group},random}
+[  -n "$1" ] && mkdir -vp "$1"/{notes,videos,books,assignments/{personal,group},random}
 
 
 

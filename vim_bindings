@@ -14,4 +14,5 @@ read stdout into a file
 - :read !command 
 capitalize letter in normal mode
 - ~ or tilde
-
+paste in front of text
+- P

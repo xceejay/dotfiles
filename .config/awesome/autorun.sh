@@ -26,6 +26,7 @@ run devilspie
 #run kdeconnect-indicator
 run blueman-applet
 run clementine
+run flashfocus
 #run rhythmbox
 #run xdman
 #tgceejay="/home/joel/Telegram/Telegram -many -workdir ~/ceejay" && run "$tgceejay"
