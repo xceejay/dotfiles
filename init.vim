@@ -640,6 +640,10 @@ highlight VemTablinePartialName      term=reverse cterm=none ctermfg=246 ctermbg
 highlight VemTablineTabNormal        term=reverse cterm=none ctermfg=0   ctermbg=251 
 highlight VemTablineTabSelected      term=bold    cterm=bold ctermfg=0   ctermbg=255 
 
+
+
+
+
 function! StatusLine(current, width)
   let l:s = ''
 
@@ -650,7 +654,7 @@ function! StatusLine(current, width)
   endif
   let l:s .= ' %f%h%w%m%r '
   if a:current
-    let l:s .= crystalline#right_sep('', 'Fill') . ' %{fugitive#head()}'
+    let l:s .= crystalline#right_sep('', 'Fill') . ' %{fugitive#head()}' .  WebDevIconsGetFileTypeSymbol()
   endif
 
   let l:s .= '%='
@@ -659,7 +663,7 @@ function! StatusLine(current, width)
     let l:s .= crystalline#left_mode_sep('')
   endif
   if a:width > 80
-    let l:s .= ' %l/%L %c%V %P '
+    let l:s .=  '  %l/%L %c%V %P '
   else
     let l:s .= ' '
   endif
@@ -673,10 +677,6 @@ let g:crystalline_theme = 'shadesofpurple'
 
 "badwolf.vim  dracula.vim  hybrid.vim      molokai.vim  onedark.vim     shadesofpurple.vim
 "default.vim  gruvbox.vim  jellybeans.vim  nord.vim     papercolor.vim  solarized.vim
-
-
-
-
 " vim:set et sw=2 ts=2 fdm=marker:
 
 
