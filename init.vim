@@ -645,10 +645,9 @@ highlight VemTablineTabSelected      term=bold    cterm=bold ctermfg=0   ctermbg
 
 
 function! StatusLine(current, width)
-  let l:s = ''
-
+  let l:s = '' 
   if a:current
-    let l:s .= '🕵 ' .  crystalline#mode()  . crystalline#right_mode_sep('') 
+    let l:s .=crystalline#mode() . '🔍  ' . crystalline#right_mode_sep('') 
   else
     let l:s .= '%#CrystallineInactive#'
   endif
