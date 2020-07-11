@@ -71,6 +71,7 @@ ZSH_THEME="lambda"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-autosuggestions  fast-syntax-highlighting)
+#kubectl
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -105,3 +106,5 @@ source /home/joel/.config/zsh/exports.zsh
 
 
 unset RPS1
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

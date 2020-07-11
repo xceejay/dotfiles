@@ -2,6 +2,8 @@
 
 
 xset  r rate 300 50
+autocutsel &
+autocutsel -s PRIMARY &
 
 function run {
   if ! pgrep -f "$1" ;
@@ -19,6 +21,7 @@ run xfce4-terminal --drop-down
 # run volti ##run pasystray -a
 run pasystray -a
 run nm-applet
+run unclutter
 run pulseaudio --start
 #run pulseaudio
 run devilspie

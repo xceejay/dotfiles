@@ -108,7 +108,7 @@ set inccommand=nosplit
 
 
 "Change leader key
-:let mapleader = ","
+let mapleader = ","
 
 
 "remember where i last left off #cursor
@@ -170,6 +170,8 @@ endfunction
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('/home/joel/nvim/plugged')
 
+"markdown preview 
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 "latex
 Plug 'lervag/vimtex'
@@ -193,11 +195,13 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 "coc for vscode inspired emulation
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-"autoclosing tags
-Plug 'townk/vim-autoclose'
 
 "airline
-Plug 'vim-airline/vim-airline'
+Plug 'rbong/vim-crystalline'
+"Plug 'itchyny/lightline.vim'
+
+
+"Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
 
 "todolist 
@@ -249,7 +253,13 @@ Plug 'honza/vim-snippets'
 
 "temp js
 Plug 'pangloss/vim-javascript'
-"Plug 'mxw/vim-jsx'
+" ES2015 code snippets (Optional)
+Plug 'epilande/vim-es2015-snippets'
+" React code snippets
+"Plug 'epilande/vim-react-snippets'
+" Ultisnips
+Plug 'SirVer/ultisnips'
+"Plug 'chemzqm/vim-jsx-improve'
 "Plug 'leafgarland/typescript-vim'
 "Plug 'peitalin/vim-jsx-typescript'
 "Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
@@ -272,7 +282,6 @@ execute pathogen#infect()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 ""%%%%CODE EMULATION%%%""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 
 inoremap jk <ESC>
 nmap <C-n> :NERDTreeToggle<CR>
@@ -335,10 +344,10 @@ let g:coc_global_extensions = [
       \ 'coc-emmet',
       \ 'coc-sh',
       \ 'coc-prettier', 
-      \ 'coc-eslint', 
       \ 'coc-json', 
       \ ]
 
+" \ 'coc-eslint', 
 "  \ 'coc-pairs',
 " from readme
 " if hidden is not set, TextEdit might fail.
@@ -442,6 +451,7 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 
 " Add status line support, for integration with other plugin, checkout `:h coc-status`
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+"unavailable for crystal line
 
 " Using CocList
 " Show all diagnostics
@@ -466,7 +476,19 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 ""%%PERSONAL CONFIG
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+set showtabline=2
+set guioptions-=e
+set laststatus=2
+"load jsx files as js
+"au BufNewFile,BufRead *.jsx set filetype=javascript
+
+
+
+"Delete buffer
+nmap <leader>c :bdelete <CR>
 
 "autoadd skeleton text anytime i create a markdown file
 "autocmd BufNewFile *.md r ~/pandoc/mdskeltontxt | :norm ggddjwwl
@@ -477,7 +499,7 @@ set statusline+=%#warningmsg#
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 0 "modified"
+let g:syntastic_auto_loc_list = 1 "modified"
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_aggregate_errors = 1
@@ -588,6 +610,11 @@ nnoremap <CR> :noh<CR><CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "%%% THEMING %%""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"let g:lightline = {
+      "\ 'colorscheme': 'nord',
+      "\ }
+
+
 
 hi Normal     ctermbg=NONE guibg=NONE
 hi LineNr     ctermbg=NONE ctermfg=NONE guibg=NONE ctermfg=red 
@@ -599,7 +626,7 @@ highlight clear SignColumn
 "hi TabLine ctermfg=NONE ctermbg=NONE
 "hi TabLineSel ctermfg=NONE ctermbg=NONE
 hi FloatermNC guibg=skyblue
-highlight VemTablineNormal           term=reverse cterm=none ctermfg=255   ctermbg=234 
+highlight VemTablineNormal           term=reverse cterm=none ctermfg=255   ctermbg=232 
 highlight VemTablineLocation         term=reverse cterm=none ctermfg=239 ctermbg=251 
 highlight VemTablineNumber           term=reverse cterm=none ctermfg=239 ctermbg=251 
 highlight VemTablineSelected         term=bold    cterm=bold ctermfg=0   ctermbg=255 
@@ -613,6 +640,44 @@ highlight VemTablinePartialName      term=reverse cterm=none ctermfg=246 ctermbg
 highlight VemTablineTabNormal        term=reverse cterm=none ctermfg=0   ctermbg=251 
 highlight VemTablineTabSelected      term=bold    cterm=bold ctermfg=0   ctermbg=255 
 
+function! StatusLine(current, width)
+  let l:s = ''
+
+  if a:current
+    let l:s .= crystalline#mode() . crystalline#right_mode_sep('')
+  else
+    let l:s .= '%#CrystallineInactive#'
+  endif
+  let l:s .= ' %f%h%w%m%r '
+  if a:current
+    let l:s .= crystalline#right_sep('', 'Fill') . ' %{fugitive#head()}'
+  endif
+
+  let l:s .= '%='
+  if a:current
+    let l:s .= crystalline#left_sep('', 'Fill') . ' %{&paste ?"PASTE ":""}%{&spell?"SPELL ":""}'
+    let l:s .= crystalline#left_mode_sep('')
+  endif
+  if a:width > 80
+    let l:s .= ' %l/%L %c%V %P '
+  else
+    let l:s .= ' '
+  endif
+
+  return l:s
+endfunction
+
+let g:crystalline_enable_sep = 1
+let g:crystalline_statusline_fn = 'StatusLine'
+let g:crystalline_theme = 'shadesofpurple'
+
+"badwolf.vim  dracula.vim  hybrid.vim      molokai.vim  onedark.vim     shadesofpurple.vim
+"default.vim  gruvbox.vim  jellybeans.vim  nord.vim     papercolor.vim  solarized.vim
+
+
+
+
+" vim:set et sw=2 ts=2 fdm=marker:
 
 
 

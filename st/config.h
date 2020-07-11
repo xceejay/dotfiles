@@ -6,7 +6,9 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "Iosevka-Term:pixelsize=14.5:antialias=true:autohint=true";
-static char *font2[] = { "JoyPixels:pixelsize=10:antialias=true:autohint=true" };
+static char *font2[] = { "Symbola:pixelsize=10:antialias=true:autohint=true",
+"emoji:pixelsize=12:antialias=true:autohint=true"
+};
 static int borderpx = 2;
 
 /*
@@ -17,7 +19,7 @@ static int borderpx = 2;
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
  */
-static char *shell = "/bin/sh";
+static char *shell = "/bin/bash";
 char *utmp = NULL;
 char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 
@@ -114,27 +116,27 @@ float alpha = 0.8;
 static const char *colorname[] = {
 
 
-"#231a40",
-"#a82ee6",
-"#4595e6",
-"#f29df2",
-"#4136d9",
-"#a886bf",
-"#40dfff",
-"#9045e6",
-"#000000",
-"#bb66cc",
-"#432d59",
-"#593380",
-"#00ff00",
-"#7e5ce6",
-"#b08ae6",
-"#a366ff",
-[255] = 0,
-"#add8e6", //[> 256 -> cursor <]
-"#555555", //[> 257 -> rev cursor<]
-"#282828", //[> 258 -> bg <]
-"#ebdbb2"
+  "#231a40",
+  "#a82ee6",
+  "#4595e6",
+  "#f29df2",
+  "#4136d9",
+  "#a886bf",
+  "#40dfff",
+  "#9045e6",
+  "#000000",
+  "#bb66cc",
+  "#432d59",
+  "#593380",
+  "#00ff00",
+  "#7e5ce6",
+  "#b08ae6",
+  "#a366ff",
+  [255] = 0,
+  "#add8e6", //[> 256 -> cursor <]
+  "#555555", //[> 257 -> rev cursor<]
+  "#282828", //[> 258 -> bg <]
+  "#ebdbb2"
 };
 
 /*
@@ -179,37 +181,37 @@ static unsigned int defaultattr = 11;
  * Xresources preferences to load at startup
  */
 ResourcePref resources[] = {
-		{ "font",         STRING,  &font },
-		{ "fontalt0",     STRING,  &font2[0] },
-		{ "color0",       STRING,  &colorname[0] },
-		{ "color1",       STRING,  &colorname[1] },
-		{ "color2",       STRING,  &colorname[2] },
-		{ "color3",       STRING,  &colorname[3] },
-		{ "color4",       STRING,  &colorname[4] },
-		{ "color5",       STRING,  &colorname[5] },
-		{ "color6",       STRING,  &colorname[6] },
-		{ "color7",       STRING,  &colorname[7] },
-		{ "color8",       STRING,  &colorname[8] },
-		{ "color9",       STRING,  &colorname[9] },
-		{ "color10",      STRING,  &colorname[10] },
-		{ "color11",      STRING,  &colorname[11] },
-		{ "color12",      STRING,  &colorname[12] },
-		{ "color13",      STRING,  &colorname[13] },
-		{ "color14",      STRING,  &colorname[14] },
-		{ "color15",      STRING,  &colorname[15] },
-		{ "background",   STRING,  &colorname[258] },
-		{ "foreground",   STRING,  &colorname[259] },
-		{ "cursorColor",  STRING,  &colorname[256] },
-		{ "termname",     STRING,  &termname },
-		{ "shell",        STRING,  &shell },
-		{ "blinktimeout", INTEGER, &blinktimeout },
-		{ "bellvolume",   INTEGER, &bellvolume },
-		{ "tabspaces",    INTEGER, &tabspaces },
-		{ "borderpx",     INTEGER, &borderpx },
-		{ "cwscale",      FLOAT,   &cwscale },
-		{ "chscale",      FLOAT,   &chscale },
-		{ "alpha",        FLOAT,   &alpha },
-		{ "ximspot_update_interval", INTEGER, &ximspot_update_interval },
+  { "font",         STRING,  &font },
+  { "fontalt0",     STRING,  &font2[0] },
+  { "color0",       STRING,  &colorname[0] },
+  { "color1",       STRING,  &colorname[1] },
+  { "color2",       STRING,  &colorname[2] },
+  { "color3",       STRING,  &colorname[3] },
+  { "color4",       STRING,  &colorname[4] },
+  { "color5",       STRING,  &colorname[5] },
+  { "color6",       STRING,  &colorname[6] },
+  { "color7",       STRING,  &colorname[7] },
+  { "color8",       STRING,  &colorname[8] },
+  { "color9",       STRING,  &colorname[9] },
+  { "color10",      STRING,  &colorname[10] },
+  { "color11",      STRING,  &colorname[11] },
+  { "color12",      STRING,  &colorname[12] },
+  { "color13",      STRING,  &colorname[13] },
+  { "color14",      STRING,  &colorname[14] },
+  { "color15",      STRING,  &colorname[15] },
+  { "background",   STRING,  &colorname[258] },
+  { "foreground",   STRING,  &colorname[259] },
+  { "cursorColor",  STRING,  &colorname[256] },
+  { "termname",     STRING,  &termname },
+  { "shell",        STRING,  &shell },
+  { "blinktimeout", INTEGER, &blinktimeout },
+  { "bellvolume",   INTEGER, &bellvolume },
+  { "tabspaces",    INTEGER, &tabspaces },
+  { "borderpx",     INTEGER, &borderpx },
+  { "cwscale",      FLOAT,   &cwscale },
+  { "chscale",      FLOAT,   &chscale },
+  { "alpha",        FLOAT,   &alpha },
+  { "ximspot_update_interval", INTEGER, &ximspot_update_interval },
 };
 
 /*
@@ -217,9 +219,9 @@ ResourcePref resources[] = {
  * Beware that overloading Button1 will disable the selection.
  */
 static MouseShortcut mshortcuts[] = {
-	/* button               mask            string */
-	{ Button4,              XK_NO_MOD,      "\031" },
-	{ Button5,              XK_NO_MOD,      "\005" },
+  /* button               mask            string */
+  { Button4,              XK_NO_MOD,      "\031" },
+  { Button5,              XK_NO_MOD,      "\005" },
 };
 
 /* Internal keyboard shortcuts. */
@@ -227,57 +229,45 @@ static MouseShortcut mshortcuts[] = {
 #define TERMMOD (ControlMask|ShiftMask)
 
 MouseKey mkeys[] = {
-	/* button               mask            function        argument */
-	{ Button4,              ShiftMask,      kscrollup,      {.i =  1} },
-	{ Button5,              ShiftMask,      kscrolldown,    {.i =  1} },
-	{ Button4,              MODKEY,         kscrollup,      {.i =  1} },
-	{ Button5,              MODKEY,         kscrolldown,    {.i =  1} },
-	{ Button4,              TERMMOD,        zoom,           {.f =  +1} },
-	{ Button5,              TERMMOD,        zoom,           {.f =  -1} },
+  /* button               mask            function        argument */
+  { Button4,              ShiftMask,      kscrollup,      {.i =  1} },
+  { Button5,              ShiftMask,      kscrolldown,    {.i =  1} },
 };
 
-static char *openurlcmd[] = { "/bin/sh", "-c", "st-urlhandler", "externalpipe", NULL };
 
-static char *copyurlcmd[] = { "/bin/sh", "-c",
-    "tmp=$(sed 's/.*│//g' | tr -d '\n' | grep -aEo '(((http|https)://|www\\.)[a-zA-Z0-9.]*[:]?[a-zA-Z0-9./@$&%?$#=_-]*)|((magnet:\\?xt=urn:btih:)[a-zA-Z0-9]*)' | uniq | sed 's/^www./http:\\/\\/www\\./g' ); IFS=; [ ! -z $tmp ] && echo $tmp | dmenu -i -p 'Copy which url?' -l 10 | tr -d '\n' | xclip -selection clipboard",
-    "externalpipe", NULL };
 
-static char *copyoutput[] = { "/bin/sh", "-c", "st-copyout", "externalpipe", NULL };
 
 static Shortcut shortcuts[] = {
-	/* mask                 keysym          function        argument */
-	{ XK_ANY_MOD,           XK_Break,       sendbreak,      {.i =  0} },
-	{ ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
-	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
-	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
-	{ TERMMOD,              XK_Prior,       zoom,           {.f = +1} },
-	{ TERMMOD,              XK_Next,        zoom,           {.f = -1} },
-	{ MODKEY,               XK_Home,        zoomreset,      {.f =  0} },
-	{ TERMMOD,               XK_c,           clipcopy,       {.i =  0} },
-	{ ShiftMask,            XK_Insert,      clippaste,      {.i =  0} },
-	{ TERMMOD,               XK_V,           clippaste,      {.i =  0} },
-	{ XK_ANY_MOD,		Button2,	selpaste,	{.i =  0} },
-	{ MODKEY,               XK_Num_Lock,    numlock,        {.i =  0} },
-	{ MODKEY,               XK_Control_L,   iso14755,       {.i =  0} },
-	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
-	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
-	{ TERMMOD,               XK_Page_Up,     kscrollup,      {.i = -1} },
-	{ TERMMOD,               XK_Page_Down,   kscrolldown,    {.i = -1} },
-	{ TERMMOD,               XK_k,           kscrollup,      {.i =  1} },
-	{ TERMMOD,               XK_j,           kscrolldown,    {.i =  1} },
-	{ TERMMOD,               XK_Up,          kscrollup,      {.i =  1} },
-	{ TERMMOD,               XK_Down,        kscrolldown,    {.i =  1} },
-	{ TERMMOD,               XK_u,           kscrollup,      {.i = -1} },
-	{ TERMMOD,               XK_d,           kscrolldown,    {.i = -1} },
-	{ TERMMOD,              XK_plus,          zoom,           {.f = +1} },
-	{ ControlMask,              XK_minus,        zoom,           {.f = -1} },
-	{ TERMMOD,              XK_K,           zoom,           {.f = +1} },
-	{ TERMMOD,              XK_J,           zoom,           {.f = -1} },
-	{ TERMMOD,              XK_U,           zoom,           {.f = +2} },
-	{ TERMMOD,              XK_D,           zoom,           {.f = -2} },
-	{ MODKEY,               XK_l,           externalpipe,   {.v = openurlcmd } },
-	{ MODKEY,               XK_y,           externalpipe,   {.v = copyurlcmd } },
-	{ MODKEY,               XK_o,           externalpipe,   {.v = copyoutput } },
+  /* mask                 keysym          function        argument */
+  { XK_ANY_MOD,           XK_Break,       sendbreak,      {.i =  0} },
+  { ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
+  { ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
+  { XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
+  { TERMMOD,              XK_Prior,       zoom,           {.f = +1} },
+  { TERMMOD,              XK_Next,        zoom,           {.f = -1} },
+  { MODKEY,               XK_Home,        zoomreset,      {.f =  0} },
+  { TERMMOD,              XK_c,           clipcopy,       {.i =  0} },
+  { ShiftMask,            XK_Insert,      clippaste,      {.i =  0} },
+  { TERMMOD,              XK_V,           clippaste,      {.i =  0} },
+  { XK_ANY_MOD,		        Button2,	      selpaste,	      {.i =  0} },
+  { MODKEY,               XK_Num_Lock,    numlock,        {.i =  0} },
+  { MODKEY,               XK_Control_L,   iso14755,       {.i =  0} },
+  { ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
+  { ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
+  { TERMMOD,              XK_Page_Up,     kscrollup,      {.i = -1} },
+  { TERMMOD,              XK_Page_Down,   kscrolldown,    {.i = -1} },
+  { TERMMOD,              XK_k,           kscrollup,      {.i =  1} },
+  { TERMMOD,              XK_j,           kscrolldown,    {.i =  1} },
+  { TERMMOD,              XK_Up,          kscrollup,      {.i =  1} },
+  { TERMMOD,              XK_Down,        kscrolldown,    {.i =  1} },
+  { TERMMOD,              XK_u,           kscrollup,      {.i = -1} },
+  { TERMMOD,              XK_d,           kscrolldown,    {.i = -1} },
+  { TERMMOD,              XK_plus,        zoom,           {.f = +1} },
+  { ControlMask,          XK_minus,       zoom,           {.f = -1} },
+  { TERMMOD,              XK_K,           zoom,           {.f = +1} },
+  { TERMMOD,              XK_J,           zoom,           {.f = -1} },
+  { TERMMOD,              XK_U,           zoom,           {.f = +2} },
+  { TERMMOD,              XK_D,           zoom,           {.f = -2} },
 };
 
 /*
