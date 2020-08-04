@@ -2,8 +2,8 @@
 
 
 xset  r rate 300 50
-autocutsel &
-autocutsel -s PRIMARY &
+#autocutsel &
+#autocutsel -s PRIMARY &
 
 function run {
   if ! pgrep -f "$1" ;
@@ -15,7 +15,7 @@ function run {
 run compton
 run sxhkd
 run xfce4-clipman
-run xfce4-terminal --drop-down
+#run xfce4-terminal --drop-down
 #run pnmixer
 #run volumeicon
 # run volti ##run pasystray -a
@@ -29,7 +29,7 @@ run devilspie
 #run kdeconnect-indicator
 run blueman-applet
 run clementine
-run flashfocus
+#run flashfocus
 #run rhythmbox
 #run xdman
 #tgceejay="/home/joel/Telegram/Telegram -many -workdir ~/ceejay" && run "$tgceejay"
