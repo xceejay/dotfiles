@@ -63,7 +63,7 @@
     "activityBarBadge.foreground": "#fff",
 
     "tree.indentGuidesStroke": "#2b2b3b",
-    "sideBar.foreground": "#787c99",
+    "sideBar.foreground": "#c0caf5",
     "sideBar.background": "#000000",
     "sideBar.border": "#101014",
     "sideBarTitle.foreground": "#787c99",
@@ -302,7 +302,7 @@
     "menubar.selectionBackground": "#000000",
     "menubar.selectionBorder": "#1b1e2e",
     "menu.foreground": "#787c99",
-    "menu.background": "#16161e",
+    "menu.background": "#000000",
     "menu.selectionForeground": "#a9b1d6",
     "menu.selectionBackground": "#1e202e",
     "menu.separatorBackground": "#101014",
@@ -715,7 +715,7 @@
         "variable.other.declaration"
       ],
       "settings": {
-        "foreground": "#bb9af7"
+        "foreground": "#c0caf5"
       }
     },
     {

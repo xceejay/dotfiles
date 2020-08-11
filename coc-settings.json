@@ -1,0 +1,16 @@
+{
+  "languageserver": {
+    "go": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod"],
+      "trace.server": "verbose",
+      "filetypes": ["go"]
+    },
+
+    "perl": {
+      "command": "cpan perl::languageserver",
+      "trace.server": "verbose",
+      "filetypes": ["pl"]
+    }
+  }
+}

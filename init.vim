@@ -176,6 +176,10 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 "latex
 Plug 'lervag/vimtex'
 
+" easy motion
+Plug 'easymotion/vim-easymotion'
+
+
 "nginx 
 Plug 'chr4/nginx.vim'
 
@@ -246,12 +250,19 @@ Plug 'honza/vim-snippets'
 "syntax checker
 Plug 'neomake/neomake'
 
+"color sheme
+Plug 'ghifarit53/tokyonight-vim'
+
 
 "notes
 "Plug 'vimwiki/vimwiki'
 
 "org mode
 "Plug 'jceb/vim-orgmode'
+
+"latx live preview 
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+
 
 
 "temp js
@@ -266,132 +277,132 @@ Plug 'SirVer/ultisnips'
 "Plug 'leafgarland/typescript-vim'
 "Plug 'peitalin/vim-jsx-typescript'
 "Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-  "Plug 'jparise/vim-graphql'
+"Plug 'jparise/vim-graphql'
 
-  call plug#end()
-
-
-  " path to directory where library can be found
-  let g:clang_library_path='/usr/lib/llvm-10/lib'
-
-  "Pathogen
-  execute pathogen#infect() 
+call plug#end()
 
 
+" path to directory where library can be found
+let g:clang_library_path='/usr/lib/llvm-10/lib'
+
+"Pathogen
+"  execute pathogen#infect() 
 
 
 
-  """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-  ""%%%%CODE EMULATION%%%""
-  """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-  inoremap jk <ESC>
-  nmap <C-n> :NERDTreeToggle<CR>
-  vmap ++ <plug>NERDCommenterToggle
-  nmap ++ <plug>NERDCommenterToggle
-
-  let g:NERDTreeIgnore = ['^node_modules$']
-  let g:NERDTreeQuitOnOpen = 1
-  let g:NERDTreeGlyphReadOnly = "RO"
-  " vim-prettier
-  let g:prettier#quickfix_enabled = 1
-  let g:prettier#quickfix_auto_focus = 0
-  " prettier command for coc
-  command! -nargs=0 Prettier :CocCommand prettier.formatFile
-  " run prettier on save
-  let g:prettier#autoformat = 1
-
-  autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html Prettier
-
-  " ctrlp
-  let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-
-  " j/k will move virtual lines (lines that wrap)
-  noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
-  noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
-  set guifont=Iosevka\ Term\ Medium\ 11
-  let g:airline_powerline_fonts = 1
 
 
-  " sync open file with NERDTree
-  " " Check if NERDTree is open or active
-  function! IsNERDTreeOpen()        
-    return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
-  endfunction
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""%%%%CODE EMULATION%%%""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-  " Call NERDTreeFind iff NERDTree is active, current window contains a modifiable
-  " file, and we're not in vimdiff
-  function! SyncTree()
-    if &modifiable && IsNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
-      NERDTreeFind
-      wincmd p
-    endif
-  endfunction
+inoremap jk <ESC>
+nmap <C-n> :NERDTreeToggle<CR>
+vmap ++ <plug>NERDCommenterToggle
+nmap ++ <plug>NERDCommenterToggle
 
-  " Highlight currently open buffer in NERDTree ("makes nerd tree open twice")
-  "autocmd BufEnter * call SyncTree()
+let g:NERDTreeIgnore = ['^node_modules$']
+let g:NERDTreeQuitOnOpen = 1
+let g:NERDTreeGlyphReadOnly = "RO"
+" vim-prettier
+let g:prettier#quickfix_enabled = 1
+let g:prettier#quickfix_auto_focus = 0
+" prettier command for coc
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+" run prettier on save
+let g:prettier#autoformat = 1
 
-  " coc config
-  let g:coc_global_extensions = [
-        \ 'coc-snippets',
-        \ 'coc-fish',
-        \ 'coc-html',
-        \ 'coc-lua',
-        \ 'coc-python',
-        \ 'coc-docker',
-        \ 'coc-vimtex',
-        \'coc-tsserver',
-        \ 'coc-yaml',
-        \ 'coc-markdownlint',
-        \ 'coc-emmet',
-        \ 'coc-sh',
-        \ 'coc-prettier', 
-        \ 'coc-json', 
-        \ ]
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html Prettier
 
-  " \ 'coc-eslint', 
-  "  \ 'coc-pairs',
-  " from readme
-  " if hidden is not set, TextEdit might fail.
-  set hidden " Some servers have issues with backup files, see #649 set nobackup set nowritebackup " Better display for messages set cmdheight=2 " You will have bad experience for diagnostic messages when it's default 4000.
-  set updatetime=300
+" ctrlp
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
-  " don't give |ins-completion-menu| messages.
-  set shortmess+=c
+" j/k will move virtual lines (lines that wrap)
+noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
+noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
+set guifont=Iosevka\ Term\ Medium\ 11
+let g:airline_powerline_fonts = 1
 
-  " always show signcolumns
-  set signcolumn=yes
 
-  " Use tab for trigger completion with characters ahead and navigate.
-  " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
-  inoremap <silent><expr> <TAB>
-        \ pumvisible() ? "\<C-n>" :
-        \ <SID>check_back_space() ? "\<TAB>" :
-        \ coc#refresh()
-  inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+" sync open file with NERDTree
+" " Check if NERDTree is open or active
+function! IsNERDTreeOpen()        
+  return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
+endfunction
 
-  function! s:check_back_space() abort
-    let col = col('.') - 1
-    return !col || getline('.')[col - 1]  =~# '\s'
-  endfunction
+" Call NERDTreeFind iff NERDTree is active, current window contains a modifiable
+" file, and we're not in vimdiff
+function! SyncTree()
+  if &modifiable && IsNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
+    NERDTreeFind
+    wincmd p
+  endif
+endfunction
 
-  " Use <c-space> to trigger completion.
-  inoremap <silent><expr> <c-space> coc#refresh()
+" Highlight currently open buffer in NERDTree ("makes nerd tree open twice")
+"autocmd BufEnter * call SyncTree()
 
-  " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
-  " Coc only does snippet and additional edit on confirm.
-  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-  " Or use `complete_info` if your vim support it, like:
-  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+" coc config
+let g:coc_global_extensions = [
+      \ 'coc-snippets',
+      \ 'coc-fish',
+      \ 'coc-html',
+      \ 'coc-lua',
+      \ 'coc-python',
+      \ 'coc-docker',
+      \ 'coc-vimtex',
+      \'coc-tsserver',
+      \ 'coc-yaml',
+      \ 'coc-markdownlint',
+      \ 'coc-emmet',
+      \ 'coc-sh',
+      \ 'coc-prettier', 
+      \ 'coc-json', 
+      \ ]
 
-  " Use `[g` and `]g` to navigate diagnostics
-  nmap <silent> [g <Plug>(coc-diagnostic-prev)
-  nmap <silent> ]g <Plug>(coc-diagnostic-next)
+" \ 'coc-eslint', 
+"  \ 'coc-pairs',
+" from readme
+" if hidden is not set, TextEdit might fail.
+set hidden " Some servers have issues with backup files, see #649 set nobackup set nowritebackup " Better display for messages set cmdheight=2 " You will have bad experience for diagnostic messages when it's default 4000.
+set updatetime=300
 
-  " Remap keys for gotos
-  nmap <silent> gd <Plug>(coc-definition)
-  nmap <silent> gy <Plug>(coc-type-definition)
-  nmap <silent> gi <Plug>(coc-implementation)
+" don't give |ins-completion-menu| messages.
+set shortmess+=c
+
+" always show signcolumns
+set signcolumn=yes
+
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
+" Coc only does snippet and additional edit on confirm.
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" Or use `complete_info` if your vim support it, like:
+inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Use `[g` and `]g` to navigate diagnostics
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window
@@ -512,6 +523,11 @@ nmap <leader>c :bdelete <CR>
 call neomake#configure#automake('nrwi', 500)
 
 
+"latex viewer 
+let g:livepreview_previewer = 'zathura'
+
+
+
 "emmet auto close tags etc key binding
 let g:user_emmet_mode='n'
 let g:user_emmet_leader_key=','
@@ -525,7 +541,14 @@ autocmd BufNewFile \(*ass?.tex\|*ass.tex\) r ~/pandoc/latexassskeletontxt | :nor
 let g:tex_flavor = 'latex'
 
 "set Color scheme
-colorscheme spacemacsvimdark
+"colorscheme spacemacsvimdark
+set termguicolors
+
+let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_transparent_background = 1
+let g:tokyonight_enable_italic = 1
+
+colorscheme tokyonight
 
 "floaterm
 let g:floaterm_keymap_new    = '<F1>'
@@ -562,13 +585,21 @@ let g:go_def_mapping_enabled = 0
 
 "vim wiki 2 markdown
 "let g:vimwiki_list = [{'path': '~/vimwiki/',
-                      "\ 'syntax': 'markdown', 'ext': '.md'}]
+      "\ 'syntax': 'markdown', 'ext': '.md'}]
 
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 ""%%%%KEY BINDINGS%%%""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+map <Leader><Leader>. <Plug>(easymotion-repeat)
+map <Leader><Leader>f <Plug>(easymotion-overwin-f)
+map <Leader><Leader>j <Plug>(easymotion-overwin-line)
+map <Leader><Leader>k <Plug>(easymotion-overwin-line)
+map <Leader><Leader>w <Plug>(easymotion-overwin-w)
+
+
 
 noremap <S-tab> :next<CR>
 
@@ -622,6 +653,22 @@ nnoremap <CR> :noh<CR><CR>
       "\ 'colorscheme': 'nord',
       "\ }
 
+hi FloatermNC guibg=skyblue
+"highlight VemTablineNormal           term=reverse cterm=bold ctermfg=0   ctermbg=0 
+"highlight VemTablineLocation         term=reverse cterm=none ctermfg=239 ctermbg=251 
+"highlight VemTablineNumber           term=reverse cterm=none ctermfg=239 ctermbg=251 
+"highlight VemTablineSelected         term=bold    cterm=bold ctermfg=0   ctermbg=255 
+"highlight VemTablineLocationSelected term=bold    cterm=none ctermfg=239 ctermbg=255 
+"highlight VemTablineNumberSelected   term=bold    cterm=none ctermfg=239 ctermbg=255 
+"highlight VemTablineShown            term=reverse cterm=none ctermfg=0   ctermbg=0
+"highlight VemTablineLocationShown    term=reverse cterm=none ctermfg=0   ctermbg=251 
+"highlight VemTablineNumberShown      term=reverse cterm=none ctermfg=0   ctermbg=251 
+"highlight VemTablineSeparator        term=reverse cterm=none ctermfg=246 ctermbg=251 
+"highlight VemTablinePartialName      term=reverse cterm=none ctermfg=246 ctermbg=251 
+"highlight VemTablineTabNormal        term=reverse cterm=none ctermfg=0   ctermbg=251 
+"highlight VemTablineTabSelected      term=bold    cterm=bold ctermfg=0   ctermbg=255
+
+
 
 
 hi Normal     ctermbg=NONE guibg=NONE
@@ -636,22 +683,6 @@ highlight clear SignColumn
 hi Visual  ctermfg=lightblue
 
 
-
-
-hi FloatermNC guibg=skyblue
-highlight VemTablineNormal           term=reverse cterm=none ctermfg=255   ctermbg=232 
-highlight VemTablineLocation         term=reverse cterm=none ctermfg=239 ctermbg=251 
-highlight VemTablineNumber           term=reverse cterm=none ctermfg=239 ctermbg=251 
-highlight VemTablineSelected         term=bold    cterm=bold ctermfg=0   ctermbg=255 
-highlight VemTablineLocationSelected term=bold    cterm=none ctermfg=239 ctermbg=255 
-highlight VemTablineNumberSelected   term=bold    cterm=none ctermfg=239 ctermbg=255 
-highlight VemTablineShown            term=reverse cterm=none ctermfg=0   ctermbg=251 
-highlight VemTablineLocationShown    term=reverse cterm=none ctermfg=0   ctermbg=251 
-highlight VemTablineNumberShown      term=reverse cterm=none ctermfg=0   ctermbg=251 
-highlight VemTablineSeparator        term=reverse cterm=none ctermfg=246 ctermbg=251 
-highlight VemTablinePartialName      term=reverse cterm=none ctermfg=246 ctermbg=251 
-highlight VemTablineTabNormal        term=reverse cterm=none ctermfg=0   ctermbg=251 
-highlight VemTablineTabSelected      term=bold    cterm=bold ctermfg=0   ctermbg=255 
 
 
 
@@ -673,7 +704,7 @@ function! StatusLine(current, width)
   let l:s .= '%='
   if a:current
     let l:s .= crystalline#left_sep('', 'Fill') . ' %{&paste ?"PASTE ":""}%{&spell?"SPELL ":""}'
-  let l:s .=  ' %l/%L 🐍 ' . crystalline#left_mode_sep('')  
+    let l:s .=  ' %l/%L 🐍 ' . crystalline#left_mode_sep('')  
   endif
   if a:width > 80
     let l:s .=  '  %P 🐵 '
@@ -691,7 +722,3 @@ let g:crystalline_theme = 'shadesofpurple'
 "badwolf.vim  dracula.vim  hybrid.vim      molokai.vim  onedark.vim     shadesofpurple.vim
 "default.vim  gruvbox.vim  jellybeans.vim  nord.vim     papercolor.vim  solarized.vim
 " vim:set et sw=2 ts=2 fdm=marker:
-
-
-
-
