@@ -7,11 +7,13 @@ syntax enable
 " Sets how many lines of history VIM has to remember
 set history=1000
 
+
+
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
 
-"Ignore case when searching 
+"Ignore case when searching
 set ignorecase
 
 " Makes search act like search in modern browsers
@@ -34,7 +36,7 @@ set mouse=a
 map 0 ^
 
 " Don't redraw while executing macros (good performance config)
-set lazyredraw 
+set lazyredraw
 
 " No annoying sound on errors
 set noerrorbells
@@ -64,7 +66,7 @@ set whichwrap+=<,>,h,l
 
 
 " Show matching brackets when text indicator is over them
-set showmatch 
+set showmatch
 
 " How many tenths of a second to blink when matching brackets
 set mat=2
@@ -170,7 +172,7 @@ endfunction
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('/home/joel/nvim/plugged')
 
-"markdown preview 
+"markdown preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 "latex
@@ -180,7 +182,7 @@ Plug 'lervag/vimtex'
 Plug 'easymotion/vim-easymotion'
 
 
-"nginx 
+"nginx
 Plug 'chr4/nginx.vim'
 
 "fish
@@ -195,6 +197,7 @@ Plug 'pacha/vem-tabline'
 
 " Plugin outside ~/.vim/plugged with post-update hook
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release', 'do': ':UpdateRemotePlugins' }
 
 "coc for vscode inspired emulation
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -208,7 +211,7 @@ Plug 'rbong/vim-crystalline'
 "Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
 
-"todolist 
+"todolist
 Plug 'aserebryakov/vim-todo-lists'
 
 "surround
@@ -225,6 +228,11 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 
 "Clang
 Plug 'rip-rip/clang_complete'
+
+
+
+
+
 
 "goyo
 Plug 'junegunn/goyo.vim'
@@ -260,7 +268,7 @@ Plug 'ghifarit53/tokyonight-vim'
 "org mode
 "Plug 'jceb/vim-orgmode'
 
-"latx live preview 
+"latx live preview
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
 
@@ -286,7 +294,7 @@ call plug#end()
 let g:clang_library_path='/usr/lib/llvm-10/lib'
 
 "Pathogen
-"  execute pathogen#infect() 
+"  execute pathogen#infect()
 
 
 
@@ -326,7 +334,7 @@ let g:airline_powerline_fonts = 1
 
 " sync open file with NERDTree
 " " Check if NERDTree is open or active
-function! IsNERDTreeOpen()        
+function! IsNERDTreeOpen()
   return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
 endfunction
 
@@ -356,11 +364,11 @@ let g:coc_global_extensions = [
       \ 'coc-markdownlint',
       \ 'coc-emmet',
       \ 'coc-sh',
-      \ 'coc-prettier', 
-      \ 'coc-json', 
+      \ 'coc-prettier',
+      \ 'coc-json',
       \ ]
 
-" \ 'coc-eslint', 
+" \ 'coc-eslint',
 "  \ 'coc-pairs',
 " from readme
 " if hidden is not set, TextEdit might fail.
@@ -491,6 +499,14 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 ""%%PERSONAL CONFIG
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+"apparently makes shit slow 
+let g:go_fmt_command = "goimports"
+
+
+" preview window
+let g:fzf_preview_window = 'right:60%'
+
+command Trim execute '%s/\s\+$//g'
 
 set showtabline=2
 set guioptions-=e
@@ -523,7 +539,7 @@ nmap <leader>c :bdelete <CR>
 call neomake#configure#automake('nrwi', 500)
 
 
-"latex viewer 
+"latex viewer
 let g:livepreview_previewer = 'zathura'
 
 
@@ -533,8 +549,8 @@ let g:user_emmet_mode='n'
 let g:user_emmet_leader_key=','
 
 
-"autoadd skeleton text anytime i create a new java file 
-"autocmd BufNewFile *.java r ~/pandoc/javaskeletontxt| :norm jjjww 
+"autoadd skeleton text anytime i create a new java file
+"autocmd BufNewFile *.java r ~/pandoc/javaskeletontxt| :norm jjjww
 
 "autoadd skeleton text anytime i start an assignment in latex
 autocmd BufNewFile \(*ass?.tex\|*ass.tex\) r ~/pandoc/latexassskeletontxt | :norm 35Gww "
@@ -626,14 +642,14 @@ nmap<F7> ]>sz=
 inoremap<c-I> <ESC>maG=gg`aa
 
 
-"move between splits 
+"move between splits
 nmap <silent> <A-Up> :wincmd k<CR>
 nmap <silent> <A-Down> :wincmd j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
 
-"toggle split 
-nmap <silent> <C-\> :vsplit 
+"toggle split
+nmap <silent> <C-\> :vsplit
 
 "move between buffer
 nmap <c-i> <Plug>vem_prev_buffer-
@@ -654,25 +670,25 @@ nnoremap <CR> :noh<CR><CR>
       "\ }
 
 hi FloatermNC guibg=skyblue
-"highlight VemTablineNormal           term=reverse cterm=bold ctermfg=0   ctermbg=0 
-"highlight VemTablineLocation         term=reverse cterm=none ctermfg=239 ctermbg=251 
-"highlight VemTablineNumber           term=reverse cterm=none ctermfg=239 ctermbg=251 
-"highlight VemTablineSelected         term=bold    cterm=bold ctermfg=0   ctermbg=255 
-"highlight VemTablineLocationSelected term=bold    cterm=none ctermfg=239 ctermbg=255 
-"highlight VemTablineNumberSelected   term=bold    cterm=none ctermfg=239 ctermbg=255 
+"highlight VemTablineNormal           term=reverse cterm=bold ctermfg=0   ctermbg=0
+"highlight VemTablineLocation         term=reverse cterm=none ctermfg=239 ctermbg=251
+"highlight VemTablineNumber           term=reverse cterm=none ctermfg=239 ctermbg=251
+"highlight VemTablineSelected         term=bold    cterm=bold ctermfg=0   ctermbg=255
+"highlight VemTablineLocationSelected term=bold    cterm=none ctermfg=239 ctermbg=255
+"highlight VemTablineNumberSelected   term=bold    cterm=none ctermfg=239 ctermbg=255
 "highlight VemTablineShown            term=reverse cterm=none ctermfg=0   ctermbg=0
-"highlight VemTablineLocationShown    term=reverse cterm=none ctermfg=0   ctermbg=251 
-"highlight VemTablineNumberShown      term=reverse cterm=none ctermfg=0   ctermbg=251 
-"highlight VemTablineSeparator        term=reverse cterm=none ctermfg=246 ctermbg=251 
-"highlight VemTablinePartialName      term=reverse cterm=none ctermfg=246 ctermbg=251 
-"highlight VemTablineTabNormal        term=reverse cterm=none ctermfg=0   ctermbg=251 
+"highlight VemTablineLocationShown    term=reverse cterm=none ctermfg=0   ctermbg=251
+"highlight VemTablineNumberShown      term=reverse cterm=none ctermfg=0   ctermbg=251
+"highlight VemTablineSeparator        term=reverse cterm=none ctermfg=246 ctermbg=251
+"highlight VemTablinePartialName      term=reverse cterm=none ctermfg=246 ctermbg=251
+"highlight VemTablineTabNormal        term=reverse cterm=none ctermfg=0   ctermbg=251
 "highlight VemTablineTabSelected      term=bold    cterm=bold ctermfg=0   ctermbg=255
 
 
 
 
 hi Normal     ctermbg=NONE guibg=NONE
-hi LineNr     ctermbg=NONE ctermfg=NONE guibg=NONE ctermfg=red 
+hi LineNr     ctermbg=NONE ctermfg=NONE guibg=NONE ctermfg=red
 "hi CursorLineNr ctermfg=magenta ctermbg=NONE
 hi CursorLineNr ctermfg=203 ctermbg=NONE
 highlight clear SignColumn
@@ -689,22 +705,22 @@ hi Visual  ctermfg=lightblue
 
 
 function! StatusLine(current, width)
-  let l:s = '' 
+  let l:s = ''
   if a:current
-    let l:s .=crystalline#mode() . '🔍  ' . crystalline#right_mode_sep('') 
+    let l:s .=crystalline#mode() . '🔍  ' . crystalline#right_mode_sep('')
   else
     let l:s .= '%#CrystallineInactive#'
   endif
-  let l:s .= ' %f%h%w%m%r ' . WebDevIconsGetFileTypeSymbol()  . ' ' 
+  let l:s .= ' %f%h%w%m%r ' . WebDevIconsGetFileTypeSymbol()  . ' '
 
   if a:current
-    let l:s .= crystalline#right_sep('', 'Fill') . ' %{fugitive#head()} 🌴'  
+    let l:s .= crystalline#right_sep('', 'Fill') . ' %{fugitive#head()} 🌴'
   endif
 
   let l:s .= '%='
   if a:current
     let l:s .= crystalline#left_sep('', 'Fill') . ' %{&paste ?"PASTE ":""}%{&spell?"SPELL ":""}'
-    let l:s .=  ' %l/%L 🐍 ' . crystalline#left_mode_sep('')  
+    let l:s .=  ' %l/%L 🐍 ' . crystalline#left_mode_sep('')
   endif
   if a:width > 80
     let l:s .=  '  %P 🐵 '
