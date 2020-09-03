@@ -222,9 +222,10 @@ Plug 'ryanoasis/vim-devicons'
 
 "Nerdtree
 Plug 'scrooloose/nerdtree'
+"Plug 'tpope/vim-vinegar'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'scrooloose/nerdcommenter'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+"Plug 'Xuyuanp/nerdtree-git-plugin'
 
 "Clang
 Plug 'rip-rip/clang_complete'
@@ -239,6 +240,10 @@ Plug 'junegunn/goyo.vim'
 
 "golang
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+
+"go debug 
+Plug 'sebdah/vim-delve'
 
 "floating terminal
 Plug 'voldikss/vim-floaterm'
@@ -499,8 +504,11 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 ""%%PERSONAL CONFIG
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+
+
+
 "apparently makes shit slow 
-let g:go_fmt_command = "goimports"
+"let g:go_fmt_command = "goimports"
 
 
 " preview window
@@ -517,7 +525,7 @@ set laststatus=2
 
 
 "Delete buffer
-nmap <leader>c :bdelete <CR>
+nmap <C-W> :bdelete <CR>
 
 "autoadd skeleton text anytime i create a markdown file
 "autocmd BufNewFile *.md r ~/pandoc/mdskeltontxt | :norm ggddjwwl
