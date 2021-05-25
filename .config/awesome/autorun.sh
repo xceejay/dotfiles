@@ -14,7 +14,7 @@ function run {
 
 run compton
 run sxhkd
-run xfce4-clipman
+#run xfce4-clipman
 #run xfce4-terminal --drop-down
 #run pnmixer
 #run volumeicon
@@ -22,13 +22,13 @@ run xfce4-clipman
 run pasystray -a
 run nm-applet
 run unclutter
-run pulseaudio --start
+#run pulseaudio --start
 #run pulseaudio
-run devilspie
+#run devilspie
 #run transmission-gtk
 #run kdeconnect-indicator
 run blueman-applet
-run clementine
+#run clementine
 #run flashfocus
 #run rhythmbox
 #run xdman

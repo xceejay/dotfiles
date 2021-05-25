@@ -5,8 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Iosevka-Term:pixelsize=14.5:antialias=true:autohint=true";
-static char *font2[] = { "Symbola:pixelsize=10:antialias=true:autohint=true",
+static char *font = "Iosevka-Term:pixelsize=15.5:antialias=true:autohint=true";
+static char *font2[] = { "Symbola:pixelsize=11:antialias=true:autohint=true",
 "emoji:pixelsize=12:antialias=true:autohint=true"
 };
 static int borderpx = 2;
@@ -114,29 +114,32 @@ float alpha = 0.8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
+/* 8 normal colors */
+	"#000000",
+	"#b21818",
+	"#18b218",
+	"#be5f00",
+	"#6d85ba",
+	"#b218b2",
+	"#18b2b2",
+	"#b2b2b2",
 
+	/* 8 bright colors */
+	"#686868",
+	"#ff5454",
+	"#54ff54",
+	"#ffff54",
+	"#6385ff",
+	"#ff54ff",
+	"#54ffff",
+	"#ffffff",
 
-  "#231a40",
-  "#a82ee6",
-  "#4595e6",
-  "#f29df2",
-  "#4136d9",
-  "#a886bf",
-  "#40dfff",
-  "#9045e6",
-  "#ffffff", //use to be black 
-  "#bb66cc",
-  "#432d59",
-  "#593380",
-  "#00ff00",
-  "#7e5ce6",
-  "#b08ae6",
-  "#a366ff",
-  [255] = 0,
-  "#add8e6", //[> 256 -> cursor <]
-  "#555555", //[> 257 -> rev cursor<]
-  "#282828", //[> 258 -> bg <]
-  "#ebdbb2"
+	[255] = 0,
+
+	/* more colors can be added after 255 to use with DefaultXX */
+	/* (cursor defaults - see below) */
+	"#cccccc",
+	"#555555",
 };
 
 /*
