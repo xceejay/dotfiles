@@ -9,5 +9,5 @@ p='killprocess️️️️🔌:'
 #k=$(free -h|awk '/^Mem:/ {print $3"("$2")"}')
 #p=$k$p
 p=$p
-process=$(ps auxch --sort -%cpu,-%mem|awk  '{print $3 "\t"$4"\t"$2"\t"$11}'|rofi -dmenu -width 30 -yoffset -210 -xoffset 485 -p "$p"|awk '{print $3}') && pname=$(ps cax|egrep -w -m1 $process|awk '{print $5}')&& sudo kill "$process" && notify-send  "$pname was killed !🔪"
+process=$(ps auxch --sort -%cpu,-%mem|awk  '{print $3 "\t"$4"\t"$2"\t"$11}'|rofi -dmenu -width 30 -yoffset -348 -xoffset 670 -p "$p"|awk '{print $3}') && pname=$(ps cax|grep -E -w -m1 $process|awk '{print $5}')&& sudo kill -9 "$process" && notify-send  "$pname was killed !🔪"
 #nice

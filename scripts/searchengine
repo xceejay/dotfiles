@@ -5,25 +5,25 @@ query=$(echo|dmenu -fn "manrope-10" -nb black -sb "#260A35" -p "Search 😃:") &
 
 
 google(){
-    firefox-esr "https://www.google.com/search?q=$query"
+    firefox "https://www.google.com/search?q=$query"
 }
 youtube(){
-    firefox-esr "https://www.youtube.com/results?search_query=$query"
+    firefox "https://www.youtube.com/results?search_query=$query"
 }
 duckduckgo(){
-    firefox-esr "https://www.duckduckgo.com/?q=$query"
+    firefox "https://www.duckduckgo.com/?q=$query"
 }
 github(){
-    firefox-esr "https://github.com/search?q=$query"
+    firefox "https://github.com/search?q=$query"
 }
 archwiki(){
-    firefox-esr "https://wiki.archlinux.org/index.php?search=$query"
+    firefox "https://wiki.archlinux.org/index.php?search=$query"
 }
 reddit(){
-    firefox-esr "https://www.reddit.com/search/?q=$query"
+    firefox "https://www.reddit.com/search/?q=$query"
 }
 lib(){
-    firefox-esr "http://gen.lib.rus.ec/search.php?req=$query"
+    firefox "http://gen.lib.rus.ec/search.php?req=$query"
 }
 
 #https://www.techopedia.com/search?q=
