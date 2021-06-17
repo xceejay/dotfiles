@@ -4,24 +4,26 @@ videosdir="/home/joel/personal/videos/screenrecordings/"
 format="mp4"
 with="with audio🔈"
 
-  output=$(echo|dmenu -fn "manrope-10" -nb black -sb "#260A35"  -p "name of output file?")
+output=$(echo|dmenu -fn "manrope-10" -nb black -sb "#260A35"  -p "name of output file?")
 
 [ -z $output ] && output=$(date|sed s/\ /-/g)
-  
-  format=$(printf "mp4\nmkv\ngif\nwebm"|dmenu -fn "manrope-10" -nb black -sb "#260A35"  -p "what file format?")
-  audio=$(printf "true\nfalse"|dmenu -fn "manrope-10" -nb black -sb "#260A35"  -p "audio?🔉")
-  time=$(printf "0\n1\n2\n3\n4"|dmenu -fn "manrope-10" -nb black -sb "#260A35"  -p "start in how many seconds?⏲")
-noaudio(){
- sleep $time; ffmpeg -video_size 1920x1080  -framerate 25 -f x11grab -i :0.0 "$videosdir$output.$format" 
 
-with="without audio🔇"
+format=$(printf "mp4\nmkv\ngif\nwebm"|dmenu -fn "manrope-10" -nb black -sb "#260A35"  -p "what file format?")
+audio=$(printf "true\nfalse"|dmenu -fn "manrope-10" -nb black -sb "#260A35"  -p "audio?🔉")
+time=$(printf "0\n1\n2\n3\n4"|dmenu -fn "manrope-10" -nb black -sb "#260A35"  -p "start in how many seconds?⏲")
+noaudio(){
+  sleep $time; ffmpeg -video_size 1920x1080  -framerate 25 -f x11grab -i :0.0 "$videosdir$output.$format" 
+
+  with="without audio🔇"
 }
 
 audio(){
 
   sleep $time; ffmpeg -video_size 1920x1080 -framerate 25 -f x11grab -i :0.0 -f pulse -ac 2 -i default "$videosdir$output.$format"
+
+  with="with audio🔊"
 }
- notify-send "Recording Started $with⏺"
-[ $audio = "true" ] && audio || noaudio && notify-send "Sucessfully Recorded To $videosdir$output.$format" 
+notify-send "recording started $with"
+[ $audio = "true" ] && audio && notify-send "sucessfully recording To $videosdir$output.$format🔊" || noaudio && notify-send "sucessfully recording To $videosdir$output.$format🔇" 
 
 

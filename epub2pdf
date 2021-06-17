@@ -1,8 +1,0 @@
-#!/bin/bash 
-
-INPUTFILE="$1"
-OUTPUTFILE="$(echo $INPUTFILE|sed 's/\.[0Aa-zZ9]*//g')"
-#OFORMAT=".$2"
-#ebook-convert "$1" "$OUTPUTFILE$OFORMAT"
-
-ebook-convert "$1" "$OUTPUTFILE.pdf" --embed-all-fonts

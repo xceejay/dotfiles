@@ -1,3 +1,0 @@
-#!/bin/bash
-path="$(cat /tmp/cpath)/"
-xdg-open "$path$(xclip -o)"

@@ -1,5 +1,0 @@
-#!/bin/bash
-
-cd "$(cat /tmp/mvspath)" 
-bash /home/joel/scripts/lmvs 
-

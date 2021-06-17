@@ -1,2 +1,0 @@
-cd /usr/share/applications/
-gtk-launch $(/bin/ls |sed s/\.desktop//g|dmenu -i -fn "manrope-10" -nb black -sb "#260A35").desktop

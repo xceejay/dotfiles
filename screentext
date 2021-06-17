@@ -1,8 +1,0 @@
-#/bin/sh
-temp=$(tempfile) 
-converttopdf(){
-scrot $temp.png && tesseract $temp.png $temp && enscript $temp.txt --output=$temp.pdf  #convert $temp.png -grayscale average $temp1.png && mv $temp1.png $temp.png 
-}
-converttopdf|zenity  --text="Converting Screen Text To Pdf..." --progress  --pulsate --time-remaining --no-cancel --auto-close
-zathura $temp.pdf
-

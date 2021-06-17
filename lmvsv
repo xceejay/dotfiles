@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-shopt -s expand_aliases
-alias lf="ls -l | egrep -v '^d'" 
-vlc() { command vlc "$@" > /dev/null 2>&1 & disown ;}
-vlc $(lf *.m[okp][v4]|cut -c 13-|sed s/matches//g|dmenu -fn "manrope-10" -nb black -sb "#260A35") &

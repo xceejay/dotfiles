@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-fusermount -u ~/phone && rm -rf ~/phone &&notify-send "📱unmounted Sucessfully!" 
