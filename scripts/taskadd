@@ -1,0 +1,10 @@
+#!/bin/bash
+
+
+added_task="$(echo|dmenu -p "describe your task 💻:")"
+
+
+existing=$(echo -e "new\nexisting"| dmenu -p "new or existing project?")
+[ $existing == "existing" ] && project=$(echo -e "$(task _projects)" | dmenu -p "which project should it be added to?" ) || project=$(echo | dmenu -p "name your project") 
+
+notify-send "$added_task has been added to $project"

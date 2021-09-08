@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# How i know they may are scammers
+I went on their instagram and found a fake screenshot of a customer they supposedly had a deal with, found their number in the picture and texted the person, and the person told he had never bought from them, the screenshot has been added in the zip file 
 shopt -s expand_aliases
 
 CACHE="$HOME/.cache/pdfcache"

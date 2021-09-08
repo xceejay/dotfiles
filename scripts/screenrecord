@@ -2,28 +2,38 @@
 
 videosdir="/home/joel/personal/videos/screenrecordings/"
 format="mp4"
-with="with audio🔈"
 
 output=$(echo|dmenu -fn "manrope-10" -nb black -sb "#260A35"  -p "name of output file?")
 
-[ -z $output ] && output=$(date|sed s/\ /-/g)
+[ -z "$output" ] && output=$(date|sed s/\ /-/g)
 
-format=$(printf "mp4\nmkv\ngif\nwebm"|dmenu -fn "manrope-10" -nb black -sb "#260A35"  -p "what file format?")
-audio=$(printf "true\nfalse"|dmenu -fn "manrope-10" -nb black -sb "#260A35"  -p "audio?🔉")
-time=$(printf "0\n1\n2\n3\n4"|dmenu -fn "manrope-10" -nb black -sb "#260A35"  -p "start in how many seconds?⏲")
+format=$(printf "mp4\nmkv\ngif\nwebm"|dmenu -fn "manrope-10" -nb black -sb "#260A35"  -p "what file format?") && audio=$(printf "true\nfalse"|dmenu -fn "manrope-10" -nb black -sb "#260A35"  -p "audio?🔉") && time=$(printf "0\n1\n2\n3\n4"|dmenu -fn "manrope-10" -nb black -sb "#260A35"  -p "start in how many seconds?⏲")
+
+
+[ -z "$format" ] && exit 
+[ -z "$audio" ] && exit 
+[ -z "$time" ] && exit 
+
 noaudio(){
-  sleep $time; ffmpeg -video_size 1920x1080  -framerate 25 -f x11grab -i :0.0 "$videosdir$output.$format" 
-
-  with="without audio🔇"
+  sleep "$time" ; notify-send "recording started without audio🔇" && ffmpeg -video_size 1920x1080  -framerate 25 -f x11grab -i :0.0 "$videosdir$output.$format"  ; echo "$videosdir$output.$format" | xclip  &&  notify-send "sucessfully recording To $videosdir$output.$format🔇" 
 }
 
 audio(){
 
-  sleep $time; ffmpeg -video_size 1920x1080 -framerate 25 -f x11grab -i :0.0 -f pulse -ac 2 -i default "$videosdir$output.$format"
+  sleep "$time" ; notify-send "recording started with audio🔊"  && ffmpeg -video_size 1920x1080 -framerate 25 -f x11grab -i :0.0 -f pulse -ac 2 -i default "$videosdir$output.$format" ; echo "$videosdir$output.$format" | xclip  &&  notify-send "sucessfully recording To $videosdir$output.$format🔊" 
 
-  with="with audio🔊"
+
 }
-notify-send "recording started $with"
-[ $audio = "true" ] && audio && notify-send "sucessfully recording To $videosdir$output.$format🔊" || noaudio && notify-send "sucessfully recording To $videosdir$output.$format🔇" 
+
+
+
+if [ "$audio" = "true" ] ; then 
+  audio 
+else
+  noaudio
+fi
+
+
+#[ $audio = "true" ] && audio || noaudio 
 
 
