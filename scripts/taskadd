@@ -5,6 +5,8 @@ added_task="$(echo|dmenu -p "describe your task 💻:")"
 
 
 existing=$(echo -e "new\nexisting"| dmenu -p "new or existing project?")
-[ $existing == "existing" ] && project=$(echo -e "$(task _projects)" | dmenu -p "which project should it be added to?" ) || project=$(echo | dmenu -p "name your project") 
+[ $existing == "existing" ] && project=$(echo -e "$(task _projects)" | dmenu -p "which project should it be added to?" ) || project=$(echo | dmenu -p "name your project:") 
+duedate=$(echo -e "now\ntoday\nsod\neod\nyesterday\ntomorrow\nmonday\ntuesday\nwednesday\nthursday\nfriday\nsaturday\nsunday\njanuary\nfebruary\nmarch\napril\nmay\njune\njuly\naugust\nseptember\noctober\nnovember\ndecember\nlater\nsomeday\nsoy\neoy\nsoq\neoq\nsom\nsocm\neom,eocm\nsow\nsocw\neow,eocw\nsoww\neoww\ngoodfriday\neaster\neastermonday\nascension\npentecost\nmidsommar\nmidsommarafton\n" | dmenu -p "when is it due?")
 
-notify-send "$added_task has been added to $project"
+
+task add project:"$project" "$added_task" due:"$duedate" && notify-send "$added_task has been added to $project🪄✨" || notify-send "ERROR when adding task❌"
