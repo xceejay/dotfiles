@@ -135,7 +135,7 @@ element alternate urgent {
     foreground: @lightred;
 }
 element selected active {
-    background-color: @lightblue;
+    background-color: @purple;
     foreground: @dark;
 }
 element selected urgent {
