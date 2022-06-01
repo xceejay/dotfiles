@@ -2,7 +2,8 @@
 
 
 
-rofi -show "" -modi ""  -yoffset -380
+rofi  -modi emoji  -show  
+#rofi  -modi emoji  -show  -yoffset -380
 
 
 #set -e

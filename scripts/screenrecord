@@ -3,11 +3,11 @@
 videosdir="/home/joel/personal/videos/screenrecordings/"
 format="mp4"
 
-output=$(echo|dmenu -fn "manrope-10" -nb black -sb "#260A35"  -p "name of output file?")
+output=$(echo|dmenu -fn "iosevka-11" -nb black -sb "#260A35"  -p "name of output file?")
 
 [ -z "$output" ] && output=$(date|sed s/\ /-/g)
 
-format=$(printf "mp4\nmkv\ngif\nwebm"|dmenu -fn "manrope-10" -nb black -sb "#260A35"  -p "what file format?") && audio=$(printf "true\nfalse"|dmenu -fn "manrope-10" -nb black -sb "#260A35"  -p "audio?🔉") && time=$(printf "0\n1\n2\n3\n4"|dmenu -fn "manrope-10" -nb black -sb "#260A35"  -p "start in how many seconds?⏲")
+format=$(printf "mp4\nmkv\ngif\nwebm"|dmenu -fn "iosevka-11" -nb black -sb "#260A35"  -p "what file format?") && audio=$(printf "true\nfalse"|dmenu -fn "iosevka-11" -nb black -sb "#260A35"  -p "audio?🔉") && time=$(printf "0\n1\n2\n3\n4"|dmenu -fn "iosevka-11" -nb black -sb "#260A35"  -p "start in how many seconds?⏲")
 
 
 [ -z "$format" ] && exit 

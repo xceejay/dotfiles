@@ -5,9 +5,9 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Iosevka-Term:pixelsize=15.5:antialias=true:autohint=true";
-static char *font2[] = { "Symbola:pixelsize=11:antialias=true:autohint=true",
-"emoji:pixelsize=12:antialias=true:autohint=true"
+static char *font = "Iosevka-Term:pixelsize=16:antialias=true:autohint=true";
+static char *font2[] = { "Noto-Color-Emoji:pixelsize=16:antialias=true:autohint=true",
+"emoji:pixelsize=14:antialias=true:autohint=true"
 };
 static int borderpx = 2;
 

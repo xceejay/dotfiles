@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rfkill unblock wlan ; sudo killall hostapd; sudo rm /tmp/create_ap.all.lock ;  sudo create_ap wlan0 wlan0 joel bufferoverflow
+

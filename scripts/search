@@ -1,1 +1,1 @@
-webpage=$(echo|dmenu -fn "manrope-10" -nb black -sb "#260A35"  -p "Enter a webpage ️️😊:") && firefox $webpage
+webpage=$(echo|dmenu -fn "iosevka-11" -nb black -sb "#260A35"  -p "Enter a webpage ️️😊:") && firefox $webpage

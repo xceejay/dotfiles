@@ -1,6 +1,6 @@
 #!/bin/bash
 
-query=$(echo|dmenu -fn "manrope-10" -nb black -sb "#260A35" -p "Search 😃:") && choice=$(printf "Duckduckgo\nGoogle\nYoutube\nLibrary\nReddit\nGithub\nArch Wiki"|dmenu -fn "manrope-10" -nb black -sb "#260A35" -p "Search with ?") 
+query=$(echo|dmenu -fn "iosevka-11" -nb black -sb "#260A35" -p "Search 😃:") && choice=$(printf "Duckduckgo\nGoogle\nYoutube\nLibrary\nReddit\nGithub\nArch Wiki"|dmenu -fn "iosevka-11" -nb black -sb "#260A35" -p "Search with ?") 
 
 
 

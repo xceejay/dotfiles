@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 shopt -s expand_aliases
 
-pdf $(ls *.pdf|sed s/" "/"\\\ "/g|dmenu -fn "manrope-10" -nb black -sb "#260A35"  -l 30)
+pdf $(ls *.pdf|sed s/" "/"\\\ "/g|dmenu -fn "iosevka-11" -nb black -sb "#260A35"  -l 30)
 

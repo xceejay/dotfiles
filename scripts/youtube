@@ -1,2 +1,2 @@
-query=$(echo|dmenu -fn "manrope-10" -nb black -sb "#260A35" -p "Search on Youtube 😃:") && chromium "https://www.youtube.com/results?search_query=$query"
+query=$(echo|dmenu -fn "iosevka-11" -nb black -sb "#260A35" -p "Search on Youtube 😃:") && chromium "https://www.youtube.com/results?search_query=$query"
 

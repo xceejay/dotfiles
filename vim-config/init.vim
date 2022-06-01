@@ -64,6 +64,7 @@ set hid
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
+set undofile
 
 " Show matching brackets when text indicator is over them
 set showmatch
@@ -118,8 +119,6 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
         \| exe "normal! g'\"" | endif
 endif
-
-
 
 
 " Visual mode pressing * or # searches for the current selection
@@ -240,7 +239,6 @@ Plug 'junegunn/goyo.vim'
 
 "golang
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-
 
 "go debug 
 Plug 'sebdah/vim-delve'
@@ -580,6 +578,8 @@ let g:floaterm_keymap_prev   = '<F2>'
 let g:floaterm_keymap_next   = '<F3>'
 let g:floaterm_keymap_toggle = '<F4>'
 
+"vim-go 
+let g:go_template_autocreate = 0
 
 "go pls
 let g:go_def_mode='gopls'

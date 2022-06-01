@@ -15,15 +15,17 @@ super + c
 super + d
   dmenu_run -fn "Iosevka Term Medium-11" -nb black -sb "#260A35"
 Print
- xfce4-screenshooter
+ ~/scripts/./screenshot.sh
 ctrl + Print 
  ~/scripts/./screenrecord
 ctrl + shift + Print 
  ~/scripts/./killrecord
+ctrl + shift + Escape 
+ ~/scripts/./shutdown_menu.sh
 super + r
  rofi -show drun -show-icons
 super + w
- dswitcher
+ rofi -show window
 F8
  ~/scripts/./screentext
 F12

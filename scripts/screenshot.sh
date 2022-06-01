@@ -2,7 +2,7 @@
 
 #script to screenshot screen with the help of maim and dmenu
 
-SCREENSHOT_OPTION=$(echo -e "fullscreen\nselect\nactive-window" |dmenu -p "screenshot📸")
+SCREENSHOT_OPTION=$(echo -e "fullscreen\nselect\nactive-window" |dmenu -fn "iosevka-11" -nb black -sb "#260A35" -p "screenshot📸")
 FILE_PATH="/home/joel/personal/pictures/screenshots/$(date -u +"%Y-%m-%dT%H:%M:%S.png")"
 
 
