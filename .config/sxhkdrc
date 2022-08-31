@@ -1,7 +1,7 @@
 super + k
   ~/scripts/./killprocess
 super + e
- ~/scripts/./emojis
+ ~/scripts/./emoji-picker
 super + g
   ~/scripts/./searchengine
 super + b
